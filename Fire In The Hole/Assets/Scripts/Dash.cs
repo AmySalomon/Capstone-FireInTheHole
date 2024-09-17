@@ -9,8 +9,12 @@ public class Dash : MonoBehaviour
     [SerializeField] private float dashSpeed = 6f;
     [SerializeField] private float dashTime = 0.3f;
 
-    private float timer;
+    //how much time the full dash meter takes to recharge, and then the actual timer tracking the time.
+    public float dashRechargeAmount = 3f;
+    [HideInInspector] public float dashRechargeTimer;
 
+    private float timer;
+    
     private float xDirection;
     private float yDirection;
 
@@ -43,15 +47,17 @@ public class Dash : MonoBehaviour
     }
     void Update()
     {
+        DashRechargeUpdate();
         DashAction();
     }
 
     private void StartDash(InputAction.CallbackContext obj)
     {
-        if (isDashing == false)
+        if (isDashing == false && dashRechargeTimer >= dashRechargeAmount/2)
         {
             Debug.Log("StartDash");
             isDashing = true;
+            dashRechargeTimer -= dashRechargeAmount / 2;
             xDirection = MovementManager.PlayerMovement.x;
             yDirection = MovementManager.PlayerMovement.y;
         }
@@ -72,6 +78,20 @@ public class Dash : MonoBehaviour
             sprite.color = new Color32(255, 200, 0, 255);
             timer = 0;
             isDashing = false;
+        }
+
+    }
+
+    private void DashRechargeUpdate()
+    {
+        //When NOT dashing, recharge the dash constantly
+        if (!isDashing) dashRechargeTimer += Time.deltaTime;
+
+        //If dash cooldown
+        if (dashRechargeTimer >= dashRechargeAmount)
+        {
+            dashRechargeTimer = dashRechargeAmount;
+            return;
         }
 
     }

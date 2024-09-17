@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class DeleteBullet : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private float timer;
+    public float deletionTime = 5;
 
     // Update is called once per frame
     void Update()
     {
-        
+        timer += Time.deltaTime;
+
+        if (timer >= deletionTime) Destroy(gameObject);
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("Collision");
+        if (collision.gameObject.name == "Main Camera") Destroy(gameObject);
     }
 }

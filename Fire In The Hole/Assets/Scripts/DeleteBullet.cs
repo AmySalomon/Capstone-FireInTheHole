@@ -15,7 +15,7 @@ public class DeleteBullet : MonoBehaviour
         if (timer >= deletionTime) Destroy(gameObject);
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("Collision");
         if (collision.gameObject.name == "Main Camera") Destroy(gameObject);

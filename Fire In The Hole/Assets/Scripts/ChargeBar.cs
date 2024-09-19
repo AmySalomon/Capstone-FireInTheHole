@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ReloadBar : MonoBehaviour
+public class ChargeBar : MonoBehaviour
 {
 	public Slider slider;
 	public Gradient gradient;

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+using UnityEngine.UI;
 public class Dash : MonoBehaviour
 {
     [SerializeField] private InputActionReference dash;
@@ -12,6 +12,10 @@ public class Dash : MonoBehaviour
     //how much time the full dash meter takes to recharge, and then the actual timer tracking the time.
     public float dashRechargeAmount = 3f;
     [HideInInspector] public float dashRechargeTimer;
+    public ChargeBar dashChargeBar;
+
+    [SerializeField] private Image FirstHalf;
+    [SerializeField] private Image LastHalf;
 
     private float timer;
     
@@ -22,8 +26,10 @@ public class Dash : MonoBehaviour
 
     private PlayerInput playerInput;
     private InputAction moveAction;
-    private SpriteRenderer sprite;
+    [SerializeField] private SpriteRenderer sprite;
     private Rigidbody2D rb;
+
+    private TrailRenderer trail;
 
     private Vector2 movement;
     
@@ -42,13 +48,14 @@ public class Dash : MonoBehaviour
     {
         //gets player movement vector action
         playerInput = GetComponent<PlayerInput>();
-        sprite = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
+        trail = GetComponent<TrailRenderer>();
     }
     void Update()
     {
         DashRechargeUpdate();
         DashAction();
+        dashChargeBar.SetCharge(dashRechargeTimer);
     }
 
     private void StartDash(InputAction.CallbackContext obj)
@@ -57,6 +64,7 @@ public class Dash : MonoBehaviour
         {
             Debug.Log("StartDash");
             isDashing = true;
+            trail.emitting = true;
             dashRechargeTimer -= dashRechargeAmount / 2;
             xDirection = MovementManager.PlayerMovement.x;
             yDirection = MovementManager.PlayerMovement.y;
@@ -75,8 +83,9 @@ public class Dash : MonoBehaviour
         }
         else
         {
-            sprite.color = new Color32(255, 200, 0, 255);
+            sprite.color = new Color32(255, 255, 255, 255);
             timer = 0;
+            trail.emitting = false;
             isDashing = false;
         }
 
@@ -84,12 +93,26 @@ public class Dash : MonoBehaviour
 
     private void DashRechargeUpdate()
     {
+        FirstHalf.color = new Color32(0, 0, 0, 0);
+        LastHalf.color = new Color32(0, 0, 0, 0);
         //When NOT dashing, recharge the dash constantly
         if (!isDashing) dashRechargeTimer += Time.deltaTime;
+
+        if (dashRechargeTimer < 0)
+        {
+            dashRechargeTimer = 0;
+            return;
+        }
+
+        if (dashRechargeTimer >= dashRechargeAmount/2)
+        {
+            FirstHalf.color = new Color32(0, 247, 255, 255);
+        }
 
         //If dash cooldown
         if (dashRechargeTimer >= dashRechargeAmount)
         {
+            LastHalf.color = new Color32(0, 247, 255, 255);
             dashRechargeTimer = dashRechargeAmount;
             return;
         }

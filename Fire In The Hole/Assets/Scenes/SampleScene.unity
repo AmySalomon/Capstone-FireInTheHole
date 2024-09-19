@@ -175,6 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 4
+  sprite: {fileID: 1287978361}
 --- !u!50 &123580804
 Rigidbody2D:
   serializedVersion: 4

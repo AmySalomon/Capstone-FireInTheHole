@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
 
     private Dash dashCheck;
 
+    [SerializeField] private SpriteRenderer sprite;
+
     // Start is called before the first frame update
     private void Awake()
     {
@@ -27,6 +29,16 @@ public class PlayerMovement : MonoBehaviour
             movement.Set(MovementManager.PlayerMovement.x, MovementManager.PlayerMovement.y);
 
             rb.velocity = movement * moveSpeed;
+        }
+
+        if (rb.velocity.x > 0)
+        {
+            sprite.flipX = false;
+        }
+
+        if (rb.velocity.x < 0)
+        {
+            sprite.flipX = true;
         }
     }
 }

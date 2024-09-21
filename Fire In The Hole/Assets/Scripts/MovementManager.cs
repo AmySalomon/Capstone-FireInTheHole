@@ -20,5 +20,9 @@ public class MovementManager : MonoBehaviour
     private void Update()
     {
         PlayerMovement = moveAction.ReadValue<Vector2>();
+        if (PlayerMovement.magnitude < 0.125)
+        {
+            PlayerMovement = Vector2.zero;
+        }
     }
 }

@@ -77,7 +77,8 @@ public class Dash : MonoBehaviour
         {
             timer += Time.deltaTime;
             movement.Set(xDirection, yDirection);
-            rb.velocity = movement * dashSpeed;
+            Vector2 newMovement = Vector3.Normalize(movement);
+            rb.velocity = newMovement * dashSpeed;
             sprite.color = new Color32(0, 215, 255, 255);
             
         }

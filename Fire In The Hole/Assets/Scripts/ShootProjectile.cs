@@ -8,16 +8,32 @@ public class ShootProjectile : MonoBehaviour
     public Rigidbody2D bullet;
     //gets barrel position
     public Transform barrelEnd;
+    //muzzle flash sprite
+    public SpriteRenderer muzzleFlash;
     //timer
-    private float timer;
+    private float timer = 10;
     //the launch force of the bullet being shot
     public float launchForce = -1200f;
 
     public float shootDelay;
 
+    private GameObject camera;
+
+    private void Start()
+    {
+        camera = GameObject.FindGameObjectWithTag("MainCamera");
+        muzzleFlash.enabled = false;
+    }
     void Update()
     {
         timer += Time.deltaTime;
+        muzzleFlash.enabled = false;
+        if (timer <= 0.1f)
+        {
+            muzzleFlash.enabled = true;
+            camera.transform.position = new Vector3(0 + Random.Range(0, 0.08f), 0 + Random.Range(0, 0.08f), -10);
+        }
+
     }
     public void ShootAction(InputAction.CallbackContext obj)
     {

@@ -5,7 +5,6 @@ using UnityEngine.InputSystem;
 using UnityEngine.UI;
 public class Dash : MonoBehaviour
 {
-    [SerializeField] private InputActionReference dash;
     [SerializeField] private float dashSpeed = 6f;
     [SerializeField] private float dashTime = 0.3f;
 
@@ -24,32 +23,22 @@ public class Dash : MonoBehaviour
 
     [HideInInspector] public bool isDashing = false;
 
-    private PlayerInput playerInput;
-    private InputAction moveAction;
     [SerializeField] private SpriteRenderer sprite;
+    private Color myColor;
     private Rigidbody2D rb;
 
     private TrailRenderer trail;
 
-    private Vector2 movement;
-    
-
-    private void OnEnable()
-    {
-        dash.action.performed += StartDash;
-    }
-
-    private void OnDisable()
-    {
-        dash.action.performed -= StartDash;
-    }
+    private PlayerMovement playerMovement;
+   
 
     private void Awake()
     {
         //gets player movement vector action
-        playerInput = GetComponent<PlayerInput>();
         rb = GetComponent<Rigidbody2D>();
         trail = GetComponent<TrailRenderer>();
+        playerMovement = GetComponent<PlayerMovement>();
+        myColor = sprite.color;
     }
     void Update()
     {
@@ -58,16 +47,16 @@ public class Dash : MonoBehaviour
         dashChargeBar.SetCharge(dashRechargeTimer);
     }
 
-    private void StartDash(InputAction.CallbackContext obj)
+    public void OnDash(InputAction.CallbackContext obj)
     {
-        if (isDashing == false && dashRechargeTimer >= dashRechargeAmount/2)
+        if (isDashing == false && dashRechargeTimer >= dashRechargeAmount/2 && obj.performed)
         {
             Debug.Log("StartDash");
             isDashing = true;
             trail.emitting = true;
             dashRechargeTimer -= dashRechargeAmount / 2;
-            xDirection = MovementManager.PlayerMovement.x;
-            yDirection = MovementManager.PlayerMovement.y;
+            xDirection = playerMovement.movement.x;
+            yDirection = playerMovement.movement.y;
         }
     }
 
@@ -76,15 +65,15 @@ public class Dash : MonoBehaviour
         if (timer <= dashTime && isDashing)
         {
             timer += Time.deltaTime;
-            movement.Set(xDirection, yDirection);
-            Vector2 newMovement = Vector3.Normalize(movement);
+            playerMovement.movement.Set(xDirection, yDirection);
+            Vector2 newMovement = Vector3.Normalize(playerMovement.movement);
             rb.velocity = newMovement * dashSpeed;
             sprite.color = new Color32(0, 215, 255, 255);
             
         }
         else
         {
-            sprite.color = new Color32(255, 255, 255, 255);
+            sprite.color = myColor;
             timer = 0;
             trail.emitting = false;
             isDashing = false;

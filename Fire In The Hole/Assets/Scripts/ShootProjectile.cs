@@ -15,27 +15,13 @@ public class ShootProjectile : MonoBehaviour
 
     public float shootDelay;
 
-    [SerializeField] private InputActionReference shoot;
-
-    private void OnEnable()
-    {
-        shoot.action.performed += ShootAction;
-    }
-
-    private void OnDisable()
-    {
-        shoot.action.performed -= ShootAction;
-    }
-
-
     void Update()
     {
         timer += Time.deltaTime;
     }
-
-    private void ShootAction(InputAction.CallbackContext obj)
+    public void ShootAction(InputAction.CallbackContext obj)
     {
-        if (timer >= shootDelay)
+        if (timer >= shootDelay && obj.performed)
         {
             Debug.Log("shoot");
             Rigidbody2D bulletInstance;

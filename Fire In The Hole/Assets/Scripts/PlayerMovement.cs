@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 3f;
 
-    private Vector2 movement;
+    [HideInInspector] public Vector2 movement;
 
     private Rigidbody2D rb;
 
@@ -21,13 +22,22 @@ public class PlayerMovement : MonoBehaviour
         dashCheck = GetComponent<Dash>();
     }
 
+    public void OnMove(InputAction.CallbackContext context)
+    {
+        movement = context.ReadValue<Vector2>();
+
+        if (movement.magnitude < 0.125)
+        {
+            movement = Vector2.zero;
+        }
+    }
+
+
     // Update is called once per frame
     private void Update()
     {
         if (dashCheck.isDashing == false)
         {
-            movement.Set(MovementManager.PlayerMovement.x, MovementManager.PlayerMovement.y);
-
             rb.velocity = movement * moveSpeed;
         }
 

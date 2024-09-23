@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PointAtVector : MonoBehaviour
 {
@@ -11,17 +12,26 @@ public class PointAtVector : MonoBehaviour
     private Vector2 lastAimDir;
     private float angle;
 
+    public void OnAim(InputAction.CallbackContext context)
+    {
+        aim = context.ReadValue<Vector2>();
+        if (aim.magnitude < 0.125)
+        {
+            aim = Vector2.zero;
+        }
+    }
     void Update()
     {
-        aim.Set(AimManager.PlayerAim.x, AimManager.PlayerAim.y);
-        
         if (aim == new Vector2 (0,0))
         {
             aim = lastAimDir;
         }
-
+        else
+        {
+            lastAimDir = aim;
+        }
         transform.transform.right = -aim;
-        lastAimDir = aim;
+
         //MOUSE CONTROLS
         /*mouse_pos = Input.mousePosition;
         mouse_pos.z = -20;

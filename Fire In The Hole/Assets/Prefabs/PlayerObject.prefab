@@ -436,6 +436,9 @@ MonoBehaviour:
   LastHalf: {fileID: 3251410675664275193}
   isDashing: 0
   sprite: {fileID: 4271349150141182393}
+  bullet:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!114 &3226842309227314660
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -30,6 +30,10 @@ public class Dash : MonoBehaviour
     private TrailRenderer trail;
 
     private PlayerMovement playerMovement;
+    private CircleCollider2D playerCollision;
+
+    public LayerMask bullet;
+    public LayerMask none;
    
 
     private void Awake()
@@ -38,6 +42,7 @@ public class Dash : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         trail = GetComponent<TrailRenderer>();
         playerMovement = GetComponent<PlayerMovement>();
+        playerCollision = GetComponent<CircleCollider2D>();
         myColor = sprite.color;
     }
     void Update()
@@ -69,6 +74,7 @@ public class Dash : MonoBehaviour
             Vector2 newMovement = Vector3.Normalize(playerMovement.movement);
             rb.velocity = newMovement * dashSpeed;
             sprite.color = new Color32(0, 215, 255, 255);
+            playerCollision.excludeLayers = bullet;
             
         }
         else
@@ -76,6 +82,7 @@ public class Dash : MonoBehaviour
             sprite.color = myColor;
             timer = 0;
             trail.emitting = false;
+            playerCollision.excludeLayers = none;
             isDashing = false;
         }
 

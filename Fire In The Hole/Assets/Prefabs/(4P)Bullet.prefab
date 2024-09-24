@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1829357051581644085}
   - component: {fileID: 8845389241397023772}
   - component: {fileID: 4112450661737238520}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: (4P)Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.3}
-  m_Size: {x: 2.5, y: 7}
+  m_Size: {x: 2, y: 6}
   m_Direction: 0
 --- !u!114 &4112450661737238520
 MonoBehaviour:

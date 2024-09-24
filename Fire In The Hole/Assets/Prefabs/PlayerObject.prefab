@@ -439,6 +439,9 @@ MonoBehaviour:
   bullet:
     serializedVersion: 2
     m_Bits: 8
+  none:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &3226842309227314660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -451,7 +454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfc0e696388c6a64bb170994225d682e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
+  moveSpeed: 3
   movement: {x: 0, y: 0}
   sprite: {fileID: 4271349150141182393}
 --- !u!50 &6029596620006062017

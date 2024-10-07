@@ -12,9 +12,9 @@ public class PointAtVector : MonoBehaviour
     private Vector2 lastAimDir;
     private float angle;
 
-    public void OnAim(InputAction.CallbackContext context)
+    public void IsAiming(Vector2 vector)
     {
-        aim = context.ReadValue<Vector2>();
+        aim = vector;
         if (aim.magnitude < 0.125)
         {
             aim = Vector2.zero;

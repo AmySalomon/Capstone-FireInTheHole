@@ -22,16 +22,15 @@ public class PlayerMovement : MonoBehaviour
         dashCheck = GetComponent<Dash>();
     }
 
-    public void OnMove(InputAction.CallbackContext context)
+    public void MovePlayer(Vector2 vector)
     {
-        movement = context.ReadValue<Vector2>();
+        movement = vector;
 
         if (movement.magnitude < 0.125)
         {
             movement = Vector2.zero;
         }
     }
-
 
     // Update is called once per frame
     private void Update()

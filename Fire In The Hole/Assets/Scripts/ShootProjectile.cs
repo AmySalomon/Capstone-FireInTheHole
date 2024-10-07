@@ -35,9 +35,9 @@ public class ShootProjectile : MonoBehaviour
         }
 
     }
-    public void ShootAction(InputAction.CallbackContext obj)
+    public void ShootAction()
     {
-        if (timer >= shootDelay && obj.performed)
+        if (timer >= shootDelay)
         {
             Debug.Log("shoot");
             Rigidbody2D bulletInstance;

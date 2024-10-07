@@ -52,9 +52,9 @@ public class Dash : MonoBehaviour
         dashChargeBar.SetCharge(dashRechargeTimer);
     }
 
-    public void OnDash(InputAction.CallbackContext obj)
+    public void PressDash()
     {
-        if (isDashing == false && dashRechargeTimer >= dashRechargeAmount/2 && obj.performed)
+        if (isDashing == false && dashRechargeTimer >= dashRechargeAmount/2)
         {
             Debug.Log("StartDash");
             isDashing = true;

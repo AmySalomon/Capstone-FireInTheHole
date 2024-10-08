@@ -41,7 +41,7 @@ public class JoinPlayer : MonoBehaviour
     public void ReadyPlayer(int index)
     {
         playerConfigs[index].IsReady = true;
-        if (playerConfigs.Count == MinPlayers && playerConfigs.TrueForAll(p => p.IsReady == true))
+        if (playerConfigs.Count >= MinPlayers && playerConfigs.TrueForAll(p => p.IsReady == true))
         {
             SceneManager.LoadScene("Blacklight");
         }

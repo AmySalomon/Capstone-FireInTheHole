@@ -10,6 +10,10 @@ public class ShootProjectile : MonoBehaviour
     public Transform barrelEnd;
     //muzzle flash sprite
     public SpriteRenderer muzzleFlash;
+    //soundPlayer
+    private AudioSource audioPlayer;
+    //gunshot sound
+    public AudioClip gunshot;
     //timer
     private float timer = 10;
     //the launch force of the bullet being shot
@@ -17,11 +21,12 @@ public class ShootProjectile : MonoBehaviour
 
     public float shootDelay;
 
-    private GameObject camera;
+    private GameObject myCamera;
 
     private void Start()
     {
-        camera = GameObject.FindGameObjectWithTag("MainCamera");
+        myCamera = GameObject.FindGameObjectWithTag("MainCamera");
+        audioPlayer = GetComponent<AudioSource>();
         muzzleFlash.enabled = false;
     }
     void Update()
@@ -31,7 +36,7 @@ public class ShootProjectile : MonoBehaviour
         if (timer <= 0.1f)
         {
             muzzleFlash.enabled = true;
-            camera.transform.position = new Vector3(0 + Random.Range(0, 0.08f), 0 + Random.Range(0, 0.08f), -10);
+            myCamera.transform.position = new Vector3(0 + Random.Range(0, 0.08f), 0 + Random.Range(0, 0.08f), -10);
         }
 
     }
@@ -40,6 +45,8 @@ public class ShootProjectile : MonoBehaviour
         if (timer >= shootDelay)
         {
             Debug.Log("shoot");
+            audioPlayer.pitch = Random.Range(0.9f, 1.1f);
+            audioPlayer.PlayOneShot(gunshot, 1f);
             Rigidbody2D bulletInstance;
             bulletInstance = Instantiate(bullet, barrelEnd.position, barrelEnd.rotation) as Rigidbody2D;
             bulletInstance.AddForce(-barrelEnd.up * launchForce);

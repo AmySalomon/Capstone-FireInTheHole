@@ -11,6 +11,7 @@ public class PlayerInputHandler : MonoBehaviour
     private Dash playerDash;
     private ShootProjectile playerShoot;
     private PointAtVector playerAim;
+    [HideInInspector] public Sprite playerSprite;
 
     private PlayerControls controls;
 
@@ -27,6 +28,7 @@ public class PlayerInputHandler : MonoBehaviour
     {
         playerConfig = pc;
         playerConfig.Input.onActionTriggered += Input_onActionTriggered;
+        playerSprite = playerConfig.PlayerSprite;
         Debug.Log("init");
     }
 

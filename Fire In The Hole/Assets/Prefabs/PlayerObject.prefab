@@ -880,6 +880,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1200328399479723322}
   - component: {fileID: 4271349150141182393}
+  - component: {fileID: 7739393383190996016}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -943,17 +944,30 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5def92d47df64184d9d762f8230d0c84, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 22ffec20cc54f904e92b817ed0a28370, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 4, y: 4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7739393383190996016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5085900501264061409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78a42ddea45e0e143bea2ed929d27434, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myInputHandler: {fileID: 6051375638936930271}
 --- !u!1 &5509045739118667847
 GameObject:
   m_ObjectHideFlags: 0
@@ -1397,3 +1411,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3604b137f4a2b2949884b6629c0a1fd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerSprite: {fileID: 0}

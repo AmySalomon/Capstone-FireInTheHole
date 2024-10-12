@@ -32,9 +32,9 @@ public class JoinPlayer : MonoBehaviour
         return playerConfigs;
     }
 
-    public void SetPlayerColor(int index, Material color)
+    public void SetPlayerSprite(int index, Sprite sprite)
     {
-        playerConfigs[index].PlayerColor = color;
+        playerConfigs[index].PlayerSprite = sprite;
         
     }
 
@@ -71,5 +71,5 @@ public class PlayerConfig
     public int PlayerIndex { get; set; }
     public bool IsReady { get; set; }
 
-    public Material PlayerColor { get; set; }
+    public Sprite PlayerSprite { get; set; }
 }

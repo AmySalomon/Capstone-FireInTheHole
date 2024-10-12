@@ -10,6 +10,10 @@ public class JoinPlayer : MonoBehaviour
 
     [SerializeField] private int MinPlayers = 1;
 
+    [HideInInspector] public bool shouldDisableButton1 = false;
+    [HideInInspector] public bool shouldDisableButton2 = false;
+    [HideInInspector] public bool shouldDisableButton3 = false;
+    [HideInInspector] public bool shouldDisableButton4 = false;
     public static JoinPlayer Instance { get; private set; }
 
     private void Awake()
@@ -55,6 +59,25 @@ public class JoinPlayer : MonoBehaviour
         {
             pi.transform.SetParent(transform);
             playerConfigs.Add(new PlayerConfig(pi));
+        }
+    }
+
+    public void DisableButton(int buttonNumber)
+    {
+        switch (buttonNumber)
+        {
+            case 1:
+                shouldDisableButton1 = true;
+                break;
+            case 2:
+                shouldDisableButton2 = true;
+                break;
+            case 3:
+                shouldDisableButton3 = true;
+                break;
+            case 4:
+                shouldDisableButton4 = true;
+                break;
         }
     }
 }

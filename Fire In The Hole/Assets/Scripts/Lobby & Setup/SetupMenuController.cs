@@ -16,6 +16,13 @@ public class SetupMenuController : MonoBehaviour
 
     [SerializeField] private Button readyButton;
 
+    [HideInInspector] public WhatButtonAmI buttonToDisable;
+
+    [SerializeField] private Button characterButton1;
+    [SerializeField] private Button characterButton2;
+    [SerializeField] private Button characterButton3;
+    [SerializeField] private Button characterButton4;
+
     private float ignoreInputTime = 1.5f;
     private bool inputEnabled;
 
@@ -34,6 +41,12 @@ public class SetupMenuController : MonoBehaviour
         {
             inputEnabled = true;
         }
+
+        //singleton variable means only one player can pick each button, so no duplicate characters.
+        if (JoinPlayer.Instance.shouldDisableButton1) characterButton1.interactable = false;
+        if (JoinPlayer.Instance.shouldDisableButton2) characterButton2.interactable = false;
+        if (JoinPlayer.Instance.shouldDisableButton3) characterButton3.interactable = false;
+        if (JoinPlayer.Instance.shouldDisableButton4) characterButton4.interactable = false;
     }
 
     public void SetSprite(Sprite sprite)
@@ -45,6 +58,14 @@ public class SetupMenuController : MonoBehaviour
         readyButton.Select();
         menuPanel.SetActive(false);
     }
+
+    public void DisableThisButton(Button button)
+    {
+        buttonToDisable = button.gameObject.GetComponent<WhatButtonAmI>();
+        JoinPlayer.Instance.DisableButton(buttonToDisable.buttonNumber);
+        //the joinplayer instance will now trigger a bool, that disables this button in the update function of this class, for all versions of this class.
+    }
+
 
     public void ReadyPlayer()
     {

@@ -23,11 +23,15 @@ public class ShootProjectile : MonoBehaviour
 
     private GameObject myCamera;
 
+    public WeaponClass defaultWeapon, currentWeapon;
+    public SpriteRenderer currentGunSprite;
+
     private void Start()
     {
         myCamera = GameObject.FindGameObjectWithTag("MainCamera");
         audioPlayer = GetComponent<AudioSource>();
         muzzleFlash.enabled = false;
+        UpdateWeapon(defaultWeapon); //Set starting weapon to player default weapon
     }
     void Update()
     {
@@ -53,5 +57,14 @@ public class ShootProjectile : MonoBehaviour
             timer = 0;
         }
         
+    }
+
+    public void UpdateWeapon(WeaponClass newWeapon) //Called on picking up a new Weapon
+    {
+        //set weapon details to the currently equipped weapon
+        currentWeapon = newWeapon;
+        shootDelay = newWeapon.shootDelay;
+        launchForce = newWeapon.launchForce;
+        currentGunSprite.sprite = newWeapon.gunSprite;
     }
 }

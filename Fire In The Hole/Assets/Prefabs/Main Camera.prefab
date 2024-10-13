@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1488369586642735109}
   - component: {fileID: 6326333576805084021}
   - component: {fileID: 151042074668021321}
+  - component: {fileID: 2539567299965374135}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -268,6 +269,14 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 19.75, y: 1}
   m_EdgeRadius: 0
+--- !u!81 &2539567299965374135
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297252713248823152}
+  m_Enabled: 1
 --- !u!1 &4357751565382076174
 GameObject:
   m_ObjectHideFlags: 0

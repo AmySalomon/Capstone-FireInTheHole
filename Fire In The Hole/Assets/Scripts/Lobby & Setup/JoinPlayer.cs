@@ -47,7 +47,7 @@ public class JoinPlayer : MonoBehaviour
         playerConfigs[index].IsReady = true;
         if (playerConfigs.Count >= MinPlayers && playerConfigs.TrueForAll(p => p.IsReady == true))
         {
-            SceneManager.LoadScene("Blacklight");
+            SceneManager.LoadScene("MacicTesting");
         }
     }
 

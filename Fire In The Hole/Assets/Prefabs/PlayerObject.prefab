@@ -276,6 +276,7 @@ GameObject:
   - component: {fileID: 8129980647565294947}
   - component: {fileID: 3383853866549433534}
   - component: {fileID: 3226842309227314660}
+  - component: {fileID: 8043993876945172938}
   - component: {fileID: 6029596620006062017}
   - component: {fileID: 7935399317293149535}
   - component: {fileID: 740412417887625949}
@@ -364,6 +365,35 @@ MonoBehaviour:
   moveSpeed: 3
   movement: {x: 0, y: 0}
   sprite: {fileID: 4271349150141182393}
+--- !u!114 &8043993876945172938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3358283545364179000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92d96d2dce1ae3e44b1ce36937095624, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  swingDistance: 0.75
+  minSwingForce: 100
+  maxSwingForce: 2000
+  chargeRate: 1000
+  swingCooldown: 1
+  playerDamage: 20
+  swingPoint: {fileID: 3884849049886853993}
+  interactableLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  isCharging: 0
+  currentSwingForce: 0
+  chargeBarOffset: {x: 0, y: 2, z: 0}
+  chargeBarSize: {x: 2, y: 0.25}
 --- !u!50 &6029596620006062017
 Rigidbody2D:
   serializedVersion: 4

@@ -14,8 +14,6 @@ public class JoinPlayer : MonoBehaviour
     [HideInInspector] public bool shouldDisableButton2 = false;
     [HideInInspector] public bool shouldDisableButton3 = false;
     [HideInInspector] public bool shouldDisableButton4 = false;
-
-    public string sceneToGoTo;
     public static JoinPlayer Instance { get; private set; }
 
     private void Awake()
@@ -49,7 +47,7 @@ public class JoinPlayer : MonoBehaviour
         playerConfigs[index].IsReady = true;
         if (playerConfigs.Count >= MinPlayers && playerConfigs.TrueForAll(p => p.IsReady == true))
         {
-            SceneManager.LoadScene(sceneToGoTo);
+            SceneManager.LoadScene("Blacklight");
         }
     }
 

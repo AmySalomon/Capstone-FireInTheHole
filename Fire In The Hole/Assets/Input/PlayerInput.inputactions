@@ -40,6 +40,27 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+<<<<<<< Updated upstream:Fire In The Hole/Assets/Input/PlayerInput.inputactions
+=======
+                },
+                {
+                    "name": "Select",
+                    "type": "Button",
+                    "id": "cdc341f1-f732-4b2c-8436-a9ea6e6988af",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MeleeSwing",
+                    "type": "Button",
+                    "id": "81216fd7-3433-4441-8f14-7f057886dbda",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+>>>>>>> Stashed changes:Fire In The Hole/Assets/Input/PlayerControls.inputactions
                 }
             ],
             "bindings": [
@@ -66,9 +87,31 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "up",
+                    "id": "2c2c734e-f31b-4f07-a62c-960323076c14",
+                    "path": "<DualShockGamepad>/leftStick/up",
+                    "interactions": "",
+                    "processors": "AxisDeadzone(min=1.401298E-45)",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "down",
                     "id": "94c8aae2-74a5-466b-82fa-42b90ac3bd4b",
                     "path": "<Gamepad>/leftStick/down",
+                    "interactions": "",
+                    "processors": "AxisDeadzone(min=1.401298E-45)",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "ef899e6d-ac4f-47d7-8230-b07a10a14bc2",
+                    "path": "<DualShockGamepad>/leftStick/down",
                     "interactions": "",
                     "processors": "AxisDeadzone(min=1.401298E-45)",
                     "groups": "",
@@ -88,9 +131,31 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "left",
+                    "id": "b716212c-4c15-4fd0-9084-16f6b1fddbfc",
+                    "path": "<DualShockGamepad>/leftStick/left",
+                    "interactions": "",
+                    "processors": "AxisDeadzone(min=1.401298E-45)",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "right",
                     "id": "c5b0f982-1095-42aa-ae42-422257c341db",
                     "path": "<Gamepad>/leftStick/right",
+                    "interactions": "",
+                    "processors": "AxisDeadzone(min=1.401298E-45)",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "5eb73843-cdcb-4ecc-a080-79120801553f",
+                    "path": "<DualShockGamepad>/leftStick/right",
                     "interactions": "",
                     "processors": "AxisDeadzone(min=1.401298E-45)",
                     "groups": "",
@@ -111,8 +176,30 @@
                 },
                 {
                     "name": "",
+                    "id": "d235b598-8494-4e85-a54e-77d1eb34b743",
+                    "path": "<DualShockGamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller",
+                    "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "9602227a-d61a-4e1a-9f4f-3d2c114bb559",
                     "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller",
+                    "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "81515421-6679-492a-8df2-c40426eeec7f",
+                    "path": "<DualShockGamepad>/rightTrigger",
                     "interactions": "",
                     "processors": "",
                     "groups": "Controller",
@@ -133,8 +220,30 @@
                 },
                 {
                     "name": "",
+                    "id": "48f06259-604c-42fd-b5e7-d124f8807df7",
+                    "path": "<DualShockGamepad>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller",
+                    "action": "Dash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "0cc674ed-0ae7-478c-b3a3-a607383ae9eb",
                     "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller",
+                    "action": "Dash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2f92722a-7f71-438a-8f96-fb2365932369",
+                    "path": "<DualShockGamepad>/leftTrigger",
                     "interactions": "",
                     "processors": "",
                     "groups": "Controller",
@@ -165,9 +274,31 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "up",
+                    "id": "16c06b97-8bdd-4b83-b3f4-832734421427",
+                    "path": "<DualShockGamepad>/rightStick/up",
+                    "interactions": "",
+                    "processors": "AxisDeadzone",
+                    "groups": "",
+                    "action": "Aim",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "down",
                     "id": "4c0085de-8ba9-4eb7-afc4-b30eb648341f",
                     "path": "<Gamepad>/rightStick/down",
+                    "interactions": "",
+                    "processors": "AxisDeadzone",
+                    "groups": "",
+                    "action": "Aim",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "024ec36a-d743-4ba3-8805-91271861af98",
+                    "path": "<DualShockGamepad>/rightStick/down",
                     "interactions": "",
                     "processors": "AxisDeadzone",
                     "groups": "",
@@ -187,6 +318,17 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "left",
+                    "id": "3115526c-422b-4835-aabd-68efef2644a9",
+                    "path": "<DualShockGamepad>/rightStick/left",
+                    "interactions": "",
+                    "processors": "AxisDeadzone",
+                    "groups": "",
+                    "action": "Aim",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "right",
                     "id": "74a960e1-0f04-497d-9172-7117fb929109",
                     "path": "<Gamepad>/rightStick/right",
@@ -196,6 +338,97 @@
                     "action": "Aim",
                     "isComposite": false,
                     "isPartOfComposite": true
+<<<<<<< Updated upstream:Fire In The Hole/Assets/Input/PlayerInput.inputactions
+=======
+                },
+                {
+                    "name": "right",
+                    "id": "52c87fdd-1887-48d8-acd2-9688b0369130",
+                    "path": "<DualShockGamepad>/rightStick/right",
+                    "interactions": "",
+                    "processors": "AxisDeadzone",
+                    "groups": "",
+                    "action": "Aim",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "114e8e31-bd97-4950-9283-a19bc6ddb90c",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "Press(behavior=2)",
+                    "processors": "",
+                    "groups": "Controller",
+                    "action": "Select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "Controller",
+                    "id": "4f5e7258-4e45-488f-a79b-f8af4fae6eb5",
+                    "path": "2DVector(mode=2)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MenuMove",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "4a0207ed-a7b7-45da-a319-f97befd4d9f0",
+                    "path": "<Gamepad>/leftStick/up",
+                    "interactions": "",
+                    "processors": "AxisDeadzone(min=0.1,max=0.925)",
+                    "groups": "",
+                    "action": "MenuMove",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "aeac84f3-88cf-40f0-8ac6-2b4372322b7d",
+                    "path": "<Gamepad>/leftStick/down",
+                    "interactions": "",
+                    "processors": "AxisDeadzone(min=0.1,max=0.925)",
+                    "groups": "",
+                    "action": "MenuMove",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "e3559665-159f-4680-8b85-4a702db5da75",
+                    "path": "<Gamepad>/leftStick/left",
+                    "interactions": "",
+                    "processors": "AxisDeadzone(min=0.1)",
+                    "groups": "",
+                    "action": "MenuMove",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "cb09c02a-73a6-4582-a270-99865a4f289f",
+                    "path": "<Gamepad>/leftStick/right",
+                    "interactions": "",
+                    "processors": "AxisDeadzone(min=0.1)",
+                    "groups": "",
+                    "action": "MenuMove",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "4d4f76c0-7535-4bc4-b3b5-f2ba71c1ed08",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MeleeSwing",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+>>>>>>> Stashed changes:Fire In The Hole/Assets/Input/PlayerControls.inputactions
                 }
             ]
         }

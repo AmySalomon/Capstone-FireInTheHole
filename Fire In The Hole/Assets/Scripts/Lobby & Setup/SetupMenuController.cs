@@ -61,8 +61,6 @@ public class SetupMenuController : MonoBehaviour
 
     public void DisableThisButton(Button button)
     {
-        if (!inputEnabled) { return; }
-
         buttonToDisable = button.gameObject.GetComponent<WhatButtonAmI>();
         JoinPlayer.Instance.DisableButton(buttonToDisable.buttonNumber);
         //the joinplayer instance will now trigger a bool, that disables this button in the update function of this class, for all versions of this class.

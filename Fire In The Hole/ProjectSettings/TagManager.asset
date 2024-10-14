@@ -3,18 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Wall
-  - Manager
-  - Hazard
+  tags: []
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Bullet
   - Water
   - UI
-  - 
   - 
   - 
   - 

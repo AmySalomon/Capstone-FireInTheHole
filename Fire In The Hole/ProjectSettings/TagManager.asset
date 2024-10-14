@@ -3,22 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Wall
-  - Manager
-<<<<<<< Updated upstream
-=======
-  - Hazard
-  - GolfHole
->>>>>>> Stashed changes
+  tags: []
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Bullet
   - Water
   - UI
-  - Golfball
   - 
   - 
   - 

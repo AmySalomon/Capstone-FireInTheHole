@@ -80,15 +80,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""MeleeSwing"",
-                    ""type"": ""Button"",
-                    ""id"": ""fb8eea8d-1d7e-4f0c-83c1-55dae830c903"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -151,6 +142,17 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""f116bd46-e5a6-4194-926f-895bc8449778"",
                     ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controller"",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9602227a-d61a-4e1a-9f4f-3d2c114bb559"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Controller"",
@@ -300,17 +302,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""action"": ""MenuMove"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""406fe91e-4139-4e0f-b7d3-5768c26516de"",
-                    ""path"": ""<Gamepad>/rightTrigger"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""MeleeSwing"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -353,7 +344,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_Player1_Dash = m_Player1.FindAction("Dash", throwIfNotFound: true);
         m_Player1_Aim = m_Player1.FindAction("Aim", throwIfNotFound: true);
         m_Player1_Select = m_Player1.FindAction("Select", throwIfNotFound: true);
-        m_Player1_MeleeSwing = m_Player1.FindAction("MeleeSwing", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -421,7 +411,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player1_Dash;
     private readonly InputAction m_Player1_Aim;
     private readonly InputAction m_Player1_Select;
-    private readonly InputAction m_Player1_MeleeSwing;
     public struct Player1Actions
     {
         private @PlayerControls m_Wrapper;
@@ -432,7 +421,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         public InputAction @Dash => m_Wrapper.m_Player1_Dash;
         public InputAction @Aim => m_Wrapper.m_Player1_Aim;
         public InputAction @Select => m_Wrapper.m_Player1_Select;
-        public InputAction @MeleeSwing => m_Wrapper.m_Player1_MeleeSwing;
         public InputActionMap Get() { return m_Wrapper.m_Player1; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -460,9 +448,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Select.started += instance.OnSelect;
             @Select.performed += instance.OnSelect;
             @Select.canceled += instance.OnSelect;
-            @MeleeSwing.started += instance.OnMeleeSwing;
-            @MeleeSwing.performed += instance.OnMeleeSwing;
-            @MeleeSwing.canceled += instance.OnMeleeSwing;
         }
 
         private void UnregisterCallbacks(IPlayer1Actions instance)
@@ -485,9 +470,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Select.started -= instance.OnSelect;
             @Select.performed -= instance.OnSelect;
             @Select.canceled -= instance.OnSelect;
-            @MeleeSwing.started -= instance.OnMeleeSwing;
-            @MeleeSwing.performed -= instance.OnMeleeSwing;
-            @MeleeSwing.canceled -= instance.OnMeleeSwing;
         }
 
         public void RemoveCallbacks(IPlayer1Actions instance)
@@ -531,6 +513,5 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         void OnDash(InputAction.CallbackContext context);
         void OnAim(InputAction.CallbackContext context);
         void OnSelect(InputAction.CallbackContext context);
-        void OnMeleeSwing(InputAction.CallbackContext context);
     }
 }

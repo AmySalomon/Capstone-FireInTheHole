@@ -11,7 +11,7 @@ public class WeaponPickup : MonoBehaviour
         if (collision.gameObject.tag == "Player") //if the gameobject is the player, update players weapon, then remove pickup
         {
             collision.gameObject.GetComponent<ShootProjectile>().UpdateWeapon(weapon);
-            Destroy(this);
+            Destroy(this.gameObject);
         }
     }
 

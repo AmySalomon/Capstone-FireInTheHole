@@ -323,6 +323,9 @@ MonoBehaviour:
   gunshot: {fileID: 8300000, guid: dba23b0180ad4f14ab7da7a658ca92bc, type: 3}
   launchForce: 400
   shootDelay: 0.2
+  defaultWeapon: {fileID: 11400000, guid: 7c44063ba9ea1ad49bc1e98ae64d75a9, type: 2}
+  currentWeapon: {fileID: 0}
+  currentGunSprite: {fileID: 3455350185084445936}
 --- !u!114 &3383853866549433534
 MonoBehaviour:
   m_ObjectHideFlags: 0

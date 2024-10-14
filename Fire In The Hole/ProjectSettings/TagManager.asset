@@ -7,6 +7,7 @@ TagManager:
   - Wall
   - Manager
   - Hazard
+  - GolfHole
   layers:
   - Default
   - TransparentFX
@@ -14,8 +15,8 @@ TagManager:
   - Bullet
   - Water
   - UI
-  - 
-  - 
+  - Golfball
+  - Player
   - 
   - 
   - 

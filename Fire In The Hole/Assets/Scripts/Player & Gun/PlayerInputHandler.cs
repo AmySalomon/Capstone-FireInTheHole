@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,18 +12,23 @@ public class PlayerInputHandler : MonoBehaviour
     private Dash playerDash;
     private ShootProjectile playerShoot;
     private PointAtVector playerAim;
+    private scr_meleeSwing playerCharge;
     [HideInInspector] public Sprite playerSprite;
 
     private PlayerControls controls;
 
+    private bool holdingSwing = false;
     private void Awake()
     {
         playerMovement = GetComponentInChildren<PlayerMovement>();
         playerDash = GetComponentInChildren<Dash>();
         playerShoot = GetComponentInChildren<ShootProjectile>();
         playerAim = GetComponentInChildren<PointAtVector>();
+        playerCharge = GetComponentInChildren<scr_meleeSwing>();
         controls = new PlayerControls();
     }
+
+   
 
     public void InitializePlayer(PlayerConfig pc)
     {
@@ -50,10 +56,17 @@ public class PlayerInputHandler : MonoBehaviour
         {
             OnAim(obj);
         }
+        if (obj.action.name == controls.Player1.MeleeSwing.name)
+        {
+            HoldSwing(obj);
+        }
         else
         {
             return;
         }
+
+
+   
     }
 
     public void OnMove(CallbackContext context)
@@ -67,7 +80,7 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void OnShoot(CallbackContext context)
     {
-        if (playerShoot != null)
+        if (playerShoot != null && context.performed)
         {
             Debug.Log("trying to shoot");
             playerShoot.ShootAction();
@@ -76,7 +89,7 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void OnDash(CallbackContext context)
     {
-        if (playerDash != null)
+        if (playerDash != null && context.performed)
         {
             Debug.Log("trying to dash");
             playerDash.PressDash();
@@ -91,4 +104,22 @@ public class PlayerInputHandler : MonoBehaviour
             playerAim.IsAiming(context.ReadValue<Vector2>());
         }
     }
+
+    public void HoldSwing(CallbackContext context)
+    {
+        
+        if (context.performed)
+        {
+            playerCharge.StartCharging();
+        }
+
+        if (context.canceled)
+        {
+            if (playerCharge.isCharging)
+            {
+                StartCoroutine(playerCharge.Swing());
+            }
+        }
+    }
+
 }

@@ -22,52 +22,20 @@ public class scr_meleeSwing : MonoBehaviour
     private bool canSwing = true;
     public float currentSwingForce;
 
-    private PlayerControls controls;
-    private InputAction swingAction;
-
     public Vector3 chargeBarOffset = new Vector3(0, 2, 0);
     public Vector2 chargeBarSize = new Vector2(2, 0.25f);
 
-    private void Awake()
-    {
-        controls = new PlayerControls();
-    }
+    public PlayerInputHandler myInput;
 
-    private void OnEnable()
-    {
-        swingAction = controls.Player1.MeleeSwing;
-        swingAction.Enable();
-        swingAction.started += OnSwingStarted;
-        swingAction.canceled += OnSwingReleased;
-    }
 
-    private void OnDisable()
-    {
-        swingAction.started -= OnSwingStarted;
-        swingAction.canceled -= OnSwingReleased;
-        swingAction.Disable();
-    }
-
-    private void OnSwingStarted(InputAction.CallbackContext context)
+    public void StartCharging()
     {
         if (canSwing)
         {
-            StartCharging();
+            isCharging = true;
+            currentSwingForce = minSwingForce;
+            StartCoroutine(ChargeSwingForce());
         }
-    }
-    private void OnSwingReleased(InputAction.CallbackContext context)
-    {
-        if (isCharging)
-        {
-            StartCoroutine(Swing());
-        }
-    }
-
-    private void StartCharging()
-    {
-        isCharging = true;
-        currentSwingForce = minSwingForce;
-        StartCoroutine(ChargeSwingForce());
     }
 
     private IEnumerator ChargeSwingForce()
@@ -80,7 +48,7 @@ public class scr_meleeSwing : MonoBehaviour
         }
     }
 
-    IEnumerator Swing()
+    public IEnumerator Swing()
     {
         isCharging = false;
         canSwing = false;

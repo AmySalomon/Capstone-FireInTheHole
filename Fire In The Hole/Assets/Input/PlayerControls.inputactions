@@ -58,6 +58,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "MeleeSwing",
+                    "type": "Button",
+                    "id": "c5b278f3-adf1-4f95-93dd-02778679e36e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Hold(duration=1.401298E-45)",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -120,17 +129,6 @@
                     "name": "",
                     "id": "f116bd46-e5a6-4194-926f-895bc8449778",
                     "path": "<Gamepad>/rightShoulder",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Controller",
-                    "action": "Shoot",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "9602227a-d61a-4e1a-9f4f-3d2c114bb559",
-                    "path": "<Gamepad>/rightTrigger",
                     "interactions": "",
                     "processors": "",
                     "groups": "Controller",
@@ -280,6 +278,17 @@
                     "action": "MenuMove",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "973a069a-b473-4da7-9455-16a2b76bb8b2",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller",
+                    "action": "MeleeSwing",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

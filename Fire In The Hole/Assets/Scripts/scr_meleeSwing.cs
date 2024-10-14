@@ -14,6 +14,12 @@ public class scr_meleeSwing : MonoBehaviour
     public float swingCooldown = 1f;
     public int playerDamage = 20;
 
+    private AudioSource audioPlayer;
+    public AudioClip missedHit;
+    public AudioClip weakHit;
+    public AudioClip normalHit;
+    public AudioClip strongHit;
+
     public Transform swingPoint;
     public LayerMask interactableLayers;
     public LayerMask playerLayer;//for pvp player layer
@@ -27,7 +33,10 @@ public class scr_meleeSwing : MonoBehaviour
 
     public PlayerInputHandler myInput;
 
-
+    private void Awake()
+    {
+        audioPlayer = GetComponent<AudioSource>();
+    }
     public void StartCharging()
     {
         if (canSwing)
@@ -61,10 +70,19 @@ public class scr_meleeSwing : MonoBehaviour
             Rigidbody2D rb = hit.collider.GetComponent<Rigidbody2D>();
             if (rb != null)
             {
+                if (currentSwingForce < 600) audioPlayer.PlayOneShot(weakHit);
+                else if (currentSwingForce < 1500) audioPlayer.PlayOneShot(normalHit);
+                else audioPlayer.PlayOneShot(strongHit);
+
+
                 Vector2 forceDirection = (hit.collider.transform.position - swingPoint.position).normalized;
                 rb.AddForce(forceDirection * currentSwingForce);
             }
 
+        }
+        if (hits.Length == 0)
+        {
+            audioPlayer.PlayOneShot(missedHit);
         }
         currentSwingForce = minSwingForce;
 

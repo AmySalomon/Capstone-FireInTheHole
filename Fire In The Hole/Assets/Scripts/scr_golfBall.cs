@@ -13,12 +13,17 @@ public class scr_golfBall : MonoBehaviour
     private bool isPlayerInRange = false;
     private scr_meleeSwing playerGolfSwing;
 
+    private AudioSource audioSource;
+    public AudioClip bounce1;
+    public AudioClip bounce2;
+    public AudioClip bounce3;
+
     bool tempPlayerCheck = false;
 
     private void Start()
     {
         //put initializing code here and delete Temp
-
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -74,6 +79,24 @@ public class scr_golfBall : MonoBehaviour
         {
             Destroy(gameObject);
             Debug.Log("Ball entered the hole! Destroying ball.");
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        int golfSwing = Random.Range(1, 4);
+
+        switch (golfSwing)
+        {
+            case 1:
+                audioSource.PlayOneShot(bounce1);
+                break;
+            case 2:
+                audioSource.PlayOneShot(bounce2);
+                break;
+            case 3:
+                audioSource.PlayOneShot(bounce3);
+                break;
         }
     }
 

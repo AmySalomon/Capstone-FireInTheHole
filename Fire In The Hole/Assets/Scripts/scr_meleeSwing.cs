@@ -84,6 +84,7 @@ public class scr_meleeSwing : MonoBehaviour
         {
             audioPlayer.PlayOneShot(missedHit);
         }
+
         currentSwingForce = minSwingForce;
 
         yield return new WaitForSeconds(swingCooldown);

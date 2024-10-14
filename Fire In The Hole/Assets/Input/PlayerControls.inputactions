@@ -58,15 +58,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "MeleeSwing",
-                    "type": "Button",
-                    "id": "fb8eea8d-1d7e-4f0c-83c1-55dae830c903",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -289,17 +280,6 @@
                     "action": "MenuMove",
                     "isComposite": false,
                     "isPartOfComposite": true
-                },
-                {
-                    "name": "",
-                    "id": "406fe91e-4139-4e0f-b7d3-5768c26516de",
-                    "path": "<Gamepad>/rightTrigger",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "MeleeSwing",
-                    "isComposite": false,
-                    "isPartOfComposite": false
                 }
             ]
         }

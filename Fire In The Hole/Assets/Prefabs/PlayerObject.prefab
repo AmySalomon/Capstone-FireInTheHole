@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 821541901503348090}
   - component: {fileID: 7895299993588267308}
   m_Layer: 7
-  m_Name: ChargeBar
+  m_Name: DashChargeBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

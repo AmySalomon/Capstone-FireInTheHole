@@ -49,7 +49,8 @@ public class JoinPlayer : MonoBehaviour
         playerConfigs[index].IsReady = true;
         if (playerConfigs.Count >= MinPlayers && playerConfigs.TrueForAll(p => p.IsReady == true))
         {
-            SceneManager.LoadScene(sceneToGoTo);
+            if (LevelSelectManager.LSManager.chosenLevel != null) SceneManager.LoadScene(LevelSelectManager.LSManager.chosenLevel);
+            else SceneManager.LoadScene(sceneToGoTo);
         }
     }
 

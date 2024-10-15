@@ -569,6 +569,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   randomLevel: 0
+  chosenLevel: 
+  playerSetup: PlayerSetup
 --- !u!1 &384395137
 GameObject:
   m_ObjectHideFlags: 0

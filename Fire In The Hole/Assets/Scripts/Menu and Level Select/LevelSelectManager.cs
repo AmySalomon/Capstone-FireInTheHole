@@ -14,6 +14,8 @@ public class LevelSelectManager : MonoBehaviour
     //For Loading and Destroying
     public static LevelSelectManager LSManager;
 
+    public string playerSetup;
+
     private void Awake()
     {
         if (LSManager != null)
@@ -30,10 +32,10 @@ public class LevelSelectManager : MonoBehaviour
     public void BackToMain()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("LevelSelect");
         chosenLevel = "Main Menu (NOT WORKING YET)";
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = false;
+        SceneManager.LoadScene("LevelSelect");
     }
 
     public void LevelRandom()
@@ -46,23 +48,23 @@ public class LevelSelectManager : MonoBehaviour
         Debug.Log(randomLevel);
         if (randomLevel == 1)
         {
-            SceneManager.LoadScene("Blacklight Resized");
             chosenLevel = "Blacklight Resized";
+            SceneManager.LoadScene(playerSetup);
         }
         else if (randomLevel == 2)
         {
-            SceneManager.LoadScene("Dinosaur Resized");
             chosenLevel = "Dinosaur Resized";
+            SceneManager.LoadScene(playerSetup);
         }
         else if (randomLevel == 3)
         {
-            SceneManager.LoadScene("Volcano Resized");
             chosenLevel = "Volcano Resized";
+            SceneManager.LoadScene(playerSetup);
         }
         else if (randomLevel == 4)
         {
-            SceneManager.LoadScene("Pirate Resized");
             chosenLevel = "Pirate Resized";
+            SceneManager.LoadScene(playerSetup);
         }
         else
         {
@@ -73,37 +75,39 @@ public class LevelSelectManager : MonoBehaviour
     public void LevelBlacklight()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Blacklight Resized");
         chosenLevel = "Blacklight Resized";
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = false;
+        SceneManager.LoadScene(playerSetup);
     }
 
     public void LevelDinosaur()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Dinosaur Resized");
         chosenLevel = "Dinosaur Resized";
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = false;
+        SceneManager.LoadScene(playerSetup);
     }
 
     public void LevelVolcano()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Volcano Resized");
         chosenLevel = "Volcano Resized";
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = false;
+        SceneManager.LoadScene(playerSetup);
     }
+        
 
     public void LevelPirate()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Pirate Resized");
         chosenLevel = "Pirate Resized";
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = false;
+        SceneManager.LoadScene(playerSetup);
+        
     }
 }
 

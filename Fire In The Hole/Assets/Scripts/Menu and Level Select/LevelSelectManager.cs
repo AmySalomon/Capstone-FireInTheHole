@@ -12,17 +12,17 @@ public class LevelSelectManager : MonoBehaviour
     public string chosenLevel;
 
     //For Loading and Destroying
-    public static SceneMusic LevelSelectManager;
+    public static LevelSelectManager LSManager;
 
     private void Awake()
     {
-        if (LevelSelectManager != null)
+        if (LSManager != null)
         {
             Destroy(gameObject);
         }
         else
         {
-            LevelSelectManager = this;
+            LSManager = this;
         }
         DontDestroyOnLoad(this.gameObject);
     }

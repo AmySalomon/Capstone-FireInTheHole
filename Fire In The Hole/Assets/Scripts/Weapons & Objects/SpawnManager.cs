@@ -62,7 +62,7 @@ public class SpawnManager : MonoBehaviour
         yield return null;
     }
 
-    private bool spawnPosIsLegal(Vector2 pos, float radius = .5f)
+    private bool spawnPosIsLegal(Vector2 pos, float radius = 1f)
     {
         Vector2 randomSpawnPosition = new Vector2(Random.Range(levelXMin, levelXMax), Random.Range(levelYMin, levelYMax));
 

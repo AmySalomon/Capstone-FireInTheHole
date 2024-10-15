@@ -11,12 +11,12 @@ public class LevelSelectManager : MonoBehaviour
     public void BackToMain()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("LevelSelect");
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = false;
     }
 
-    public void RandomLevel()
+    public void LevelRandom()
     {
         Time.timeScale = 1f;
         Cursor.lockState = CursorLockMode.Confined;
@@ -42,11 +42,11 @@ public class LevelSelectManager : MonoBehaviour
         }
         else
         {
-            Debug.LogError("LevelSelectManager: Randomizer Broke.");
+            Debug.LogError("LevelSelectManager: Randomizer Broke. (LevelRandom)");
         }
     }
 
-    public void Blacklight()
+    public void LevelBlacklight()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("Blacklight Resized");
@@ -54,7 +54,7 @@ public class LevelSelectManager : MonoBehaviour
         Cursor.visible = false;
     }
 
-    public void Dinosaur()
+    public void LevelDinosaur()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("Dinosaur Resized");
@@ -62,7 +62,7 @@ public class LevelSelectManager : MonoBehaviour
         Cursor.visible = false;
     }
 
-    public void Volcano()
+    public void LevelVolcano()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("Volcano Resized");
@@ -70,7 +70,7 @@ public class LevelSelectManager : MonoBehaviour
         Cursor.visible = false;
     }
 
-    public void Pirate()
+    public void LevelPirate()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("Pirate Resized");

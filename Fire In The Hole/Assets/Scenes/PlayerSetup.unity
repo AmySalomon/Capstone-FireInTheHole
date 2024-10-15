@@ -158,7 +158,7 @@ MonoBehaviour:
   shouldDisableButton2: 0
   shouldDisableButton3: 0
   shouldDisableButton4: 0
-  sceneToGoTo: Blacklight
+  sceneToGoTo: LevelSelect
 --- !u!4 &30369629
 Transform:
   m_ObjectHideFlags: 0

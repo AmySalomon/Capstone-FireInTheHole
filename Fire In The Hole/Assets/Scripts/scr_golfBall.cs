@@ -14,13 +14,16 @@ public class scr_golfBall : MonoBehaviour
     private scr_meleeSwing playerGolfSwing;
     private Rigidbody2D myRigidbody;
     private SpriteRenderer mySprite;
+    private TrailRenderer myTrail;
 
     private AudioSource audioSource;
     public AudioClip bounce1;
     public AudioClip bounce2;
     public AudioClip bounce3;
+    public Gradient killSpeedGradient;
+    public Gradient normalGradient;
 
-    public float minVelocityToKill = 7;
+    public float minVelocityToKill = 8;
 
     bool tempPlayerCheck = false;
 
@@ -30,6 +33,7 @@ public class scr_golfBall : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         myRigidbody = GetComponent<Rigidbody2D>();
         mySprite = GetComponent<SpriteRenderer>();
+        myTrail = GetComponent<TrailRenderer>();
     }
 
     private void Update()
@@ -40,12 +44,16 @@ public class scr_golfBall : MonoBehaviour
         {
             gameObject.tag = "Bullet";
             mySprite.color = Color.red;
+            myTrail.colorGradient = killSpeedGradient;
+            gameObject.layer = 3;
 
         }
         else
         {
             gameObject.tag = "Ball";
             mySprite.color = Color.white;
+            myTrail.colorGradient = normalGradient;
+            gameObject.layer = 6;
         }
             
         /*

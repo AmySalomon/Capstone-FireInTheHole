@@ -15,10 +15,11 @@ public class PlayerDeath : MonoBehaviour
 
     public float respawnTime;
 
-    private bool playerIsDead = false;
+    [HideInInspector] public bool playerIsDead = false;
     private float timer = 0;
     private AudioSource killSound;
     private SpriteRenderer deathIcon;
+    private Dash dash;
 
     private Vector2 moveToPosition;
 
@@ -26,6 +27,7 @@ public class PlayerDeath : MonoBehaviour
     {
         killSound = GetComponent<AudioSource>();
         deathIcon = GetComponent<SpriteRenderer>();
+        dash = GetComponentInChildren<Dash>();
         deathIcon.enabled = false;
     }
     void Update()
@@ -66,6 +68,7 @@ public class PlayerDeath : MonoBehaviour
             playerStuff.SetActive(true);
             playerCanvasStuff.SetActive(true);
             timer = 0;
+            dash.dashRechargeTimer = dash.dashRechargeAmount;
             StopCoroutine(SpawnPlayer());
         }
 

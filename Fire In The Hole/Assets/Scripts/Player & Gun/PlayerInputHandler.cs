@@ -17,6 +17,7 @@ public class PlayerInputHandler : MonoBehaviour
     [HideInInspector] public Sprite playerSprite;
 
     private PlayerControls controls;
+    private PlayerDeath playerDead;
 
     private bool holdingSwing = false;
     private void Awake()
@@ -25,6 +26,7 @@ public class PlayerInputHandler : MonoBehaviour
         playerDash = GetComponentInChildren<Dash>();
         playerShoot = GetComponentInChildren<ShootProjectile>();
         playerCharge = GetComponentInChildren<scr_meleeSwing>();
+        playerDead = GetComponent<PlayerDeath>();
         controls = new PlayerControls();
     }
 
@@ -80,7 +82,7 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void OnShoot(CallbackContext context)
     {
-        if (playerShoot != null && context.performed && playerCharge.isCharging == false && playerDash.isDashing == false)
+        if (playerShoot != null && context.performed && playerCharge.isCharging == false && playerDash.isDashing == false && playerDead.playerIsDead == false)
         {
             Debug.Log("trying to shoot");
             playerShoot.ShootAction();
@@ -89,7 +91,7 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void OnDash(CallbackContext context)
     {
-        if (playerDash != null && context.performed && playerCharge.isCharging == false)
+        if (playerDash != null && context.performed && playerCharge.isCharging == false && playerDead.playerIsDead == false)
         {
             Debug.Log("trying to dash");
             playerDash.PressDash();
@@ -108,14 +110,14 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void HoldSwing(CallbackContext context)
     {
-        if (context.performed)
+        if (context.performed && playerDead.playerIsDead == false)
         {
             if (playerCharge.isCharging) playerDash.dashChargeBar.gameObject.SetActive(false);
             playerCharge.StartCharging();
             
         }
 
-        if (context.canceled)
+        if (context.canceled && playerDead.playerIsDead == false)
         {
             if (playerCharge.isCharging)
             {

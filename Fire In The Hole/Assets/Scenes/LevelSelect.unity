@@ -208,7 +208,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 357236307}
         m_TargetAssemblyTypeName: LevelSelectManager, Assembly-CSharp
-        m_MethodName: Blacklight
+        m_MethodName: LevelBlacklight
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

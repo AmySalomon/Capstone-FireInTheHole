@@ -38,7 +38,7 @@ public class SpawnManager : MonoBehaviour
 
     IEnumerator SpawnBall()
     {
-        if (spawnPosIsLegal(transform.position) == true)
+        if (spawnPosIsLegal() == true)
         {
             golfBallTimer = 0;
             needAGolfSpawn = false;
@@ -51,7 +51,7 @@ public class SpawnManager : MonoBehaviour
 
     IEnumerator SpawnWeapon()
     {
-        if (spawnPosIsLegal(transform.position) == true)
+        if (spawnPosIsLegal() == true)
         {
             weaponTimer = 0;
             needAWeaponSpawn = false;
@@ -62,21 +62,22 @@ public class SpawnManager : MonoBehaviour
         yield return null;
     }
 
-    private bool spawnPosIsLegal(Vector2 pos, float radius = 1f)
+    private bool spawnPosIsLegal(float radius = .5f)
     {
         Vector2 randomSpawnPosition = new Vector2(Random.Range(levelXMin, levelXMax), Random.Range(levelYMin, levelYMax));
 
         transform.position = randomSpawnPosition;
 
-        RaycastHit2D[] colliders = Physics2D.CircleCastAll(pos, radius, transform.forward, 0);
+        Collider2D collider = Physics2D.OverlapCircle(transform.position, radius);
 
-        foreach (RaycastHit2D collision in colliders)
+        if (collider == null)
         {
-            GameObject go = collision.collider.gameObject;
-            Debug.Log(go);
+            return true;
+        }
+        else
+        {
+            Debug.Log(collider.gameObject.name);
             return false;
         }
-
-        return true;
     }
 }

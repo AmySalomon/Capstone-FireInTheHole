@@ -9,14 +9,6 @@ public class ChargeBar : MonoBehaviour
 	public Gradient gradient;
 	public Image fill;
 
-	public void SetMaxCharge(float charge)
-	{
-		slider.maxValue = 0.5f;
-		slider.value = 0;
-
-		fill.color = gradient.Evaluate(1f);
-	}
-
 	public void SetCharge(float charge)
 	{
 		slider.value = charge;

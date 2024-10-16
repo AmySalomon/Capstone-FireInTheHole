@@ -33,9 +33,12 @@ public class scr_meleeSwing : MonoBehaviour
 
     public PlayerInputHandler myInput;
 
+    public ChargeBar swingChargeBar;
+
     private void Awake()
     {
         audioPlayer = GetComponent<AudioSource>();
+        swingChargeBar.gameObject.SetActive(false);
     }
     public void StartCharging()
     {
@@ -53,6 +56,8 @@ public class scr_meleeSwing : MonoBehaviour
         {
             currentSwingForce = Mathf.Clamp(currentSwingForce + chargeRate * Time.deltaTime, minSwingForce, maxSwingForce);
             Debug.Log(currentSwingForce);
+            swingChargeBar.gameObject.SetActive(true);
+            swingChargeBar.SetCharge(currentSwingForce);
             yield return null;
         }
     }
@@ -61,6 +66,7 @@ public class scr_meleeSwing : MonoBehaviour
     {
         isCharging = false;
         canSwing = false;
+        swingChargeBar.gameObject.SetActive(false);
 
         Debug.Log($"Swing with force: {currentSwingForce}");
 

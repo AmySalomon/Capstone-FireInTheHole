@@ -11,7 +11,8 @@ public class PlayerInputHandler : MonoBehaviour
     private PlayerMovement playerMovement;
     private Dash playerDash;
     private ShootProjectile playerShoot;
-    private PointAtVector playerAim;
+    public PointAtVector playerAim;
+    public PointAtVector playerSwingAim;
     private scr_meleeSwing playerCharge;
     [HideInInspector] public Sprite playerSprite;
 
@@ -23,7 +24,6 @@ public class PlayerInputHandler : MonoBehaviour
         playerMovement = GetComponentInChildren<PlayerMovement>();
         playerDash = GetComponentInChildren<Dash>();
         playerShoot = GetComponentInChildren<ShootProjectile>();
-        playerAim = GetComponentInChildren<PointAtVector>();
         playerCharge = GetComponentInChildren<scr_meleeSwing>();
         controls = new PlayerControls();
     }
@@ -80,7 +80,7 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void OnShoot(CallbackContext context)
     {
-        if (playerShoot != null && context.performed)
+        if (playerShoot != null && context.performed && playerCharge.isCharging == false && playerDash.isDashing == false)
         {
             Debug.Log("trying to shoot");
             playerShoot.ShootAction();
@@ -89,7 +89,7 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void OnDash(CallbackContext context)
     {
-        if (playerDash != null && context.performed)
+        if (playerDash != null && context.performed && playerCharge.isCharging == false)
         {
             Debug.Log("trying to dash");
             playerDash.PressDash();
@@ -102,21 +102,24 @@ public class PlayerInputHandler : MonoBehaviour
         {
             Debug.Log("trying to aim");
             playerAim.IsAiming(context.ReadValue<Vector2>());
+            playerSwingAim.IsAiming(context.ReadValue<Vector2>());
         }
     }
 
     public void HoldSwing(CallbackContext context)
     {
-        
         if (context.performed)
         {
+            if (playerCharge.isCharging) playerDash.dashChargeBar.gameObject.SetActive(false);
             playerCharge.StartCharging();
+            
         }
 
         if (context.canceled)
         {
             if (playerCharge.isCharging)
             {
+                playerDash.dashChargeBar.gameObject.SetActive(true);
                 StartCoroutine(playerCharge.Swing());
             }
         }

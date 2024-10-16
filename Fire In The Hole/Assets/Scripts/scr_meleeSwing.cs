@@ -35,10 +35,21 @@ public class scr_meleeSwing : MonoBehaviour
 
     public ChargeBar swingChargeBar;
 
+    public SpriteRenderer crosshair;
+    public PointAtVector gunAiming;
+    public PointAtVector golfAiming;
+    public SpriteRenderer golfCrosshair;
+
+    private SpritePicker spriteObject;
+    private SpriteRenderer playerSprite;
+
     private void Awake()
     {
         audioPlayer = GetComponent<AudioSource>();
         swingChargeBar.gameObject.SetActive(false);
+        spriteObject = GetComponentInChildren<SpritePicker>();
+        playerSprite = spriteObject.gameObject.GetComponent<SpriteRenderer>();
+        golfCrosshair.enabled = false;
     }
     public void StartCharging()
     {
@@ -56,6 +67,14 @@ public class scr_meleeSwing : MonoBehaviour
         {
             currentSwingForce = Mathf.Clamp(currentSwingForce + chargeRate * Time.deltaTime, minSwingForce, maxSwingForce);
             Debug.Log(currentSwingForce);
+
+            gunAiming.enabled = false;
+            gunAiming.gameObject.transform.Rotate(0, 0, 4);
+            if(playerSprite.flipX == true) gunAiming.gameObject.transform.localPosition = new Vector2(0.5f, 0);
+            else gunAiming.gameObject.transform.localPosition = new Vector2(-0.5f, 0);
+
+            golfCrosshair.enabled = true;
+            crosshair.enabled = false;
             swingChargeBar.gameObject.SetActive(true);
             swingChargeBar.SetCharge(currentSwingForce);
             yield return null;
@@ -66,6 +85,12 @@ public class scr_meleeSwing : MonoBehaviour
     {
         isCharging = false;
         canSwing = false;
+
+        gunAiming.gameObject.transform.localPosition = new Vector2(0, 0);
+        gunAiming.enabled = true;
+
+        golfCrosshair.enabled = false;
+        crosshair.enabled = true;
         swingChargeBar.gameObject.SetActive(false);
 
         Debug.Log($"Swing with force: {currentSwingForce}");

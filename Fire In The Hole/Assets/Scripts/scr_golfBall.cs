@@ -12,11 +12,15 @@ public class scr_golfBall : MonoBehaviour
     private GameObject directionArrowInstance;
     private bool isPlayerInRange = false;
     private scr_meleeSwing playerGolfSwing;
+    private Rigidbody2D myRigidbody;
+    private SpriteRenderer mySprite;
 
     private AudioSource audioSource;
     public AudioClip bounce1;
     public AudioClip bounce2;
     public AudioClip bounce3;
+
+    public float minVelocityToKill = 7;
 
     bool tempPlayerCheck = false;
 
@@ -24,10 +28,27 @@ public class scr_golfBall : MonoBehaviour
     {
         //put initializing code here and delete Temp
         audioSource = GetComponent<AudioSource>();
+        myRigidbody = GetComponent<Rigidbody2D>();
+        mySprite = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
     {
+        if (myRigidbody.velocity != Vector2.zero) Debug.Log(myRigidbody.velocity);
+
+        if (myRigidbody.velocity.x > minVelocityToKill || myRigidbody.velocity.y > minVelocityToKill || myRigidbody.velocity.x < -minVelocityToKill || myRigidbody.velocity.y < -minVelocityToKill)
+        {
+            gameObject.tag = "Bullet";
+            mySprite.color = Color.red;
+
+        }
+        else
+        {
+            gameObject.tag = "Ball";
+            mySprite.color = Color.white;
+        }
+            
+        /*
         if (player == null) //Temp replacement as instantialized players arent being assigned balls properly
         {
             Debug.Log("Assign Player In Inspector! [TEMP]");
@@ -52,7 +73,9 @@ public class scr_golfBall : MonoBehaviour
         else
         {
             HideDirectionArrow();
-        }  
+        }
+        */
+
     }
 
     private void ShowDirectionArrow()

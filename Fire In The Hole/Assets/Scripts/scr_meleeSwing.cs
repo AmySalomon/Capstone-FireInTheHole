@@ -66,7 +66,7 @@ public class scr_meleeSwing : MonoBehaviour
         while (isCharging)
         {
             currentSwingForce = Mathf.Clamp(currentSwingForce + chargeRate * Time.deltaTime, minSwingForce, maxSwingForce);
-            Debug.Log(currentSwingForce);
+            //Debug.Log(currentSwingForce);
 
             gunAiming.enabled = false;
             gunAiming.gameObject.transform.Rotate(0, 0, 2 * (currentSwingForce / 200));

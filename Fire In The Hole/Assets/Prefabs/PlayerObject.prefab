@@ -437,7 +437,7 @@ MonoBehaviour:
   minSwingForce: 100
   maxSwingForce: 2000
   chargeRate: 1000
-  swingCooldown: 1
+  swingCooldown: 0.5
   playerDamage: 20
   missedHit: {fileID: 8300000, guid: a64d61df650099d4fa14abc6fc3e0f84, type: 3}
   weakHit: {fileID: 8300000, guid: 7db9957c0e8850448896903cd67c2282, type: 3}

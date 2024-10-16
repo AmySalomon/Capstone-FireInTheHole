@@ -69,7 +69,7 @@ public class scr_meleeSwing : MonoBehaviour
             Debug.Log(currentSwingForce);
 
             gunAiming.enabled = false;
-            gunAiming.gameObject.transform.Rotate(0, 0, 4);
+            gunAiming.gameObject.transform.Rotate(0, 0, 2 * (currentSwingForce / 200));
             if(playerSprite.flipX == true) gunAiming.gameObject.transform.localPosition = new Vector2(0.5f, 0);
             else gunAiming.gameObject.transform.localPosition = new Vector2(-0.5f, 0);
 
@@ -107,7 +107,7 @@ public class scr_meleeSwing : MonoBehaviour
 
 
                 Vector2 forceDirection = (hit.collider.transform.position - swingPoint.position).normalized;
-                rb.AddForce(forceDirection * currentSwingForce);
+                rb.AddForce(forceDirection * (currentSwingForce / 2));
             }
 
         }

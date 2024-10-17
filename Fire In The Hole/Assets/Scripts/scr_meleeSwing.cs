@@ -108,6 +108,11 @@ public class scr_meleeSwing : MonoBehaviour
 
                 Vector2 forceDirection = (hit.collider.transform.position - swingPoint.position).normalized;
                 rb.AddForce(forceDirection * (currentSwingForce / 2));
+                //if you hit a golf ball, tell the golf ball that you hit it
+                if (rb.gameObject.TryGetComponent<scr_golfBall>(out scr_golfBall golfBall))
+                {
+                    golfBall.playerHitter = myInput.gameObject;
+                }
             }
 
         }

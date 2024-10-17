@@ -16,21 +16,28 @@ public class SpawnManager : MonoBehaviour
     private bool needAGolfSpawn = false;
     private bool needAWeaponSpawn = false;
 
+    //Timers until next spawncheck occurs
     private float golfBallTimer = 0;
     private float weaponTimer = 0;
 
     public float SpawnTimeForGolfBalls;
     public float SpawnTimeForWeapons;
+
+    //Maximum amount of weapon powerups / golfballs that can be on screen at once
+    public float golfBallLimit = 3;
+    public float weaponLimit = 4;
     void Update()
     {
         golfBallTimer += Time.deltaTime;
         weaponTimer += Time.deltaTime;
 
-        if (golfBallTimer > SpawnTimeForGolfBalls) needAGolfSpawn = true;
+        //when the timer elapses and there aren't more than golfBallLimit balls on screen, spawn a golfball
+        if (golfBallTimer > SpawnTimeForGolfBalls && GolfBallLimitCheck()) needAGolfSpawn = true;
 
         if (needAGolfSpawn == true) StartCoroutine(SpawnBall());
 
-        if (weaponTimer > SpawnTimeForWeapons) needAWeaponSpawn = true;
+        //when the timer elapses and there aren't more than weaponLimit weapons on screen, spawn a weapon
+        if (weaponTimer > SpawnTimeForWeapons && WeaponLimitCheck()) needAWeaponSpawn = true;
 
         if (needAWeaponSpawn == true) StartCoroutine(SpawnWeapon());
 
@@ -79,5 +86,25 @@ public class SpawnManager : MonoBehaviour
             Debug.Log(collider.gameObject.name);
             return false;
         }
+    }
+
+    //returns true if there are not at maximum amount of golf balls on screen
+    public bool GolfBallLimitCheck()
+    {
+        int amountFound;
+        amountFound = FindObjectsOfType<scr_golfBall>().Length;
+        Debug.Log("found " + amountFound + " golf balls");
+        golfBallTimer = 0;
+        return amountFound < golfBallLimit;
+    }
+
+    //returns true if there are not at maximum amount of power ups on screen
+    public bool WeaponLimitCheck()
+    {
+        int amountFound;
+        amountFound = FindObjectsOfType<WeaponPickup>().Length;
+        Debug.Log("found " + amountFound + " weapons");
+        weaponTimer = 0;
+        return amountFound < weaponLimit;
     }
 }

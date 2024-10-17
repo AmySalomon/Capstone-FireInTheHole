@@ -27,6 +27,9 @@ public class scr_golfBall : MonoBehaviour
 
     bool tempPlayerCheck = false;
 
+    //player who last hit the golfball
+    public GameObject playerHitter;
+
     private void Start()
     {
         //put initializing code here and delete Temp
@@ -38,7 +41,11 @@ public class scr_golfBall : MonoBehaviour
 
     private void Update()
     {
-        //if (myRigidbody.velocity != Vector2.zero) Debug.Log(myRigidbody.velocity);
+        //if speed of the golf ball reaches zero, reset who would get the point
+        if (myRigidbody.velocity == Vector2.zero)
+        {
+            playerHitter = null;
+        }
 
         if (myRigidbody.velocity.x > minVelocityToKill || myRigidbody.velocity.y > minVelocityToKill || myRigidbody.velocity.x < -minVelocityToKill || myRigidbody.velocity.y < -minVelocityToKill)
         {
@@ -106,8 +113,8 @@ public class scr_golfBall : MonoBehaviour
     {
         if (other.CompareTag(golfHoleTag))
         {
+            Debug.Log("Scored on by " + playerHitter.name);
             Destroy(gameObject);
-            Debug.Log("Ball entered the hole! Destroying ball.");
         }
     }
 

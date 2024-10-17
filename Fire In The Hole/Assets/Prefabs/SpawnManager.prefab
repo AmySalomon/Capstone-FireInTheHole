@@ -51,8 +51,10 @@ MonoBehaviour:
   levelXMax: 8.5
   levelYMin: -5
   levelYMax: 5
-  SpawnTimeForGolfBalls: 3
-  SpawnTimeForWeapons: 5
+  SpawnTimeForGolfBalls: 5
+  SpawnTimeForWeapons: 10
+  golfBallLimit: 3
+  weaponLimit: 3
 --- !u!58 &455177589352024495
 CircleCollider2D:
   m_ObjectHideFlags: 0

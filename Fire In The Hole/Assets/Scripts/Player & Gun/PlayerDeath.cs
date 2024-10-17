@@ -20,6 +20,7 @@ public class PlayerDeath : MonoBehaviour
     private AudioSource killSound;
     private SpriteRenderer deathIcon;
     private Dash dash;
+    private ShootProjectile gun;
 
     private Vector2 moveToPosition;
 
@@ -28,6 +29,7 @@ public class PlayerDeath : MonoBehaviour
         killSound = GetComponent<AudioSource>();
         deathIcon = GetComponent<SpriteRenderer>();
         dash = GetComponentInChildren<Dash>();
+        gun = GetComponentInChildren<ShootProjectile>();
         deathIcon.enabled = false;
     }
     void Update()
@@ -69,6 +71,7 @@ public class PlayerDeath : MonoBehaviour
             playerCanvasStuff.SetActive(true);
             timer = 0;
             dash.dashRechargeTimer = dash.dashRechargeAmount;
+            gun.UpdateWeapon(gun.defaultWeapon);
             StopCoroutine(SpawnPlayer());
         }
 

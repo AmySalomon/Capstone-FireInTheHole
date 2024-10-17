@@ -16,9 +16,9 @@ MonoBehaviour:
   bulletRange: 0
   ammoMax: 10
   magazineCount: 999999
-  shootDelay: 0.2
+  shootDelay: 0.25
   reloadSpeed: 0
-  launchForce: 400
+  launchForce: 330
   screenShake: 0.08
   automatic: 1
   gunshot: {fileID: 0}

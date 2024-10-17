@@ -113,7 +113,7 @@ public class scr_golfBall : MonoBehaviour
     {
         if (other.CompareTag(golfHoleTag))
         {
-            Debug.Log("Scored on by " + playerHitter.name);
+            playerHitter.GetComponentInChildren<PlayerScore>().IncreaseScore();
             Destroy(gameObject);
         }
     }

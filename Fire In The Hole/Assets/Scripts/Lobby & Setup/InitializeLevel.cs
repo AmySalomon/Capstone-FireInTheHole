@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InitializeLevel : MonoBehaviour
 {
-    [SerializeField] private Transform[] playerSpawns;
+    [SerializeField] private Transform[] playerSpawns, playerScores;
     [SerializeField] private GameObject playerPrefab;
     // Start is called before the first frame update
     void Start()
@@ -14,6 +14,7 @@ public class InitializeLevel : MonoBehaviour
         {
             var player = Instantiate(playerPrefab, playerSpawns[i].position, playerSpawns[i].rotation, gameObject.transform);
             player.GetComponentInChildren<PlayerInputHandler>().InitializePlayer(playerConfigs[i]);
+            player.GetComponentInChildren<PlayerScore>().myScore = playerScores[i];
         }
     }
 

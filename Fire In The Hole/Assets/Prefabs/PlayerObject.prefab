@@ -329,6 +329,7 @@ GameObject:
   - component: {fileID: 5428579101130468382}
   - component: {fileID: 740412417887625949}
   - component: {fileID: 4169516061372755092}
+  - component: {fileID: 2344058164890448738}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -379,6 +380,8 @@ MonoBehaviour:
   defaultWeapon: {fileID: 11400000, guid: 7c44063ba9ea1ad49bc1e98ae64d75a9, type: 2}
   currentWeapon: {fileID: 0}
   currentGunSprite: {fileID: 3455350185084445936}
+  reloading: 0
+  isTryingToShoot: 0
 --- !u!114 &3383853866549433534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -747,6 +750,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2344058164890448738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3358283545364179000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ecd47018b699264f891f5b50ab5b11d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myScore: {fileID: 0}
 --- !u!1 &3775079352876674912
 GameObject:
   m_ObjectHideFlags: 0

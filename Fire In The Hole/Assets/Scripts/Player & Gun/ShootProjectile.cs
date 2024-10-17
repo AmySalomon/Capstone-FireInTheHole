@@ -77,16 +77,16 @@ public class ShootProjectile : MonoBehaviour
             audioPlayer.pitch = Random.Range(0.9f, 1.1f);
             audioPlayer.PlayOneShot(gunshot, 1f);
             if (currentWeapon.shotgun)
-            { //god why did I do this
+            { //shotgun shoots three bullets, slightly down, forward, and slightly up
                 Rigidbody2D bulletInstance;
-                bulletInstance = Instantiate(bullet, barrelEnd.position, barrelEnd.rotation) as Rigidbody2D;
-                bulletInstance.AddForce(-barrelEnd.up * launchForce);
+                bulletInstance = Instantiate(bullet, barrelEnd.position, Quaternion.AngleAxis(-15, barrelEnd.forward)*barrelEnd.rotation) as Rigidbody2D;
+                bulletInstance.AddForce(Quaternion.AngleAxis(15, -barrelEnd.forward)*-barrelEnd.up * launchForce);
                 Rigidbody2D bulletInstanceTwo;
                 bulletInstanceTwo = Instantiate(bullet, barrelEnd.position, barrelEnd.rotation) as Rigidbody2D;
-                bulletInstanceTwo.AddForce(-barrelEnd.forward * launchForce);
+                bulletInstanceTwo.AddForce(-barrelEnd.up * launchForce);
                 Rigidbody2D bulletInstanceThree;
-                bulletInstanceThree = Instantiate(bullet, barrelEnd.position, barrelEnd.rotation) as Rigidbody2D;
-                bulletInstanceThree.AddForce(-barrelEnd.right * launchForce);
+                bulletInstanceThree = Instantiate(bullet, barrelEnd.position, Quaternion.AngleAxis(15, barrelEnd.forward) *barrelEnd.rotation) as Rigidbody2D;
+                bulletInstanceThree.AddForce(Quaternion.AngleAxis(-15, -barrelEnd.forward) * -barrelEnd.up * launchForce);
                 ammoCurrent -= 2;
             }
             else

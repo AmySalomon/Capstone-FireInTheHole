@@ -27,8 +27,11 @@ public class scr_golfBall : MonoBehaviour
 
     bool tempPlayerCheck = false;
 
+    bool hasMoved = false;
     //player who last hit the golfball
     public GameObject playerHitter;
+
+    
 
     private void Start()
     {
@@ -41,9 +44,14 @@ public class scr_golfBall : MonoBehaviour
 
     private void Update()
     {
+        if (myRigidbody.velocity.magnitude >= 0.1) hasMoved = true;
+            
         //if speed of the golf ball reaches zero, reset who would get the point
-        if (myRigidbody.velocity == Vector2.zero)
+        if (myRigidbody.velocity.magnitude <= 0.1 && hasMoved)
         {
+          
+            Debug.Log("RRRESET");
+            hasMoved = false;
             playerHitter = null;
         }
 

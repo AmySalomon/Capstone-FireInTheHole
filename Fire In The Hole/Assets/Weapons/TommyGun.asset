@@ -17,9 +17,10 @@ MonoBehaviour:
   ammoMax: 30
   magazineCount: 2
   shootDelay: 0.1
-  reloadSpeed: 0
+  reloadSpeed: 1
   launchForce: 250
   screenShake: 0.04
   automatic: 1
+  shotgun: 0
   gunshot: {fileID: 0}
   gunSprite: {fileID: 21300000, guid: 23d5074840335f144a17c4891566572f, type: 3}

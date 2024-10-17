@@ -228,5 +228,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d38b3fbe5a5f3dd4d916cc22563d201d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 11400000, guid: ca38e97616dc38f4ba66243bc43de3b2, type: 2}
+  weapon:
+  - {fileID: 11400000, guid: ca38e97616dc38f4ba66243bc43de3b2, type: 2}
+  - {fileID: 11400000, guid: 8e5fcc5654db5264caae9c1a610b2816, type: 2}
+  - {fileID: 11400000, guid: bd6599bad3f49e5479765de110939cc3, type: 2}
+  chosenWeapon: {fileID: 0}
   weaponSprite: {fileID: 4787526505093045353}

@@ -38,7 +38,7 @@ public class scr_golfBall : MonoBehaviour
 
     private void Update()
     {
-        if (myRigidbody.velocity != Vector2.zero) Debug.Log(myRigidbody.velocity);
+        //if (myRigidbody.velocity != Vector2.zero) Debug.Log(myRigidbody.velocity);
 
         if (myRigidbody.velocity.x > minVelocityToKill || myRigidbody.velocity.y > minVelocityToKill || myRigidbody.velocity.x < -minVelocityToKill || myRigidbody.velocity.y < -minVelocityToKill)
         {

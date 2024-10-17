@@ -22,4 +22,4 @@ MonoBehaviour:
   screenShake: 0.08
   automatic: 1
   gunshot: {fileID: 0}
-  gunSprite: {fileID: 21300000, guid: 931a03d82d9622941b7dc9ce9cfebc6b, type: 3}
+  gunSprite: {fileID: 21300000, guid: dcc195922ad26fe48aa3581d71064335, type: 3}

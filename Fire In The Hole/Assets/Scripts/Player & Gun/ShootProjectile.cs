@@ -29,6 +29,7 @@ public class ShootProjectile : MonoBehaviour
     public WeaponClass defaultWeapon, currentWeapon;
     public SpriteRenderer currentGunSprite;
 
+    [HideInInspector] public bool isTryingToShoot;
     private void Start()
     {
         myCamera = GameObject.FindGameObjectWithTag("MainCamera");
@@ -47,6 +48,10 @@ public class ShootProjectile : MonoBehaviour
             myCamera.transform.position = new Vector3(0 + Random.Range(0, screenShake), 0 + Random.Range(0, screenShake), -10);
         }
 
+        if (isTryingToShoot)
+        {
+            ShootAction();
+        }
     }
     public void ShootAction()
     {

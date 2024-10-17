@@ -85,7 +85,13 @@ public class PlayerInputHandler : MonoBehaviour
         if (playerShoot != null && context.performed && playerCharge.isCharging == false && playerDash.isDashing == false && playerDead.playerIsDead == false)
         {
             Debug.Log("trying to shoot");
-            playerShoot.ShootAction();
+            playerShoot.isTryingToShoot = true;
+        }
+
+        if (playerShoot != null && context.canceled)
+        {
+            Debug.Log("trying to shoot");
+            playerShoot.isTryingToShoot = false;
         }
     }
 

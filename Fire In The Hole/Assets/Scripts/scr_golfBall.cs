@@ -45,7 +45,7 @@ public class scr_golfBall : MonoBehaviour
             gameObject.tag = "Bullet";
             mySprite.color = Color.red;
             myTrail.colorGradient = killSpeedGradient;
-            gameObject.layer = 3;
+           // gameObject.layer = 3;
 
         }
         else
@@ -53,7 +53,7 @@ public class scr_golfBall : MonoBehaviour
             gameObject.tag = "Ball";
             mySprite.color = Color.white;
             myTrail.colorGradient = normalGradient;
-            gameObject.layer = 6;
+           // gameObject.layer = 6;
         }
             
         /*

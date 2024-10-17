@@ -51,7 +51,6 @@ MonoBehaviour:
   levelXMax: 8.5
   levelYMin: -5
   levelYMax: 5
-  checkRadius: 0
   SpawnTimeForGolfBalls: 3
   SpawnTimeForWeapons: 5
 --- !u!58 &455177589352024495

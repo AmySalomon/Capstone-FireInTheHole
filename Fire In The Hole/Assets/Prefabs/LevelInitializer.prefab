@@ -350,6 +350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1365408167096810521}
+  score: 0
 --- !u!1 &2956308831374141483
 GameObject:
   m_ObjectHideFlags: 0
@@ -814,8 +815,8 @@ MonoBehaviour:
   playerScores:
   - {fileID: 2606221283910961473}
   - {fileID: 3625347852496358069}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 4835646249498629046}
+  - {fileID: 6790008627932792018}
   playerPrefab: {fileID: 8370212098543078777, guid: 01d0b7e9a88b5364f8855d5c748de0bd, type: 3}
 --- !u!1 &4578708291672023776
 GameObject:
@@ -1287,6 +1288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 3940497329679241798}
+  score: 0
 --- !u!1 &7280430645555937760
 GameObject:
   m_ObjectHideFlags: 0
@@ -1337,6 +1339,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 8306525019449907481}
+  score: 0
 --- !u!1 &7302286597217337322
 GameObject:
   m_ObjectHideFlags: 0
@@ -1731,6 +1734,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 3645306334095855592}
+  score: 0
 --- !u!1 &8017859714963344339
 GameObject:
   m_ObjectHideFlags: 0

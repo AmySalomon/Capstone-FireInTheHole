@@ -9,11 +9,16 @@ public class InitializeLevel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        for(int i = 0; i<playerScores.Length; i++)
+        {
+            playerScores[i].gameObject.SetActive(false);
+        }
         var playerConfigs = JoinPlayer.Instance.GetPlayerConfigs().ToArray();
         for (int i = 0; i < playerConfigs.Length; i++)
         {
             //only show player scoreboard if a player is assined to it
             playerScores[i].gameObject.SetActive(true);
+            GameTimer.gameTimer.playerScoreboards[i] = playerScores[i];
             var player = Instantiate(playerPrefab, playerSpawns[i].position, playerSpawns[i].rotation, gameObject.transform);
             player.GetComponentInChildren<PlayerInputHandler>().InitializePlayer(playerConfigs[i]);
             player.GetComponentInChildren<PlayerScore>().myScore = playerScores[i];

@@ -121,6 +121,8 @@ public class scr_golfBall : MonoBehaviour
     {
         if (other.CompareTag(golfHoleTag))
         {
+            AudioSource audio = other.GetComponent<AudioSource>();
+            audio.Play();
             playerHitter.GetComponentInChildren<PlayerScore>().IncreaseScore();
             Destroy(gameObject);
         }

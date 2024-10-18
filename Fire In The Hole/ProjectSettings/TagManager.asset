@@ -10,6 +10,7 @@ TagManager:
   - GolfHole
   - Bullet
   - Ball
+  - Timer
   layers:
   - Default
   - TransparentFX

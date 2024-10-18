@@ -67,10 +67,11 @@ public class GameTimer : MonoBehaviour
         //get each player's final score, then load end screen
         for(int i = 0; i < playerScoreboards.Length; i++)
         {
-            playerScores[i] = playerScoreboards[i].gameObject.GetComponentInChildren<ScoreTracker>().score;
+            playerScores[i] = playerScoreboards[i].gameObject.GetComponent<ScoreTracker>().score;
         }
         timer = 0;
         timerStarted = false;
+        timerText.gameObject.SetActive(false);
         SceneManager.LoadScene(endScreenScene);
     }
 }

@@ -80,6 +80,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MeleeSwing"",
+                    ""type"": ""Button"",
+                    ""id"": ""398b8ac1-3040-4d44-bf75-0fbf36a83a26"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -302,6 +311,17 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""action"": ""MenuMove"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bbcffd6c-0c66-4ee2-8080-457931ffacf4"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MeleeSwing"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -344,6 +364,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_Player1_Dash = m_Player1.FindAction("Dash", throwIfNotFound: true);
         m_Player1_Aim = m_Player1.FindAction("Aim", throwIfNotFound: true);
         m_Player1_Select = m_Player1.FindAction("Select", throwIfNotFound: true);
+        m_Player1_MeleeSwing = m_Player1.FindAction("MeleeSwing", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -411,6 +432,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player1_Dash;
     private readonly InputAction m_Player1_Aim;
     private readonly InputAction m_Player1_Select;
+    private readonly InputAction m_Player1_MeleeSwing;
     public struct Player1Actions
     {
         private @PlayerControls m_Wrapper;
@@ -421,6 +443,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         public InputAction @Dash => m_Wrapper.m_Player1_Dash;
         public InputAction @Aim => m_Wrapper.m_Player1_Aim;
         public InputAction @Select => m_Wrapper.m_Player1_Select;
+        public InputAction @MeleeSwing => m_Wrapper.m_Player1_MeleeSwing;
         public InputActionMap Get() { return m_Wrapper.m_Player1; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -448,6 +471,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Select.started += instance.OnSelect;
             @Select.performed += instance.OnSelect;
             @Select.canceled += instance.OnSelect;
+            @MeleeSwing.started += instance.OnMeleeSwing;
+            @MeleeSwing.performed += instance.OnMeleeSwing;
+            @MeleeSwing.canceled += instance.OnMeleeSwing;
         }
 
         private void UnregisterCallbacks(IPlayer1Actions instance)
@@ -470,6 +496,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Select.started -= instance.OnSelect;
             @Select.performed -= instance.OnSelect;
             @Select.canceled -= instance.OnSelect;
+            @MeleeSwing.started -= instance.OnMeleeSwing;
+            @MeleeSwing.performed -= instance.OnMeleeSwing;
+            @MeleeSwing.canceled -= instance.OnMeleeSwing;
         }
 
         public void RemoveCallbacks(IPlayer1Actions instance)
@@ -513,5 +542,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         void OnDash(InputAction.CallbackContext context);
         void OnAim(InputAction.CallbackContext context);
         void OnSelect(InputAction.CallbackContext context);
+        void OnMeleeSwing(InputAction.CallbackContext context);
     }
 }

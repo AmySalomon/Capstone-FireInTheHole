@@ -15,6 +15,7 @@ public class scr_meleeSwing : MonoBehaviour
     public int playerDamage = 20;
 
     public Transform swingPoint;
+    public Vector3 swingAim;
     public LayerMask interactableLayers;
     public LayerMask playerLayer;//for pvp player layer
 
@@ -24,9 +25,11 @@ public class scr_meleeSwing : MonoBehaviour
 
     private PlayerControls controls;
     private InputAction swingAction;
+    private InputAction rightStickAction;
 
     public Vector3 chargeBarOffset = new Vector3(0, 2, 0);
     public Vector2 chargeBarSize = new Vector2(2, 0.25f);
+    private Vector2 rightStickDirection;
 
     private void Awake()
     {
@@ -36,7 +39,11 @@ public class scr_meleeSwing : MonoBehaviour
     private void OnEnable()
     {
         swingAction = controls.Player1.MeleeSwing;
+        rightStickAction = controls.Player1.Aim;
+
         swingAction.Enable();
+        rightStickAction.Enable();
+
         swingAction.started += OnSwingStarted;
         swingAction.canceled += OnSwingReleased;
     }
@@ -46,6 +53,20 @@ public class scr_meleeSwing : MonoBehaviour
         swingAction.started -= OnSwingStarted;
         swingAction.canceled -= OnSwingReleased;
         swingAction.Disable();
+        rightStickAction.Disable();
+    }
+    private void Update()
+    {
+        rightStickDirection = rightStickAction.ReadValue<Vector2>();
+
+        if (rightStickDirection.magnitude > 0.1f)
+        {
+            swingAim = transform.position + (Vector3)rightStickDirection.normalized * swingDistance;
+        }
+        else
+        {
+            swingAim = transform.position; //unsure of what we want to do for when the player isnt aiming so figured a close range radius is fine and fun.
+        }
     }
 
     private void OnSwingStarted(InputAction.CallbackContext context)
@@ -85,15 +106,13 @@ public class scr_meleeSwing : MonoBehaviour
         isCharging = false;
         canSwing = false;
 
-        Debug.Log($"Swing with force: {currentSwingForce}");
-
-        RaycastHit2D[] hits = Physics2D.CircleCastAll(swingPoint.position, swingDistance, Vector2.zero, 0f, interactableLayers);
+        RaycastHit2D[] hits = Physics2D.CircleCastAll(swingAim, swingDistance, Vector2.zero, 0f, interactableLayers);
         foreach (RaycastHit2D hit in hits)
         {
             Rigidbody2D rb = hit.collider.GetComponent<Rigidbody2D>();
             if (rb != null)
             {
-                Vector2 forceDirection = (hit.collider.transform.position - swingPoint.position).normalized;
+                Vector2 forceDirection = (hit.collider.transform.position - swingAim).normalized;
                 rb.AddForce(forceDirection * currentSwingForce);
             }
 
@@ -106,10 +125,10 @@ public class scr_meleeSwing : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        if (swingPoint != null)
+        if (swingAim != null)
         {
             Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(swingPoint.position, swingDistance);
+            Gizmos.DrawWireSphere(swingAim, swingDistance);
         }
         DrawChargeBar();
     }
@@ -120,7 +139,7 @@ public class scr_meleeSwing : MonoBehaviour
 
         float chargeRatio = (currentSwingForce - minSwingForce) / (maxSwingForce - minSwingForce);
 
-        Vector3 barPosition = swingPoint.position + chargeBarOffset;
+        Vector3 barPosition = swingAim + chargeBarOffset;
         Vector3 barSize = new Vector3(chargeBarSize.x * chargeRatio, chargeBarSize.y, 1);
 
         Gizmos.color = Color.gray;

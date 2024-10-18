@@ -15,9 +15,9 @@ MonoBehaviour:
   gunType: Sniper
   bulletRange: 0
   ammoMax: 1
-  magazineCount: 6
+  magazineCount: 9
   shootDelay: 0
-  reloadSpeed: 0.6
+  reloadSpeed: 0.7
   launchForce: 1250
   screenShake: 0.2
   automatic: 0

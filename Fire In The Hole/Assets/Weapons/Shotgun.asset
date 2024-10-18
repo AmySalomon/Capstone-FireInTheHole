@@ -15,10 +15,10 @@ MonoBehaviour:
   gunType: Shotgun
   bulletRange: 0
   ammoMax: 3
-  magazineCount: 5
-  shootDelay: 0.4
-  reloadSpeed: 0.3
-  launchForce: 250
+  magazineCount: 14
+  shootDelay: 0
+  reloadSpeed: 0.4
+  launchForce: 320
   screenShake: 0.1
   automatic: 0
   shotgun: 1

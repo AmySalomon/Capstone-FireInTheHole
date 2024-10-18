@@ -34,13 +34,13 @@ public class ShootProjectile : MonoBehaviour
     public bool reloading = false;
     [HideInInspector] public bool isTryingToShoot;
 
-    [SerializeField] private TextMeshProUGUI reloadingText;
+    [SerializeField] private GameObject reloadingText;
     private void Start()
     {
         myCamera = GameObject.FindGameObjectWithTag("MainCamera");
         audioPlayer = GetComponent<AudioSource>();
         muzzleFlash.enabled = false;
-        reloadingText.gameObject.SetActive(false);
+        reloadingText.SetActive(false);
         UpdateWeapon(defaultWeapon); //Set starting weapon to player default weapon
     }
     void Update()
@@ -128,14 +128,14 @@ public class ShootProjectile : MonoBehaviour
     {
         reloading = true;
         reloadTimer = reloadTimerMax;
-        reloadingText.gameObject.SetActive(true);
+        reloadingText.SetActive(true);
     }
     public void ReloadComplete()
     {
         magazineCount--;
         ammoCurrent = ammoMax;
         reloading = false;
-        reloadingText.gameObject.SetActive(false);
+        reloadingText.SetActive(false);
 
     }
 }

@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gunType: Tommy Gun
   bulletRange: 0
-  ammoMax: 30
+  ammoMax: 20
   magazineCount: 2
   shootDelay: 0.1
-  reloadSpeed: 1
-  launchForce: 250
+  reloadSpeed: 1.3
+  launchForce: 270
   screenShake: 0.04
   automatic: 1
   shotgun: 0

@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gunType: Pistol
   bulletRange: 0
-  ammoMax: 10
+  ammoMax: 8
   magazineCount: 999999
   shootDelay: 0.25
-  reloadSpeed: 0.5
+  reloadSpeed: 0.8
   launchForce: 330
   screenShake: 0.08
   automatic: 1

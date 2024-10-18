@@ -17,6 +17,7 @@ public class GameTimer : MonoBehaviour
     public int[] playerScores;
     public Transform[] playerScoreboards;
 
+    public bool timerStarted = false;
     private void Awake()
     {
         if(gameTimer != null)
@@ -33,23 +34,22 @@ public class GameTimer : MonoBehaviour
     void Start()
     {
         timer = startingTime;
+        timerStarted = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!timerStarted) return;
         if (timer > 0)
         {
             timer -= Time.deltaTime;
             updateTimer(timer);
             if (timer < 10) timerText.color = Color.red;
         }
-
         else
         {
-            timer = 0;
-            finalScoreTally();
-            SceneManager.LoadScene(endScreenScene);
+            EndGame();
         }
     }
 
@@ -62,11 +62,15 @@ public class GameTimer : MonoBehaviour
 
         timerText.text = string.Format("{0:00} : {1:00}", minutes, seconds);
     }
-    void finalScoreTally()
+    void EndGame()
     {
+        //get each player's final score, then load end screen
         for(int i = 0; i < playerScoreboards.Length; i++)
         {
             playerScores[i] = playerScoreboards[i].gameObject.GetComponentInChildren<ScoreTracker>().score;
         }
+        timer = 0;
+        timerStarted = false;
+        SceneManager.LoadScene(endScreenScene);
     }
 }

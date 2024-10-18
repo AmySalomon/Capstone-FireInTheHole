@@ -404,3 +404,9 @@ MonoBehaviour:
   startingTime: 120
   endScreenScene: EndingScene
   timerText: {fileID: 2290122430713016838}
+  playerScores: 00000000000000000000000000000000
+  playerScoreboards:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

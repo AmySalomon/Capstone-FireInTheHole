@@ -12,6 +12,23 @@ public class GameTimer : MonoBehaviour
 
     public TextMeshProUGUI timerText;
 
+    public static GameTimer gameTimer;
+
+    public int[] playerScores;
+    public Transform[] playerScoreboards;
+
+    private void Awake()
+    {
+        if(gameTimer != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            gameTimer = this;
+        }
+        DontDestroyOnLoad(this.gameObject);
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +48,7 @@ public class GameTimer : MonoBehaviour
         else
         {
             timer = 0;
+            finalScoreTally();
             SceneManager.LoadScene(endScreenScene);
         }
     }
@@ -43,5 +61,12 @@ public class GameTimer : MonoBehaviour
         float seconds = Mathf.FloorToInt(currentTime % 60);
 
         timerText.text = string.Format("{0:00} : {1:00}", minutes, seconds);
+    }
+    void finalScoreTally()
+    {
+        for(int i = 0; i < playerScoreboards.Length; i++)
+        {
+            playerScores[i] = playerScoreboards[i].gameObject.GetComponentInChildren<ScoreTracker>().score;
+        }
     }
 }

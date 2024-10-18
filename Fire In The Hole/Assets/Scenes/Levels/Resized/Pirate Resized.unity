@@ -269,6 +269,26 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06f8cbb26a42c804fbce4ee7e194e64e, type: 3}
+--- !u!224 &176311738 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6790008627932792018, guid: 06f8cbb26a42c804fbce4ee7e194e64e, type: 3}
+  m_PrefabInstance: {fileID: 176311737}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &176311739 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4835646249498629046, guid: 06f8cbb26a42c804fbce4ee7e194e64e, type: 3}
+  m_PrefabInstance: {fileID: 176311737}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &176311740 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3625347852496358069, guid: 06f8cbb26a42c804fbce4ee7e194e64e, type: 3}
+  m_PrefabInstance: {fileID: 176311737}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &176311741 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2606221283910961473, guid: 06f8cbb26a42c804fbce4ee7e194e64e, type: 3}
+  m_PrefabInstance: {fileID: 176311737}
+  m_PrefabAsset: {fileID: 0}
 --- !u!213 &399426855
 Sprite:
   m_ObjectHideFlags: 0
@@ -487,6 +507,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7129663365810361743, guid: ee16cafbe26cae640a4e3da3def6f611, type: 3}
+      propertyPath: startingTime
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 7129663365810361743, guid: ee16cafbe26cae640a4e3da3def6f611, type: 3}
+      propertyPath: playerScoreboards.Array.data[0]
+      value: 
+      objectReference: {fileID: 176311741}
+    - target: {fileID: 7129663365810361743, guid: ee16cafbe26cae640a4e3da3def6f611, type: 3}
+      propertyPath: playerScoreboards.Array.data[1]
+      value: 
+      objectReference: {fileID: 176311740}
+    - target: {fileID: 7129663365810361743, guid: ee16cafbe26cae640a4e3da3def6f611, type: 3}
+      propertyPath: playerScoreboards.Array.data[2]
+      value: 
+      objectReference: {fileID: 176311739}
+    - target: {fileID: 7129663365810361743, guid: ee16cafbe26cae640a4e3da3def6f611, type: 3}
+      propertyPath: playerScoreboards.Array.data[3]
+      value: 
+      objectReference: {fileID: 176311738}
     - target: {fileID: 7728419644067189197, guid: ee16cafbe26cae640a4e3da3def6f611, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.8424506

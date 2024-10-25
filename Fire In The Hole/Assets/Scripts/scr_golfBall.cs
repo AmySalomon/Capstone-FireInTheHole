@@ -12,17 +12,64 @@ public class scr_golfBall : MonoBehaviour
     private GameObject directionArrowInstance;
     private bool isPlayerInRange = false;
     private scr_meleeSwing playerGolfSwing;
+    private Rigidbody2D myRigidbody;
+    private SpriteRenderer mySprite;
+    private TrailRenderer myTrail;
+
+    private AudioSource audioSource;
+    public AudioClip bounce1;
+    public AudioClip bounce2;
+    public AudioClip bounce3;
+    public Gradient killSpeedGradient;
+    public Gradient normalGradient;
+
+    public float minVelocityToKill = 8;
 
     bool tempPlayerCheck = false;
+
+    bool hasMoved = false;
+    //player who last hit the golfball
+    public GameObject playerHitter;
+
+    
 
     private void Start()
     {
         //put initializing code here and delete Temp
-
+        audioSource = GetComponent<AudioSource>();
+        myRigidbody = GetComponent<Rigidbody2D>();
+        mySprite = GetComponent<SpriteRenderer>();
+        myTrail = GetComponent<TrailRenderer>();
     }
 
     private void Update()
     {
+        if (myRigidbody.velocity.magnitude >= 0.1) hasMoved = true;
+            
+        //if speed of the golf ball reaches zero, reset who would get the point
+        if (myRigidbody.velocity.magnitude <= 0.1 && hasMoved)
+        {
+          
+            Debug.Log("RRRESET");
+            hasMoved = false;
+            playerHitter = null;
+        }
+
+        if (myRigidbody.velocity.x > minVelocityToKill || myRigidbody.velocity.y > minVelocityToKill || myRigidbody.velocity.x < -minVelocityToKill || myRigidbody.velocity.y < -minVelocityToKill)
+        {
+            gameObject.tag = "Bullet";
+            mySprite.color = Color.red;
+            myTrail.colorGradient = killSpeedGradient;
+
+        }
+        else
+        {
+            gameObject.tag = "Ball";
+            mySprite.color = Color.white;
+            myTrail.colorGradient = normalGradient;
+        }
+            
+        /*
         if (player == null) //Temp replacement as instantialized players arent being assigned balls properly
         {
             Debug.Log("Assign Player In Inspector! [TEMP]");
@@ -47,7 +94,9 @@ public class scr_golfBall : MonoBehaviour
         else
         {
             HideDirectionArrow();
-        }  
+        }
+        */
+
     }
 
     private void ShowDirectionArrow()
@@ -72,8 +121,28 @@ public class scr_golfBall : MonoBehaviour
     {
         if (other.CompareTag(golfHoleTag))
         {
+            AudioSource audio = other.GetComponent<AudioSource>();
+            audio.Play();
+            playerHitter.GetComponentInChildren<PlayerScore>().IncreaseScore();
             Destroy(gameObject);
-            Debug.Log("Ball entered the hole! Destroying ball.");
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        int golfSwing = Random.Range(1, 4);
+
+        switch (golfSwing)
+        {
+            case 1:
+                audioSource.PlayOneShot(bounce1);
+                break;
+            case 2:
+                audioSource.PlayOneShot(bounce2);
+                break;
+            case 3:
+                audioSource.PlayOneShot(bounce3);
+                break;
         }
     }
 

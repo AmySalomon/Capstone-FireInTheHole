@@ -39,7 +39,6 @@ public class DeleteBullet : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             hasKilled = true;
-            Destroy(collision.gameObject);
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
             gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
         }

@@ -11,6 +11,7 @@ public class WeaponClass : ScriptableObject
     //time in between shots, time it takes to reload magazine, how fast the bullet travels, how hard the screen shakes when a bullet is fired
     public float shootDelay, reloadSpeed, launchForce, screenShake;
     public bool automatic; //whether the player can hold down the shoot button to keep firing
+    public bool shotgun; //Remind me to make less hamfisted code later. checks if it should fire like a shotgun
     public AudioClip gunshot; //sound made when player fires
 
     

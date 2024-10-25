@@ -33,6 +33,7 @@ public class Dash : MonoBehaviour
     private CircleCollider2D playerCollision;
 
     public LayerMask bullet;
+    public LayerMask golfBall;
     public LayerMask none;
    
 
@@ -74,7 +75,8 @@ public class Dash : MonoBehaviour
             Vector2 newMovement = Vector3.Normalize(playerMovement.movement);
             rb.velocity = newMovement * dashSpeed;
             sprite.color = new Color32(0, 215, 255, 255);
-            playerCollision.excludeLayers = bullet;
+            playerCollision.excludeLayers = bullet + golfBall;
+            
             
         }
         else

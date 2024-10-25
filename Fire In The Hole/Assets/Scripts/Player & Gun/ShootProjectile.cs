@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
 public class ShootProjectile : MonoBehaviour
 {
     //gets bullet prefab
@@ -14,8 +15,10 @@ public class ShootProjectile : MonoBehaviour
     private AudioSource audioPlayer;
     //gunshot sound
     public AudioClip gunshot;
-    //timer
-    private float timer = 10;
+    //timer for shooting bullets
+    private float shootTimer = 10;
+    //timer for reloading with new Magazine
+    private float reloadTimer, reloadTimerMax;
     //the launch force of the bullet being shot
     public float launchForce = -1200f;
 
@@ -28,42 +31,76 @@ public class ShootProjectile : MonoBehaviour
 
     public WeaponClass defaultWeapon, currentWeapon;
     public SpriteRenderer currentGunSprite;
+    public bool reloading = false;
+    [HideInInspector] public bool isTryingToShoot;
 
+    [SerializeField] private GameObject reloadingText;
     private void Start()
     {
         myCamera = GameObject.FindGameObjectWithTag("MainCamera");
         audioPlayer = GetComponent<AudioSource>();
         muzzleFlash.enabled = false;
+        reloadingText.SetActive(false);
         UpdateWeapon(defaultWeapon); //Set starting weapon to player default weapon
     }
     void Update()
     {
-        timer += Time.deltaTime;
+        shootTimer += Time.deltaTime;
         muzzleFlash.enabled = false;
+        if (reloading)
+        {
+            reloadTimer -= Time.deltaTime;
+            if (reloadTimer <= 0)
+            {
+                ReloadComplete();
+            }
+        }
         //Screenshake
-        if (timer <= 0.1f)
+        if (shootTimer <= 0.1f)
         {
             muzzleFlash.enabled = true;
             myCamera.transform.position = new Vector3(0 + Random.Range(0, screenShake), 0 + Random.Range(0, screenShake), -10);
         }
 
+        if (isTryingToShoot)
+        {
+            ShootAction();
+        }
     }
     public void ShootAction()
     {
-        if (timer >= shootDelay)
+        if (reloading) { return; }
+        if (shootTimer >= shootDelay)
         {
             if(ammoCurrent <= 0)
             {
-                magazineCount--;
-                ammoCurrent = ammoMax;
+                StartReloading();
+                return;
             }
             Debug.Log("shoot");
             audioPlayer.pitch = Random.Range(0.9f, 1.1f);
             audioPlayer.PlayOneShot(gunshot, 1f);
-            Rigidbody2D bulletInstance;
-            bulletInstance = Instantiate(bullet, barrelEnd.position, barrelEnd.rotation) as Rigidbody2D;
-            bulletInstance.AddForce(-barrelEnd.up * launchForce);
-            timer = 0;
+            if (currentWeapon.shotgun)
+            { //shotgun shoots three bullets, slightly down, forward, and slightly up
+                Rigidbody2D bulletInstance;
+                bulletInstance = Instantiate(bullet, barrelEnd.position, Quaternion.AngleAxis(-15, barrelEnd.forward)*barrelEnd.rotation) as Rigidbody2D;
+                bulletInstance.AddForce(Quaternion.AngleAxis(15, -barrelEnd.forward)*-barrelEnd.up * launchForce);
+                Rigidbody2D bulletInstanceTwo;
+                bulletInstanceTwo = Instantiate(bullet, barrelEnd.position, barrelEnd.rotation) as Rigidbody2D;
+                bulletInstanceTwo.AddForce(-barrelEnd.up * launchForce);
+                Rigidbody2D bulletInstanceThree;
+                bulletInstanceThree = Instantiate(bullet, barrelEnd.position, Quaternion.AngleAxis(15, barrelEnd.forward) *barrelEnd.rotation) as Rigidbody2D;
+                bulletInstanceThree.AddForce(Quaternion.AngleAxis(-15, -barrelEnd.forward) * -barrelEnd.up * launchForce);
+                ammoCurrent -= 2;
+            }
+            else
+            {
+                Rigidbody2D bulletInstance;
+                bulletInstance = Instantiate(bullet, barrelEnd.position, barrelEnd.rotation) as Rigidbody2D;
+                bulletInstance.AddForce(-barrelEnd.up * launchForce);
+            }
+           
+            shootTimer = 0;
             ammoCurrent--;
             if(ammoCurrent <=0 && magazineCount <= 0) //when the player fully exhausts all bullets and weapon magazines, switch to default weapon
             {
@@ -84,5 +121,21 @@ public class ShootProjectile : MonoBehaviour
         ammoMax = newWeapon.ammoMax;
         ammoCurrent = ammoMax;
         magazineCount = newWeapon.magazineCount;
+        reloadTimerMax = newWeapon.reloadSpeed;
+    }
+
+    public void StartReloading()
+    {
+        reloading = true;
+        reloadTimer = reloadTimerMax;
+        reloadingText.SetActive(true);
+    }
+    public void ReloadComplete()
+    {
+        magazineCount--;
+        ammoCurrent = ammoMax;
+        reloading = false;
+        reloadingText.SetActive(false);
+
     }
 }

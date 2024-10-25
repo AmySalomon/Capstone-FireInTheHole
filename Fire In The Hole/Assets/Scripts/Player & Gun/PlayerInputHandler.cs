@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,19 +11,26 @@ public class PlayerInputHandler : MonoBehaviour
     private PlayerMovement playerMovement;
     private Dash playerDash;
     private ShootProjectile playerShoot;
-    private PointAtVector playerAim;
+    public PointAtVector playerAim;
+    public PointAtVector playerSwingAim;
+    private scr_meleeSwing playerCharge;
     [HideInInspector] public Sprite playerSprite;
 
     private PlayerControls controls;
+    private PlayerDeath playerDead;
 
+    private bool holdingSwing = false;
     private void Awake()
     {
         playerMovement = GetComponentInChildren<PlayerMovement>();
         playerDash = GetComponentInChildren<Dash>();
         playerShoot = GetComponentInChildren<ShootProjectile>();
-        playerAim = GetComponentInChildren<PointAtVector>();
+        playerCharge = GetComponentInChildren<scr_meleeSwing>();
+        playerDead = GetComponent<PlayerDeath>();
         controls = new PlayerControls();
     }
+
+   
 
     public void InitializePlayer(PlayerConfig pc)
     {
@@ -50,10 +58,17 @@ public class PlayerInputHandler : MonoBehaviour
         {
             OnAim(obj);
         }
+        if (obj.action.name == controls.Player1.MeleeSwing.name)
+        {
+            HoldSwing(obj);
+        }
         else
         {
             return;
         }
+
+
+   
     }
 
     public void OnMove(CallbackContext context)
@@ -67,16 +82,22 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void OnShoot(CallbackContext context)
     {
-        if (playerShoot != null)
+        if (playerShoot != null && context.performed && playerCharge.isCharging == false && playerDash.isDashing == false && playerDead.playerIsDead == false)
         {
             Debug.Log("trying to shoot");
-            playerShoot.ShootAction();
+            playerShoot.isTryingToShoot = true;
+        }
+
+        if (playerShoot != null && context.canceled)
+        {
+            Debug.Log("trying to shoot");
+            playerShoot.isTryingToShoot = false;
         }
     }
 
     public void OnDash(CallbackContext context)
     {
-        if (playerDash != null)
+        if (playerDash != null && context.performed && playerCharge.isCharging == false && playerDead.playerIsDead == false)
         {
             Debug.Log("trying to dash");
             playerDash.PressDash();
@@ -89,6 +110,27 @@ public class PlayerInputHandler : MonoBehaviour
         {
             Debug.Log("trying to aim");
             playerAim.IsAiming(context.ReadValue<Vector2>());
+            playerSwingAim.IsAiming(context.ReadValue<Vector2>());
         }
     }
+
+    public void HoldSwing(CallbackContext context)
+    {
+        if (context.performed && playerDead.playerIsDead == false)
+        {
+            if (playerCharge.isCharging) playerDash.dashChargeBar.gameObject.SetActive(false);
+            playerCharge.StartCharging();
+            
+        }
+
+        if (context.canceled && playerDead.playerIsDead == false)
+        {
+            if (playerCharge.isCharging)
+            {
+                playerDash.dashChargeBar.gameObject.SetActive(true);
+                StartCoroutine(playerCharge.Swing());
+            }
+        }
+    }
+
 }

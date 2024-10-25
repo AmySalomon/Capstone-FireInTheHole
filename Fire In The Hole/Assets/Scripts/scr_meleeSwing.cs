@@ -14,6 +14,12 @@ public class scr_meleeSwing : MonoBehaviour
     public float swingCooldown = 1f;
     public int playerDamage = 20;
 
+    private AudioSource audioPlayer;
+    public AudioClip missedHit;
+    public AudioClip weakHit;
+    public AudioClip normalHit;
+    public AudioClip strongHit;
+
     public Transform swingPoint;
     public Vector3 swingAim;
     public LayerMask interactableLayers;
@@ -27,34 +33,33 @@ public class scr_meleeSwing : MonoBehaviour
     private InputAction swingAction;
     private InputAction rightStickAction;
 
+
     public Vector3 chargeBarOffset = new Vector3(0, 2, 0);
     public Vector2 chargeBarSize = new Vector2(2, 0.25f);
     private Vector2 rightStickDirection;
 
+    public PlayerInputHandler myInput;
+
+    public ChargeBar swingChargeBar;
+
+    public SpriteRenderer crosshair;
+    public PointAtVector gunAiming;
+    public PointAtVector golfAiming;
+    public SpriteRenderer golfCrosshair;
+
+    private SpritePicker spriteObject;
+    private SpriteRenderer playerSprite;
+
     private void Awake()
     {
-        controls = new PlayerControls();
+        audioPlayer = GetComponent<AudioSource>();
+        swingChargeBar.gameObject.SetActive(false);
+        spriteObject = GetComponentInChildren<SpritePicker>();
+        playerSprite = spriteObject.gameObject.GetComponent<SpriteRenderer>();
+        golfCrosshair.enabled = false;
     }
 
-    private void OnEnable()
-    {
-        swingAction = controls.Player1.MeleeSwing;
-        rightStickAction = controls.Player1.Aim;
-
-        swingAction.Enable();
-        rightStickAction.Enable();
-
-        swingAction.started += OnSwingStarted;
-        swingAction.canceled += OnSwingReleased;
-    }
-
-    private void OnDisable()
-    {
-        swingAction.started -= OnSwingStarted;
-        swingAction.canceled -= OnSwingReleased;
-        swingAction.Disable();
-        rightStickAction.Disable();
-    }
+    
     private void Update()
     {
         rightStickDirection = rightStickAction.ReadValue<Vector2>();
@@ -70,25 +75,15 @@ public class scr_meleeSwing : MonoBehaviour
     }
 
     private void OnSwingStarted(InputAction.CallbackContext context)
+
+    public void StartCharging()
     {
         if (canSwing)
         {
-            StartCharging();
+            isCharging = true;
+            currentSwingForce = minSwingForce;
+            StartCoroutine(ChargeSwingForce());
         }
-    }
-    private void OnSwingReleased(InputAction.CallbackContext context)
-    {
-        if (isCharging)
-        {
-            StartCoroutine(Swing());
-        }
-    }
-
-    private void StartCharging()
-    {
-        isCharging = true;
-        currentSwingForce = minSwingForce;
-        StartCoroutine(ChargeSwingForce());
     }
 
     private IEnumerator ChargeSwingForce()
@@ -96,17 +91,39 @@ public class scr_meleeSwing : MonoBehaviour
         while (isCharging)
         {
             currentSwingForce = Mathf.Clamp(currentSwingForce + chargeRate * Time.deltaTime, minSwingForce, maxSwingForce);
-            Debug.Log(currentSwingForce);
+            //Debug.Log(currentSwingForce);
+
+            gunAiming.enabled = false;
+            gunAiming.gameObject.transform.Rotate(0, 0, 2 * (currentSwingForce / 200));
+            if(playerSprite.flipX == true) gunAiming.gameObject.transform.localPosition = new Vector2(0.5f, 0);
+            else gunAiming.gameObject.transform.localPosition = new Vector2(-0.5f, 0);
+
+            golfCrosshair.enabled = true;
+            crosshair.enabled = false;
+            swingChargeBar.gameObject.SetActive(true);
+            swingChargeBar.SetCharge(currentSwingForce);
             yield return null;
         }
     }
 
-    IEnumerator Swing()
+    public IEnumerator Swing()
     {
         isCharging = false;
         canSwing = false;
 
+
         RaycastHit2D[] hits = Physics2D.CircleCastAll(swingAim, swingDistance, Vector2.zero, 0f, interactableLayers);
+
+        gunAiming.gameObject.transform.localPosition = new Vector2(0, 0);
+        gunAiming.enabled = true;
+
+        golfCrosshair.enabled = false;
+        crosshair.enabled = true;
+        swingChargeBar.gameObject.SetActive(false);
+
+        Debug.Log($"Swing with force: {currentSwingForce}");
+
+
         foreach (RaycastHit2D hit in hits)
         {
             Rigidbody2D rb = hit.collider.GetComponent<Rigidbody2D>();
@@ -114,9 +131,25 @@ public class scr_meleeSwing : MonoBehaviour
             {
                 Vector2 forceDirection = (hit.collider.transform.position - swingAim).normalized;
                 rb.AddForce(forceDirection * currentSwingForce);
+
+                if (currentSwingForce < 600) audioPlayer.PlayOneShot(weakHit);
+                else if (currentSwingForce < 1500) audioPlayer.PlayOneShot(normalHit);
+                else audioPlayer.PlayOneShot(strongHit);
+
+                //if you hit a golf ball, tell the golf ball that you hit it
+                if (rb.gameObject.TryGetComponent<scr_golfBall>(out scr_golfBall golfBall))
+                {
+                    golfBall.playerHitter = myInput.gameObject;
+                }
+
             }
 
         }
+        if (hits.Length == 0)
+        {
+            audioPlayer.PlayOneShot(missedHit);
+        }
+
         currentSwingForce = minSwingForce;
 
         yield return new WaitForSeconds(swingCooldown);

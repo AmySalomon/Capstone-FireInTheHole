@@ -8,12 +8,7 @@ public class FourPlayerDeleteBullet : MonoBehaviour
     private float timer;
     public float deletionTime = 5;
 
-    private GameObject manager;
 
-    private void Awake()
-    {
-        manager = GameObject.FindGameObjectWithTag("Manager");
-    }
     void Update()
     {
         timer += Time.deltaTime;
@@ -31,8 +26,6 @@ public class FourPlayerDeleteBullet : MonoBehaviour
 
         if (collision.gameObject.tag == "Player")
         {
-            Destroy(collision.gameObject);
-            manager.GetComponent<FourPlayerManager>().currentPlayersDead++;
             Destroy(gameObject);
         }
     }

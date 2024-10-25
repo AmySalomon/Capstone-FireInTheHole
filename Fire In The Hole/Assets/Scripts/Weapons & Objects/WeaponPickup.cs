@@ -4,19 +4,23 @@ using UnityEngine;
 
 public class WeaponPickup : MonoBehaviour
 {
-    public WeaponClass weapon;
+    public WeaponClass[] weapon;
+    public WeaponClass chosenWeapon;
     public SpriteRenderer weaponSprite;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player") //if the gameobject is the player, update players weapon, then remove pickup
         {
-            collision.gameObject.GetComponent<ShootProjectile>().UpdateWeapon(weapon);
+            collision.gameObject.GetComponent<ShootProjectile>().UpdateWeapon(chosenWeapon);
             Destroy(this.gameObject);
         }
     }
 
     private void Start()
     {
-        weaponSprite.sprite = weapon.gunSprite;
+        //Pick a random weapon from the list, and show it in the powerup visual
+        chosenWeapon = weapon[Random.Range(0, weapon.Length)];
+        Debug.Log("weapon chosen is " + chosenWeapon.name);
+        weaponSprite.sprite = chosenWeapon.gunSprite;
     }
 }

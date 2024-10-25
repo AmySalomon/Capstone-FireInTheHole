@@ -154,6 +154,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MinPlayers: 1
+  shouldDisableButton1: 0
+  shouldDisableButton2: 0
+  shouldDisableButton3: 0
+  shouldDisableButton4: 0
+  sceneToGoTo: Blacklight
 --- !u!4 &30369629
 Transform:
   m_ObjectHideFlags: 0

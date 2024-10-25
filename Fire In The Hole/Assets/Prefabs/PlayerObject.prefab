@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f99412bca14acde42be24478894cee80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aim: {x: 0, y: 0}
 --- !u!1 &1000412141575831137
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,7 +575,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92d96d2dce1ae3e44b1ce36937095624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swingDistance: 0.75
+  swingDistance: 0.2
+  swingRadius: 0.5
   minSwingForce: 100
   maxSwingForce: 2000
   chargeRate: 1000
@@ -585,9 +587,10 @@ MonoBehaviour:
   normalHit: {fileID: 8300000, guid: 5dea81fbded0c594a8dfcd53fa147e20, type: 3}
   strongHit: {fileID: 8300000, guid: 0938c418e42513647b20098486205863, type: 3}
   swingPoint: {fileID: 3884849049886853993}
+  swingAim: {x: 0, y: 0, z: 0}
   interactableLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -1217,6 +1220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f99412bca14acde42be24478894cee80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aim: {x: 0, y: 0}
 --- !u!1 &4438179308414730306
 GameObject:
   m_ObjectHideFlags: 0

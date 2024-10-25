@@ -7,7 +7,9 @@ using UnityEngine.InputSystem.UI;
 public class scr_meleeSwing : MonoBehaviour
 {
     [Header("Golf Swing Settings")]
-    public float swingDistance = 5f;
+    //CHANGE THESE IN THE PREFAB IN INSPECTOR!!!
+    public float swingDistance = 1f;
+    public float swingRadius = 1f;
     public float minSwingForce = 500f;
     public float maxSwingForce = 2000f;
     public float chargeRate = 1000f;
@@ -62,19 +64,19 @@ public class scr_meleeSwing : MonoBehaviour
     
     private void Update()
     {
-        rightStickDirection = rightStickAction.ReadValue<Vector2>();
+        rightStickDirection = golfAiming.aim;
 
         if (rightStickDirection.magnitude > 0.1f)
         {
-            swingAim = transform.position + (Vector3)rightStickDirection.normalized * swingDistance;
+            swingAim = (Vector3)rightStickDirection.normalized;
         }
         else
         {
-            swingAim = transform.position; //unsure of what we want to do for when the player isnt aiming so figured a close range radius is fine and fun.
+            swingAim = Vector2.zero; //unsure of what we want to do for when the player isnt aiming so figured a close range radius is fine and fun.
         }
+        Debug.Log(swingAim);
     }
 
-    private void OnSwingStarted(InputAction.CallbackContext context)
 
     public void StartCharging()
     {
@@ -111,8 +113,7 @@ public class scr_meleeSwing : MonoBehaviour
         isCharging = false;
         canSwing = false;
 
-
-        RaycastHit2D[] hits = Physics2D.CircleCastAll(swingAim, swingDistance, Vector2.zero, 0f, interactableLayers);
+        RaycastHit2D[] hits = Physics2D.CircleCastAll(golfCrosshair.transform.position, swingRadius, (Vector3)rightStickDirection.normalized, swingDistance, interactableLayers);
 
         gunAiming.gameObject.transform.localPosition = new Vector2(0, 0);
         gunAiming.enabled = true;
@@ -129,8 +130,8 @@ public class scr_meleeSwing : MonoBehaviour
             Rigidbody2D rb = hit.collider.GetComponent<Rigidbody2D>();
             if (rb != null)
             {
-                Vector2 forceDirection = (hit.collider.transform.position - swingAim).normalized;
-                rb.AddForce(forceDirection * currentSwingForce);
+                Vector2 forceDirection = (swingAim).normalized;
+                rb.AddForce(forceDirection * currentSwingForce / 2);
 
                 if (currentSwingForce < 600) audioPlayer.PlayOneShot(weakHit);
                 else if (currentSwingForce < 1500) audioPlayer.PlayOneShot(normalHit);
@@ -156,12 +157,13 @@ public class scr_meleeSwing : MonoBehaviour
         canSwing = true;
     }
 
+    //DEBUG STUFF
     private void OnDrawGizmosSelected()
     {
         if (swingAim != null)
         {
             Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(swingAim, swingDistance);
+            Gizmos.DrawWireSphere(swingAim, swingRadius);
         }
         DrawChargeBar();
     }

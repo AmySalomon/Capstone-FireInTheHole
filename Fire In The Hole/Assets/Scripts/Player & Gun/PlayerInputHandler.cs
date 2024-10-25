@@ -19,7 +19,6 @@ public class PlayerInputHandler : MonoBehaviour
     private PlayerControls controls;
     private PlayerDeath playerDead;
 
-    private bool holdingSwing = false;
     private void Awake()
     {
         playerMovement = GetComponentInChildren<PlayerMovement>();

@@ -41,5 +41,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EndingScene.unity
     guid: 74ceda6ef616eab4fad6780e9f007d9d
+  - enabled: 1
+    path: Assets/Scenes/Levels/Resized/3D Test (Blacklight).unity
+    guid: 0fe03b0e07e9fe046b699a2343f2180c
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 73eb5283e2d80804c8ef1cd07f094675, type: 2}

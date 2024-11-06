@@ -109,5 +109,15 @@ public class LevelSelectManager : MonoBehaviour
         SceneManager.LoadScene(playerSetup);
         
     }
+
+    public void HowToPlay()
+    {
+        Time.timeScale = 1f;
+        chosenLevel = "HowTo (Test)";
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = false;
+        SceneManager.LoadScene(playerSetup);
+
+    }
 }
 

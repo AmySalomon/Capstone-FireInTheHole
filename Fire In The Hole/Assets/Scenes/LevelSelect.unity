@@ -669,7 +669,7 @@ GameObject:
   - component: {fileID: 357236307}
   m_Layer: 0
   m_Name: LevelSelectManager
-  m_TagString: Untagged
+  m_TagString: LevelSelectManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -761,7 +761,7 @@ MonoBehaviour:
     m_SelectOnUp: {fileID: 1089665230}
     m_SelectOnDown: {fileID: 141254887}
     m_SelectOnLeft: {fileID: 1089665230}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnRight: {fileID: 103960162}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -1943,9 +1943,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '[Not Available]
-
-'
+  m_text: Main Menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

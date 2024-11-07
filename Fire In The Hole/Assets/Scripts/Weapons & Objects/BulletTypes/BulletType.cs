@@ -6,8 +6,8 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "WeaponClass/BulletType/Default")]
 public class BulletType : ScriptableObject
 {
-    public float deletionTime;
-    public Rigidbody2D bulletPrefab;
+    public float deletionTime; //how long the bullet lasts for
+    public Rigidbody2D bulletPrefab; //the gameobject that's being spawned
     public virtual void BulletCollision(Collision2D collision, GameObject bullet)
     {
         if (collision.gameObject.tag == "MainCamera" || collision.gameObject.tag == "Wall")

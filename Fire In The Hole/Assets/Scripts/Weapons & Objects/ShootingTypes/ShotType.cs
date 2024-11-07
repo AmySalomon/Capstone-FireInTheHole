@@ -8,8 +8,8 @@ using UnityEngine;
 
 public class ShotType : ScriptableObject
 {
-    public BulletType bulletType;
-    public virtual void ShootBullets(Transform barrelEnd, float launchForce)
+    public BulletType bulletType; //how the bullet itself behaves
+    public virtual void ShootBullets(Transform barrelEnd, float launchForce) //shoot a bullet
     {
         Rigidbody2D bulletInstance;
         bulletInstance = Instantiate(bulletType.bulletPrefab, barrelEnd.position, barrelEnd.rotation) as Rigidbody2D;

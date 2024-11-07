@@ -8,9 +8,8 @@ public class ExplodingBulletType : BulletType
 {
     public GameObject explosion;
     public float explosionRadius;
-    //public Transform explosionCenter;
 
-
+    //When the bullet would despawn, create a harmful explosion in its place (then despawn)
     public override void DeleteBullet(GameObject bullet)
     {
         GameObject explosionInstance = Instantiate(explosion);

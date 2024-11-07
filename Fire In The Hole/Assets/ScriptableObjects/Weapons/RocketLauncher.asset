@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gunType: Rocket Launcher
   bulletRange: 0
-  ammoMax: 1
-  magazineCount: 3
-  shootDelay: 0
-  reloadSpeed: 0.4
+  ammoMax: 3
+  magazineCount: 1
+  shootDelay: 0.7
+  reloadSpeed: 0.6
   launchForce: 300
   screenShake: 0.2
   automatic: 0

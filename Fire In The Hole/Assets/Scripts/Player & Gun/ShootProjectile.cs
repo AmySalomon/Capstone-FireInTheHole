@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
+using UnityEngine.UI;
 public class ShootProjectile : MonoBehaviour
 {
     //gets bullet prefab
@@ -36,6 +37,12 @@ public class ShootProjectile : MonoBehaviour
     [HideInInspector] public bool isTryingToShoot;
 
     [SerializeField] private GameObject reloadingText;
+    [SerializeField] private TextMeshProUGUI magazineText;
+
+    public GameObject bullet_UI;
+    public Sprite usedBullet_UI;
+    public Transform bulletPanelParent;
+    public List<GameObject> ammo_UI = new List<GameObject>();
     private void Start()
     {
         myCamera = GameObject.FindGameObjectWithTag("MainCamera");
@@ -43,6 +50,7 @@ public class ShootProjectile : MonoBehaviour
         muzzleFlash.enabled = false;
         reloadingText.SetActive(false);
         UpdateWeapon(defaultWeapon); //Set starting weapon to player default weapon
+        
     }
     void Update()
     {
@@ -83,6 +91,8 @@ public class ShootProjectile : MonoBehaviour
             audioPlayer.PlayOneShot(gunshot, 1f);
             currentWeapon.behaviour.ShootBullets(barrelEnd, launchForce);
             shootTimer = 0;
+            Destroy(ammo_UI[ammoCurrent - 1]);
+            ammo_UI.RemoveAt((int)ammoCurrent-1);
             ammoCurrent--;
             if(ammoCurrent <=0 && magazineCount <= 0) //when the player fully exhausts all bullets and weapon magazines, switch to default weapon
             {
@@ -94,6 +104,12 @@ public class ShootProjectile : MonoBehaviour
 
     public void UpdateWeapon(WeaponClass newWeapon) //Called on picking up a new Weapon
     {
+        //update bullet UI for new bullets
+        for (int i = 0; i < ammo_UI.Count; i++)
+        {
+            Destroy(ammo_UI[i]);
+        }
+        ammo_UI.Clear();
         //set weapon details to the currently equipped weapon
         currentWeapon = newWeapon;
         shootDelay = newWeapon.shootDelay;
@@ -104,6 +120,12 @@ public class ShootProjectile : MonoBehaviour
         ammoCurrent = ammoMax;
         magazineCount = newWeapon.magazineCount;
         reloadTimerMax = newWeapon.reloadSpeed;
+
+        for (int i = 0; i < ammoMax; i++)
+        {
+            ammo_UI.Add(Instantiate(bullet_UI, bulletPanelParent));
+        }
+        magazineText.text = magazineCount.ToString();
     }
 
     public void StartReloading()
@@ -114,9 +136,20 @@ public class ShootProjectile : MonoBehaviour
     }
     public void ReloadComplete()
     {
+        for (int i = 0; i < ammo_UI.Count; i++)
+        {
+            Destroy(ammo_UI[i]);
+        }
+        ammo_UI.Clear();
         magazineCount--;
         ammoCurrent = ammoMax;
         reloading = false;
         reloadingText.SetActive(false);
+        for (int i = 0; i < ammoMax; i++)
+        {
+            ammo_UI.Add(Instantiate(bullet_UI, bulletPanelParent));
+        }
+        magazineText.text = magazineCount.ToString();
     }
+
 }

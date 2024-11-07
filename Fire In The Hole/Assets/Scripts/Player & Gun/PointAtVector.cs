@@ -8,7 +8,7 @@ public class PointAtVector : MonoBehaviour
     private Vector3 mouse_pos;
     private Vector3 object_pos;
 
-    private Vector2 aim;
+    [HideInInspector] public Vector2 aim;
     private Vector2 lastAimDir;
     private float angle;
 

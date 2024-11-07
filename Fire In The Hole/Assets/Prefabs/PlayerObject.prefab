@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4136930194450746967}
   - component: {fileID: 6007203986983997689}
+  - component: {fileID: 7219208136829025212}
   m_Layer: 7
   m_Name: GolfAimer
   m_TagString: Untagged
@@ -43,6 +44,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f99412bca14acde42be24478894cee80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7219208136829025212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556888177883907572}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e32f148585cb6724889213ef751d2e83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1000412141575831137
@@ -585,6 +598,7 @@ MonoBehaviour:
   normalHit: {fileID: 8300000, guid: 5dea81fbded0c594a8dfcd53fa147e20, type: 3}
   strongHit: {fileID: 8300000, guid: 0938c418e42513647b20098486205863, type: 3}
   swingPoint: {fileID: 3884849049886853993}
+  swingAim: {x: 0, y: 0, z: 0}
   interactableLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1182,6 +1196,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2481977962951979863}
   - component: {fileID: 6448943944460789078}
+  - component: {fileID: 1800512559559580404}
   m_Layer: 7
   m_Name: Gun
   m_TagString: Untagged
@@ -1215,6 +1230,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f99412bca14acde42be24478894cee80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1800512559559580404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4334827013187009724}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e32f148585cb6724889213ef751d2e83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &4438179308414730306
@@ -2123,6 +2150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerAim: {fileID: 6448943944460789078}
   playerSwingAim: {fileID: 6007203986983997689}
+  mouseAim: {fileID: 1800512559559580404}
   playerSprite: {fileID: 0}
 --- !u!114 &4617527675341735179
 MonoBehaviour:

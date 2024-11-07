@@ -62,7 +62,7 @@ public class scr_meleeSwing : MonoBehaviour
     
     private void Update()
     {
-        rightStickDirection = rightStickAction.ReadValue<Vector2>();
+       /* rightStickDirection = rightStickAction.ReadValue<Vector2>();
 
         if (rightStickDirection.magnitude > 0.1f)
         {
@@ -71,10 +71,9 @@ public class scr_meleeSwing : MonoBehaviour
         else
         {
             swingAim = transform.position; //unsure of what we want to do for when the player isnt aiming so figured a close range radius is fine and fun.
-        }
+        } */
     }
 
-    private void OnSwingStarted(InputAction.CallbackContext context)
 
     public void StartCharging()
     {

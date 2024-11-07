@@ -32,6 +32,7 @@ public class ShootProjectile : MonoBehaviour
     public WeaponClass defaultWeapon, currentWeapon;
     public SpriteRenderer currentGunSprite;
     public bool reloading = false;
+
     [HideInInspector] public bool isTryingToShoot;
 
     [SerializeField] private GameObject reloadingText;
@@ -80,7 +81,7 @@ public class ShootProjectile : MonoBehaviour
             Debug.Log("shoot");
             audioPlayer.pitch = Random.Range(0.9f, 1.1f);
             audioPlayer.PlayOneShot(gunshot, 1f);
-            currentWeapon.behaviour.ShootBullets();
+            currentWeapon.behaviour.ShootBullets(barrelEnd, launchForce);
             shootTimer = 0;
             ammoCurrent--;
             if(ammoCurrent <=0 && magazineCount <= 0) //when the player fully exhausts all bullets and weapon magazines, switch to default weapon
@@ -95,7 +96,6 @@ public class ShootProjectile : MonoBehaviour
     {
         //set weapon details to the currently equipped weapon
         currentWeapon = newWeapon;
-        currentWeapon = ScriptableObject.Instantiate(newWeapon);
         shootDelay = newWeapon.shootDelay;
         launchForce = newWeapon.launchForce;
         currentGunSprite.sprite = newWeapon.gunSprite;
@@ -104,10 +104,6 @@ public class ShootProjectile : MonoBehaviour
         ammoCurrent = ammoMax;
         magazineCount = newWeapon.magazineCount;
         reloadTimerMax = newWeapon.reloadSpeed;
-        //tell the newWeapon where the barrelEnd is, and what bullets it is shooting
-        newWeapon.behaviour = ScriptableObject.Instantiate(newWeapon.behaviour); //make sure the code runs off of an instance of the scriptable object
-        newWeapon.behaviour.barrelEnd = barrelEnd;
-        newWeapon.behaviour.launchForce = launchForce;
     }
 
     public void StartReloading()
@@ -122,6 +118,5 @@ public class ShootProjectile : MonoBehaviour
         ammoCurrent = ammoMax;
         reloading = false;
         reloadingText.SetActive(false);
-
     }
 }

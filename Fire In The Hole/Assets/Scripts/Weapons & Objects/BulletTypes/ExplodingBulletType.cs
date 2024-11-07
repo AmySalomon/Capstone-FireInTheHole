@@ -11,11 +11,11 @@ public class ExplodingBulletType : BulletType
     //public Transform explosionCenter;
 
 
-    public override void DeleteBullet()
+    public override void DeleteBullet(GameObject bullet)
     {
         GameObject explosionInstance = Instantiate(explosion);
         explosionInstance.transform.position = bullet.transform.position;
-        base.DeleteBullet();
+        base.DeleteBullet(bullet);
     }
     
 }

@@ -21,22 +21,21 @@ public class BulletManager : MonoBehaviour
         timer += Time.deltaTime;
         if (timer >= deletionTime)
         {
-            DestroyBullet();
+            DestroyBullet(this.gameObject);
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        bulletType.BulletCollision(collision);
+        bulletType.BulletCollision(collision, this.gameObject);
     }
 
     public void UpdateBulletType()
     {
         bulletType = ScriptableObject.Instantiate(bulletType);
         deletionTime = bulletType.deletionTime;
-        bulletType.bullet = gameObject;
     }
-    public void DestroyBullet()
+    public void DestroyBullet(GameObject bullet)
     {
-        bulletType.DeleteBullet();
+        bulletType.DeleteBullet(this.gameObject);
     }
 }

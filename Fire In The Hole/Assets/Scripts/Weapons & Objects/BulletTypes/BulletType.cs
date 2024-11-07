@@ -7,22 +7,21 @@ using UnityEngine;
 public class BulletType : ScriptableObject
 {
     public float deletionTime;
-    public GameObject bullet;
     public Rigidbody2D bulletPrefab;
-    public virtual void BulletCollision(Collision2D collision)
+    public virtual void BulletCollision(Collision2D collision, GameObject bullet)
     {
         if (collision.gameObject.tag == "MainCamera" || collision.gameObject.tag == "Wall")
         {
-            DeleteBullet();
+            DeleteBullet(bullet);
         }
 
         if (collision.gameObject.tag == "Player")
         {
-            DeleteBullet();
+            DeleteBullet(bullet);
         }
     }
     
-    public virtual void DeleteBullet()
+    public virtual void DeleteBullet(GameObject bullet)
     {
         Destroy(bullet);
     }

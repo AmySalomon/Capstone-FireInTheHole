@@ -9,7 +9,7 @@ public class MultishotShotType : ShotType
     public int bulletsPerShot;
     public float bulletOffset; // angle between each bullet
     public float startingAngle; // angle of the highest bullet
-    public override void ShootBullets()
+    public override void ShootBullets(Transform barrelEnd, float launchForce)
     {
         float currentAngle = startingAngle;
         for (int i = 0; i < bulletsPerShot; i++)
@@ -19,8 +19,6 @@ public class MultishotShotType : ShotType
             bulletInstance.AddForce(Quaternion.AngleAxis(-currentAngle, -barrelEnd.forward) * -barrelEnd.up * launchForce);
             currentAngle -= bulletOffset;
             bulletInstance.GetComponent<BulletManager>().bulletType = bulletType;
-            //bulletInstance.GetComponent<BulletManager>().bulletType = ScriptableObject.CreateInstance("ExplodingBulletType") as BulletType;
-
         }
     }
     

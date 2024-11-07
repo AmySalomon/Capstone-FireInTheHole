@@ -24,3 +24,4 @@ MonoBehaviour:
   shotgun: 0
   gunshot: {fileID: 0}
   gunSprite: {fileID: 21300000, guid: 23d5074840335f144a17c4891566572f, type: 3}
+  behaviour: {fileID: 11400000, guid: dc96fdaebba5a524fa0b65132053b6dd, type: 2}

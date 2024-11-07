@@ -13,8 +13,7 @@ public class WeaponClass : ScriptableObject
     public bool automatic; //whether the player can hold down the shoot button to keep firing
     public bool shotgun; //Remind me to make less hamfisted code later. checks if it should fire like a shotgun
     public AudioClip gunshot; //sound made when player fires
-
-    
     public Sprite gunSprite; //gun visual
+    public ShotType behaviour; //how the gun shoots bullets
     
 }

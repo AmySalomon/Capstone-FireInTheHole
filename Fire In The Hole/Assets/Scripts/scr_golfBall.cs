@@ -8,6 +8,7 @@ public class scr_golfBall : MonoBehaviour
     public GameObject directionArrowPrefab;
     private float interactionRange;
     public string golfHoleTag = "GolfHole";
+    public string sandTrapTag = "Sand";
 
     private GameObject directionArrowInstance;
     private bool isPlayerInRange = false;
@@ -30,6 +31,7 @@ public class scr_golfBall : MonoBehaviour
     bool hasMoved = false;
     //player who last hit the golfball
     public GameObject playerHitter;
+
 
     
 
@@ -69,6 +71,7 @@ public class scr_golfBall : MonoBehaviour
             myTrail.colorGradient = normalGradient;
         }
             
+
         /*
         if (player == null) //Temp replacement as instantialized players arent being assigned balls properly
         {
@@ -99,6 +102,7 @@ public class scr_golfBall : MonoBehaviour
 
     }
 
+    
     private void ShowDirectionArrow()
     {
         directionArrowInstance.GetComponent<SpriteRenderer>().enabled = true;
@@ -126,6 +130,20 @@ public class scr_golfBall : MonoBehaviour
             playerHitter.GetComponentInChildren<PlayerScore>().IncreaseScore();
             Destroy(gameObject);
         }
+        //slows ball in sand trap
+        if (other.CompareTag(sandTrapTag))
+        {
+            myRigidbody.drag = 2;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        //speed ball back up outside of sand trap
+        if (other.CompareTag(sandTrapTag))
+        {
+            myRigidbody.drag = .5f;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -151,4 +169,5 @@ public class scr_golfBall : MonoBehaviour
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, interactionRange);
     }
+    
 }

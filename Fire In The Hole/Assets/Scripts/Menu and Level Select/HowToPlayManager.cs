@@ -9,7 +9,7 @@ public class HowToPlayManager : MonoBehaviour
     {
         //No duplicate LevelSelectManager!!!
         string currentScene = SceneManager.GetActiveScene().name;
-        if (currentScene == "HowTo (Test)")
+        if (currentScene == "HowToPlay")
         {
             GameObject[] LSManager;
             LSManager = GameObject.FindGameObjectsWithTag("LevelSelectManager");

@@ -134,7 +134,7 @@ public class LevelSelectManager : MonoBehaviour
     public void HowToPlay()
     {
         Time.timeScale = 1f;
-        chosenLevel = "HowTo (Test)";
+        chosenLevel = "HowToPlay";
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = false;
         SceneManager.LoadScene(playerSetup);

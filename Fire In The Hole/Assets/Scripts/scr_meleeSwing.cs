@@ -74,7 +74,7 @@ public class scr_meleeSwing : MonoBehaviour
         {
             swingAim = Vector2.zero; //unsure of what we want to do for when the player isnt aiming so figured a close range radius is fine and fun.
         }
-        Debug.Log(swingAim);
+        //Debug.Log(swingAim);
     }
 
 

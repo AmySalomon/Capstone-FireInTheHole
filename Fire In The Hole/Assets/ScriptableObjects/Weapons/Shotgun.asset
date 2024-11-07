@@ -10,17 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f0e182f2fbf6a6b4093cf938dee4c117, type: 3}
-  m_Name: Sniper
+  m_Name: Shotgun
   m_EditorClassIdentifier: 
-  gunType: Sniper
+  gunType: Shotgun
   bulletRange: 0
   ammoMax: 1
-  magazineCount: 9
+  magazineCount: 13
   shootDelay: 0
-  reloadSpeed: 0.7
-  launchForce: 1250
-  screenShake: 0.2
+  reloadSpeed: 0.4
+  launchForce: 320
+  screenShake: 0.1
   automatic: 0
-  shotgun: 0
+  shotgun: 1
   gunshot: {fileID: 0}
-  gunSprite: {fileID: 21300000, guid: dd1254fda64a7b04fba945cef285e278, type: 3}
+  gunSprite: {fileID: 21300000, guid: 44b8f5e85fbfc6b4c8639d1d679fc35a, type: 3}
+  behaviour: {fileID: 11400000, guid: 7bcbc86ec87585746ab708934dd22574, type: 2}

@@ -11,8 +11,11 @@ TagManager:
   - Bullet
   - Ball
   - Timer
+<<<<<<< HEAD
   - PlayerManager
   - LevelSelectManager
+=======
+>>>>>>> main
   layers:
   - Default
   - TransparentFX

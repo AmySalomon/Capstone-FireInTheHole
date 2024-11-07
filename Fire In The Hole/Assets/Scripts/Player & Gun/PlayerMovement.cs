@@ -7,12 +7,6 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 3f;
 
-    [SerializeField] private float sandMoveSpeed = 1f;
-
-    private float currentMoveSpeed;
-
-    private string sandTrapTag = "Sand";
-
     [HideInInspector] public Vector2 movement;
 
     private Rigidbody2D rb;
@@ -26,9 +20,6 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         dashCheck = GetComponent<Dash>();
-
-        //starts movespeed as current movdespeed
-        currentMoveSpeed = moveSpeed;
     }
 
     public void MovePlayer(Vector2 vector)
@@ -46,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (dashCheck.isDashing == false)
         {
-            rb.velocity = movement * currentMoveSpeed;
+            rb.velocity = movement * moveSpeed;
         }
 
         if (rb.velocity.x > 0)
@@ -57,24 +48,6 @@ public class PlayerMovement : MonoBehaviour
         if (rb.velocity.x < 0)
         {
             sprite.flipX = true;
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        //if in sand trap, slow currentmovespeed
-        if (other.CompareTag(sandTrapTag))
-        {
-            currentMoveSpeed = sandMoveSpeed;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        //if in sand trap, slow currentmovespeed
-        if (other.CompareTag(sandTrapTag))
-        {
-            currentMoveSpeed = moveSpeed;
         }
     }
 }

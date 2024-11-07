@@ -52,6 +52,7 @@ MonoBehaviour:
   player: {fileID: 0}
   directionArrowPrefab: {fileID: 3008977995450802778, guid: 32629b242ae621e458f00bd051371e80, type: 3}
   golfHoleTag: GolfHole
+  sandTrapTag: Sand
   bounce1: {fileID: 8300000, guid: 42dcec202047c1141b1425b32d017750, type: 3}
   bounce2: {fileID: 8300000, guid: 4255212018de3ef4ea41f6c141c31954, type: 3}
   bounce3: {fileID: 8300000, guid: 6748f21cefd1e8549b59d5755216a723, type: 3}
@@ -116,6 +117,9 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   minVelocityToKill: 8
+  playerHitter: {fileID: 0}
+  normalBall: {fileID: 6200000, guid: f685cd95ae6a77c4bb8257300ca184bb, type: 2}
+  sandBall: {fileID: 6200000, guid: 920fc119adf1cb944bc30afbfe75c55d, type: 2}
 --- !u!212 &3362427951106548886
 SpriteRenderer:
   m_ObjectHideFlags: 0

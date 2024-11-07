@@ -232,6 +232,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ca38e97616dc38f4ba66243bc43de3b2, type: 2}
   - {fileID: 11400000, guid: 8e5fcc5654db5264caae9c1a610b2816, type: 2}
   - {fileID: 11400000, guid: bd6599bad3f49e5479765de110939cc3, type: 2}
-  - {fileID: 11400000, guid: 9557f9d64f6ee0b44a5176ec05d3c3fd, type: 2}
   chosenWeapon: {fileID: 0}
   weaponSprite: {fileID: 4787526505093045353}

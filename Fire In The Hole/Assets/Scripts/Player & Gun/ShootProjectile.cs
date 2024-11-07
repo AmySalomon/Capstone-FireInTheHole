@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
-using UnityEngine.UI;
 public class ShootProjectile : MonoBehaviour
 {
     //gets bullet prefab
@@ -33,16 +32,9 @@ public class ShootProjectile : MonoBehaviour
     public WeaponClass defaultWeapon, currentWeapon;
     public SpriteRenderer currentGunSprite;
     public bool reloading = false;
-
     [HideInInspector] public bool isTryingToShoot;
 
     [SerializeField] private GameObject reloadingText;
-    [SerializeField] private TextMeshProUGUI magazineText;
-
-    public GameObject bullet_UI;
-    public Sprite usedBullet_UI;
-    public Transform bulletPanelParent;
-    public List<GameObject> ammo_UI = new List<GameObject>();
     private void Start()
     {
         myCamera = GameObject.FindGameObjectWithTag("MainCamera");
@@ -50,7 +42,6 @@ public class ShootProjectile : MonoBehaviour
         muzzleFlash.enabled = false;
         reloadingText.SetActive(false);
         UpdateWeapon(defaultWeapon); //Set starting weapon to player default weapon
-        
     }
     void Update()
     {
@@ -89,10 +80,27 @@ public class ShootProjectile : MonoBehaviour
             Debug.Log("shoot");
             audioPlayer.pitch = Random.Range(0.9f, 1.1f);
             audioPlayer.PlayOneShot(gunshot, 1f);
-            currentWeapon.behaviour.ShootBullets(barrelEnd, launchForce);
+            if (currentWeapon.shotgun)
+            { //shotgun shoots three bullets, slightly down, forward, and slightly up
+                Rigidbody2D bulletInstance;
+                bulletInstance = Instantiate(bullet, barrelEnd.position, Quaternion.AngleAxis(-15, barrelEnd.forward)*barrelEnd.rotation) as Rigidbody2D;
+                bulletInstance.AddForce(Quaternion.AngleAxis(15, -barrelEnd.forward)*-barrelEnd.up * launchForce);
+                Rigidbody2D bulletInstanceTwo;
+                bulletInstanceTwo = Instantiate(bullet, barrelEnd.position, barrelEnd.rotation) as Rigidbody2D;
+                bulletInstanceTwo.AddForce(-barrelEnd.up * launchForce);
+                Rigidbody2D bulletInstanceThree;
+                bulletInstanceThree = Instantiate(bullet, barrelEnd.position, Quaternion.AngleAxis(15, barrelEnd.forward) *barrelEnd.rotation) as Rigidbody2D;
+                bulletInstanceThree.AddForce(Quaternion.AngleAxis(-15, -barrelEnd.forward) * -barrelEnd.up * launchForce);
+                ammoCurrent -= 2;
+            }
+            else
+            {
+                Rigidbody2D bulletInstance;
+                bulletInstance = Instantiate(bullet, barrelEnd.position, barrelEnd.rotation) as Rigidbody2D;
+                bulletInstance.AddForce(-barrelEnd.up * launchForce);
+            }
+           
             shootTimer = 0;
-            Destroy(ammo_UI[ammoCurrent - 1]);
-            ammo_UI.RemoveAt((int)ammoCurrent-1);
             ammoCurrent--;
             if(ammoCurrent <=0 && magazineCount <= 0) //when the player fully exhausts all bullets and weapon magazines, switch to default weapon
             {
@@ -104,12 +112,6 @@ public class ShootProjectile : MonoBehaviour
 
     public void UpdateWeapon(WeaponClass newWeapon) //Called on picking up a new Weapon
     {
-        //update bullet UI for new bullets
-        for (int i = 0; i < ammo_UI.Count; i++)
-        {
-            Destroy(ammo_UI[i]);
-        }
-        ammo_UI.Clear();
         //set weapon details to the currently equipped weapon
         currentWeapon = newWeapon;
         shootDelay = newWeapon.shootDelay;
@@ -120,12 +122,6 @@ public class ShootProjectile : MonoBehaviour
         ammoCurrent = ammoMax;
         magazineCount = newWeapon.magazineCount;
         reloadTimerMax = newWeapon.reloadSpeed;
-
-        for (int i = 0; i < ammoMax; i++)
-        {
-            ammo_UI.Add(Instantiate(bullet_UI, bulletPanelParent));
-        }
-        magazineText.text = magazineCount.ToString();
     }
 
     public void StartReloading()
@@ -136,20 +132,10 @@ public class ShootProjectile : MonoBehaviour
     }
     public void ReloadComplete()
     {
-        for (int i = 0; i < ammo_UI.Count; i++)
-        {
-            Destroy(ammo_UI[i]);
-        }
-        ammo_UI.Clear();
         magazineCount--;
         ammoCurrent = ammoMax;
         reloading = false;
         reloadingText.SetActive(false);
-        for (int i = 0; i < ammoMax; i++)
-        {
-            ammo_UI.Add(Instantiate(bullet_UI, bulletPanelParent));
-        }
-        magazineText.text = magazineCount.ToString();
-    }
 
+    }
 }

@@ -12,11 +12,16 @@ TagManager:
   - Ball
   - Timer
 <<<<<<< HEAD
+<<<<<<< HEAD
   - PlayerManager
   - LevelSelectManager
 =======
   - Sand
 >>>>>>> main
+=======
+  - PlayerManager
+  - LevelSelectManager
+>>>>>>> dcb967c3a7f4d283eb773dda0ae65b6fbb3168e2
   layers:
   - Default
   - TransparentFX

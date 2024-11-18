@@ -57,6 +57,7 @@ public class scr_golfBall : MonoBehaviour
             Debug.Log("RRRESET");
             hasMoved = false;
             playerHitter = null;
+            outline.OutlineColor = Color.white;
             outline.enabled = false;
         }
 

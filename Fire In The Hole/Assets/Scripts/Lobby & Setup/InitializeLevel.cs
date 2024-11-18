@@ -19,11 +19,14 @@ public class InitializeLevel : MonoBehaviour
             //only show player scoreboard if a player is assined to it
             playerScores[i].gameObject.SetActive(true);
             GameTimer.gameTimer.playerScoreboards[i] = playerScores[i];
+            LeaderboardManager.leaderboardManager.playerScoreboards[i] = playerScores[i];
             var player = Instantiate(playerPrefab, playerSpawns[i].position, playerSpawns[i].rotation, gameObject.transform);
             player.GetComponentInChildren<PlayerInputHandler>().InitializePlayer(playerConfigs[i]);
             player.GetComponentInChildren<PlayerScore>().myScore = playerScores[i];
             player.GetComponentInChildren<PlayerScore>().mySprite = playerConfigs[i].PlayerSprite;
             player.GetComponentInChildren<PlayerScore>().SetSprite();
+            player.GetComponentInChildren<PlayerScore>().HideScoreLeader();
+            LeaderboardManager.leaderboardManager.players[i] = player;
         }
     }
 

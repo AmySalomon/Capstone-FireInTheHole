@@ -22,6 +22,8 @@ public class InitializeLevel : MonoBehaviour
             var player = Instantiate(playerPrefab, playerSpawns[i].position, playerSpawns[i].rotation, gameObject.transform);
             player.GetComponentInChildren<PlayerInputHandler>().InitializePlayer(playerConfigs[i]);
             player.GetComponentInChildren<PlayerScore>().myScore = playerScores[i];
+            player.GetComponentInChildren<PlayerScore>().mySprite = playerConfigs[i].PlayerSprite;
+            player.GetComponentInChildren<PlayerScore>().SetSprite();
         }
     }
 

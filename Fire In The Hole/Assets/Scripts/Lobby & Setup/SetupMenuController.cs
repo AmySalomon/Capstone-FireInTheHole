@@ -59,6 +59,14 @@ public class SetupMenuController : MonoBehaviour
         menuPanel.SetActive(false);
     }
 
+    public void SetColor(string color)
+    {
+        if (!inputEnabled) { return; }
+        ColorUtility.TryParseHtmlString(color, out Color playerColor);
+        JoinPlayer.Instance.SetPlayerColor(PlayerIndex, playerColor);
+
+    }
+
     public void DisableThisButton(Button button)
     {
         if (!inputEnabled) { return; }

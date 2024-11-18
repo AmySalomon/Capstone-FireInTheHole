@@ -27,6 +27,7 @@ public class InitializeLevel : MonoBehaviour
             player.GetComponentInChildren<PlayerScore>().mySprite = playerConfigs[i].PlayerSprite;
             player.GetComponentInChildren<PlayerScore>().SetSprite();
             player.GetComponentInChildren<PlayerScore>().HideScoreLeader();
+            player.GetComponentInChildren<scr_meleeSwing>().outlineColor = playerConfigs[i].PlayerColor;
             LeaderboardManager.leaderboardManager.players[i] = player;
         }
     }

@@ -18,6 +18,7 @@ public class InitializeLevel : MonoBehaviour
         {
             //only show player scoreboard if a player is assined to it
             playerScores[i].gameObject.SetActive(true);
+            playerScores[i].gameObject.GetComponent<ScoreTracker>().HideScoreLeader(); 
             GameTimer.gameTimer.playerScoreboards[i] = playerScores[i];
             LeaderboardManager.leaderboardManager.playerScoreboards[i] = playerScores[i];
             var player = Instantiate(playerPrefab, playerSpawns[i].position, playerSpawns[i].rotation, gameObject.transform);

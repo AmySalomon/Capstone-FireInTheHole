@@ -18,12 +18,12 @@ public class PlayerScore : MonoBehaviour
         myScore.GetComponent<ScoreTracker>().UpdateSprite(mySprite);
     }
 
-    public void ShowScoreLeader()
+    public void ShowScoreLeader() //show laurel on leaderboard if player has the most points
     {
         scoreLeaderSprite.gameObject.SetActive(true);
     }
 
-    public void HideScoreLeader()
+    public void HideScoreLeader() //hide laurel on leaderboard if player does not have the most points
     {
         scoreLeaderSprite.gameObject.SetActive(false);
     }

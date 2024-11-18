@@ -30,13 +30,16 @@ public class LeaderboardManager : MonoBehaviour
         for (int i = 0; i < playerScores.Length; i++) //if the player's score is equal to the highscore, show the scoreleader Laurel
         {
             if (playerScoreboards[i] == null) { return; }
-            if (playerScores[i] >= currentHighscore)
+            if (playerScores[i] >= currentHighscore) //if the player has a score equal to or greater than (somehow) the highest score, display they're in the lead, if not, hide it
             {
                 players[i].GetComponentInChildren<PlayerScore>().ShowScoreLeader();
+                playerScoreboards[i].gameObject.GetComponent<ScoreTracker>().ShowScoreLeader();
             }
             else
             {
                 players[i].GetComponentInChildren<PlayerScore>().HideScoreLeader();
+                playerScoreboards[i].gameObject.GetComponent<ScoreTracker>().HideScoreLeader();
+
             }
         }
         

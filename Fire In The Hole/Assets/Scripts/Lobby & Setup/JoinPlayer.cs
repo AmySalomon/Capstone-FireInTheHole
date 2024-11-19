@@ -15,6 +15,11 @@ public class JoinPlayer : MonoBehaviour
     [HideInInspector] public bool shouldDisableButton3 = false;
     [HideInInspector] public bool shouldDisableButton4 = false;
 
+    [HideInInspector] public bool shouldIDisableUI = false;
+
+    [SerializeField] private Transform[] playerSpawns;
+    [SerializeField] private GameObject playerPrefab;
+
     public string sceneToGoTo;
     public static JoinPlayer Instance { get; private set; }
 
@@ -47,11 +52,19 @@ public class JoinPlayer : MonoBehaviour
     public void ReadyPlayer(int index)
     {
         playerConfigs[index].IsReady = true;
+
+        //this code adds the player into the scene once theyre readied up, at their spawn point, and disables the hud for character selection
+        var player = Instantiate(playerPrefab, playerSpawns[index].position, playerSpawns[index].rotation, gameObject.transform);
+        player.GetComponentInChildren<PlayerInputHandler>().InitializePlayer(playerConfigs[index]);
+        shouldIDisableUI = true;
+
+        /*
+         CODE USED TO MOVE TO THE LEVEL SCENE WHEN EVERYONE IS READ
         if (playerConfigs.Count >= MinPlayers && playerConfigs.TrueForAll(p => p.IsReady == true))
         {
             if (LevelSelectManager.LSManager.chosenLevel != null) SceneManager.LoadScene(LevelSelectManager.LSManager.chosenLevel);
             else SceneManager.LoadScene(sceneToGoTo);
-        }
+        }*/
     }
 
     public void HandlePlayerJoin(PlayerInput pi)

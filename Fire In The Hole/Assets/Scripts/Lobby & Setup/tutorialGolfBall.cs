@@ -118,6 +118,7 @@ public class tutorialGolfBall : MonoBehaviour
             
             if (other.GetComponent<LobbyHoleIdentity>().isTutorialHole == true) ;
             {
+                //when scoring in the tutorial hole, add a player as being "ready".
                 readyManager.playersReady++;
                 Destroy(other.gameObject);
             }

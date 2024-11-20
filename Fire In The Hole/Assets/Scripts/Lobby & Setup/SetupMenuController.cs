@@ -83,5 +83,8 @@ public class SetupMenuController : MonoBehaviour
 
         JoinPlayer.Instance.ReadyPlayer(PlayerIndex);
         readyButton.gameObject.SetActive(false);
+
+        //this disables the UI panel after selecting character. in future, we will have to make a way to return to this UI panel after selecting a character
+        gameObject.SetActive(false);
     }
 }

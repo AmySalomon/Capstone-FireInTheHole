@@ -15,8 +15,19 @@ public class JoinPlayer : MonoBehaviour
     [HideInInspector] public bool shouldDisableButton3 = false;
     [HideInInspector] public bool shouldDisableButton4 = false;
 
+    [HideInInspector] public bool shouldIDisableUI = false;
+
+    [SerializeField] private Transform[] playerSpawns;
+    [SerializeField] private Transform[] flagSpawns;
+    [SerializeField] private Transform[] ballSpawns;
+    [SerializeField] private GameObject playerPrefab;
+    [SerializeField] private GameObject tutorialFlagPrefab;
+    [SerializeField] private GameObject tutorialBallPrefab;
+
     public string sceneToGoTo;
     public static JoinPlayer Instance { get; private set; }
+
+    private PlayerInputHandler[] playersActive;
 
     private void Awake()
     {
@@ -53,12 +64,31 @@ public class JoinPlayer : MonoBehaviour
     public void ReadyPlayer(int index)
     {
         playerConfigs[index].IsReady = true;
-        if (playerConfigs.Count >= MinPlayers && playerConfigs.TrueForAll(p => p.IsReady == true))
-        {
-            if (LevelSelectManager.LSManager.chosenLevel != null) SceneManager.LoadScene(LevelSelectManager.LSManager.chosenLevel);
-            else SceneManager.LoadScene(sceneToGoTo);
-        }
+
+        //this code adds the player into the scene once theyre readied up, at their spawn point, and disables the hud for character selection
+        var player = Instantiate(playerPrefab, playerSpawns[index].position, playerSpawns[index].rotation, gameObject.transform);
+        var tutorialFlag = Instantiate(tutorialFlagPrefab, flagSpawns[index].position, flagSpawns[index].rotation, gameObject.transform);
+        var tutorialBall = Instantiate(tutorialBallPrefab, ballSpawns[index].position, ballSpawns[index].rotation, gameObject.transform);
+        player.GetComponentInChildren<PlayerInputHandler>().InitializePlayer(playerConfigs[index]);
+        shouldIDisableUI = true;
     }
+
+    //CODE USED TO MOVE TO THE LEVEL SCENE WHEN EVERYONE IS READ
+    public void GoToGameScene()
+    {
+        playersActive = GetComponentsInChildren<PlayerInputHandler>();
+
+        //destroy all players before going to the next scene
+        foreach (PlayerInputHandler player in playersActive)
+        {
+            Destroy(player.gameObject);
+        }
+            
+        //goto the next scene
+        if (LevelSelectManager.LSManager.chosenLevel != null) SceneManager.LoadScene(LevelSelectManager.LSManager.chosenLevel);
+        else SceneManager.LoadScene(sceneToGoTo);
+    }
+            
 
     public void HandlePlayerJoin(PlayerInput pi)
     {

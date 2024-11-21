@@ -5,7 +5,7 @@ using UnityEngine;
 public class VolcanoHazard : MonoBehaviour
 {
     Color startingColour;
-    public float timeToImpactMax = 6;
+    public float timeToImpactMax;
     public float timeToImpact;
     public double lingerTimer = 1;
     private bool exploding = false;

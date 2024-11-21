@@ -59,7 +59,8 @@ MonoBehaviour:
   currentSpawnTimeForHazards: 0
   golfBallLimit: 3
   weaponLimit: 3
-  hazardSpawnLimit: 3
+  hazardSpawnLimit: 5
+  meteorsToSpawn: 0
 --- !u!58 &455177589352024495
 CircleCollider2D:
   m_ObjectHideFlags: 0

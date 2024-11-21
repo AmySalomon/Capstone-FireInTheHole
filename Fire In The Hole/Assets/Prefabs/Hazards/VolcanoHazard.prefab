@@ -123,7 +123,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1940600147623887452}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -217,9 +217,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2463b321782dfa94a96a97206d618d43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToImpactMax: 3
+  timeToImpactMax: 4
   timeToImpact: 0
-  lingerTimer: 0.25
+  lingerTimer: 1
   lavaAnimator: {fileID: 1464218712985430446}
 --- !u!212 &9139986844345775030
 SpriteRenderer:

@@ -32,7 +32,8 @@ public class SpawnManager : MonoBehaviour
     //Maximum amount of weapon powerups / golfballs / hazards that can be on screen at once
     public float golfBallLimit = 3;
     public float weaponLimit = 4;
-    public float hazardSpawnLimit = 3;
+    public int hazardSpawnLimit = 3;
+    public int meteorsToSpawn;
 
     private void Start()
     {
@@ -87,14 +88,21 @@ public class SpawnManager : MonoBehaviour
 
     IEnumerator SpawnHazard()
     {
-
-        for (int i = 0; i < hazardSpawnLimit; i++) //try to spawn as many hazards as spawn limit permits
+        int succesfullySpawned = 0;
+        while (succesfullySpawned < meteorsToSpawn) //try to spawn as hazards until succesfully spawning the needed amount
         {
             if (spawnPosIsLegal(0.5f) == true)
             {
+                Debug.Log("successful meteor spawn");
                 Instantiate(hazardPrefab, transform.position, transform.rotation);
+                succesfullySpawned++;
+            }
+            else
+            {
+                Debug.Log("Meteor Spawn Failed");
             }
         }
+
 
         hazardTimer = 0;
         needAHazardSpawn = false;
@@ -146,5 +154,6 @@ public class SpawnManager : MonoBehaviour
     public void DetermineHazardTimer()
     {
         currentSpawnTimeForHazards = Random.Range(minSpawnTimeForHazards, maxSpawnTimeForHazards);
+        meteorsToSpawn = Random.Range(1, hazardSpawnLimit);
     }
 }

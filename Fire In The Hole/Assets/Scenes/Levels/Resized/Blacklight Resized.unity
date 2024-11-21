@@ -1211,6 +1211,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 638448158197664558, guid: ee16cafbe26cae640a4e3da3def6f611, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -21.900024
+      objectReference: {fileID: 0}
     - target: {fileID: 7129663365810361743, guid: ee16cafbe26cae640a4e3da3def6f611, type: 3}
       propertyPath: startingTime
       value: 120
@@ -4118,6 +4122,10 @@ PrefabInstance:
     - target: {fileID: 4311005573901221893, guid: 06f8cbb26a42c804fbce4ee7e194e64e, type: 3}
       propertyPath: m_Name
       value: LevelInitializer
+      objectReference: {fileID: 0}
+    - target: {fileID: 7370826533265110581, guid: 06f8cbb26a42c804fbce4ee7e194e64e, type: 3}
+      propertyPath: m_Name
+      value: Player Icon
       objectReference: {fileID: 0}
     - target: {fileID: 9158550349686972837, guid: 06f8cbb26a42c804fbce4ee7e194e64e, type: 3}
       propertyPath: m_LocalPosition.x

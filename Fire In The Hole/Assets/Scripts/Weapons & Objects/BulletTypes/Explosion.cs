@@ -11,7 +11,6 @@ public class Explosion : MonoBehaviour
         timer -= Time.deltaTime;
         if(timer <= 0)
         {
-            //GetComponent<BulletManager>().DestroyBullet();
             Destroy(this.gameObject);
         }
     }

@@ -47,14 +47,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   golfballPrefab: {fileID: 2418453429810656359, guid: 4031563aec8778046a5edc5d43dcb23d, type: 3}
   weaponPrefab: {fileID: 7631844770271239170, guid: ac2d026ab12e2b84684430477457e369, type: 3}
+  hazardPrefab: {fileID: 5214778925187614226, guid: 0fc4879413606d34d82111d725322ea2, type: 3}
   levelXMin: -8.5
   levelXMax: 8.5
   levelYMin: -5
   levelYMax: 5
   SpawnTimeForGolfBalls: 5
   SpawnTimeForWeapons: 10
+  minSpawnTimeForHazards: 3
+  maxSpawnTimeForHazards: 6
+  currentSpawnTimeForHazards: 0
   golfBallLimit: 3
   weaponLimit: 3
+  hazardSpawnLimit: 3
 --- !u!58 &455177589352024495
 CircleCollider2D:
   m_ObjectHideFlags: 0

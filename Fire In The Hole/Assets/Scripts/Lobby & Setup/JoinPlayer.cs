@@ -55,6 +55,12 @@ public class JoinPlayer : MonoBehaviour
         
     }
 
+    public void SetPlayerColor(int index, Color color)
+    {
+        playerConfigs[index].PlayerColor = color;
+
+    }
+
     public void ReadyPlayer(int index)
     {
         playerConfigs[index].IsReady = true;
@@ -139,4 +145,6 @@ public class PlayerConfig
     public bool IsReady { get; set; }
 
     public Sprite PlayerSprite { get; set; }
+
+    public Color PlayerColor { get; set; }
 }

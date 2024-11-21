@@ -143,6 +143,7 @@ public class scr_meleeSwing : MonoBehaviour
                 if (rb.gameObject.TryGetComponent<scr_golfBall>(out scr_golfBall golfBall))
                 {
                     golfBall.playerHitter = myInput.gameObject;
+                    golfBall.outline.enabled = true;
                     golfBall.outline.OutlineColor = outlineColor;
                 }
 

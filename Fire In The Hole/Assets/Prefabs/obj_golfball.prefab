@@ -119,6 +119,7 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   minVelocityToKill: 8
   playerHitter: {fileID: 0}
+  outline: {fileID: 0}
 --- !u!212 &3362427951106548886
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -456,7 +457,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineMode: 0
   outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 2
-  precomputeOutline: 0
+  outlineWidth: 5
+  precomputeOutline: 1
   bakeKeys: []
   bakeValues: []

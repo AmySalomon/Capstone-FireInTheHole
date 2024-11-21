@@ -45,7 +45,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f99412bca14acde42be24478894cee80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseScr: {fileID: 0}
   aim: {x: 0, y: 0}
+  InputDevice: 0
+  aimRadius: 5
 --- !u!1 &1000412141575831137
 GameObject:
   m_ObjectHideFlags: 0
@@ -1263,7 +1266,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f99412bca14acde42be24478894cee80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseScr: {fileID: 0}
   aim: {x: 0, y: 0}
+  InputDevice: 0
+  aimRadius: 15
 --- !u!1 &4438179308414730306
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,40 +5,75 @@ using UnityEngine.InputSystem;
 
 public class PointAtVector : MonoBehaviour
 {
-    private Vector3 mouse_pos;
-    private Vector3 object_pos;
+    public scr_mouseAim mouseScr;
 
     [HideInInspector] public Vector2 aim;
     private Vector2 lastAimDir;
     private float angle;
+    public bool InputDevice; //True == Controller, false == Keyboard & Mouse
+
+    //Mouse Variables hehe
+    private Vector3 aimDirection;
+    private Camera mainCamera;
+    private Vector3 screenCenter;
+
+    [SerializeField] private float aimRadius = 5f;
+
+    private void Awake()
+    {
+        mainCamera = Camera.main;
+        //Cursor.visible = false; //for the radius aiming 
+        //Cursor.lockState = CursorLockMode.Confined;
+    }
+
+    private void Start()
+    {
+        screenCenter = new Vector3(Screen.width / 2f, Screen.height / 2f, 0f);
+    }
 
     public void IsAiming(Vector2 vector)
     {
-        aim = vector;
-        if (aim.magnitude < 0.125)
+        if (InputDevice == true)
         {
-            aim = Vector2.zero;
+            aim = vector;
+            if (aim.magnitude < 0.125) //stick drift deadzone
+            {
+                aim = Vector2.zero;
+            }
+        }
+        if (InputDevice == false)
+        {
+            Debug.Log("Aiming with Mouse");
         }
     }
     void Update()
     {
-        if (aim == new Vector2 (0,0))
+        if (InputDevice == true)
         {
-            aim = lastAimDir;
+            if (aim == new Vector2(0, 0))
+            {
+                aim = lastAimDir;
+            }
+            else
+            {
+                lastAimDir = aim;
+            }
+            transform.transform.right = -aim;
         }
-        else
+        if (InputDevice == false) 
         {
-            lastAimDir = aim;
-        }
-        transform.transform.right = -aim;
+            Vector3 mouseScreenPosition = Input.mousePosition;
+            Vector3 offset = mouseScreenPosition - screenCenter;
 
-        //MOUSE CONTROLS
-        /*mouse_pos = Input.mousePosition;
-        mouse_pos.z = -20;
-        object_pos = Camera.main.WorldToScreenPoint(transform.position);
-        mouse_pos.x = mouse_pos.x - object_pos.x;
-        mouse_pos.y = mouse_pos.y - object_pos.y;
-        angle = Mathf.Atan2(mouse_pos.y, mouse_pos.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, angle - 180);*/
+            if (offset.magnitude > aimRadius)
+            {
+                offset = offset.normalized * aimRadius;
+            }
+
+            Vector3 clampedMouseScreenPosition = screenCenter + offset;
+            Vector3 mouseWorldPosition = mainCamera.ScreenToWorldPoint(clampedMouseScreenPosition);
+            aimDirection = (mouseWorldPosition - mainCamera.ScreenToWorldPoint(screenCenter)).normalized;
+            transform.right = -aimDirection;
+        }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.U2D;
 using static UnityEngine.InputSystem.InputAction;
 
 public class PlayerInputHandler : MonoBehaviour
@@ -18,7 +19,7 @@ public class PlayerInputHandler : MonoBehaviour
 
     private PlayerControls controls;
     private PlayerDeath playerDead;
-
+    private InputDevice device;
     private void Awake()
     {
         playerMovement = GetComponentInChildren<PlayerMovement>();
@@ -41,6 +42,8 @@ public class PlayerInputHandler : MonoBehaviour
 
     private void Input_onActionTriggered(CallbackContext obj)
     {
+        device = obj.control.device; //Assigns control type to device (keyboard or controller)
+
         if (obj.action.name == controls.Player1.Move.name)
         {
             OnMove(obj);
@@ -107,9 +110,22 @@ public class PlayerInputHandler : MonoBehaviour
     {
         if (playerAim != null)
         {
-            Debug.Log("trying to aim");
-            playerAim.IsAiming(context.ReadValue<Vector2>());
-            playerSwingAim.IsAiming(context.ReadValue<Vector2>());
+            if (device is Gamepad)
+            {
+                Debug.Log("trying to aim Gamepad");
+                playerAim.IsAiming(context.ReadValue<Vector2>());
+                playerAim.InputDevice = true;
+                playerSwingAim.IsAiming(context.ReadValue<Vector2>());
+                playerSwingAim.InputDevice = true;
+            }
+            else if (device is Mouse)
+            {
+                Debug.Log("trying to aim Mouse");
+                playerAim.IsAiming(context.ReadValue<Vector2>());
+                playerAim.InputDevice = false;
+                playerSwingAim.IsAiming(context.ReadValue<Vector2>());
+                playerSwingAim.InputDevice = false;
+            }
         }
     }
 

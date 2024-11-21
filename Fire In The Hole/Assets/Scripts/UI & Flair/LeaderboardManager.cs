@@ -13,15 +13,15 @@ public class LeaderboardManager : MonoBehaviour
 
     private void Awake()
     {
-        if(leaderboardManager != null)
+        if (leaderboardManager != null)
         {
-            Destroy(gameObject);
+            Debug.Log("Singleton - Trying to create another instance of singleton -BAD-");
         }
         else
         {
             leaderboardManager = this;
+            DontDestroyOnLoad(leaderboardManager);
         }
-        DontDestroyOnLoad(this.gameObject);
     }
     public void FindScoreLead()
     {

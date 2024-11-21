@@ -7,8 +7,9 @@ public class VolcanoHazard : MonoBehaviour
     Color startingColour;
     public float timeToImpactMax = 6;
     public float timeToImpact;
-    public double lingerTimer = 0.25;
+    public double lingerTimer = 1;
     private bool exploding = false;
+    public Animator lavaAnimator;
 
     // Start is called before the first frame update
     void Start()
@@ -18,12 +19,13 @@ public class VolcanoHazard : MonoBehaviour
         this.GetComponent<SpriteRenderer>().color = new Color(1.0f, 0.0f, 0.0f, 0.5f);
         startingColour = GetComponent<SpriteRenderer>().color;
         exploding = false;
+        ColorChanger();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        ColorChanger();
         timeToImpact -= Time.deltaTime;
         if (exploding)
         {//go away after set time
@@ -37,6 +39,7 @@ public class VolcanoHazard : MonoBehaviour
         {
             this.GetComponent<Collider2D>().enabled = true;
             exploding = true;
+            lavaAnimator.SetBool("Fade Away", true);
         }
     }
 

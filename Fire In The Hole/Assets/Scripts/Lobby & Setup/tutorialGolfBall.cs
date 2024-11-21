@@ -116,7 +116,7 @@ public class tutorialGolfBall : MonoBehaviour
             AudioSource audio = other.GetComponent<AudioSource>();
             audio.Play();
             
-            if (other.GetComponent<LobbyHoleIdentity>().isTutorialHole == true) ;
+            if (other.GetComponent<LobbyHoleIdentity>().isTutorialHole == true)
             {
                 //when scoring in the tutorial hole, add a player as being "ready".
                 readyManager.playersReady++;

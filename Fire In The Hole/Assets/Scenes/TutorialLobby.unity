@@ -10098,6 +10098,10 @@ PrefabInstance:
       value: ReadyUpFlag
       objectReference: {fileID: 0}
     - target: {fileID: 1156945299708961334, guid: 4367ff540abcd7e4082be22c18008a82, type: 3}
+      propertyPath: flagNumber
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1156945299708961334, guid: 4367ff540abcd7e4082be22c18008a82, type: 3}
       propertyPath: isTutorialHole
       value: 0
       objectReference: {fileID: 0}

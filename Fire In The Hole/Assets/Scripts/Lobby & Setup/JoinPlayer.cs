@@ -68,11 +68,22 @@ public class JoinPlayer : MonoBehaviour
         //this code adds the player into the scene once theyre readied up, at their spawn point, and disables the hud for character selection
         var player = Instantiate(playerPrefab, playerSpawns[index].position, playerSpawns[index].rotation, gameObject.transform);
         var tutorialFlag = Instantiate(tutorialFlagPrefab, flagSpawns[index].position, flagSpawns[index].rotation, gameObject.transform);
+        tutorialFlag.GetComponent<LobbyHoleIdentity>().flagNumber = index + 1;
         var tutorialBall = Instantiate(tutorialBallPrefab, ballSpawns[index].position, ballSpawns[index].rotation, gameObject.transform);
         player.GetComponentInChildren<PlayerInputHandler>().InitializePlayer(playerConfigs[index]);
         shouldIDisableUI = true;
     }
 
+    //CODE USED TO DESTROY ACTIVE PLAYER OBJECTS (USUALLY WHEN MOVING TO NEW SCENES IN A DIFFERENT WAY THAN GOTOGAMESCENE
+    public void DestroyActivePlayers()
+    {
+        playersActive = GetComponentsInChildren<PlayerInputHandler>();
+
+        foreach (PlayerInputHandler player in playersActive)
+        {
+            Destroy(player.gameObject);
+        }
+    }
     //CODE USED TO MOVE TO THE LEVEL SCENE WHEN EVERYONE IS READ
     public void GoToGameScene()
     {

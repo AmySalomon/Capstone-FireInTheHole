@@ -116,12 +116,29 @@ public class tutorialGolfBall : MonoBehaviour
             AudioSource audio = other.GetComponent<AudioSource>();
             audio.Play();
             
-            if (other.GetComponent<LobbyHoleIdentity>().isTutorialHole == true) ;
+            if (other.GetComponent<LobbyHoleIdentity>().isTutorialHole == true)
             {
                 //when scoring in the tutorial hole, add a player as being "ready".
                 readyManager.playersReady++;
+                //switch statement checks which hole was hit to destroy the tutorial wall
+                switch(other.GetComponent<LobbyHoleIdentity>().flagNumber)
+                {
+                    case 1:
+                        readyManager.DestroyWall(1);
+                        break;
+                    case 2:
+                        readyManager.DestroyWall(2);
+                        break;
+                    case 3:
+                        readyManager.DestroyWall(3);
+                        break;
+                    case 4:
+                        readyManager.DestroyWall(4);
+                        break;
+                }
                 Destroy(other.gameObject);
             }
+
             Destroy(gameObject);
         }
         //slows ball in sand trap

@@ -6,17 +6,7 @@ public class LobbyHoleIdentity : MonoBehaviour
 {
     public bool isTutorialHole;
 
-    
+    public int flagNumber;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

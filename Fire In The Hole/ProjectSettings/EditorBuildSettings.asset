@@ -47,5 +47,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TutorialLobby.unity
     guid: dd5d40a21e644c64fb347a11341ca6f0
+  - enabled: 1
+    path: Assets/Scenes/IntoGameTransition.unity
+    guid: f15503f3caa3b2e4a809be5c4337e036
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 73eb5283e2d80804c8ef1cd07f094675, type: 2}

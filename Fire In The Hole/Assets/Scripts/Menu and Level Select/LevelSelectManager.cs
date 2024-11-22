@@ -69,7 +69,7 @@ public class LevelSelectManager : MonoBehaviour
         Debug.Log(randomLevel);
         if (randomLevel == 1)
         {
-            chosenLevel = "3D Test (Blacklight)";
+            chosenLevel = "3D Blacklight";
             SceneManager.LoadScene(playerSetup);
         }
         else if (randomLevel == 2)
@@ -96,7 +96,7 @@ public class LevelSelectManager : MonoBehaviour
     public void LevelBlacklight()
     {
         Time.timeScale = 1f;
-        chosenLevel = "3D Test (Blacklight)";
+        chosenLevel = "3D Blacklight";
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = false;
         SceneManager.LoadScene(playerSetup);

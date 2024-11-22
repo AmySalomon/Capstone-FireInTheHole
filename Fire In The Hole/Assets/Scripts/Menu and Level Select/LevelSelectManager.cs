@@ -18,24 +18,45 @@ public class LevelSelectManager : MonoBehaviour
 
     private void Awake()
     {
+        //No duplicate LevelSelectManagers!!!
         if (LSManager != null)
         {
             Destroy(gameObject);
+            Debug.Log("[LevelSelectManager]: Destroyed LevelSelectManager.");
         }
         else
         {
             LSManager = this;
         }
         DontDestroyOnLoad(this.gameObject);
+
+        //No duplicate PlayerManagers!!!
+        string currentScene = SceneManager.GetActiveScene().name;
+        if (currentScene == "LevelSelect")
+        {
+            GameObject[] PMObject;
+            PMObject = GameObject.FindGameObjectsWithTag("PlayerManager");
+            foreach (GameObject manager in PMObject)
+                Destroy(manager);
+            Debug.Log("Destroyed Player Manager.");
+
+            //No duplicate Game Timers!!!
+            GameObject[] GTObject;
+            GTObject = GameObject.FindGameObjectsWithTag("Timer");
+            foreach (GameObject timer in GTObject)
+                Destroy(timer);
+            Debug.Log("Destroyed Game Timer.");
+
+        }        
     }
 
     public void BackToMain()
     {
         Time.timeScale = 1f;
-        chosenLevel = "Main Menu (NOT WORKING YET)";
+        chosenLevel = "MainMenu";
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = false;
-        SceneManager.LoadScene("LevelSelect");
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void LevelRandom()
@@ -109,5 +130,14 @@ public class LevelSelectManager : MonoBehaviour
         SceneManager.LoadScene(playerSetup);
         
     }
-}
 
+    public void HowToPlay()
+    {
+        Time.timeScale = 1f;
+        chosenLevel = "HowToPlay";
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = false;
+        SceneManager.LoadScene(playerSetup);
+
+    }
+}

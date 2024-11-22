@@ -52,6 +52,8 @@ public class scr_meleeSwing : MonoBehaviour
     private SpritePicker spriteObject;
     private SpriteRenderer playerSprite;
 
+
+    public Color outlineColor;
     private void Awake()
     {
         audioPlayer = GetComponent<AudioSource>();
@@ -74,7 +76,7 @@ public class scr_meleeSwing : MonoBehaviour
         {
             swingAim = Vector2.zero; //unsure of what we want to do for when the player isnt aiming so figured a close range radius is fine and fun.
         }
-        Debug.Log(swingAim);
+        //Debug.Log(swingAim);
     }
 
 
@@ -141,6 +143,8 @@ public class scr_meleeSwing : MonoBehaviour
                 if (rb.gameObject.TryGetComponent<scr_golfBall>(out scr_golfBall golfBall))
                 {
                     golfBall.playerHitter = myInput.gameObject;
+                    golfBall.outline.enabled = true;
+                    golfBall.outline.OutlineColor = outlineColor;
                 }
 
             }

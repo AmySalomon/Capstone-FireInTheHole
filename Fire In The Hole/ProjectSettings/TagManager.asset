@@ -11,7 +11,10 @@ TagManager:
   - Bullet
   - Ball
   - Timer
+  - PlayerManager
+  - LevelSelectManager
   - Sand
+  - LobbyReadyManager
   layers:
   - Default
   - TransparentFX
@@ -51,4 +54,7 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Foreground
+    uniqueID: 3926214191
     locked: 0

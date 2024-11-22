@@ -32,7 +32,7 @@ public class scr_golfBall : MonoBehaviour
     //player who last hit the golfball
     public GameObject playerHitter;
 
-
+    public Outline outline;
     
 
     private void Start()
@@ -42,6 +42,8 @@ public class scr_golfBall : MonoBehaviour
         myRigidbody = GetComponent<Rigidbody2D>();
         mySprite = GetComponent<SpriteRenderer>();
         myTrail = GetComponent<TrailRenderer>();
+        outline = GetComponent<Outline>();
+        outline.enabled = false;
     }
 
     private void Update()
@@ -55,6 +57,8 @@ public class scr_golfBall : MonoBehaviour
             Debug.Log("RRRESET");
             hasMoved = false;
             playerHitter = null;
+            outline.OutlineColor = Color.white;
+            outline.enabled = false;
         }
 
         if (myRigidbody.velocity.x > minVelocityToKill || myRigidbody.velocity.y > minVelocityToKill || myRigidbody.velocity.x < -minVelocityToKill || myRigidbody.velocity.y < -minVelocityToKill)

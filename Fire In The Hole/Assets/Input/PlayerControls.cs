@@ -148,12 +148,78 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
+                    ""name"": ""Keyboard"",
+                    ""id"": ""b93f291f-2bee-4226-9847-c44350f58772"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""Up"",
+                    ""id"": ""4b750dab-5938-47e4-a3cc-2be92c84fc6d"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Down"",
+                    ""id"": ""7ba79ec5-8b0b-4bb0-b4e8-b620338bfb62"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Left"",
+                    ""id"": ""3f22c8e6-7f51-4052-9bec-d3eda3355ddd"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Right"",
+                    ""id"": ""ea35b947-3dd1-4a4e-9a9e-8477982ce2cf"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
                     ""name"": """",
                     ""id"": ""f116bd46-e5a6-4194-926f-895bc8449778"",
-                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Controller"",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""183d774b-2f7a-4f17-98dc-ac4155b29ba6"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
                     ""action"": ""Shoot"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -172,7 +238,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""0cc674ed-0ae7-478c-b3a3-a607383ae9eb"",
-                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Controller"",
@@ -303,12 +369,110 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-
                     ""id"": ""973a069a-b473-4da7-9455-16a2b76bb8b2"",
-                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Controller"",
+                    ""action"": ""MeleeSwing"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""Keyboard"",
+                    ""id"": ""08baa50e-99e0-4a91-83b3-bb3e9b02871f"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MenuMove"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""Up"",
+                    ""id"": ""98587b4b-932d-4410-9276-8fd8e0354962"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MenuMove"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Down"",
+                    ""id"": ""cd1f88ed-cd15-47ba-94c9-11057b06fcaf"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MenuMove"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Left"",
+                    ""id"": ""37717afa-c1d4-458d-98a3-085138bf1ab3"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MenuMove"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Right"",
+                    ""id"": ""ee857732-83ff-4cfc-bd67-40319a2f94b1"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MenuMove"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a1ac55a9-979d-41fc-997c-183e5ea6ecb0"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Dash"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6120d26c-451d-47d0-adca-dc82d8ed06e2"",
+                    ""path"": ""<Mouse>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Aim"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""71f8fbf4-a2c9-43d8-b0c8-342b9a830042"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Select"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3de9ae17-2ebb-4288-9ee0-2c5ee3caddda"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
                     ""action"": ""MeleeSwing"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false

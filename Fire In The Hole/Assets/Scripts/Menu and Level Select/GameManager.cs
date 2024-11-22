@@ -5,21 +5,27 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    private void Awake()
+    {
+        //No duplicate LevelSelectManager!!!
+        string currentScene = SceneManager.GetActiveScene().name;
+        if (currentScene == "MainMenu")
+        {
+            GameObject[] LSManager;
+            LSManager = GameObject.FindGameObjectsWithTag("LevelSelectManager");
+            foreach (GameObject manager in LSManager)
+                Destroy(manager);
+            Debug.Log("[GameManager]: Destroyed LevelSelectManager.");
+        }
+    }
+
     public void PlayGame()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("PlayerSetup");
+        SceneManager.LoadScene("LevelSelect");
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = false;
 
-    }
-
-    public void GoToMainMenu()
-    {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene("MainMenu");
-        Cursor.lockState = CursorLockMode.Confined;
-        Cursor.visible = true;
     }
 
     public void GoToOptions()
@@ -34,6 +40,14 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
+    }
+
+    public void GoToLevelSelect()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("LevelSelect");
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
     }

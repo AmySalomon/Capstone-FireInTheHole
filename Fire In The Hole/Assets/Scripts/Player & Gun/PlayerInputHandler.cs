@@ -15,6 +15,7 @@ public class PlayerInputHandler : MonoBehaviour
     public PointAtVector playerSwingAim;
     private scr_meleeSwing playerCharge;
     [HideInInspector] public Sprite playerSprite;
+    [HideInInspector] public Color playerColor;
 
     private PlayerControls controls;
     private PlayerDeath playerDead;
@@ -36,6 +37,7 @@ public class PlayerInputHandler : MonoBehaviour
         playerConfig = pc;
         playerConfig.Input.onActionTriggered += Input_onActionTriggered;
         playerSprite = playerConfig.PlayerSprite;
+        playerColor = playerConfig.PlayerColor;
         Debug.Log("init");
     }
 

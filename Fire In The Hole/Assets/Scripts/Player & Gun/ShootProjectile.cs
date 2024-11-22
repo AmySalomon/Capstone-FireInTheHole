@@ -43,6 +43,10 @@ public class ShootProjectile : MonoBehaviour
     public Sprite usedBullet_UI;
     public Transform bulletPanelParent;
     public List<GameObject> ammo_UI = new List<GameObject>();
+
+    private float currentCameraX;
+    private float currentCameraY;
+    private float currentCameraZ;
     private void Start()
     {
         myCamera = GameObject.FindGameObjectWithTag("MainCamera");
@@ -50,7 +54,11 @@ public class ShootProjectile : MonoBehaviour
         muzzleFlash.enabled = false;
         reloadingText.SetActive(false);
         UpdateWeapon(defaultWeapon); //Set starting weapon to player default weapon
-        
+
+        //gets the current camera's position for screen shake later
+        currentCameraX = myCamera.transform.position.x;
+        currentCameraY = myCamera.transform.position.y;
+        currentCameraZ = myCamera.transform.position.z;
     }
     void Update()
     {
@@ -64,11 +72,11 @@ public class ShootProjectile : MonoBehaviour
                 ReloadComplete();
             }
         }
-        //Screenshake
+        //Screenshake and muzzle flash
         if (shootTimer <= 0.1f)
         {
             muzzleFlash.enabled = true;
-            myCamera.transform.position = new Vector3(0 + Random.Range(0, screenShake), 0 + Random.Range(0, screenShake), -10);
+            myCamera.transform.position = new Vector3(currentCameraX + Random.Range(0, screenShake), currentCameraY + Random.Range(0, screenShake), currentCameraZ + Random.Range(0, screenShake));
         }
 
         if (isTryingToShoot)

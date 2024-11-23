@@ -27,16 +27,16 @@ EditorBuildSettings:
     path: Assets/Scenes/PlayerSetup.unity
     guid: 0d9e8c3b4bd2ee24eaefd3e7fe4bdd73
   - enabled: 1
-    path: Assets/Scenes/Levels/Resized/Blacklight Resized.unity
+    path: Assets/Scenes/Levels/OLD/Resized/Blacklight Resized.unity
     guid: d0201c51525568c4eafd9a0a6c174b2d
   - enabled: 1
-    path: Assets/Scenes/Levels/Resized/Dinosaur Resized.unity
+    path: Assets/Scenes/Levels/OLD/Resized/Dinosaur Resized.unity
     guid: cc1b93380ecddd64393c614b9e0082d7
   - enabled: 1
-    path: Assets/Scenes/Levels/Resized/Pirate Resized.unity
+    path: Assets/Scenes/Levels/OLD/Resized/Pirate Resized.unity
     guid: 139c6217c5c419045a0d65be42b547f2
   - enabled: 1
-    path: Assets/Scenes/Levels/Resized/Volcano Resized.unity
+    path: Assets/Scenes/Levels/OLD/Resized/Volcano Resized.unity
     guid: 9802526fae4835343b598129422218b4
   - enabled: 1
     path: Assets/Scenes/EndingScene.unity
@@ -51,7 +51,7 @@ EditorBuildSettings:
     path: Assets/Scenes/IntoGameTransition.unity
     guid: f15503f3caa3b2e4a809be5c4337e036
   - enabled: 1
-    path: Assets/Scenes/Levels/Resized/3D Test (Blacklight).unity
+    path: Assets/Scenes/Levels/3D/3D Blacklight.unity
     guid: 0fe03b0e07e9fe046b699a2343f2180c
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 73eb5283e2d80804c8ef1cd07f094675, type: 2}

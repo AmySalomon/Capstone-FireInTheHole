@@ -74,17 +74,17 @@ public class LevelSelectManager : MonoBehaviour
         }
         else if (randomLevel == 2)
         {
-            chosenLevel = "Dinosaur Resized";
+            chosenLevel = "3D Dinosaur";
             SceneManager.LoadScene(playerSetup);
         }
         else if (randomLevel == 3)
         {
-            chosenLevel = "Volcano Resized";
+            chosenLevel = "3D Volcano";
             SceneManager.LoadScene(playerSetup);
         }
         else if (randomLevel == 4)
         {
-            chosenLevel = "Pirate Resized";
+            chosenLevel = "3D Pirate";
             SceneManager.LoadScene(playerSetup);
         }
         else
@@ -105,7 +105,7 @@ public class LevelSelectManager : MonoBehaviour
     public void LevelDinosaur()
     {
         Time.timeScale = 1f;
-        chosenLevel = "Dinosaur Resized";
+        chosenLevel = "3D Dinosaur";
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = false;
         SceneManager.LoadScene(playerSetup);
@@ -114,7 +114,7 @@ public class LevelSelectManager : MonoBehaviour
     public void LevelVolcano()
     {
         Time.timeScale = 1f;
-        chosenLevel = "Volcano Resized";
+        chosenLevel = "3D Volcano";
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = false;
         SceneManager.LoadScene(playerSetup);
@@ -124,7 +124,7 @@ public class LevelSelectManager : MonoBehaviour
     public void LevelPirate()
     {
         Time.timeScale = 1f;
-        chosenLevel = "Pirate Resized";
+        chosenLevel = "3D Pirate";
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = false;
         SceneManager.LoadScene(playerSetup);

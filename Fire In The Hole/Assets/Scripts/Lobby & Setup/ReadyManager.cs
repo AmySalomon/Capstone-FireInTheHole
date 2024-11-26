@@ -19,6 +19,12 @@ public class ReadyManager : MonoBehaviour
     public GameObject Wall3;
     public GameObject Wall4;
 
+    //3D walls on the tutorial level blocking -insert player number- from leaving tutorial ready area
+    public GameObject Wall1_3D;
+    public GameObject Wall2_3D;
+    public GameObject Wall3_3D;
+    public GameObject Wall4_3D;
+
     public SpriteRenderer FadeOut;
 
     public TextMeshProUGUI CountdownText;
@@ -40,8 +46,8 @@ public class ReadyManager : MonoBehaviour
         }
     }
 
-    
-    
+
+
     //the scene transition for the game to start
     public void StartTheGame()
     {
@@ -84,18 +90,22 @@ public class ReadyManager : MonoBehaviour
         {
             case 1:
                 Destroy(Wall1);
+                Destroy(Wall1_3D);
                 break;
 
             case 2:
                 Destroy(Wall2);
+                Destroy(Wall2_3D);
                 break;
 
             case 3:
                 Destroy(Wall3);
+                Destroy(Wall3_3D);
                 break;
 
             case 4:
                 Destroy(Wall4);
+                Destroy(Wall4_3D);
                 break;
         }
     }

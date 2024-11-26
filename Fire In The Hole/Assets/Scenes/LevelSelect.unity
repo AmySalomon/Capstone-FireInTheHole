@@ -703,7 +703,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   randomLevel: 0
   chosenLevel: 
-  playerSetup: TutorialLobby
+  playerSetup: 3D TutorialLobby
 --- !u!1 &384395137
 GameObject:
   m_ObjectHideFlags: 0

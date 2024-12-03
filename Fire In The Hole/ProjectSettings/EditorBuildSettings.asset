@@ -9,22 +9,22 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelSelect.unity
     guid: fd4506a8758a78e478b4bf7af85e1641
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/Tests/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/4PlayerSampleScene.unity
+    path: Assets/Scenes/Tests/4PlayerSampleScene.unity
     guid: 2fa3035a03961c5449ec8ba47b18da16
   - enabled: 0
     path: Assets/Scenes/Levels/OLD/Greybox/Blacklight.unity
     guid: 0330a577d3a5f994eb129d213044ace0
   - enabled: 1
-    path: Assets/Scenes/MacicTesting.unity
+    path: Assets/Scenes/Tests/MacicTesting.unity
     guid: 8b25af2e26bf2ef4d8e76044369185cb
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: c895d838e1fda6d45a328e4660adef4f
   - enabled: 1
-    path: Assets/Scenes/PlayerSetup.unity
+    path: Assets/Scenes/Tests/PlayerSetup.unity
     guid: 0d9e8c3b4bd2ee24eaefd3e7fe4bdd73
   - enabled: 0
     path: Assets/Scenes/Levels/OLD/Resized/Blacklight Resized.unity
@@ -42,10 +42,10 @@ EditorBuildSettings:
     path: Assets/Scenes/EndingScene.unity
     guid: 74ceda6ef616eab4fad6780e9f007d9d
   - enabled: 1
-    path: Assets/Scenes/HowToPlay.unity
+    path: Assets/Scenes/Old/HowToPlay.unity
     guid: 312fbe8c3cbcc53448d740802f16126f
   - enabled: 0
-    path: Assets/Scenes/TutorialLobby.unity
+    path: Assets/Scenes/Old/TutorialLobby.unity
     guid: dd5d40a21e644c64fb347a11341ca6f0
   - enabled: 1
     path: Assets/Scenes/IntoGameTransition.unity
@@ -66,7 +66,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/3D/3D Volcano.unity
     guid: 2e6906c35f2f54244b732cbaca379817
   - enabled: 1
-    path: Assets/Scenes/Levels/3D/3D TutorialLobby.unity
+    path: Assets/Scenes/3D TutorialLobby.unity
     guid: 3430aeaf7846432419d9148c9368bdb9
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 73eb5283e2d80804c8ef1cd07f094675, type: 2}

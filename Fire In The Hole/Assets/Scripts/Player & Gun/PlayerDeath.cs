@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.Tracing;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerDeath : MonoBehaviour
@@ -15,14 +17,27 @@ public class PlayerDeath : MonoBehaviour
 
     public float respawnTime;
 
+    public float invulnRespawnTime;
+
     [HideInInspector] public bool playerIsDead = false;
+    private bool playerJustRespawned = false;
+
+    //player sprite so we can make it flash on respawn
+    [SerializeField] private SpriteRenderer playerSprite;
     private float timer = 0;
+    private float invulnTimer = 0;
     private AudioSource killSound;
     private SpriteRenderer deathIcon;
     private Dash dash;
     private ShootProjectile gun;
+    private CircleCollider2D playerCollision;
 
     private Vector2 moveToPosition;
+
+    //layermasks we want to exclude for player respawn invulnerability
+    public LayerMask bullet;
+    public LayerMask golfBall;
+    public LayerMask none;
 
     private void Awake()
     {
@@ -30,15 +45,18 @@ public class PlayerDeath : MonoBehaviour
         deathIcon = GetComponent<SpriteRenderer>();
         dash = GetComponentInChildren<Dash>();
         gun = GetComponentInChildren<ShootProjectile>();
+        playerCollision = GetComponentInChildren<CircleCollider2D>();
         deathIcon.enabled = false;
     }
     void Update()
     {
+        //kills player, flashes kill indicator, waits to respawn player
         if (playerIsDead)
         {
             transform.position = moveToPosition;
             timer += Time.deltaTime;
 
+            //flash kill indicator
             if (timer > 1) deathIcon.enabled = false;
             else if (timer > 0.8) deathIcon.enabled = true;
             else if (timer > 0.6) deathIcon.enabled = false;
@@ -49,6 +67,32 @@ public class PlayerDeath : MonoBehaviour
 
             if (timer > respawnTime) StartCoroutine(SpawnPlayer());
         }
+
+        if (playerJustRespawned)
+        {
+            invulnTimer += Time.deltaTime;
+
+            //flash player sprite when invulnerable, when time runs out, re-enable player damage via layers
+            if (invulnTimer > invulnRespawnTime)
+            {
+                playerSprite.enabled = true;
+                playerCollision.excludeLayers = none;
+                invulnTimer = 0;
+                playerJustRespawned = false;
+            }
+            //get dad's help with this calculation
+            else if (invulnTimer > invulnTimer / 10 * 9) playerSprite.enabled = false;
+            else if (invulnTimer > invulnTimer / 10 * 8) playerSprite.enabled = true;
+            else if (invulnTimer > invulnTimer / 10 * 8) playerSprite.enabled = false;
+            else if (invulnTimer > invulnTimer / 10 * 7) playerSprite.enabled = true;
+            else if (invulnTimer > invulnTimer / 10 * 6) playerSprite.enabled = false;
+            else if (invulnTimer > invulnTimer / 10 * 5) playerSprite.enabled = true;
+            else if (invulnTimer > invulnTimer / 10 * 4) playerSprite.enabled = false;
+            else if (invulnTimer > invulnTimer / 10 * 3) playerSprite.enabled = true;
+            else if (invulnTimer > invulnTimer / 10 * 2) playerSprite.enabled = false;
+            else if (invulnTimer > 0) playerSprite.enabled = true;
+        }
+        
     }
 
     public void Died()
@@ -70,8 +114,13 @@ public class PlayerDeath : MonoBehaviour
             playerStuff.SetActive(true);
             playerCanvasStuff.SetActive(true);
             timer = 0;
+            //make player invulnerable
+            playerCollision.excludeLayers = bullet + golfBall;
+            //sets dashes to full
             dash.dashRechargeTimer = dash.dashRechargeAmount;
+            //give player default gun
             gun.UpdateWeapon(gun.defaultWeapon);
+            playerJustRespawned = true;
             StopCoroutine(SpawnPlayer());
         }
 

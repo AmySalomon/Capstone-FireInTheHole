@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private float sandMoveSpeed = 1f;
 
+    [SerializeField] private float rotationSpeed = 1f;
+
     private float currentMoveSpeed;
 
     private string sandTrapTag = "Sand";
@@ -81,8 +83,6 @@ public class PlayerMovement : MonoBehaviour
         {
             RotateToRight();
         }
-
-        Debug.Log(currentRotation.y +  "CURRENT ROTATION");
     }
 
     void RotateToLeft()
@@ -95,7 +95,7 @@ public class PlayerMovement : MonoBehaviour
 
         else
         {
-            sprite.transform.eulerAngles = new Vector3(currentRotation.x, currentRotation.y +1.5f, currentRotation.z);
+            sprite.transform.eulerAngles = new Vector3(currentRotation.x, currentRotation.y + rotationSpeed, currentRotation.z);
         }
     }
 
@@ -109,7 +109,7 @@ public class PlayerMovement : MonoBehaviour
 
         else
         {
-            sprite.transform.eulerAngles = new Vector3(currentRotation.x, currentRotation.y - 1.5f, currentRotation.z);
+            sprite.transform.eulerAngles = new Vector3(currentRotation.x, currentRotation.y - rotationSpeed, currentRotation.z);
         }
     }
 

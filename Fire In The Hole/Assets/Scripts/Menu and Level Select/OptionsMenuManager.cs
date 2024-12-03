@@ -16,19 +16,40 @@ public class OptionsMenuManager : MonoBehaviour
     //Change Audio Sliders
     public void ChangeMasterVolume()
     {
-        mainAudioMixer.SetFloat("MasterParam", masterVol.value);
+        if (masterVol.value <= -20) //The lowest setting 
+        {
+            mainAudioMixer.SetFloat("MasterParam", -80);
+        }
+        else
+        {
+            mainAudioMixer.SetFloat("MasterParam", masterVol.value);
+        }
         masterVolTemp = masterVol.value;
     }
 
     public void ChangeMusicVolume()
     {
-        mainAudioMixer.SetFloat("MusicParam", musicVol.value);
+        if (musicVol.value <= -20) //The lowest setting 
+        {
+            mainAudioMixer.SetFloat("MusicParam", -80);
+        }
+        else
+        {
+            mainAudioMixer.SetFloat("MusicParam", musicVol.value);
+        }
         musicVolTemp = musicVol.value;
     }
 
     public void ChangeSoundVolume()
     {
-        mainAudioMixer.SetFloat("SoundParam", soundVol.value);
+        if (soundVol.value <= -20) //The lowest setting 
+        {
+            mainAudioMixer.SetFloat("SoundParam", -80);
+        }
+        else
+        {
+            mainAudioMixer.SetFloat("SoundParam", soundVol.value);
+        }
         soundVolTemp = soundVol.value;
     }
 

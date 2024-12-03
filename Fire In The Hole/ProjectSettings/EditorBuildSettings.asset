@@ -68,5 +68,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/3D TutorialLobby.unity
     guid: 3430aeaf7846432419d9148c9368bdb9
+  - enabled: 1
+    path: Assets/Scenes/OptionsMenu.unity
+    guid: d7f2a7dd0b22549488a589ac387a773f
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 73eb5283e2d80804c8ef1cd07f094675, type: 2}

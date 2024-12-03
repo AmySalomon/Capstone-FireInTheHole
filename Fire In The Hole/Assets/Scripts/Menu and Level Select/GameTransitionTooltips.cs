@@ -23,7 +23,7 @@ public class GameTransitionTooltips : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (timer > 6.5)
+        if (timer > 9.5)
         {
             JoinPlayer.Instance.GoToGameScene();
         }

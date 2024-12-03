@@ -37,7 +37,7 @@ public class MenuMusic : MonoBehaviour
         {
             Debug.Log("Scene name not found.");
         }
-        else if (currentLevelName == "MainMenu" || currentLevelName == "OptionsMenu" || currentLevelName == "LevelSelect" || currentLevelName == "Credits")
+        else if (currentLevelName == "MainMenu" || currentLevelName == "OptionsMenu" || currentLevelName == "LevelSelect" || currentLevelName == "Credits" || currentLevelName == "3D TutorialLobby")
         {
             menuMusic = true;
         }

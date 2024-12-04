@@ -35,6 +35,8 @@ public class tutorialGolfBall : MonoBehaviour
     public GameObject playerHitter;
 
     private ReadyManager readyManager;
+
+    [HideInInspector]public Outline outline;
     
 
     private void Start()
@@ -45,6 +47,7 @@ public class tutorialGolfBall : MonoBehaviour
         myRigidbody = GetComponent<Rigidbody2D>();
         mySprite = GetComponent<SpriteRenderer>();
         myTrail = GetComponent<TrailRenderer>();
+        outline = GetComponent<Outline>();
     }
 
     private void Update()
@@ -58,6 +61,7 @@ public class tutorialGolfBall : MonoBehaviour
             Debug.Log("RRRESET");
             hasMoved = false;
             playerHitter = null;
+            outline.OutlineColor = Color.white;
         }
 
         if (myRigidbody.velocity.x > minVelocityToKill || myRigidbody.velocity.y > minVelocityToKill || myRigidbody.velocity.x < -minVelocityToKill || myRigidbody.velocity.y < -minVelocityToKill)

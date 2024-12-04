@@ -43,6 +43,13 @@ public class ReadyManager : MonoBehaviour
             {
                 StartTheGame();
             }
+            else
+            {
+                //resets the fade transition if someone joins last minute
+                timer = 0;
+                CountdownText.text = " ";
+                FadeOut.color = new Color(0, 0, 0, 0);
+            }
         }
     }
 

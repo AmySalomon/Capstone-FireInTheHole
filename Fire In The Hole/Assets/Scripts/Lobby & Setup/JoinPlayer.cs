@@ -29,6 +29,8 @@ public class JoinPlayer : MonoBehaviour
 
     private PlayerInputHandler[] playersActive;
 
+    private PlayerInputManager inputManager;
+
     private void Awake()
     {
         if (Instance != null)
@@ -42,6 +44,7 @@ public class JoinPlayer : MonoBehaviour
             playerConfigs = new List<PlayerConfig>();
         }
 
+        inputManager = GetComponent<PlayerInputManager>();
     }
 
     public List<PlayerConfig> GetPlayerConfigs()
@@ -79,12 +82,13 @@ public class JoinPlayer : MonoBehaviour
     {
         playersActive = GetComponentsInChildren<PlayerInputHandler>();
 
+        inputManager.enabled = false;
         foreach (PlayerInputHandler player in playersActive)
         {
             Destroy(player.gameObject);
         }
     }
-    //CODE USED TO MOVE TO THE LEVEL SCENE WHEN EVERYONE IS READ
+    //CODE USED TO MOVE TO THE LEVEL SCENE WHEN EVERYONE IS READY
     public void GoToGameScene()
     {
         playersActive = GetComponentsInChildren<PlayerInputHandler>();

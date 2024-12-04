@@ -98,7 +98,7 @@ public class scr_meleeSwing : MonoBehaviour
             //Debug.Log(currentSwingForce);
 
             gunAiming.enabled = false;
-            gunAiming.gameObject.transform.Rotate(0, 0, 2 * (currentSwingForce / 200));
+            gunAiming.gameObject.transform.Rotate(0, 0, 300 * (currentSwingForce / 200) * Time.deltaTime);
             if(playerSprite.flipX == true) gunAiming.gameObject.transform.localPosition = new Vector2(0.5f, 0);
             else gunAiming.gameObject.transform.localPosition = new Vector2(-0.5f, 0);
 
@@ -143,8 +143,12 @@ public class scr_meleeSwing : MonoBehaviour
                 if (rb.gameObject.TryGetComponent<scr_golfBall>(out scr_golfBall golfBall))
                 {
                     golfBall.playerHitter = myInput.gameObject;
-                    golfBall.outline.enabled = true;
                     golfBall.outline.OutlineColor = outlineColor;
+                }
+                if (rb.gameObject.TryGetComponent<tutorialGolfBall>(out tutorialGolfBall tutGolfBall))
+                {
+                    tutGolfBall.playerHitter = myInput.gameObject;
+                    tutGolfBall.outline.OutlineColor = outlineColor;
                 }
 
             }

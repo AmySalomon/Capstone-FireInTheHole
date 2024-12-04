@@ -30,7 +30,7 @@ public class PlayerDeath : MonoBehaviour
     private SpriteRenderer deathIcon;
     private Dash dash;
     private ShootProjectile gun;
-    private CircleCollider2D playerCollision;
+    public Rigidbody2D playerRigidbody;
 
     private Vector2 moveToPosition;
 
@@ -45,7 +45,6 @@ public class PlayerDeath : MonoBehaviour
         deathIcon = GetComponent<SpriteRenderer>();
         dash = GetComponentInChildren<Dash>();
         gun = GetComponentInChildren<ShootProjectile>();
-        playerCollision = GetComponentInChildren<CircleCollider2D>();
         deathIcon.enabled = false;
     }
     void Update()
@@ -72,17 +71,17 @@ public class PlayerDeath : MonoBehaviour
         {
             invulnTimer += Time.deltaTime;
             //make player invulnerable
-            playerCollision.excludeLayers = bullet + golfBall;
+            playerRigidbody.excludeLayers = bullet + golfBall;
             //flash player sprite when invulnerable, when time runs out, re-enable player damage via layers
             if (invulnTimer > invulnRespawnTime)
             {
                 playerSprite.enabled = true;
-                playerCollision.excludeLayers = none;
+                playerRigidbody.excludeLayers = none;
                 invulnTimer = 0;
                 playerJustRespawned = false;
             }
-            else if (invulnTimer > invulnRespawnTime / 10 * 9) playerSprite.enabled = false;
-            else if (invulnTimer > invulnRespawnTime / 10 * 8) playerSprite.enabled = true;
+            else if (invulnTimer > invulnRespawnTime / 10 * 10) playerSprite.enabled = false;
+            else if (invulnTimer > invulnRespawnTime / 10 * 9) playerSprite.enabled = true;
             else if (invulnTimer > invulnRespawnTime / 10 * 8) playerSprite.enabled = false;
             else if (invulnTimer > invulnRespawnTime / 10 * 7) playerSprite.enabled = true;
             else if (invulnTimer > invulnRespawnTime / 10 * 6) playerSprite.enabled = false;
@@ -115,7 +114,7 @@ public class PlayerDeath : MonoBehaviour
             playerCanvasStuff.SetActive(true);
             timer = 0;
             //make player invulnerable
-            playerCollision.excludeLayers = bullet + golfBall;
+            playerRigidbody.excludeLayers = bullet + golfBall;
             //sets dashes to full
             dash.dashRechargeTimer = dash.dashRechargeAmount;
             //give player default gun

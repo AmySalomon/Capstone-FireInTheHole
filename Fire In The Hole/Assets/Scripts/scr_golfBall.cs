@@ -32,7 +32,7 @@ public class scr_golfBall : MonoBehaviour
     //player who last hit the golfball
     public GameObject playerHitter;
 
-    public Outline outline;
+    [HideInInspector]public Outline outline;
     
 
     private void Start()
@@ -43,7 +43,6 @@ public class scr_golfBall : MonoBehaviour
         mySprite = GetComponent<SpriteRenderer>();
         myTrail = GetComponent<TrailRenderer>();
         outline = GetComponent<Outline>();
-        outline.enabled = false;
     }
 
     private void Update()
@@ -58,9 +57,9 @@ public class scr_golfBall : MonoBehaviour
             hasMoved = false;
             playerHitter = null;
             outline.OutlineColor = Color.white;
-            outline.enabled = false;
         }
 
+        //when moving over certain velocity, make ball lethal to players
         if (myRigidbody.velocity.x > minVelocityToKill || myRigidbody.velocity.y > minVelocityToKill || myRigidbody.velocity.x < -minVelocityToKill || myRigidbody.velocity.y < -minVelocityToKill)
         {
             gameObject.tag = "Bullet";
@@ -68,6 +67,7 @@ public class scr_golfBall : MonoBehaviour
             myTrail.colorGradient = killSpeedGradient;
 
         }
+        //once slow again, make non-lethal
         else
         {
             gameObject.tag = "Ball";

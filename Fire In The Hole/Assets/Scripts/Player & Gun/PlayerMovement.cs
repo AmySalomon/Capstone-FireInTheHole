@@ -95,7 +95,7 @@ public class PlayerMovement : MonoBehaviour
 
         else
         {
-            sprite.transform.eulerAngles = new Vector3(currentRotation.x, currentRotation.y + rotationSpeed, currentRotation.z);
+            sprite.transform.eulerAngles = new Vector3(currentRotation.x, currentRotation.y + rotationSpeed * Time.deltaTime, currentRotation.z);
         }
     }
 
@@ -109,7 +109,7 @@ public class PlayerMovement : MonoBehaviour
 
         else
         {
-            sprite.transform.eulerAngles = new Vector3(currentRotation.x, currentRotation.y - rotationSpeed, currentRotation.z);
+            sprite.transform.eulerAngles = new Vector3(currentRotation.x, currentRotation.y - rotationSpeed * Time.deltaTime, currentRotation.z);
         }
     }
 

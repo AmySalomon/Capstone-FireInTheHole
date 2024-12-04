@@ -605,6 +605,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 2
   sandMoveSpeed: 1.3
+  rotationSpeed: 600
   movement: {x: 0, y: 0}
   sprite: {fileID: 5085900501264061409}
 --- !u!114 &8043993876945172938
@@ -624,7 +625,7 @@ MonoBehaviour:
   minSwingForce: 100
   maxSwingForce: 2000
   chargeRate: 1000
-  swingCooldown: 0.5
+  swingCooldown: 0.1
   playerDamage: 20
   missedHit: {fileID: 8300000, guid: a64d61df650099d4fa14abc6fc3e0f84, type: 3}
   weakHit: {fileID: 8300000, guid: 7db9957c0e8850448896903cd67c2282, type: 3}
@@ -2459,12 +2460,16 @@ MonoBehaviour:
   invulnRespawnTime: 2
   playerIsDead: 0
   playerSprite: {fileID: 4271349150141182393}
+  playerRigidbody: {fileID: 6029596620006062017}
   bullet:
     serializedVersion: 2
     m_Bits: 8
   golfBall:
     serializedVersion: 2
     m_Bits: 64
+  none:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!82 &7798374392852686781
 AudioSource:
   m_ObjectHideFlags: 0

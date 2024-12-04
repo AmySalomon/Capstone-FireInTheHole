@@ -147,4 +147,15 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   minVelocityToKill: 8
   playerHitter: {fileID: 0}
-  readyManager: {fileID: 0}
+  outline: {fileID: 8066647415987434356}
+--- !u!114 &8066647415987434356 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1309956234745881904, guid: 4031563aec8778046a5edc5d43dcb23d, type: 3}
+  m_PrefabInstance: {fileID: 9070138962665199172}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6651686632387158563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

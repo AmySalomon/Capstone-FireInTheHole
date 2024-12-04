@@ -124,7 +124,7 @@ public class PlayerInputHandler : MonoBehaviour
             
         }
 
-        if (context.canceled && playerDead.playerIsDead == false)
+        if (context.canceled)
         {
             if (playerCharge.isCharging)
             {

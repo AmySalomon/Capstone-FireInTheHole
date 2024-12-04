@@ -71,7 +71,8 @@ public class PlayerDeath : MonoBehaviour
         if (playerJustRespawned)
         {
             invulnTimer += Time.deltaTime;
-
+            //make player invulnerable
+            playerCollision.excludeLayers = bullet + golfBall;
             //flash player sprite when invulnerable, when time runs out, re-enable player damage via layers
             if (invulnTimer > invulnRespawnTime)
             {
@@ -80,16 +81,15 @@ public class PlayerDeath : MonoBehaviour
                 invulnTimer = 0;
                 playerJustRespawned = false;
             }
-            //get dad's help with this calculation
-            else if (invulnTimer > invulnTimer / 10 * 9) playerSprite.enabled = false;
-            else if (invulnTimer > invulnTimer / 10 * 8) playerSprite.enabled = true;
-            else if (invulnTimer > invulnTimer / 10 * 8) playerSprite.enabled = false;
-            else if (invulnTimer > invulnTimer / 10 * 7) playerSprite.enabled = true;
-            else if (invulnTimer > invulnTimer / 10 * 6) playerSprite.enabled = false;
-            else if (invulnTimer > invulnTimer / 10 * 5) playerSprite.enabled = true;
-            else if (invulnTimer > invulnTimer / 10 * 4) playerSprite.enabled = false;
-            else if (invulnTimer > invulnTimer / 10 * 3) playerSprite.enabled = true;
-            else if (invulnTimer > invulnTimer / 10 * 2) playerSprite.enabled = false;
+            else if (invulnTimer > invulnRespawnTime / 10 * 9) playerSprite.enabled = false;
+            else if (invulnTimer > invulnRespawnTime / 10 * 8) playerSprite.enabled = true;
+            else if (invulnTimer > invulnRespawnTime / 10 * 8) playerSprite.enabled = false;
+            else if (invulnTimer > invulnRespawnTime / 10 * 7) playerSprite.enabled = true;
+            else if (invulnTimer > invulnRespawnTime / 10 * 6) playerSprite.enabled = false;
+            else if (invulnTimer > invulnRespawnTime / 10 * 5) playerSprite.enabled = true;
+            else if (invulnTimer > invulnRespawnTime / 10 * 4) playerSprite.enabled = false;
+            else if (invulnTimer > invulnRespawnTime / 10 * 3) playerSprite.enabled = true;
+            else if (invulnTimer > invulnRespawnTime / 10 * 2) playerSprite.enabled = false;
             else if (invulnTimer > 0) playerSprite.enabled = true;
         }
         

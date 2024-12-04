@@ -72,4 +72,14 @@ public class OptionsMenuManager : MonoBehaviour
         Cursor.visible = false;
         SceneManager.LoadScene("LevelSelect");
     }
+
+    //Kill LevelSelectManager!!!
+    public void Awake()
+    {
+        GameObject[] PMObject;
+        PMObject = GameObject.FindGameObjectsWithTag("LevelSelectManager");
+        foreach (GameObject manager in PMObject)
+           Destroy(manager);
+        Debug.Log("[OptionsMenuManager]: Destroyed LevelSelectManager.");
+    }
 }

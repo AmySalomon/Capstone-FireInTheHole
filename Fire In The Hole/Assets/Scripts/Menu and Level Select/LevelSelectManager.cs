@@ -38,16 +38,15 @@ public class LevelSelectManager : MonoBehaviour
             PMObject = GameObject.FindGameObjectsWithTag("PlayerManager");
             foreach (GameObject manager in PMObject)
                 Destroy(manager);
-            Debug.Log("Destroyed Player Manager.");
+            Debug.Log("[LevelSelectManager]: Destroyed Player Manager.");
 
             //No duplicate Game Timers!!!
             GameObject[] GTObject;
             GTObject = GameObject.FindGameObjectsWithTag("Timer");
             foreach (GameObject timer in GTObject)
                 Destroy(timer);
-            Debug.Log("Destroyed Game Timer.");
-
-        }        
+            Debug.Log("[LevelSelectManager]: Destroyed Game Timer.");
+        }
     }
 
     public void BackToMain()

@@ -52,12 +52,17 @@ public class scr_meleeSwing : MonoBehaviour
     private SpritePicker spriteObject;
     private SpriteRenderer playerSprite;
 
+    //gets the swing animation script
+    private SwingAnimation swingAnim;
+
+    public Color outlineColor;
     private void Awake()
     {
         audioPlayer = GetComponent<AudioSource>();
         swingChargeBar.gameObject.SetActive(false);
         spriteObject = GetComponentInChildren<SpritePicker>();
         playerSprite = spriteObject.gameObject.GetComponent<SpriteRenderer>();
+        swingAnim = GetComponentInChildren<SwingAnimation>();
         golfCrosshair.enabled = false;
     }
 
@@ -96,7 +101,7 @@ public class scr_meleeSwing : MonoBehaviour
             //Debug.Log(currentSwingForce);
 
             gunAiming.enabled = false;
-            gunAiming.gameObject.transform.Rotate(0, 0, 2 * (currentSwingForce / 200));
+            gunAiming.gameObject.transform.Rotate(0, 0, 300 * (currentSwingForce / 200) * Time.deltaTime);
             if(playerSprite.flipX == true) gunAiming.gameObject.transform.localPosition = new Vector2(0.5f, 0);
             else gunAiming.gameObject.transform.localPosition = new Vector2(-0.5f, 0);
 
@@ -124,6 +129,7 @@ public class scr_meleeSwing : MonoBehaviour
 
         Debug.Log($"Swing with force: {currentSwingForce}");
 
+        swingAnim.DoAnimation();
 
         foreach (RaycastHit2D hit in hits)
         {
@@ -141,6 +147,12 @@ public class scr_meleeSwing : MonoBehaviour
                 if (rb.gameObject.TryGetComponent<scr_golfBall>(out scr_golfBall golfBall))
                 {
                     golfBall.playerHitter = myInput.gameObject;
+                    golfBall.outline.OutlineColor = outlineColor;
+                }
+                if (rb.gameObject.TryGetComponent<tutorialGolfBall>(out tutorialGolfBall tutGolfBall))
+                {
+                    tutGolfBall.playerHitter = myInput.gameObject;
+                    tutGolfBall.outline.OutlineColor = outlineColor;
                 }
 
             }

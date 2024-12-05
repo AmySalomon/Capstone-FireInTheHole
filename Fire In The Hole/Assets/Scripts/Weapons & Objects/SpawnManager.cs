@@ -6,6 +6,7 @@ public class SpawnManager : MonoBehaviour
 {
     public GameObject golfballPrefab;
     public GameObject weaponPrefab;
+    public GameObject hazardPrefab;
 
     public float levelXMin;
     public float levelXMax;
@@ -15,22 +16,34 @@ public class SpawnManager : MonoBehaviour
 
     private bool needAGolfSpawn = false;
     private bool needAWeaponSpawn = false;
+    private bool needAHazardSpawn = false;
 
     //Timers until next spawncheck occurs
     private float golfBallTimer = 0;
     private float weaponTimer = 0;
+    private float hazardTimer = 0;
 
     public float SpawnTimeForGolfBalls;
     public float SpawnTimeForWeapons;
+    public float minSpawnTimeForHazards;
+    public float maxSpawnTimeForHazards;
+    [SerializeField] private float currentSpawnTimeForHazards;
 
-    //Maximum amount of weapon powerups / golfballs that can be on screen at once
+    //Maximum amount of weapon powerups / golfballs / hazards that can be on screen at once
     public float golfBallLimit = 3;
     public float weaponLimit = 4;
+    public int hazardSpawnLimit = 3;
+    public int meteorsToSpawn;
+
+    private void Start()
+    {
+        DetermineHazardTimer();
+    }
     void Update()
     {
         golfBallTimer += Time.deltaTime;
         weaponTimer += Time.deltaTime;
-
+        hazardTimer += Time.deltaTime;
         //when the timer elapses and there aren't more than golfBallLimit balls on screen, spawn a golfball
         if (golfBallTimer > SpawnTimeForGolfBalls && GolfBallLimitCheck()) needAGolfSpawn = true;
 
@@ -41,11 +54,15 @@ public class SpawnManager : MonoBehaviour
 
         if (needAWeaponSpawn == true) StartCoroutine(SpawnWeapon());
 
+        if (hazardTimer > currentSpawnTimeForHazards) needAHazardSpawn = true;
+
+        if (needAHazardSpawn == true) StartCoroutine(SpawnHazard());
+
     }
 
     IEnumerator SpawnBall()
     {
-        if (spawnPosIsLegal() == true)
+        if (spawnPosIsLegal(0.5f) == true)
         {
             golfBallTimer = 0;
             needAGolfSpawn = false;
@@ -58,7 +75,7 @@ public class SpawnManager : MonoBehaviour
 
     IEnumerator SpawnWeapon()
     {
-        if (spawnPosIsLegal() == true)
+        if (spawnPosIsLegal(0.5f) == true)
         {
             weaponTimer = 0;
             needAWeaponSpawn = false;
@@ -69,7 +86,32 @@ public class SpawnManager : MonoBehaviour
         yield return null;
     }
 
-    private bool spawnPosIsLegal(float radius = .5f)
+    IEnumerator SpawnHazard()
+    {
+        int succesfullySpawned = 0;
+        while (succesfullySpawned < meteorsToSpawn) //try to spawn as hazards until succesfully spawning the needed amount
+        {
+            if (spawnPosIsLegal(0.5f) == true)
+            {
+                Debug.Log("successful meteor spawn");
+                Instantiate(hazardPrefab, transform.position, transform.rotation);
+                succesfullySpawned++;
+            }
+            else
+            {
+                Debug.Log("Meteor Spawn Failed");
+            }
+        }
+
+
+        hazardTimer = 0;
+        needAHazardSpawn = false;
+        DetermineHazardTimer();
+        StopCoroutine(SpawnWeapon());
+        yield return null;
+    }
+
+    private bool spawnPosIsLegal(float radius)
     {
         Vector2 randomSpawnPosition = new Vector2(Random.Range(levelXMin, levelXMax), Random.Range(levelYMin, levelYMax));
 
@@ -106,5 +148,12 @@ public class SpawnManager : MonoBehaviour
         Debug.Log("found " + amountFound + " weapons");
         weaponTimer = 0;
         return amountFound < weaponLimit;
+    }
+
+    //randomly choose the timer until the next hazard spawn between the minimum and maximum spawn time
+    public void DetermineHazardTimer()
+    {
+        currentSpawnTimeForHazards = Random.Range(minSpawnTimeForHazards, maxSpawnTimeForHazards);
+        meteorsToSpawn = Random.Range(1, hazardSpawnLimit);
     }
 }

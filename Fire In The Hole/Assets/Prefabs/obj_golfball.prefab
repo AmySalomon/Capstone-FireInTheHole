@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3171756630649061019}
   - component: {fileID: 7856862134184047064}
   - component: {fileID: 7039773675726006005}
+  - component: {fileID: 1309956234745881904}
   m_Layer: 6
   m_Name: obj_golfball
   m_TagString: Ball
@@ -118,8 +119,7 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   minVelocityToKill: 8
   playerHitter: {fileID: 0}
-  normalBall: {fileID: 6200000, guid: f685cd95ae6a77c4bb8257300ca184bb, type: 2}
-  sandBall: {fileID: 6200000, guid: 920fc119adf1cb944bc30afbfe75c55d, type: 2}
+  outline: {fileID: 0}
 --- !u!212 &3362427951106548886
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -197,7 +197,7 @@ Rigidbody2D:
     m_Bits: 8
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!58 &3171756630649061019
 CircleCollider2D:
@@ -356,7 +356,7 @@ AudioSource:
   m_GameObject: {fileID: 2418453429810656359}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -2815080828377637210, guid: 03236680b3327e643be992d6d321973c, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 0.5
@@ -443,3 +443,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1309956234745881904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2418453429810656359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 3
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 5
+  precomputeOutline: 1
+  bakeKeys: []
+  bakeValues: []

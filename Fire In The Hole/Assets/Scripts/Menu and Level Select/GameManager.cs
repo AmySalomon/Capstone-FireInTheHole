@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     public void GoToOptions()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("OptionsMenu");
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
     }

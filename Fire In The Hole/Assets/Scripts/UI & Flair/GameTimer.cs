@@ -8,6 +8,7 @@ public class GameTimer : MonoBehaviour
 {
     [HideInInspector] public float timer;
     public float startingTime;
+    public float runningOutTime;
     public string endScreenScene;
 
     public TextMeshProUGUI timerText;
@@ -45,7 +46,7 @@ public class GameTimer : MonoBehaviour
         {
             timer -= Time.deltaTime;
             updateTimer(timer);
-            if (timer < 10) timerText.color = Color.red;
+            if (timer < runningOutTime) timerText.color = Color.red;
         }
         else
         {

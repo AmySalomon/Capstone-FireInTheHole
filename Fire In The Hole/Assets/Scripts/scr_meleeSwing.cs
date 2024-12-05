@@ -52,6 +52,8 @@ public class scr_meleeSwing : MonoBehaviour
     private SpritePicker spriteObject;
     private SpriteRenderer playerSprite;
 
+    //gets the swing animation script
+    private SwingAnimation swingAnim;
 
     public Color outlineColor;
     private void Awake()
@@ -60,6 +62,7 @@ public class scr_meleeSwing : MonoBehaviour
         swingChargeBar.gameObject.SetActive(false);
         spriteObject = GetComponentInChildren<SpritePicker>();
         playerSprite = spriteObject.gameObject.GetComponent<SpriteRenderer>();
+        swingAnim = GetComponentInChildren<SwingAnimation>();
         golfCrosshair.enabled = false;
     }
 
@@ -126,6 +129,7 @@ public class scr_meleeSwing : MonoBehaviour
 
         Debug.Log($"Swing with force: {currentSwingForce}");
 
+        swingAnim.DoAnimation();
 
         foreach (RaycastHit2D hit in hits)
         {

@@ -31,10 +31,16 @@ public class PauseMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = false;
         SceneManager.LoadScene("MainMenu");
+        //Destroy game timer and level intializer objects so they're not floating around on the main menu
+        GameObject[] GTObject;
+        GTObject = GameObject.FindGameObjectsWithTag("Timer");
+        foreach (GameObject timer in GTObject)
+            Destroy(timer);
+        Debug.Log("[PauseMenu]: Destroyed Game Timer.");
         GameObject[] LevelInitializers;
         LevelInitializers = GameObject.FindGameObjectsWithTag("LevelInitializer");
-        foreach (GameObject timer in LevelInitializers)
-            Destroy(timer);
-        Debug.Log("[PauseMenu]: LevelInitializer.");
+        foreach (GameObject levelInits in LevelInitializers)
+            Destroy(levelInits);
+        Debug.Log("[PauseMenu]: Destroyed LevelInitializer.");
     }
 }

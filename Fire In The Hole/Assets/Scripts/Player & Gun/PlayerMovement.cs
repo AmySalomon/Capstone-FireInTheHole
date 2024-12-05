@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private float rotationSpeed = 1f;
 
-    private float currentMoveSpeed;
+    public float currentMoveSpeed;
 
     private string sandTrapTag = "Sand";
 

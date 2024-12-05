@@ -14,20 +14,22 @@ public class PointAtVector : MonoBehaviour
 
     //Mouse Variables hehe
     private Vector3 aimDirection;
-    private Camera mainCamera;
+    public Camera mainCamera;
     private Vector3 screenCenter;
+    public GameObject player;
 
-    [SerializeField] private float aimRadius = 5f;
+    [SerializeField] private float aimRadius = 2f;
 
     private void Awake()
     {
-        mainCamera = Camera.main;
-        //Cursor.visible = false; //for the radius aiming 
-        //Cursor.lockState = CursorLockMode.Confined;
+        
+        //Cursor.visible = true; //for the radius aiming 
+        //Cursor.lockState = CursorLockMode.None;
     }
 
     private void Start()
     {
+        mainCamera = Camera.main;
         screenCenter = new Vector3(Screen.width / 2f, Screen.height / 2f, 0f);
     }
 
@@ -71,8 +73,9 @@ public class PointAtVector : MonoBehaviour
             }
 
             Vector3 clampedMouseScreenPosition = screenCenter + offset;
-            Vector3 mouseWorldPosition = mainCamera.ScreenToWorldPoint(clampedMouseScreenPosition);
-            aimDirection = (mouseWorldPosition - mainCamera.ScreenToWorldPoint(screenCenter)).normalized;
+            Vector3 mouseWorldPosition = mainCamera.ViewportToScreenPoint(clampedMouseScreenPosition);
+            //Debug.Log(clampedMouseScreenPosition + " is the mouse position");
+            aimDirection = (mouseWorldPosition - mainCamera.ViewportToScreenPoint(screenCenter)).normalized;
             transform.right = -aimDirection;
         }
     }

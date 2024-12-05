@@ -48,7 +48,9 @@ MonoBehaviour:
   mouseScr: {fileID: 0}
   aim: {x: 0, y: 0}
   InputDevice: 0
-  aimRadius: 5
+  mainCamera: {fileID: 0}
+  player: {fileID: 3358283545364179000}
+  aimRadius: 3
 --- !u!1 &1000412141575831137
 GameObject:
   m_ObjectHideFlags: 0
@@ -1294,7 +1296,9 @@ MonoBehaviour:
   mouseScr: {fileID: 0}
   aim: {x: 0, y: 0}
   InputDevice: 0
-  aimRadius: 15
+  mainCamera: {fileID: 0}
+  player: {fileID: 3358283545364179000}
+  aimRadius: 3
 --- !u!1 &4438179308414730306
 GameObject:
   m_ObjectHideFlags: 0

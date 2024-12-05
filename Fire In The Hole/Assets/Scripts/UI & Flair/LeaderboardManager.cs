@@ -16,12 +16,14 @@ public class LeaderboardManager : MonoBehaviour
         if (leaderboardManager != null)
         {
             Debug.Log("Singleton - Trying to create another instance of singleton -BAD-");
+            Destroy(leaderboardManager);
         }
-        else
-        {
+        
+        
             leaderboardManager = this;
-            DontDestroyOnLoad(leaderboardManager);
-        }
+        
+        DontDestroyOnLoad(this.gameObject);
+
     }
     public void FindScoreLead()
     {
@@ -52,5 +54,10 @@ public class LeaderboardManager : MonoBehaviour
             if(playerScoreboards[i] == null) { return; }
             playerScores[i] = playerScoreboards[i].gameObject.GetComponent<ScoreTracker>().score;
         }
+    }
+
+    public void HidePlayers()
+    {
+
     }
 }

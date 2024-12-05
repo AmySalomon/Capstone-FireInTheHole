@@ -10,13 +10,14 @@ public class GameTimer : MonoBehaviour
     public float startingTime;
     public float runningOutTime;
     public string endScreenScene;
-
+    public Transform timerUI;
     public TextMeshProUGUI timerText;
 
     public static GameTimer gameTimer;
 
     public int[] playerScores;
     public Transform[] playerScoreboards;
+    public GameObject[] players;
 
     public bool timerStarted = false;
     private void Awake()
@@ -24,6 +25,7 @@ public class GameTimer : MonoBehaviour
         if(gameTimer != null)
         {
             Destroy(gameObject);
+            Debug.Log("Killed it!");
         }
         else
         {
@@ -68,11 +70,15 @@ public class GameTimer : MonoBehaviour
         //get each player's final score, then load end screen
         for(int i = 0; i < playerScoreboards.Length; i++)
         {
+            if(players[i] == null) { break; }
             playerScores[i] = playerScoreboards[i].gameObject.GetComponent<ScoreTracker>().score;
+            playerScoreboards[i].gameObject.SetActive(false);
+            players[i].SetActive(false);
         }
         timer = 0;
         timerStarted = false;
         timerText.gameObject.SetActive(false);
+        timerUI.gameObject.SetActive(false);
         SceneManager.LoadScene(endScreenScene);
     }
 }

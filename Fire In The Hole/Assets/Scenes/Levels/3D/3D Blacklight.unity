@@ -7008,6 +7008,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 649615755730208136, guid: 06f8cbb26a42c804fbce4ee7e194e64e, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4311005573901221893, guid: 06f8cbb26a42c804fbce4ee7e194e64e, type: 3}
       propertyPath: m_Name
       value: LevelInitializer

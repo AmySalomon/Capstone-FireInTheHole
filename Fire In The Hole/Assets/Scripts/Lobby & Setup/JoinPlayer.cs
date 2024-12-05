@@ -58,6 +58,11 @@ public class JoinPlayer : MonoBehaviour
         
     }
 
+    public void SetVictorySprite(int index, Sprite sprite)
+    {
+        playerConfigs[index].VictorySprite = sprite;
+
+    }
     public void SetPlayerColor(int index, Color color)
     {
         playerConfigs[index].PlayerColor = color;
@@ -151,4 +156,8 @@ public class PlayerConfig
     public Sprite PlayerSprite { get; set; }
 
     public Color PlayerColor { get; set; }
+
+    public Sprite VictorySprite { get; set; }
+
+    public bool placed { get; set; }
 }

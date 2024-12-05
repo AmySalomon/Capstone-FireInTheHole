@@ -14,6 +14,7 @@ public class PlayerInputHandler : MonoBehaviour
     public PointAtVector playerAim;
     public PointAtVector playerSwingAim;
     private scr_meleeSwing playerCharge;
+    private PlayerPause playerPause;
     [HideInInspector] public Sprite playerSprite;
     [HideInInspector] public Color playerColor;
 
@@ -27,6 +28,7 @@ public class PlayerInputHandler : MonoBehaviour
         playerShoot = GetComponentInChildren<ShootProjectile>();
         playerCharge = GetComponentInChildren<scr_meleeSwing>();
         playerDead = GetComponent<PlayerDeath>();
+        playerPause = GetComponent<PlayerPause>();
         controls = new PlayerControls();
     }
 
@@ -63,6 +65,10 @@ public class PlayerInputHandler : MonoBehaviour
         {
             HoldSwing(obj);
         }
+        if(obj.action.name == controls.Player1.Pause.name)
+        {
+            OnPause(obj);
+        }
         else
         {
             return;
@@ -74,6 +80,7 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void OnMove(CallbackContext context)
     {
+        if(PlayerPause.paused) { return; }
         if (playerMovement != null)
         {
             Debug.Log("trying to move");
@@ -83,6 +90,8 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void OnShoot(CallbackContext context)
     {
+        if (PlayerPause.paused) { return; }
+
         if (playerShoot != null && context.performed && playerCharge.isCharging == false && playerDash.isDashing == false && playerDead.playerIsDead == false)
         {
             Debug.Log("trying to shoot");
@@ -98,6 +107,8 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void OnDash(CallbackContext context)
     {
+        if (PlayerPause.paused) { return; }
+
         if (playerDash != null && context.performed && playerCharge.isCharging == false && playerDead.playerIsDead == false)
         {
             Debug.Log("trying to dash");
@@ -107,6 +118,8 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void OnAim(CallbackContext context)
     {
+        if (PlayerPause.paused) { return; }
+
         if (playerAim != null)
         {
             Debug.Log("trying to aim");
@@ -117,6 +130,8 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void HoldSwing(CallbackContext context)
     {
+        if (PlayerPause.paused) { return; }
+
         if (context.performed && playerDead.playerIsDead == false)
         {
             if (playerCharge.isCharging) playerDash.dashChargeBar.gameObject.SetActive(false);
@@ -131,6 +146,18 @@ public class PlayerInputHandler : MonoBehaviour
                 playerDash.dashChargeBar.gameObject.SetActive(true);
                 StartCoroutine(playerCharge.Swing());
             }
+        }
+    }
+
+    public void OnPause(CallbackContext context)
+    {
+        if (playerPause != null && context.performed && !PlayerPause.paused)
+        {
+            playerPause.PauseGame(playerConfig.PlayerIndex);
+        }
+        else if (playerPause != null && context.performed && PlayerPause.paused && PlayerPause.playerPaused == playerConfig.PlayerIndex)
+        {
+            playerPause.UnpauseGame();
         }
     }
 

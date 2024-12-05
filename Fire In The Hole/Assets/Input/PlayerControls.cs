@@ -89,6 +89,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": ""Hold(duration=1.401298E-45)"",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""a4abd9da-d85f-469e-a176-980b5159847e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -476,6 +485,28 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""action"": ""MeleeSwing"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""314d1817-19d9-4c1c-9cd6-59a2753c23b9"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controller"",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c7495967-4f18-4a6b-aa48-d9a689ab95db"",
+                    ""path"": ""*/{Cancel}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -519,6 +550,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_Player1_Aim = m_Player1.FindAction("Aim", throwIfNotFound: true);
         m_Player1_Select = m_Player1.FindAction("Select", throwIfNotFound: true);
         m_Player1_MeleeSwing = m_Player1.FindAction("MeleeSwing", throwIfNotFound: true);
+        m_Player1_Pause = m_Player1.FindAction("Pause", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -587,6 +619,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player1_Aim;
     private readonly InputAction m_Player1_Select;
     private readonly InputAction m_Player1_MeleeSwing;
+    private readonly InputAction m_Player1_Pause;
     public struct Player1Actions
     {
         private @PlayerControls m_Wrapper;
@@ -598,6 +631,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         public InputAction @Aim => m_Wrapper.m_Player1_Aim;
         public InputAction @Select => m_Wrapper.m_Player1_Select;
         public InputAction @MeleeSwing => m_Wrapper.m_Player1_MeleeSwing;
+        public InputAction @Pause => m_Wrapper.m_Player1_Pause;
         public InputActionMap Get() { return m_Wrapper.m_Player1; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -628,6 +662,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @MeleeSwing.started += instance.OnMeleeSwing;
             @MeleeSwing.performed += instance.OnMeleeSwing;
             @MeleeSwing.canceled += instance.OnMeleeSwing;
+            @Pause.started += instance.OnPause;
+            @Pause.performed += instance.OnPause;
+            @Pause.canceled += instance.OnPause;
         }
 
         private void UnregisterCallbacks(IPlayer1Actions instance)
@@ -653,6 +690,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @MeleeSwing.started -= instance.OnMeleeSwing;
             @MeleeSwing.performed -= instance.OnMeleeSwing;
             @MeleeSwing.canceled -= instance.OnMeleeSwing;
+            @Pause.started -= instance.OnPause;
+            @Pause.performed -= instance.OnPause;
+            @Pause.canceled -= instance.OnPause;
         }
 
         public void RemoveCallbacks(IPlayer1Actions instance)
@@ -697,5 +737,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         void OnAim(InputAction.CallbackContext context);
         void OnSelect(InputAction.CallbackContext context);
         void OnMeleeSwing(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
     }
 }

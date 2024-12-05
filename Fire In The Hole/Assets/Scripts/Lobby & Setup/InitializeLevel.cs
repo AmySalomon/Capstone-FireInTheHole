@@ -6,6 +6,7 @@ public class InitializeLevel : MonoBehaviour
 {
     [SerializeField] private Transform[] playerSpawns, playerScores;
     [SerializeField] private GameObject playerPrefab;
+    public Transform pauseMenu;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,10 +31,12 @@ public class InitializeLevel : MonoBehaviour
             player.GetComponentInChildren<PlayerScore>().HideScoreLeader();
             player.GetComponentInChildren<scr_meleeSwing>().outlineColor = playerConfigs[i].PlayerColor;
             player.GetComponentInChildren<PlayerConfigInfo>().GetPlayerConfig(playerConfigs[i]);
+            player.GetComponentInChildren<PlayerPause>().GetPauseMenu(pauseMenu);
             LeaderboardManager.leaderboardManager.players[i] = player;
             GameTimer.gameTimer.players[i] = player;
 
         }
+        
     }
 
 }

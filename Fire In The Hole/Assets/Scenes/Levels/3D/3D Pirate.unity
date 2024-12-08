@@ -4281,6 +4281,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpawnManager
       objectReference: {fileID: 0}
+    - target: {fileID: 1001562037024599741, guid: a9b8390e1f730764b962386adb7cd1b8, type: 3}
+      propertyPath: hazardPrefab
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4391282991399758845, guid: a9b8390e1f730764b962386adb7cd1b8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.575815

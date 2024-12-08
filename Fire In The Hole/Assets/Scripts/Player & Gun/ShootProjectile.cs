@@ -131,9 +131,17 @@ public class ShootProjectile : MonoBehaviour
 
         for (int i = 0; i < ammoMax; i++)
         {
-            ammo_UI.Add(Instantiate(bullet_UI, bulletPanelParent));
+            UpdateBulletUI(newWeapon);
         }
-        magazineText.text = magazineCount.ToString();
+        //hide magazine count if the weapon is the default weapon
+        if(newWeapon.gunType == defaultWeapon.gunType)
+        {
+            magazineText.text = null;
+        }
+        else
+        {
+            magazineText.text = magazineCount.ToString();
+        }
     }
 
     public void StartReloading()
@@ -155,9 +163,23 @@ public class ShootProjectile : MonoBehaviour
         reloadingText.SetActive(false);
         for (int i = 0; i < ammoMax; i++)
         {
-            ammo_UI.Add(Instantiate(bullet_UI, bulletPanelParent));
+            UpdateBulletUI(currentWeapon);
+        }
+        if (currentWeapon.gunType == defaultWeapon.gunType)
+        {
+            magazineText.text = null;
+        }
+        else
+        {
+            magazineText.text = magazineCount.ToString();
         }
         magazineText.text = magazineCount.ToString();
     }
 
+    public void UpdateBulletUI(WeaponClass newWeapon)
+    {
+        GameObject bulletUI = Instantiate(bullet_UI, bulletPanelParent);
+        bulletUI.GetComponent<Image>().sprite = newWeapon.bulletUI;
+        ammo_UI.Add(bulletUI);
+    }
 }

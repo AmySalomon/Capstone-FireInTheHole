@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gunType: Shotgun
   bulletRange: 0
-  ammoMax: 1
-  magazineCount: 13
-  shootDelay: 0
-  reloadSpeed: 0.4
+  ammoMax: 3
+  magazineCount: 4
+  shootDelay: 0.3
+  reloadSpeed: 0.5
   launchForce: 320
   screenShake: 0.1
   automatic: 0

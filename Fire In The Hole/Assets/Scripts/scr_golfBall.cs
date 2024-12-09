@@ -129,9 +129,9 @@ public class scr_golfBall : MonoBehaviour
     {
         if (other.CompareTag(golfHoleTag))
         {
+            playerHitter.GetComponentInChildren<PlayerScore>(true).IncreaseScore();
             AudioSource audio = other.GetComponent<AudioSource>();
             audio.Play();
-            playerHitter.GetComponentInChildren<PlayerScore>().IncreaseScore();
             Destroy(gameObject);
         }
         //slows ball in sand trap

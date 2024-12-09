@@ -172,15 +172,16 @@ public class ShootProjectile : MonoBehaviour
         {
             UpdateBulletUI(currentWeapon);
         }
+        Debug.Log("current weapon is " +currentWeapon.gunType+" and default weapon is "+defaultWeapon.gunType);
         if (currentWeapon.gunType == defaultWeapon.gunType)
         {
-            magazineText.text = null;
+            magazineText.text = "";
+            Debug.Log("Magazine text: " + magazineText.text);
         }
         else
         {
             magazineText.text = magazineCount.ToString();
         }
-        magazineText.text = magazineCount.ToString();
     }
 
     public void UpdateBulletUI(WeaponClass newWeapon)

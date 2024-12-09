@@ -556,6 +556,7 @@ MonoBehaviour:
   ammoMax: 0
   ammoCurrent: 0
   magazineCount: 0
+  shotType: {fileID: 0}
   defaultWeapon: {fileID: 11400000, guid: 7c44063ba9ea1ad49bc1e98ae64d75a9, type: 2}
   currentWeapon: {fileID: 0}
   currentGunSprite: {fileID: 3455350185084445936}
@@ -1484,7 +1485,7 @@ MonoBehaviour:
   m_ChildAlignment: 1
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 7, y: 10}
+  m_CellSize: {x: 5, y: 12}
   m_Spacing: {x: 0, y: 1}
   m_Constraint: 0
   m_ConstraintCount: 2
@@ -2776,7 +2777,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 0}
-  paused: 0
 --- !u!1 &8831624847153814609
 GameObject:
   m_ObjectHideFlags: 0

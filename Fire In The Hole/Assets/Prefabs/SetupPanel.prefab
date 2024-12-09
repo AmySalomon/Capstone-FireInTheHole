@@ -498,7 +498,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: olive
+          m_StringArgument: green
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 5214641042356862192}

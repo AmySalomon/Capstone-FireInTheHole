@@ -11,7 +11,8 @@ public class PlayerPause : MonoBehaviour
     void Start()
     {
         playerPaused = null;
-        
+        Transform tempPause = FindAnyObjectByType<PauseMenu>().pauseMenu;
+        GetPauseMenu(tempPause);
     }
 
     public void PauseGame(int index)

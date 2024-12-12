@@ -9,7 +9,7 @@ public class PauseMenu : MonoBehaviour
 
     private void Start()
     {
-
+        Debug.Log("Game is " + PlayerPause.paused);
         pauseMenu.gameObject.SetActive(false);
     }
     public void QuitGame()
@@ -30,8 +30,9 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = false;
+        PlayerPause.paused = false;
         SceneManager.LoadScene("MainMenu");
-        //Destroy game timer and level intializer objects so they're not floating around on the main menu
+        //Destroy game timer, playermanager and level intializer objects so they're not floating around on the main menu
         GameObject[] GTObject;
         GTObject = GameObject.FindGameObjectsWithTag("Timer");
         foreach (GameObject timer in GTObject)
@@ -42,5 +43,10 @@ public class PauseMenu : MonoBehaviour
         foreach (GameObject levelInits in LevelInitializers)
             Destroy(levelInits);
         Debug.Log("[PauseMenu]: Destroyed LevelInitializer.");
+        GameObject[] PMObject;
+        PMObject = GameObject.FindGameObjectsWithTag("PlayerManager");
+        foreach (GameObject manager in PMObject)
+            Destroy(manager);
+        Debug.Log("[PauseMenu]: Destroyed Player Manager.");
     }
 }

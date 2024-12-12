@@ -18,6 +18,7 @@ public class PlayerPause : MonoBehaviour
     public void PauseGame(int index)
     {
         playerPaused = index;
+        Debug.Log("Pause by player " + playerPaused);
         paused = true;
         Time.timeScale = 0;
         if(pauseMenu!= null)

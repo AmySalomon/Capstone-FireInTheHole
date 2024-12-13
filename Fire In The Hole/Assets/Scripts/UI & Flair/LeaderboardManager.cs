@@ -16,12 +16,14 @@ public class LeaderboardManager : MonoBehaviour
         if (leaderboardManager != null)
         {
             Debug.Log("Singleton - Trying to create another instance of singleton -BAD-");
+            Destroy(leaderboardManager);
         }
-        else
-        {
+        
+        
             leaderboardManager = this;
-            DontDestroyOnLoad(leaderboardManager);
-        }
+        
+        DontDestroyOnLoad(this.gameObject);
+
     }
     public void FindScoreLead()
     {
@@ -32,12 +34,13 @@ public class LeaderboardManager : MonoBehaviour
             if (playerScoreboards[i] == null) { return; }
             if (playerScores[i] >= currentHighscore) //if the player has a score equal to or greater than (somehow) the highest score, display they're in the lead, if not, hide it
             {
-                players[i].GetComponentInChildren<PlayerScore>().ShowScoreLeader();
+                
+                players[i].GetComponentInChildren<PlayerScore>(true).ShowScoreLeader();
                 playerScoreboards[i].gameObject.GetComponent<ScoreTracker>().ShowScoreLeader();
             }
             else
             {
-                players[i].GetComponentInChildren<PlayerScore>().HideScoreLeader();
+                players[i].GetComponentInChildren<PlayerScore>(true).HideScoreLeader();
                 playerScoreboards[i].gameObject.GetComponent<ScoreTracker>().HideScoreLeader();
 
             }
@@ -52,5 +55,10 @@ public class LeaderboardManager : MonoBehaviour
             if(playerScoreboards[i] == null) { return; }
             playerScores[i] = playerScoreboards[i].gameObject.GetComponent<ScoreTracker>().score;
         }
+    }
+
+    public void HidePlayers()
+    {
+
     }
 }

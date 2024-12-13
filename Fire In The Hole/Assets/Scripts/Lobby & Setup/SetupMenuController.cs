@@ -59,6 +59,12 @@ public class SetupMenuController : MonoBehaviour
         menuPanel.SetActive(false);
     }
 
+    public void SetVictorySprite(Sprite sprite)
+    {
+        if (!inputEnabled) { return; }
+        JoinPlayer.Instance.SetVictorySprite(PlayerIndex, sprite);
+
+    }
     public void SetColor(string color)
     {
         if (!inputEnabled) { return; }

@@ -28,6 +28,7 @@ public class ShootProjectile : MonoBehaviour
     public int ammoMax; //how much ammo is in each magazine
     public int ammoCurrent; //how much ammo the player currently has left
     public int magazineCount; //how many magazines the player has
+    public ShotType shotType; //how the gun shoots (multishot is only one for now)
     private GameObject myCamera;
 
     public WeaponClass defaultWeapon, currentWeapon;
@@ -97,7 +98,7 @@ public class ShootProjectile : MonoBehaviour
             Debug.Log("shoot");
             audioPlayer.pitch = Random.Range(0.9f, 1.1f);
             audioPlayer.PlayOneShot(gunshot, 1f);
-            currentWeapon.behaviour.ShootBullets(barrelEnd, launchForce);
+            shotType.ShootBullets(barrelEnd, launchForce);
             shootTimer = 0;
             Destroy(ammo_UI[ammoCurrent - 1]);
             ammo_UI.RemoveAt((int)ammoCurrent-1);
@@ -128,12 +129,26 @@ public class ShootProjectile : MonoBehaviour
         ammoCurrent = ammoMax;
         magazineCount = newWeapon.magazineCount;
         reloadTimerMax = newWeapon.reloadSpeed;
+        shotType = newWeapon.behaviour;
 
         for (int i = 0; i < ammoMax; i++)
         {
-            ammo_UI.Add(Instantiate(bullet_UI, bulletPanelParent));
+            UpdateBulletUI(newWeapon);
         }
-        magazineText.text = magazineCount.ToString();
+        //hide magazine count if the weapon is the default weapon
+        if(newWeapon.gunType == defaultWeapon.gunType)
+        {
+            magazineText.text = null;
+        }
+        else
+        {
+            magazineText.text = magazineCount.ToString();
+        }
+    }
+
+    public void UpdateShotType(ShotType newShotType)
+    {
+        shotType = newShotType;
     }
 
     public void StartReloading()
@@ -155,9 +170,24 @@ public class ShootProjectile : MonoBehaviour
         reloadingText.SetActive(false);
         for (int i = 0; i < ammoMax; i++)
         {
-            ammo_UI.Add(Instantiate(bullet_UI, bulletPanelParent));
+            UpdateBulletUI(currentWeapon);
         }
-        magazineText.text = magazineCount.ToString();
+        Debug.Log("current weapon is " +currentWeapon.gunType+" and default weapon is "+defaultWeapon.gunType);
+        if (currentWeapon.gunType == defaultWeapon.gunType)
+        {
+            magazineText.text = "";
+            Debug.Log("Magazine text: " + magazineText.text);
+        }
+        else
+        {
+            magazineText.text = magazineCount.ToString();
+        }
     }
 
+    public void UpdateBulletUI(WeaponClass newWeapon)
+    {
+        GameObject bulletUI = Instantiate(bullet_UI, bulletPanelParent);
+        bulletUI.GetComponent<Image>().sprite = newWeapon.bulletUI;
+        ammo_UI.Add(bulletUI);
+    }
 }

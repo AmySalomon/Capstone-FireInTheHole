@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
-using UnityEngine.SceneManagement;
-
 //this script checks how many players have readied up, and starts the game if all available players have. it gets signals from each tutorial golf hole, and stores them.
 public class ReadyManager : MonoBehaviour
 {

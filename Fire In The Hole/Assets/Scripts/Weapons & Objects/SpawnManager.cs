@@ -54,6 +54,8 @@ public class SpawnManager : MonoBehaviour
 
         if (needAWeaponSpawn == true) StartCoroutine(SpawnWeapon());
 
+        if (hazardPrefab == null) { return; } //if there is no hazards for the map, do not check for hazard related actions
+
         if (hazardTimer > currentSpawnTimeForHazards) needAHazardSpawn = true;
 
         if (needAHazardSpawn == true) StartCoroutine(SpawnHazard());
@@ -153,6 +155,7 @@ public class SpawnManager : MonoBehaviour
     //randomly choose the timer until the next hazard spawn between the minimum and maximum spawn time
     public void DetermineHazardTimer()
     {
+        if (hazardPrefab == null) { return; }
         currentSpawnTimeForHazards = Random.Range(minSpawnTimeForHazards, maxSpawnTimeForHazards);
         meteorsToSpawn = Random.Range(1, hazardSpawnLimit);
     }

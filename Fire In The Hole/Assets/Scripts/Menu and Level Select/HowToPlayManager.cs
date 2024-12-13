@@ -27,11 +27,11 @@ public class HowToPlayManager : MonoBehaviour
                 Destroy(manager);
             Debug.Log("[HowToPlayManager]: Destroyed LevelSelectManager.");
 
-            GameObject[] GameTimer;
-            GameTimer = GameObject.FindGameObjectsWithTag("Timer");
-            foreach (GameObject timer in GameTimer)
-                Destroy(timer);
-            Debug.Log("[HowToPlayManager]: Destroyed GameTimer.");
+            //GameObject[] GameTimer;
+            //GameTimer = GameObject.FindGameObjectsWithTag("Timer");
+            //foreach (GameObject timer in GameTimer)
+            //    Destroy(timer);
+            //Debug.Log("[HowToPlayManager]: Destroyed GameTimer.");
         }
     }
 

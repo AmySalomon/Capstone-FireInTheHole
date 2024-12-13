@@ -15,6 +15,7 @@ TagManager:
   - LevelSelectManager
   - Sand
   - LobbyReadyManager
+  - LevelInitializer
   layers:
   - Default
   - TransparentFX

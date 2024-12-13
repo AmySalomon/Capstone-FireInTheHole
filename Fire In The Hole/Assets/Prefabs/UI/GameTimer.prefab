@@ -180,7 +180,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -1, y: -21.9}
+  m_AnchoredPosition: {x: -1, y: -21.900024}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &104910182306044005
@@ -404,9 +404,15 @@ MonoBehaviour:
   startingTime: 180
   runningOutTime: 60
   endScreenScene: EndingScene
+  timerUI: {fileID: 638448158197664558}
   timerText: {fileID: 2290122430713016838}
   playerScores: 00000000000000000000000000000000
   playerScoreboards:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  players:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

@@ -77,6 +77,7 @@ public class PointAtVector : MonoBehaviour
             //Debug.Log(clampedMouseScreenPosition + " is the mouse position");
             aimDirection = (mouseWorldPosition - mainCamera.ViewportToScreenPoint(screenCenter)).normalized;
             transform.right = -aimDirection;
+            aim = aimDirection;
         }
     }
 }

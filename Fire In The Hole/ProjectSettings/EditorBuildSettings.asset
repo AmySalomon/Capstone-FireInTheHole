@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: c895d838e1fda6d45a328e4660adef4f
+  - enabled: 1
     path: Assets/Scenes/LevelSelect.unity
     guid: fd4506a8758a78e478b4bf7af85e1641
   - enabled: 1
@@ -20,9 +23,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tests/MacicTesting.unity
     guid: 8b25af2e26bf2ef4d8e76044369185cb
-  - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: c895d838e1fda6d45a328e4660adef4f
   - enabled: 1
     path: Assets/Scenes/Tests/PlayerSetup.unity
     guid: 0d9e8c3b4bd2ee24eaefd3e7fe4bdd73

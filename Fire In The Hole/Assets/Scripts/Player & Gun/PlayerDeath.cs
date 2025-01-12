@@ -9,13 +9,21 @@ public class PlayerDeath : MonoBehaviour
     public GameObject playerStuff;
     public GameObject playerCanvasStuff;
 
+    public GameObject spawnIndicatorPrefab;
+
+    [HideInInspector] public Color myColor;
+
     public float levelXMin;
     public float levelXMax;
 
     public float levelYMin;
     public float levelYMax;
 
+    //indicator determines when the spawn indicator ring should appear ; this should happen (insert ring closing time) seconds before the respawn time 
+    //(ex: rings close in 2 seconds, therefore, if respawn time is 3 seconds, rings should appear 1 second into respawn time)
     public float respawnTime;
+    public float respawnIndicatorTime;
+    private bool spawnRings = true;
 
     public float invulnRespawnTime;
 
@@ -38,6 +46,8 @@ public class PlayerDeath : MonoBehaviour
     public LayerMask bullet;
     public LayerMask golfBall;
     public LayerMask none;
+
+    private Vector3 respawnPosition;
 
     private void Awake()
     {
@@ -63,7 +73,7 @@ public class PlayerDeath : MonoBehaviour
             else if (timer > 0.2) deathIcon.enabled = false;
             else if (timer > 0) deathIcon.enabled = true;
 
-
+            if (spawnRings && timer > respawnIndicatorTime) SpawnRingIndicators();
             if (timer > respawnTime) StartCoroutine(SpawnPlayer());
         }
 
@@ -105,10 +115,13 @@ public class PlayerDeath : MonoBehaviour
 
     IEnumerator SpawnPlayer()
     {
-        if (spawnPosIsLegal() == true)
+        if (spawnRings == false)
         {
+            transform.position = respawnPosition;
             deathIcon.enabled = false;
             playerIsDead = false;
+            //resets whether the rings should spawn or not (should only happen once per respawn)
+            spawnRings = true;
             playerStuff.transform.localPosition = Vector2.zero;
             playerStuff.SetActive(true);
             playerCanvasStuff.SetActive(true);
@@ -136,12 +149,24 @@ public class PlayerDeath : MonoBehaviour
 
         if (collider == null)
         {
+            respawnPosition = transform.position;
             return true;
         }
         else
         {
-            Debug.Log(collider.gameObject.name);
+            //Debug.Log(collider.gameObject.name);
             return false;
+        }
+    }
+
+    void SpawnRingIndicators()
+    {
+        if (spawnPosIsLegal() == true)
+        {
+            GameObject ringIndicator = GameObject.Instantiate(spawnIndicatorPrefab, transform.position, Quaternion.identity) as GameObject;
+            ringIndicator.GetComponent<SpawnRing>().spawnPlayer = true;
+            ringIndicator.GetComponent<SpawnRing>().myColor = myColor;
+            spawnRings = false;
         }
     }
 }

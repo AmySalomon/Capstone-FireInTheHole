@@ -20,8 +20,8 @@ MonoBehaviour:
   reloadSpeed: 0.6
   launchForce: 300
   screenShake: 0.2
-  automatic: 0
-  shotgun: 0
+  shotSpread: 5
   gunshot: {fileID: 0}
   gunSprite: {fileID: 21300000, guid: 7a9974de703262d408686f41b0e3f36a, type: 3}
   behaviour: {fileID: 11400000, guid: e23f59878a8b45e45a57ee796d7b4e2c, type: 2}
+  bulletUI: {fileID: 0}

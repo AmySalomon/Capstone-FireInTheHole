@@ -9,11 +9,13 @@ using UnityEngine;
 public class ShotType : ScriptableObject
 {
     public BulletType bulletType; //how the bullet itself behaves
-    public virtual void ShootBullets(Transform barrelEnd, float launchForce) //shoot a bullet
+    public virtual void ShootBullets(Transform barrelEnd, float launchForce, float spreadAngle) //shoot a bullet
     {
+        float shotSpread = Random.Range(-spreadAngle, spreadAngle);
         Rigidbody2D bulletInstance;
-        bulletInstance = Instantiate(bulletType.bulletPrefab, barrelEnd.position, barrelEnd.rotation) as Rigidbody2D;
-        bulletInstance.AddForce(-barrelEnd.up * launchForce);
+        bulletInstance = Instantiate(bulletType.bulletPrefab, barrelEnd.position, Quaternion.AngleAxis(shotSpread, barrelEnd.forward) * barrelEnd.rotation) as Rigidbody2D;
+        bulletInstance.AddRelativeForce(Vector2.down * launchForce);
+        //bulletInstance.AddForce(-barrelEnd.up * launchForce);
         bulletInstance.GetComponent<BulletManager>().bulletType = bulletType;
     }
     

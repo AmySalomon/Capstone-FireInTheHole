@@ -23,12 +23,14 @@ public class ShootProjectile : MonoBehaviour
     //the launch force of the bullet being shot
     public float launchForce = -1200f;
 
+
     public float shootDelay; //time between shots
     public float screenShake; //how hard screen shakes
     public int ammoMax; //how much ammo is in each magazine
     public int ammoCurrent; //how much ammo the player currently has left
     public int magazineCount; //how many magazines the player has
-    public ShotType shotType; //how the gun shoots (multishot is only one for now)
+    public ShotType shotType; //how the gun shoots (multishot is only one other one than basic for now)
+    public float shotSpread; //the angle at which a bullet can be modified when shooting
     private GameObject myCamera;
 
     public WeaponClass defaultWeapon, currentWeapon;
@@ -98,7 +100,7 @@ public class ShootProjectile : MonoBehaviour
             Debug.Log("shoot");
             audioPlayer.pitch = Random.Range(0.9f, 1.1f);
             audioPlayer.PlayOneShot(gunshot, 1f);
-            shotType.ShootBullets(barrelEnd, launchForce);
+            shotType.ShootBullets(barrelEnd, launchForce, shotSpread);
             shootTimer = 0;
             Destroy(ammo_UI[ammoCurrent - 1]);
             ammo_UI.RemoveAt((int)ammoCurrent-1);
@@ -130,6 +132,7 @@ public class ShootProjectile : MonoBehaviour
         magazineCount = newWeapon.magazineCount;
         reloadTimerMax = newWeapon.reloadSpeed;
         shotType = newWeapon.behaviour;
+        shotSpread = newWeapon.shotSpread;
 
         for (int i = 0; i < ammoMax; i++)
         {

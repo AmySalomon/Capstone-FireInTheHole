@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    public GameObject golfballPrefab;
-    public GameObject weaponPrefab;
+    //with new spawn system, the following prefabs are no longer necessary
+    //public GameObject golfballPrefab;
+    //public GameObject weaponPrefab;
     public GameObject hazardPrefab;
+    public GameObject ringSpawnerPrefab;
 
     public float levelXMin;
     public float levelXMax;
@@ -68,7 +70,8 @@ public class SpawnManager : MonoBehaviour
         {
             golfBallTimer = 0;
             needAGolfSpawn = false;
-            Instantiate(golfballPrefab, transform.position, transform.rotation);
+            GameObject newBall = GameObject.Instantiate(ringSpawnerPrefab, transform.position, Quaternion.identity) as GameObject;
+            newBall.GetComponent<SpawnRing>().spawnBall = true;
             StopCoroutine(SpawnBall());
         }
 
@@ -81,7 +84,8 @@ public class SpawnManager : MonoBehaviour
         {
             weaponTimer = 0;
             needAWeaponSpawn = false;
-            Instantiate(weaponPrefab, transform.position, transform.rotation);
+            GameObject newGun = GameObject.Instantiate(ringSpawnerPrefab, transform.position, Quaternion.identity) as GameObject;
+            newGun.GetComponent<SpawnRing>().spawnGun = true;
             StopCoroutine(SpawnWeapon());
         }
 

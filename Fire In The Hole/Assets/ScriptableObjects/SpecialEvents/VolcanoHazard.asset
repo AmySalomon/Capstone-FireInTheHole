@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d612251e72ce144c8c5012aa9cc6537, type: 3}
+  m_Name: VolcanoHazard
+  m_EditorClassIdentifier: 
+  eventName: 
+  hazardPrefab: {fileID: 5214778925187614226, guid: 0fc4879413606d34d82111d725322ea2, type: 3}
+  minSpawnTimeForEvent: 3
+  maxSpawnTimeForEvent: 6
+  spawnManager: {fileID: 0}
+  hazardSpawnMaximum: 3
+  hazardSpawnMinimum: 1

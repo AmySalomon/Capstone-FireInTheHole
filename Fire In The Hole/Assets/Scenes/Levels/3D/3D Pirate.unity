@@ -978,7 +978,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8052291417359043760, guid: bcb8780dd9c9afe42b7ed4aac93e513e, type: 3}
       propertyPath: m_DynamicOccludee
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8052291417359043760, guid: bcb8780dd9c9afe42b7ed4aac93e513e, type: 3}
       propertyPath: m_LocalAABB.m_Center.x
@@ -3426,7 +3426,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8052291417359043760, guid: bcb8780dd9c9afe42b7ed4aac93e513e, type: 3}
       propertyPath: m_DynamicOccludee
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8052291417359043760, guid: bcb8780dd9c9afe42b7ed4aac93e513e, type: 3}
       propertyPath: m_LocalAABB.m_Center.x
@@ -9919,6 +9919,10 @@ PrefabInstance:
       propertyPath: hazardPrefab
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1001562037024599741, guid: a9b8390e1f730764b962386adb7cd1b8, type: 3}
+      propertyPath: specialEvents
+      value: 
+      objectReference: {fileID: 11400000, guid: 31a4bce10c7e2e947b40d7a041d1a322, type: 2}
     - target: {fileID: 4391282991399758845, guid: a9b8390e1f730764b962386adb7cd1b8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.575815
@@ -13497,7 +13501,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8052291417359043760, guid: bcb8780dd9c9afe42b7ed4aac93e513e, type: 3}
       propertyPath: m_DynamicOccludee
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8052291417359043760, guid: bcb8780dd9c9afe42b7ed4aac93e513e, type: 3}
       propertyPath: m_LocalAABB.m_Center.x
@@ -14164,11 +14168,11 @@ GameObject:
   - component: {fileID: 1672606469}
   m_Layer: 0
   m_Name: High Tide
-  m_TagString: Untagged
+  m_TagString: High Tide
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1672606469
 Transform:
   m_ObjectHideFlags: 0
@@ -14198,7 +14202,7 @@ GameObject:
   - component: {fileID: 1706386833}
   m_Layer: 0
   m_Name: Low Tide
-  m_TagString: Untagged
+  m_TagString: Low Tide
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

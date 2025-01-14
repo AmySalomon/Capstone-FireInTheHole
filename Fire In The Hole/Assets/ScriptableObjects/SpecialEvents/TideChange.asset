@@ -9,9 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4182ca9dc224aa04e85f977aa547b36d, type: 3}
-  m_Name: New Special Event
+  m_Script: {fileID: 11500000, guid: d572966693cf56e459da818c8b9e29ce, type: 3}
+  m_Name: TideChange
   m_EditorClassIdentifier: 
-  variableSpawnTime: 0
-  minSpawnTimeForEvent: 0
-  maxSpawnTimeForEvent: 0
+  eventName: Pirate Map Tide Change
+  hazardPrefab: {fileID: 0}
+  minSpawnTimeForEvent: 3
+  maxSpawnTimeForEvent: 5
+  spawnManager: {fileID: 0}
+  currentLowTide: 0

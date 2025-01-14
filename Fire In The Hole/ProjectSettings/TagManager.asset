@@ -16,6 +16,8 @@ TagManager:
   - Sand
   - LobbyReadyManager
   - LevelInitializer
+  - Low Tide
+  - High Tide
   layers:
   - Default
   - TransparentFX

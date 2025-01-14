@@ -15,7 +15,6 @@ public class ShotType : ScriptableObject
         Rigidbody2D bulletInstance;
         bulletInstance = Instantiate(bulletType.bulletPrefab, barrelEnd.position, Quaternion.AngleAxis(shotSpread, barrelEnd.forward) * barrelEnd.rotation) as Rigidbody2D;
         bulletInstance.AddRelativeForce(Vector2.down * launchForce);
-        //bulletInstance.AddForce(-barrelEnd.up * launchForce);
         bulletInstance.GetComponent<BulletManager>().bulletType = bulletType;
     }
     

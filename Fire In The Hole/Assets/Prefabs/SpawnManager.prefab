@@ -45,9 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f40e9d32aa85c4d49ac5203c6ffe7bc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  golfballPrefab: {fileID: 2418453429810656359, guid: 4031563aec8778046a5edc5d43dcb23d, type: 3}
-  weaponPrefab: {fileID: 7631844770271239170, guid: ac2d026ab12e2b84684430477457e369, type: 3}
   hazardPrefab: {fileID: 5214778925187614226, guid: 0fc4879413606d34d82111d725322ea2, type: 3}
+  ringSpawnerPrefab: {fileID: 8514672411319002925, guid: e058e74139c55d54abb9013e309da4ea, type: 3}
   levelXMin: -8.5
   levelXMax: 8.5
   levelYMin: -5

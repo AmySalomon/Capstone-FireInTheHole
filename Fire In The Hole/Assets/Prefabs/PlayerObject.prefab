@@ -684,7 +684,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!58 &7935399317293149535
 CircleCollider2D:
@@ -2639,11 +2639,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStuff: {fileID: 3358283545364179000}
   playerCanvasStuff: {fileID: 3949027636941628624}
+  spawnIndicatorPrefab: {fileID: 8514672411319002925, guid: e058e74139c55d54abb9013e309da4ea, type: 3}
+  myColor: {r: 0, g: 0, b: 0, a: 0}
   levelXMin: -8.5
   levelXMax: 8.5
   levelYMin: -5
   levelYMax: 5
   respawnTime: 3
+  respawnIndicatorTime: 1
   invulnRespawnTime: 2
   playerIsDead: 0
   playerSprite: {fileID: 4271349150141182393}

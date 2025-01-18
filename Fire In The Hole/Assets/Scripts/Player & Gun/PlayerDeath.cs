@@ -49,6 +49,8 @@ public class PlayerDeath : MonoBehaviour
 
     private Vector3 respawnPosition;
 
+    [HideInInspector] public Transform setSpawnLocation;
+
     private void Awake()
     {
         killSound = GetComponent<AudioSource>();
@@ -161,7 +163,16 @@ public class PlayerDeath : MonoBehaviour
 
     void SpawnRingIndicators()
     {
-        if (spawnPosIsLegal() == true)
+        if (setSpawnLocation != null)
+        {
+            transform.position = setSpawnLocation.position;
+            respawnPosition = transform.position;
+            GameObject ringIndicator = GameObject.Instantiate(spawnIndicatorPrefab, transform.position, Quaternion.identity) as GameObject;
+            ringIndicator.GetComponent<SpawnRing>().spawnPlayer = true;
+            ringIndicator.GetComponent<SpawnRing>().myColor = myColor;
+            spawnRings = false;
+        }
+        else if (spawnPosIsLegal() == true)
         {
             GameObject ringIndicator = GameObject.Instantiate(spawnIndicatorPrefab, transform.position, Quaternion.identity) as GameObject;
             ringIndicator.GetComponent<SpawnRing>().spawnPlayer = true;

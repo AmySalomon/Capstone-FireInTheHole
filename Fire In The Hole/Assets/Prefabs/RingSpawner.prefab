@@ -226,8 +226,9 @@ MonoBehaviour:
   spawnPowerup: 0
   spawnPlayer: 0
   timeToSpawn: 2
-  playerTimeToSpawn: 2
+  playerTimeToSpawn: 3
   timeToAppear: 0.3
+  playerRingOpacity: 0.1
   myColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &8692312855387847064
 GameObject:

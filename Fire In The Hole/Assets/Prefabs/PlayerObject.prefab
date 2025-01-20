@@ -558,6 +558,7 @@ MonoBehaviour:
   ammoCurrent: 0
   magazineCount: 0
   shotType: {fileID: 0}
+  shotSpread: 0
   defaultWeapon: {fileID: 11400000, guid: 7c44063ba9ea1ad49bc1e98ae64d75a9, type: 2}
   currentWeapon: {fileID: 0}
   currentGunSprite: {fileID: 3455350185084445936}
@@ -2645,7 +2646,7 @@ MonoBehaviour:
   levelXMax: 8.5
   levelYMin: -5
   levelYMax: 5
-  respawnTime: 3
+  respawnTime: 4
   respawnIndicatorTime: 1
   invulnRespawnTime: 2
   playerIsDead: 0
@@ -2660,6 +2661,7 @@ MonoBehaviour:
   none:
     serializedVersion: 2
     m_Bits: 0
+  setSpawnLocation: {fileID: 0}
 --- !u!82 &7798374392852686781
 AudioSource:
   m_ObjectHideFlags: 0

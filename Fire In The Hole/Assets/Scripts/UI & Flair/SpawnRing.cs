@@ -19,7 +19,7 @@ public class SpawnRing : MonoBehaviour
 
     float time = 0;
     public float timeToSpawn = 2f;
-    public float playerTimeToSpawn = 2f;
+    public float playerTimeToSpawn = 3f;
     public float timeToAppear = .3f;
     float endScale;
     float startScale;
@@ -68,11 +68,6 @@ public class SpawnRing : MonoBehaviour
 
     void AppearAnimation()
     {
-        //dont do this animation if the player is spawning
-        if (spawnPlayer)
-        {
-            return;
-        }
 
         if (time < timeToAppear)
         {

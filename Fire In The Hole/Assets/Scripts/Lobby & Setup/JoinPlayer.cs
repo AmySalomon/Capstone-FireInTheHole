@@ -20,9 +20,11 @@ public class JoinPlayer : MonoBehaviour
     [SerializeField] private Transform[] playerSpawns;
     [SerializeField] private Transform[] flagSpawns;
     [SerializeField] private Transform[] ballSpawns;
+    [SerializeField] private Transform[] turretSpawns;
     [SerializeField] private GameObject playerPrefab;
     [SerializeField] private GameObject tutorialFlagPrefab;
     [SerializeField] private GameObject tutorialBallPrefab;
+    [SerializeField] private GameObject tutorialTurretPrefab;
 
     public string sceneToGoTo;
     public static JoinPlayer Instance { get; private set; }
@@ -80,6 +82,7 @@ public class JoinPlayer : MonoBehaviour
         tutorialFlag.GetComponent<LobbyHoleIdentity>().flagNumber = index + 1;
         var tutorialBall = Instantiate(tutorialBallPrefab, ballSpawns[index].position, ballSpawns[index].rotation, gameObject.transform);
         player.GetComponentInChildren<PlayerInputHandler>().InitializePlayer(playerConfigs[index]);
+        var tutorialTurret = Instantiate(tutorialTurretPrefab, turretSpawns[index].position, turretSpawns[index].rotation, gameObject.transform);
         shouldIDisableUI = true;
     }
 

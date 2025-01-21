@@ -53,13 +53,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/3D/3D Blacklight.unity
     guid: 0fe03b0e07e9fe046b699a2343f2180c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Levels/3D/OLD/3D Dinosaur (BEFORE MECHANICS).unity
     guid: c0d6f6d9c1f14aa4aa37c606cee4cfa6
   - enabled: 0
     path: Assets/Scenes/Levels/3D/3D Lobby.unity
     guid: a36ef384cdacff7408a1cc2941514b78
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Levels/3D/OLD/3D Pirate (BEFORE MECHANICS).unity
     guid: 2d3f5ab0855d6c441811d34ae24f85fe
   - enabled: 1
@@ -77,5 +77,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/3D/3D Pirate.unity
     guid: f9741e71a1614234da8831ed55f52735
+  - enabled: 1
+    path: Assets/Scenes/Levels/3D/3D Dinosaur.unity
+    guid: 306d63fca9e559d499b2b59629e93ac6
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 73eb5283e2d80804c8ef1cd07f094675, type: 2}

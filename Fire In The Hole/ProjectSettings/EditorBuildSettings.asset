@@ -80,5 +80,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/3D/3D Dinosaur.unity
     guid: 306d63fca9e559d499b2b59629e93ac6
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: d0817692e0b3c6144afdad1f77d5ef3e
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 73eb5283e2d80804c8ef1cd07f094675, type: 2}

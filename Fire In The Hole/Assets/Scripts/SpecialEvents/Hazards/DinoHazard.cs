@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//this script is for the dino hazard object. it rotates over a certain angle over time, and when a ball hits it, it will stop and shoot it back out after a short time.
 public class DinoHazard : MonoBehaviour
 {
-    [Header("COUNTER CLOCKWISE")]
+    [Header("Change Z rotation for base")]
+    [Header("COUNTER CLOCKWISE for max")]
     public float maxRotationDegrees = 35;
     //speed in degrees per second
     public float rotationSpeed = 5f; 

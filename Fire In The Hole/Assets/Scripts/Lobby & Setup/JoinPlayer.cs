@@ -30,6 +30,7 @@ public class JoinPlayer : MonoBehaviour
     public static JoinPlayer Instance { get; private set; }
 
     private PlayerInputHandler[] playersActive;
+    private TutorialTurret[] turretsActive;
 
     private PlayerInputManager inputManager;
 
@@ -95,6 +96,14 @@ public class JoinPlayer : MonoBehaviour
         foreach (PlayerInputHandler player in playersActive)
         {
             Destroy(player.gameObject);
+        }
+
+        //code added to handle the tutorial turrets not being destroyed when game starts
+        turretsActive = GetComponentsInChildren<TutorialTurret>();
+
+        foreach (TutorialTurret turret in turretsActive)
+        {
+            Destroy(turret.gameObject);
         }
     }
     //CODE USED TO MOVE TO THE LEVEL SCENE WHEN EVERYONE IS READY

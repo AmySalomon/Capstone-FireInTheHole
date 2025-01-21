@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
     public void GoToCredits()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("Credits");
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
     }
@@ -48,6 +48,14 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("LevelSelect");
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
+    }
+
+    public void GoToMain()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("MainMenu");
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
     }

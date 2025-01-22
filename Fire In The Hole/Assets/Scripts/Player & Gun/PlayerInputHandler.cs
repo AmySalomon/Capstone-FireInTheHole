@@ -22,6 +22,8 @@ public class PlayerInputHandler : MonoBehaviour
     private PlayerControls controls;
     private PlayerDeath playerDead;
     private InputDevice device;
+
+    private Vector2 playerDirection;
     private void Awake()
     {
         playerMovement = GetComponentInChildren<PlayerMovement>();
@@ -83,6 +85,7 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void OnMove(CallbackContext context)
     {
+        playerDirection = context.ReadValue<Vector2>();
         if(PlayerPause.paused) { return; }
         if (playerMovement != null)
         {
@@ -112,7 +115,7 @@ public class PlayerInputHandler : MonoBehaviour
     {
         if (PlayerPause.paused) { return; }
 
-        if (playerDash != null && context.performed && playerCharge.isCharging == false && playerDead.playerIsDead == false)
+        if (playerDash != null && context.performed && playerCharge.isCharging == false && playerDead.playerIsDead == false && playerDirection != Vector2.zero)
         {
             Debug.Log("trying to dash");
             playerDash.PressDash();

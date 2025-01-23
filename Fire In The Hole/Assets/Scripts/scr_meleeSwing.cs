@@ -26,6 +26,8 @@ public class scr_meleeSwing : MonoBehaviour
     public Vector3 swingAim;
     public LayerMask interactableLayers;
     public LayerMask playerLayer;//for pvp player layer
+    public Rigidbody2D rb;
+    public Vector2 forceDirection;
 
     public bool isCharging = false;
     private bool canSwing = true;
@@ -133,10 +135,10 @@ public class scr_meleeSwing : MonoBehaviour
 
         foreach (RaycastHit2D hit in hits)
         {
-            Rigidbody2D rb = hit.collider.GetComponent<Rigidbody2D>();
+            rb = hit.collider.GetComponent<Rigidbody2D>();
             if (rb != null)
             {
-                Vector2 forceDirection = (swingAim).normalized;
+                forceDirection = (swingAim).normalized;
                 rb.AddForce(forceDirection * currentSwingForce / 2);
 
                 if (currentSwingForce < 600) audioPlayer.PlayOneShot(weakHit);
@@ -163,7 +165,7 @@ public class scr_meleeSwing : MonoBehaviour
             audioPlayer.PlayOneShot(missedHit);
         }
 
-        currentSwingForce = minSwingForce;
+        //currentSwingForce = minSwingForce;
 
         yield return new WaitForSeconds(swingCooldown);
         canSwing = true;

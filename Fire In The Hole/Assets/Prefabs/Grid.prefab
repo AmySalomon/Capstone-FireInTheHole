@@ -57,9 +57,9 @@ GameObject:
   - component: {fileID: 6019252595912611731}
   - component: {fileID: 6319918301979423778}
   - component: {fileID: 6089971449014741}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: obj_collisionMap
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

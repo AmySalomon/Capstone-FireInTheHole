@@ -91,6 +91,7 @@ public class PlayerInputHandler : MonoBehaviour
         {
             Debug.Log("trying to move");
             playerMovement.MovePlayer(context.ReadValue<Vector2>());
+            playerDead.MoveRespawnIndicator(context.ReadValue<Vector2>());
         }
     }
 

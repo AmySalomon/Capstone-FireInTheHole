@@ -12,6 +12,7 @@ public class PlayerDeath : MonoBehaviour
     public GameObject spawnIndicatorPrefab;
 
     [HideInInspector] public Color myColor;
+    [HideInInspector] public Sprite mySprite;
 
     public float levelXMin;
     public float levelXMax;
@@ -51,6 +52,9 @@ public class PlayerDeath : MonoBehaviour
 
     [HideInInspector] public Transform setSpawnLocation;
 
+    //gets the current ring indicator, in order to move it for the helldivers respawn
+    private GameObject currentRingIndicator;
+
     private void Awake()
     {
         killSound = GetComponent<AudioSource>();
@@ -61,6 +65,10 @@ public class PlayerDeath : MonoBehaviour
     }
     void Update()
     {
+        if (currentRingIndicator != null)
+        {
+            respawnPosition = currentRingIndicator.transform.position;
+        }
         //kills player, flashes kill indicator, waits to respawn player
         if (playerIsDead)
         {
@@ -167,17 +175,28 @@ public class PlayerDeath : MonoBehaviour
         {
             transform.position = setSpawnLocation.position;
             respawnPosition = transform.position;
-            GameObject ringIndicator = GameObject.Instantiate(spawnIndicatorPrefab, transform.position, Quaternion.identity) as GameObject;
-            ringIndicator.GetComponent<SpawnRing>().spawnPlayer = true;
-            ringIndicator.GetComponent<SpawnRing>().myColor = myColor;
+            currentRingIndicator = GameObject.Instantiate(spawnIndicatorPrefab, transform.position, Quaternion.identity) as GameObject;
+            currentRingIndicator.GetComponent<SpawnRing>().spawnPlayer = true;
+            currentRingIndicator.GetComponent<SpawnRing>().myColor = myColor;
+            currentRingIndicator.GetComponent<SpawnRing>().mySprite = mySprite;
             spawnRings = false;
         }
         else if (spawnPosIsLegal() == true)
         {
-            GameObject ringIndicator = GameObject.Instantiate(spawnIndicatorPrefab, transform.position, Quaternion.identity) as GameObject;
-            ringIndicator.GetComponent<SpawnRing>().spawnPlayer = true;
-            ringIndicator.GetComponent<SpawnRing>().myColor = myColor;
+            currentRingIndicator = GameObject.Instantiate(spawnIndicatorPrefab, transform.position, Quaternion.identity) as GameObject;
+            currentRingIndicator.GetComponent<SpawnRing>().spawnPlayer = true;
+            currentRingIndicator.GetComponent<SpawnRing>().myColor = myColor;
+            currentRingIndicator.GetComponent<SpawnRing>().mySprite = mySprite;
             spawnRings = false;
         }
+    }
+
+    public void MoveRespawnIndicator(Vector2 vector)
+    {
+       if (currentRingIndicator != null)
+        {
+            currentRingIndicator.GetComponent<SpawnRing>().respawnMovement = vector;
+        }
+       
     }
 }

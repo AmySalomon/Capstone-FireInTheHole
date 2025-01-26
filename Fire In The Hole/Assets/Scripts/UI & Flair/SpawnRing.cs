@@ -11,6 +11,9 @@ public class SpawnRing : MonoBehaviour
     public GameObject innerRing;
     public GameObject outerRing;
     public GameObject insideIcon;
+    public GameObject flashingArrows;
+    public GameObject warningIcon;
+    public GameObject playerSkydive;
 
     [HideInInspector] public bool spawnBall = false;
     [HideInInspector] public bool spawnGun = false;
@@ -23,44 +26,67 @@ public class SpawnRing : MonoBehaviour
     public float timeToAppear = .3f;
     float endScale;
     float startScale;
-    float playerStartScale = 5.8f;
-
-    public float playerRingOpacity = 0.1f;
 
     float newRingScale;
     //vert scale is specifically for the animation of the circles appearing at the start
     float newVertScale;
 
+    float newSkydivePosition;
+
     [HideInInspector] public Color myColor = Color.white;
-    // Start is called before the first frame update
+
+    [HideInInspector] public Sprite mySprite;
+
+    //ALL OF THE FOLLOWING IS FOR HELLDIVERS RESPAWN MECHANIC
+    [SerializeField] private float respawnMoveSpeed = 3f;
+
+    [HideInInspector] public Vector2 respawnMovement;
+
+    private Rigidbody2D respawnRb;
+
+    // Start is called before removthe first frame update
     void Start()
     {
-        //making endScale (the end of the lerp) the same size as the smaller ring. making startScale (the start of the lerp) the same size as the bigger ring.
-        //using X makes it possible to make it a float, and x/y should be the same, anyway.
-        endScale = innerRing.transform.localScale.x;
-        startScale = outerRing.transform.localScale.x;
+        respawnRb = GetComponent<Rigidbody2D>();
 
         //if player spawning, then change colors and size of the rings to match the player spawn animation
         if (spawnPlayer)
         {
-            outerRing.transform.localScale = new Vector3(5.8f, 5.8f, 1f);
-            outerRing.GetComponent<SpriteRenderer>().color = new Vector4(myColor.r, myColor.g, myColor.b, playerRingOpacity);
+            outerRing.transform.localScale = new Vector3(.45f, .45f, 1f);
+            innerRing.transform.localScale = new Vector3(.25f, .25f, 1f);
+            outerRing.GetComponent<SpriteRenderer>().color = myColor;
             innerRing.GetComponent<SpriteRenderer>().color = myColor;
-            insideIcon.GetComponent<SpriteRenderer>().color = new Vector4 (myColor.r, myColor.g, myColor.b, playerRingOpacity);
+            flashingArrows.GetComponent<SpriteRenderer>().color = new Color(myColor.r, myColor.g, myColor.b, 0.9f);
+            warningIcon.GetComponent<SpriteRenderer>().color = myColor;
+            playerSkydive.transform.localPosition = new Vector3(0, 0, -9);
+            playerSkydive.GetComponent<SpriteRenderer>().sprite = mySprite;
+            insideIcon.SetActive(false);
         }
+        else
+        {
+            flashingArrows.SetActive(false);
+            warningIcon.SetActive(false);
+            playerSkydive.SetActive(false);
+        }
+        //making endScale (the end of the lerp) the same size as the smaller ring. making startScale (the start of the lerp) the same size as the bigger ring.
+        //using X makes it possible to make it a float, and x/y should be the same, anyway.
+        endScale = innerRing.transform.localScale.x;
+        startScale = outerRing.transform.localScale.x;
     }
 
     // Update is called once per frame
     void Update()
     {
+        AppearAnimation();
         //if spawning player in, then do different stuff
         if (spawnPlayer)
         {
+            MoveIndicator();
             PlayerSpawnAnimation();
+            PlayerSkydiveAnimation();
         }
         else
         {
-            AppearAnimation();
             SpawnAnimation();
         }
         time += Time.deltaTime;
@@ -101,7 +127,7 @@ public class SpawnRing : MonoBehaviour
         //if it hasnt been as long as the spawn timer, then continue scaling down the outer ring until the timer ends
         if (time < playerTimeToSpawn)
         {
-            newRingScale = Mathf.Lerp(playerStartScale, endScale, time / playerTimeToSpawn);
+            newRingScale = Mathf.Lerp(startScale, endScale, time / playerTimeToSpawn);
             outerRing.transform.localScale = new Vector3(newRingScale, newRingScale, 1);
         }
         else
@@ -109,6 +135,16 @@ public class SpawnRing : MonoBehaviour
             //if the lerp has ended, snap the circles to be the same size
             outerRing.transform.localScale = innerRing.transform.localScale;
             Destroy(this.gameObject);
+        }
+    }
+
+    void PlayerSkydiveAnimation()
+    {
+        //plays the skydive animation for whichever player is spawning in, 1 second before spawning
+        if (time > playerTimeToSpawn - 1)
+        {
+            newSkydivePosition = Mathf.Lerp(-9, 0, time - playerTimeToSpawn + 1 / 1);
+            playerSkydive.transform.localPosition = new Vector3(0, 0, newSkydivePosition);
         }
     }
 
@@ -130,5 +166,14 @@ public class SpawnRing : MonoBehaviour
         }
 
         Destroy(this.gameObject);
+    }
+
+    void MoveIndicator()
+    {
+        if (respawnMovement.magnitude < 0.125)
+        {
+            respawnMovement = Vector2.zero;
+        }
+        respawnRb.velocity = respawnMovement * respawnMoveSpeed;
     }
 }

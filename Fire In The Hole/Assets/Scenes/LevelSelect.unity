@@ -446,7 +446,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 17d29b83188272f4a8b9813f56185876, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0f80c0a55f26542479706f2b6fc7f750, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1872,7 +1872,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: cb89ffd8dbca7b748b883f94c573f000, type: 3}
+  m_Sprite: {fileID: 21300000, guid: eb7ffeed928007e48bff28d1005184c1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2905,7 +2905,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 328445dd3257b6b4e876cf3bec4c10eb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bf77621dfc1a42747bb8bd5bd65c751c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2934,6 +2934,7 @@ GameObject:
   - component: {fileID: 1411319552}
   - component: {fileID: 1411319554}
   - component: {fileID: 1411319553}
+  - component: {fileID: 1411319555}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -2980,7 +2981,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 2cdafff285b35e54691bd49428b5cb2c, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -2995,6 +2996,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1411319551}
   m_CullTransparentMesh: 1
+--- !u!95 &1411319555
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411319551}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7635e7f341f745841b44ec01998cd578, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1433010678
 GameObject:
   m_ObjectHideFlags: 0
@@ -3375,7 +3397,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 82215850f616d3148b695a51fd78d56b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fb3b9bb4d47d7584e8e1090c292a902d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

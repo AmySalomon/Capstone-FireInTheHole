@@ -32,6 +32,7 @@ public class InitializeLevel : MonoBehaviour
             player.GetComponentInChildren<scr_meleeSwing>().outlineColor = playerConfigs[i].PlayerColor;
             player.GetComponentInChildren<PlayerDeath>().myColor = playerConfigs[i].PlayerColor;
             player.GetComponentInChildren<PlayerDeath>().mySprite = playerConfigs[i].PlayerSprite;
+            player.GetComponentInChildren<SniperLaser>().myColor = playerConfigs[i].PlayerColor;
             player.GetComponentInChildren<PlayerConfigInfo>().GetPlayerConfig(playerConfigs[i]);
             player.GetComponentInChildren<PlayerPause>().GetPauseMenu(pauseMenu);
             LeaderboardManager.leaderboardManager.players[i] = player;

@@ -25,3 +25,4 @@ MonoBehaviour:
   gunSprite: {fileID: 21300000, guid: dd1254fda64a7b04fba945cef285e278, type: 3}
   behaviour: {fileID: 11400000, guid: dc96fdaebba5a524fa0b65132053b6dd, type: 2}
   bulletUI: {fileID: 21300000, guid: a6ec410ee1034ff489fd0d398d144615, type: 3}
+  hasLaser: 1

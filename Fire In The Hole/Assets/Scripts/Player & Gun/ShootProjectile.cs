@@ -31,6 +31,7 @@ public class ShootProjectile : MonoBehaviour
     public int magazineCount; //how many magazines the player has
     public ShotType shotType; //how the gun shoots (multishot is only one other one than basic for now)
     public float shotSpread; //the angle at which a bullet can be modified when shooting
+    public bool hasLaser; //whether or not the gun has a laserpointer (sniper only)
     private GameObject myCamera;
 
     public WeaponClass defaultWeapon, currentWeapon;
@@ -133,6 +134,7 @@ public class ShootProjectile : MonoBehaviour
         reloadTimerMax = newWeapon.reloadSpeed;
         shotType = newWeapon.behaviour;
         shotSpread = newWeapon.shotSpread;
+        hasLaser = newWeapon.hasLaser;
 
         for (int i = 0; i < ammoMax; i++)
         {

@@ -47,7 +47,7 @@ public class tutorialGolfBall : MonoBehaviour
         myRigidbody = GetComponent<Rigidbody2D>();
         mySprite = GetComponent<SpriteRenderer>();
         myTrail = GetComponent<TrailRenderer>();
-        outline = GetComponent<Outline>();
+        outline = GetComponentInChildren<Outline>();
     }
 
     private void Update()

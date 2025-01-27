@@ -158,6 +158,13 @@ MonoBehaviour:
   shouldDisableButton2: 0
   shouldDisableButton3: 0
   shouldDisableButton4: 0
+  shouldIDisableUI: 0
+  playerSpawns: []
+  flagSpawns: []
+  ballSpawns: []
+  playerPrefab: {fileID: 0}
+  tutorialFlagPrefab: {fileID: 0}
+  tutorialBallPrefab: {fileID: 0}
   sceneToGoTo: Blacklight
 --- !u!4 &30369629
 Transform:
@@ -329,7 +336,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -641,7 +649,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:

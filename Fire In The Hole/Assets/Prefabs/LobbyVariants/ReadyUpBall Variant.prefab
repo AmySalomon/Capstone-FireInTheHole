@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ReadyUpBall Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3362427951106548886, guid: 4031563aec8778046a5edc5d43dcb23d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 4292043681957677503, guid: 4031563aec8778046a5edc5d43dcb23d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

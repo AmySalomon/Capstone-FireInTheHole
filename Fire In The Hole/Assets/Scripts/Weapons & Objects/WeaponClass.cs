@@ -16,4 +16,5 @@ public class WeaponClass : ScriptableObject
     public Sprite gunSprite; //gun visual
     public ShotType behaviour; //how the gun shoots bullets
     public Sprite bulletUI; //how the bullets remaining look above the player's head
+    public bool hasLaser; //whether or not the gun should have a laserpointer (sniper only)
 }

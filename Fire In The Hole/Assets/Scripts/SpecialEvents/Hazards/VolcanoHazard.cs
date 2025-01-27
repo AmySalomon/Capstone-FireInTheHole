@@ -7,7 +7,7 @@ public class VolcanoHazard : MonoBehaviour
     Color startingColour;
     public float timeToImpactMax;
     public float timeToImpact;
-    public double lingerTimer = 1;
+    public double lingerTimer = 0.3;
     private bool exploding = false;
     public Animator lavaAnimator;
 

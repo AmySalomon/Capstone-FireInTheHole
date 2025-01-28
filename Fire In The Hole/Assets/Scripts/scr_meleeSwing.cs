@@ -75,10 +75,6 @@ public class scr_meleeSwing : MonoBehaviour
         {
             swingAim = (Vector3)rightStickDirection.normalized;
         }
-        else
-        {
-            swingAim = Vector2.zero; //unsure of what we want to do for when the player isnt aiming so figured a close range radius is fine and fun.
-        }
         //Debug.Log(swingAim);
     }
 
@@ -109,16 +105,28 @@ public class scr_meleeSwing : MonoBehaviour
             crosshair.enabled = false;
             swingChargeBar.gameObject.SetActive(true);
             swingChargeBar.SetCharge(currentSwingForce);
-            yield return null;
+
+            //this next section will be to detect golf balls in range, and send that data to the laser aim script
+            RaycastHit2D[] hits = Physics2D.CircleCastAll(golfCrosshair.transform.position, swingRadius, swingAim.normalized, swingDistance, interactableLayers);
+
+            foreach (RaycastHit2D hit in hits)
+            {
+                GolfAimLaser golfBallLaser = hit.transform.gameObject.GetComponent<GolfAimLaser>();
+
+                golfBallLaser.TryGolfLaser(swingAim, currentSwingForce, outlineColor);
+                
+            }
+                yield return null;
         }
     }
+
 
     public IEnumerator Swing()
     {
         isCharging = false;
         canSwing = false;
 
-        RaycastHit2D[] hits = Physics2D.CircleCastAll(golfCrosshair.transform.position, swingRadius, (Vector3)rightStickDirection.normalized, swingDistance, interactableLayers);
+        RaycastHit2D[] hits = Physics2D.CircleCastAll(golfCrosshair.transform.position, swingRadius, swingAim.normalized, swingDistance, interactableLayers);
 
         gunAiming.gameObject.transform.localPosition = new Vector2(0, 0);
         gunAiming.enabled = true;

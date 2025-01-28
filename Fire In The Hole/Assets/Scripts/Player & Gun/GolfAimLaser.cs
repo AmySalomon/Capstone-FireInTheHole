@@ -16,6 +16,8 @@ public class GolfAimLaser : MonoBehaviour
     GradientAlphaKey[] alphaKey;
 
     private bool tryingToLaser = false;
+
+    float lineWidth;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,13 +25,14 @@ public class GolfAimLaser : MonoBehaviour
         mySprite = GetComponent<SpriteRenderer>();
         myOutline = GetComponent<Outline>();
         myTransform = GetComponent<Transform>();
-
+        lineWidth = lineRenderer.startWidth;
         SetGradient(myLaserColor);
     }
 
     private void Update()
     {
         lineRenderer.colorGradient = myGradient;
+        lineRenderer.material.mainTextureScale = new Vector2(1f / lineWidth, 1.0f);
     }
     private void LateUpdate()
     {

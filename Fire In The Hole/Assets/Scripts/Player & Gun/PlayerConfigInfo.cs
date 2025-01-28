@@ -6,7 +6,7 @@ public class PlayerConfigInfo : MonoBehaviour
 {
     private PlayerConfig playerConfig;
     public PlayerConfig playerConfigPublic;
-    public Transform crosshair;
+    public Transform crosshair, playerSprite;
     public bool placed = false;
     // Start is called before the first frame update
     void Start()
@@ -30,5 +30,6 @@ public class PlayerConfigInfo : MonoBehaviour
     public void UpdatePlayerInfo()
     {
         crosshair.GetComponent<SpriteRenderer>().color = playerConfig.PlayerColor;
+        playerSprite.GetComponentInChildren<Outline>().OutlineColor = playerConfig.PlayerColor;
     }
 }

@@ -1095,6 +1095,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crosshair: {fileID: 0}
+  playerSprite: {fileID: 0}
   placed: 0
 --- !u!1 &3775079352876674912
 GameObject:
@@ -2947,6 +2948,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crosshair: {fileID: 7103122365907552541}
+  playerSprite: {fileID: 1200328399479723322}
   placed: 0
 --- !u!114 &524689870148123672
 MonoBehaviour:

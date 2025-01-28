@@ -11,10 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LevelSelect.unity
     guid: fd4506a8758a78e478b4bf7af85e1641
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Tests/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Tests/4PlayerSampleScene.unity
     guid: 2fa3035a03961c5449ec8ba47b18da16
   - enabled: 0
@@ -71,7 +71,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/OptionsMenu.unity
     guid: d7f2a7dd0b22549488a589ac387a773f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Levels/3D/DEBUG/Debug - Pirate.unity
     guid: 603b6300402e7364f9bf07e6b138a592
   - enabled: 1

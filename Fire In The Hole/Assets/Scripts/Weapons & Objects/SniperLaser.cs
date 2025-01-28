@@ -6,7 +6,6 @@ public class SniperLaser : MonoBehaviour
 {
     [HideInInspector] private LineRenderer lineRenderer;
     private Transform myTransform;
-    private Transform laserFirePoint;
     [SerializeField] private float rayDistance = 300;
 
     [HideInInspector] public Color myColor;

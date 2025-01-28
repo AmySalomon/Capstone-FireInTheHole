@@ -116,7 +116,7 @@ public class PlayerInputHandler : MonoBehaviour
     {
         if (PlayerPause.paused) { return; }
 
-        if (playerDash != null && context.performed && playerCharge.isCharging == false && playerDead.playerIsDead == false && playerDirection != Vector2.zero)
+        if (playerDash != null && context.performed && playerCharge.isCharging == false && playerDead.playerIsDead == false && playerDirection.magnitude >= 0.1f)
         {
             Debug.Log("trying to dash");
             playerDash.PressDash();

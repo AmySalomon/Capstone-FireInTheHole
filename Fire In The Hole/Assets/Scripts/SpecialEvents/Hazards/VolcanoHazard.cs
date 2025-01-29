@@ -21,6 +21,7 @@ public class VolcanoHazard : MonoBehaviour
 
     public GameObject innerRing;
     public GameObject outerRing;
+    public GameObject warningIcon;
 
     //timer specifically for the ring indicators, needs to count upwards.
     float time = 0;
@@ -65,6 +66,7 @@ public class VolcanoHazard : MonoBehaviour
             lavaAnimator.SetBool("Fade Away", true);
             innerRing.GetComponent<SpriteRenderer>().enabled = false;
             outerRing.GetComponent<SpriteRenderer>().enabled = false;
+            warningIcon.SetActive(false);
         }
     }
 

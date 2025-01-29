@@ -10,10 +10,15 @@ public class SpawnRing : MonoBehaviour
 
     public GameObject innerRing;
     public GameObject outerRing;
-    public GameObject insideIcon;
     public GameObject flashingArrows;
     public GameObject warningIcon;
+    public GameObject golfballIcon;
+    public GameObject ammoIcon;
     public GameObject playerSkydive;
+
+    public Sprite squareRing;
+    public Sprite hexagonRing;
+
 
     [HideInInspector] public bool spawnBall = false;
     [HideInInspector] public bool spawnGun = false;
@@ -56,17 +61,39 @@ public class SpawnRing : MonoBehaviour
             innerRing.transform.localScale = new Vector3(.25f, .25f, 1f);
             outerRing.GetComponent<SpriteRenderer>().color = myColor;
             innerRing.GetComponent<SpriteRenderer>().color = myColor;
+            outerRing.GetComponent<SpriteRenderer>().sprite = hexagonRing;
+            innerRing.GetComponent<SpriteRenderer>().sprite = hexagonRing;
             flashingArrows.GetComponent<SpriteRenderer>().color = new Color(myColor.r, myColor.g, myColor.b, 0.9f);
             warningIcon.GetComponent<SpriteRenderer>().color = myColor;
             playerSkydive.transform.localPosition = new Vector3(0, 0, -9);
             playerSkydive.GetComponent<SpriteRenderer>().sprite = mySprite;
-            insideIcon.SetActive(false);
+            golfballIcon.SetActive(false);
+            ammoIcon.SetActive(false);
         }
         else
         {
             flashingArrows.SetActive(false);
             warningIcon.SetActive(false);
             playerSkydive.SetActive(false);
+        }
+
+        if (spawnBall)
+        {
+            //bright yellowish green
+            outerRing.GetComponent<SpriteRenderer>().color = new Color32(123, 211, 0, 255);
+            innerRing.GetComponent<SpriteRenderer>().color = new Color32(123, 211, 0, 255);
+            golfballIcon.GetComponent<SpriteRenderer>().color = new Color32(123, 211, 0, 255);
+            ammoIcon.SetActive(false);
+        }
+        else if (spawnGun)
+        {
+            //bright orange
+            outerRing.GetComponent<SpriteRenderer>().color = new Color32(231, 100, 0, 255);
+            innerRing.GetComponent<SpriteRenderer>().color = new Color32(231, 100, 0, 255);
+            ammoIcon.GetComponent<SpriteRenderer>().color = new Color32(231, 100, 0, 255);
+            outerRing.GetComponent<SpriteRenderer>().sprite = squareRing;
+            innerRing.GetComponent<SpriteRenderer>().sprite = squareRing;
+            golfballIcon.SetActive(false);
         }
         //making endScale (the end of the lerp) the same size as the smaller ring. making startScale (the start of the lerp) the same size as the bigger ring.
         //using X makes it possible to make it a float, and x/y should be the same, anyway.

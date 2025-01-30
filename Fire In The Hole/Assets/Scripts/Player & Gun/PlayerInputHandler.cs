@@ -46,17 +46,21 @@ public class PlayerInputHandler : MonoBehaviour
 
     private void Update()
     {
+        //the system used to dictate how much rumble and for how long for this player. 
+        //i downloaded an asset pack called XinputDotNetPure for this following GamePad.SetVibration method, and it works (but only for the first index, and I have no idea why.)
+        //for example, if the controller player is player 2, and the MnK player is player 1, then anything player 1 does will trigger the controller's rumble.
+        //if controller player is player 1, then it works fine. i haven't tested multiple controllers yet, but this needs fixing for sure.
 
-        if (rumbleTime > 0)
+        //for now, it will be commented out.
+        /*if (rumbleTime > 0)
         {
             rumbleTime -= Time.deltaTime;
             GamePad.SetVibration((PlayerIndex)myInputIndex, rumbleAmount, rumbleAmount);
-            Debug.Log("MY INDEX IS: " + (PlayerIndex)myInputIndex);
         }
         else
         {
             GamePad.SetVibration((PlayerIndex)myInputIndex, 0, 0);
-        }
+        }*/
     }
 
     public void InitializePlayer(PlayerConfig pc)

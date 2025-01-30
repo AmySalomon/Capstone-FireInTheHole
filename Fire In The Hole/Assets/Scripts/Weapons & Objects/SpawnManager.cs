@@ -4,9 +4,16 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    public GameObject golfballPrefab;
-    public GameObject weaponPrefab;
+    //with new spawn system, the following prefabs are no longer necessary
+    //public GameObject golfballPrefab;
+    //public GameObject weaponPrefab;
     public GameObject hazardPrefab;
+
+    public SpecialEvents specialEvents;
+
+
+    public GameObject ringSpawnerPrefab;
+
 
     public float levelXMin;
     public float levelXMax;
@@ -29,16 +36,25 @@ public class SpawnManager : MonoBehaviour
     public float maxSpawnTimeForHazards;
     [SerializeField] private float currentSpawnTimeForHazards;
 
-    //Maximum amount of weapon powerups / golfballs / hazards that can be on screen at once
+    //Maximum amount of weapon powerups / golfballs that can be on screen at once
     public float golfBallLimit = 3;
     public float weaponLimit = 4;
-    public int hazardSpawnLimit = 3;
-    public int meteorsToSpawn;
+    
 
     private void Start()
     {
+        InitiateEventSetup();
         DetermineHazardTimer();
     }
+
+    private void InitiateEventSetup()
+    {
+        if (specialEvents == null) { return; } //if there is no events for the map, do not check for hazard related actions
+        specialEvents.EventSetup(this.gameObject);
+        minSpawnTimeForHazards = specialEvents.minSpawnTimeForEvent;
+        maxSpawnTimeForHazards = specialEvents.maxSpawnTimeForEvent;
+    }
+
     void Update()
     {
         golfBallTimer += Time.deltaTime;
@@ -54,7 +70,7 @@ public class SpawnManager : MonoBehaviour
 
         if (needAWeaponSpawn == true) StartCoroutine(SpawnWeapon());
 
-        if (hazardPrefab == null) { return; } //if there is no hazards for the map, do not check for hazard related actions
+        if (specialEvents == null) { return; } //if there is no hazards for the map, do not check for hazard related actions
 
         if (hazardTimer > currentSpawnTimeForHazards) needAHazardSpawn = true;
 
@@ -68,7 +84,8 @@ public class SpawnManager : MonoBehaviour
         {
             golfBallTimer = 0;
             needAGolfSpawn = false;
-            Instantiate(golfballPrefab, transform.position, transform.rotation);
+            GameObject newBall = GameObject.Instantiate(ringSpawnerPrefab, transform.position, Quaternion.identity) as GameObject;
+            newBall.GetComponent<SpawnRing>().spawnBall = true;
             StopCoroutine(SpawnBall());
         }
 
@@ -81,7 +98,8 @@ public class SpawnManager : MonoBehaviour
         {
             weaponTimer = 0;
             needAWeaponSpawn = false;
-            Instantiate(weaponPrefab, transform.position, transform.rotation);
+            GameObject newGun = GameObject.Instantiate(ringSpawnerPrefab, transform.position, Quaternion.identity) as GameObject;
+            newGun.GetComponent<SpawnRing>().spawnGun = true;
             StopCoroutine(SpawnWeapon());
         }
 
@@ -90,26 +108,27 @@ public class SpawnManager : MonoBehaviour
 
     IEnumerator SpawnHazard()
     {
-        int succesfullySpawned = 0;
-        while (succesfullySpawned < meteorsToSpawn) //try to spawn as hazards until succesfully spawning the needed amount
-        {
-            if (spawnPosIsLegal(0.5f) == true)
-            {
-                Debug.Log("successful meteor spawn");
-                Instantiate(hazardPrefab, transform.position, transform.rotation);
-                succesfullySpawned++;
-            }
-            else
-            {
-                Debug.Log("Meteor Spawn Failed");
-            }
-        }
+        specialEvents.InitiateEvent();
+        //int succesfullySpawned = 0;
+        //while (succesfullySpawned < meteorsToSpawn) //try to spawn as hazards until succesfully spawning the needed amount
+        //{
+        //    if (spawnPosIsLegal(0.5f) == true)
+        //    {
+        //        Debug.Log("successful meteor spawn");
+        //        Instantiate(hazardPrefab, transform.position, transform.rotation);
+        //        succesfullySpawned++;
+        //    }
+        //    else
+        //    {
+        //        Debug.Log("Meteor Spawn Failed");
+        //    }
+        //}
 
 
         hazardTimer = 0;
         needAHazardSpawn = false;
         DetermineHazardTimer();
-        StopCoroutine(SpawnWeapon());
+        StopCoroutine(SpawnHazard());
         yield return null;
     }
 
@@ -130,6 +149,12 @@ public class SpawnManager : MonoBehaviour
             Debug.Log(collider.gameObject.name);
             return false;
         }
+    }
+
+    //allows external objects to run the spawn position checker
+    public bool checkSpawnPosIsLegal(float radius)
+    {
+        return spawnPosIsLegal(radius);
     }
 
     //returns true if there are not at maximum amount of golf balls on screen
@@ -155,8 +180,7 @@ public class SpawnManager : MonoBehaviour
     //randomly choose the timer until the next hazard spawn between the minimum and maximum spawn time
     public void DetermineHazardTimer()
     {
-        if (hazardPrefab == null) { return; }
+        if (specialEvents == null) { return; }
         currentSpawnTimeForHazards = Random.Range(minSpawnTimeForHazards, maxSpawnTimeForHazards);
-        meteorsToSpawn = Random.Range(1, hazardSpawnLimit);
     }
 }

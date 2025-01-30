@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class InitializeLevel : MonoBehaviour
 {
@@ -25,11 +26,15 @@ public class InitializeLevel : MonoBehaviour
             LeaderboardManager.leaderboardManager.playerScoreboards[i] = playerScores[i];
             var player = Instantiate(playerPrefab, playerSpawns[i].position, playerSpawns[i].rotation, gameObject.transform);
             player.GetComponentInChildren<PlayerInputHandler>().InitializePlayer(playerConfigs[i]);
+            player.GetComponentInChildren<PlayerInputHandler>().myInputIndex = playerConfigs[i].PlayerIndex;
             player.GetComponentInChildren<PlayerScore>().myScore = playerScores[i];
             player.GetComponentInChildren<PlayerScore>().mySprite = playerConfigs[i].PlayerSprite;
             player.GetComponentInChildren<PlayerScore>().SetSprite();
             player.GetComponentInChildren<PlayerScore>().HideScoreLeader();
             player.GetComponentInChildren<scr_meleeSwing>().outlineColor = playerConfigs[i].PlayerColor;
+            player.GetComponentInChildren<PlayerDeath>().myColor = playerConfigs[i].PlayerColor;
+            player.GetComponentInChildren<PlayerDeath>().mySprite = playerConfigs[i].PlayerSprite;
+            player.GetComponentInChildren<SniperLaser>().myColor = playerConfigs[i].PlayerColor;
             player.GetComponentInChildren<PlayerConfigInfo>().GetPlayerConfig(playerConfigs[i]);
             player.GetComponentInChildren<PlayerPause>().GetPauseMenu(pauseMenu);
             LeaderboardManager.leaderboardManager.players[i] = player;

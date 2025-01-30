@@ -66,14 +66,14 @@ public class tutorialGolfBall : MonoBehaviour
 
         if (myRigidbody.velocity.x > minVelocityToKill || myRigidbody.velocity.y > minVelocityToKill || myRigidbody.velocity.x < -minVelocityToKill || myRigidbody.velocity.y < -minVelocityToKill)
         {
-            //gameObject.tag = "Bullet";
+            gameObject.tag = "Bullet";
             mySprite.color = Color.red;
             myTrail.colorGradient = killSpeedGradient;
 
         }
         else
         {
-            //gameObject.tag = "Ball";
+            gameObject.tag = "Ball";
             mySprite.color = Color.white;
             myTrail.colorGradient = normalGradient;
         }

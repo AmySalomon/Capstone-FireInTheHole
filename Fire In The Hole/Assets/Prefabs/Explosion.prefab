@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 863565245139612386}
+  - component: {fileID: 2227348553268178407}
   - component: {fileID: 965569204798244896}
   - component: {fileID: 8436397617063568281}
-  - component: {fileID: -8384613137182405135}
   m_Layer: 3
   m_Name: Explosion
   m_TagString: Bullet
@@ -34,6 +34,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2227348553268178407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8977285105747890853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f31abf8e78811f4089832013da2b1af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &965569204798244896
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -121,16 +133,3 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &-8384613137182405135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8977285105747890853}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 187fb69b0711c544dba9ae4d0e396c26, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timer: 1

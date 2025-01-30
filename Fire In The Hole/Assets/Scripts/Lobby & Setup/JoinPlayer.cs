@@ -20,14 +20,17 @@ public class JoinPlayer : MonoBehaviour
     [SerializeField] private Transform[] playerSpawns;
     [SerializeField] private Transform[] flagSpawns;
     [SerializeField] private Transform[] ballSpawns;
+    [SerializeField] private Transform[] turretSpawns;
     [SerializeField] private GameObject playerPrefab;
     [SerializeField] private GameObject tutorialFlagPrefab;
     [SerializeField] private GameObject tutorialBallPrefab;
+    [SerializeField] private GameObject tutorialTurretPrefab;
 
     public string sceneToGoTo;
     public static JoinPlayer Instance { get; private set; }
 
     private PlayerInputHandler[] playersActive;
+    private TutorialTurret[] turretsActive;
 
     private PlayerInputManager inputManager;
 
@@ -69,16 +72,19 @@ public class JoinPlayer : MonoBehaviour
 
     }
 
+
     public void ReadyPlayer(int index)
     {
         playerConfigs[index].IsReady = true;
 
         //this code adds the player into the scene once theyre readied up, at their spawn point, and disables the hud for character selection
         var player = Instantiate(playerPrefab, playerSpawns[index].position, playerSpawns[index].rotation, gameObject.transform);
+        player.GetComponent<PlayerDeath>().setSpawnLocation = playerSpawns[index];
         var tutorialFlag = Instantiate(tutorialFlagPrefab, flagSpawns[index].position, flagSpawns[index].rotation, gameObject.transform);
         tutorialFlag.GetComponent<LobbyHoleIdentity>().flagNumber = index + 1;
         var tutorialBall = Instantiate(tutorialBallPrefab, ballSpawns[index].position, ballSpawns[index].rotation, gameObject.transform);
         player.GetComponentInChildren<PlayerInputHandler>().InitializePlayer(playerConfigs[index]);
+        var tutorialTurret = Instantiate(tutorialTurretPrefab, turretSpawns[index].position, turretSpawns[index].rotation, gameObject.transform);
         shouldIDisableUI = true;
     }
 
@@ -91,6 +97,14 @@ public class JoinPlayer : MonoBehaviour
         foreach (PlayerInputHandler player in playersActive)
         {
             Destroy(player.gameObject);
+        }
+
+        //code added to handle the tutorial turrets not being destroyed when game starts
+        turretsActive = GetComponentsInChildren<TutorialTurret>();
+
+        foreach (TutorialTurret turret in turretsActive)
+        {
+            Destroy(turret.gameObject);
         }
     }
     //CODE USED TO MOVE TO THE LEVEL SCENE WHEN EVERYONE IS READY

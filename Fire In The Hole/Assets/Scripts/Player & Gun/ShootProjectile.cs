@@ -23,12 +23,15 @@ public class ShootProjectile : MonoBehaviour
     //the launch force of the bullet being shot
     public float launchForce = -1200f;
 
+
     public float shootDelay; //time between shots
     public float screenShake; //how hard screen shakes
     public int ammoMax; //how much ammo is in each magazine
     public int ammoCurrent; //how much ammo the player currently has left
     public int magazineCount; //how many magazines the player has
-    public ShotType shotType; //how the gun shoots (multishot is only one for now)
+    public ShotType shotType; //how the gun shoots (multishot is only one other one than basic for now)
+    public float shotSpread; //the angle at which a bullet can be modified when shooting
+    public bool hasLaser; //whether or not the gun has a laserpointer (sniper only)
     private GameObject myCamera;
 
     public WeaponClass defaultWeapon, currentWeapon;
@@ -36,6 +39,7 @@ public class ShootProjectile : MonoBehaviour
     public bool reloading = false;
 
     [HideInInspector] public bool isTryingToShoot;
+    private PlayerInputHandler rumbleHandler;
 
     [SerializeField] private GameObject reloadingText;
     [SerializeField] private TextMeshProUGUI magazineText;
@@ -54,6 +58,7 @@ public class ShootProjectile : MonoBehaviour
         audioPlayer = GetComponent<AudioSource>();
         muzzleFlash.enabled = false;
         reloadingText.SetActive(false);
+        rumbleHandler = GetComponentInParent<PlayerInputHandler>();
         UpdateWeapon(defaultWeapon); //Set starting weapon to player default weapon
 
         //gets the current camera's position for screen shake later
@@ -96,9 +101,15 @@ public class ShootProjectile : MonoBehaviour
                 return;
             }
             Debug.Log("shoot");
+
             audioPlayer.pitch = Random.Range(0.9f, 1.1f);
             audioPlayer.PlayOneShot(gunshot, 1f);
-            shotType.ShootBullets(barrelEnd, launchForce);
+            if (rumbleHandler.rumbleTime < 0.3)
+            {
+                rumbleHandler.rumbleTime = 0.3f;
+                rumbleHandler.rumbleAmount = 0.3f;
+            }
+            shotType.ShootBullets(barrelEnd, launchForce, shotSpread);
             shootTimer = 0;
             Destroy(ammo_UI[ammoCurrent - 1]);
             ammo_UI.RemoveAt((int)ammoCurrent-1);
@@ -130,6 +141,8 @@ public class ShootProjectile : MonoBehaviour
         magazineCount = newWeapon.magazineCount;
         reloadTimerMax = newWeapon.reloadSpeed;
         shotType = newWeapon.behaviour;
+        shotSpread = newWeapon.shotSpread;
+        hasLaser = newWeapon.hasLaser;
 
         for (int i = 0; i < ammoMax; i++)
         {

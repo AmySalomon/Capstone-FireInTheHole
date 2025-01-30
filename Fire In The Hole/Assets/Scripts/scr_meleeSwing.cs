@@ -77,10 +77,6 @@ public class scr_meleeSwing : MonoBehaviour
         {
             swingAim = (Vector3)rightStickDirection.normalized;
         }
-        else
-        {
-            swingAim = Vector2.zero; //unsure of what we want to do for when the player isnt aiming so figured a close range radius is fine and fun.
-        }
         //Debug.Log(swingAim);
     }
 
@@ -111,16 +107,35 @@ public class scr_meleeSwing : MonoBehaviour
             crosshair.enabled = false;
             swingChargeBar.gameObject.SetActive(true);
             swingChargeBar.SetCharge(currentSwingForce);
-            yield return null;
+
+            //this next section will be to detect golf balls in range, and send that data to the laser aim script
+            RaycastHit2D[] hits = Physics2D.CircleCastAll(golfCrosshair.transform.position, swingRadius, swingAim.normalized, swingDistance, interactableLayers);
+
+            foreach (RaycastHit2D hit in hits)
+            {
+                GolfAimLaser golfBallLaser = hit.transform.gameObject.GetComponent<GolfAimLaser>();
+
+                golfBallLaser.TryGolfLaser(swingAim, currentSwingForce, outlineColor);
+                
+            }
+            //rumble amount based on swingforce
+            myInput.rumbleTime = 0.1f;
+            if (currentSwingForce < 600) myInput.rumbleAmount = 0.1f;
+            else if (currentSwingForce < 1500) myInput.rumbleAmount = 0.2f;
+            else myInput.rumbleAmount = 0.4f;
+
+
+                yield return null;
         }
     }
+
 
     public IEnumerator Swing()
     {
         isCharging = false;
         canSwing = false;
 
-        RaycastHit2D[] hits = Physics2D.CircleCastAll(golfCrosshair.transform.position, swingRadius, (Vector3)rightStickDirection.normalized, swingDistance, interactableLayers);
+        RaycastHit2D[] hits = Physics2D.CircleCastAll(golfCrosshair.transform.position, swingRadius, swingAim.normalized, swingDistance, interactableLayers);
 
         gunAiming.gameObject.transform.localPosition = new Vector2(0, 0);
         gunAiming.enabled = true;
@@ -140,10 +155,22 @@ public class scr_meleeSwing : MonoBehaviour
             {
                 forceDirection = (swingAim).normalized;
                 rb.AddForce(forceDirection * currentSwingForce / 2);
-
-                if (currentSwingForce < 600) audioPlayer.PlayOneShot(weakHit);
-                else if (currentSwingForce < 1500) audioPlayer.PlayOneShot(normalHit);
-                else audioPlayer.PlayOneShot(strongHit);
+                myInput.rumbleTime = 0.3f;
+                if (currentSwingForce < 600)
+                {
+                    audioPlayer.PlayOneShot(weakHit);
+                    myInput.rumbleAmount = 0.4f;
+                }
+                else if (currentSwingForce < 1500)
+                {
+                    audioPlayer.PlayOneShot(normalHit);
+                    myInput.rumbleAmount = 0.7f;
+                }
+                else
+                {
+                    audioPlayer.PlayOneShot(strongHit);
+                    myInput.rumbleAmount = 1f;
+                }
 
                 //if you hit a golf ball, tell the golf ball that you hit it
                 if (rb.gameObject.TryGetComponent<scr_golfBall>(out scr_golfBall golfBall))

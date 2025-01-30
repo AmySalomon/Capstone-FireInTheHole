@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.U2D;
 using static UnityEngine.InputSystem.InputAction;
+using XInputDotNetPure;
 
 public class PlayerInputHandler : MonoBehaviour
 {
@@ -22,6 +23,16 @@ public class PlayerInputHandler : MonoBehaviour
     private PlayerControls controls;
     private PlayerDeath playerDead;
     private InputDevice device;
+
+    [HideInInspector] public int myInputIndex;
+
+    private Gamepad myGamepad;
+
+    private Vector2 playerDirection;
+
+    public float rumbleTime = 0;
+    public float rumbleAmount = 0.1f;
+
     private void Awake()
     {
         playerMovement = GetComponentInChildren<PlayerMovement>();
@@ -33,7 +44,24 @@ public class PlayerInputHandler : MonoBehaviour
         controls = new PlayerControls();
     }
 
-   
+    private void Update()
+    {
+        //the system used to dictate how much rumble and for how long for this player. 
+        //i downloaded an asset pack called XinputDotNetPure for this following GamePad.SetVibration method, and it works (but only for the first index, and I have no idea why.)
+        //for example, if the controller player is player 2, and the MnK player is player 1, then anything player 1 does will trigger the controller's rumble.
+        //if controller player is player 1, then it works fine. i haven't tested multiple controllers yet, but this needs fixing for sure.
+
+        //for now, it will be commented out.
+        /*if (rumbleTime > 0)
+        {
+            rumbleTime -= Time.deltaTime;
+            GamePad.SetVibration((PlayerIndex)myInputIndex, rumbleAmount, rumbleAmount);
+        }
+        else
+        {
+            GamePad.SetVibration((PlayerIndex)myInputIndex, 0, 0);
+        }*/
+    }
 
     public void InitializePlayer(PlayerConfig pc)
     {
@@ -47,6 +75,8 @@ public class PlayerInputHandler : MonoBehaviour
     private void Input_onActionTriggered(CallbackContext obj)
     {
         device = obj.control.device; //Assigns control type to device (keyboard or controller)
+
+        
 
         if (obj.action.name == controls.Player1.Move.name)
         {
@@ -83,11 +113,13 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void OnMove(CallbackContext context)
     {
+        playerDirection = context.ReadValue<Vector2>();
         if(PlayerPause.paused) { return; }
         if (playerMovement != null)
         {
             Debug.Log("trying to move");
             playerMovement.MovePlayer(context.ReadValue<Vector2>());
+            playerDead.MoveRespawnIndicator(context.ReadValue<Vector2>());
         }
     }
 
@@ -112,7 +144,7 @@ public class PlayerInputHandler : MonoBehaviour
     {
         if (PlayerPause.paused) { return; }
 
-        if (playerDash != null && context.performed && playerCharge.isCharging == false && playerDead.playerIsDead == false)
+        if (playerDash != null && context.performed && playerCharge.isCharging == false && playerDead.playerIsDead == false && playerDirection.magnitude >= 0.1f)
         {
             Debug.Log("trying to dash");
             playerDash.PressDash();

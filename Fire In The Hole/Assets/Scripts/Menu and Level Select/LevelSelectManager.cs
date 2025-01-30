@@ -130,6 +130,16 @@ public class LevelSelectManager : MonoBehaviour
         
     }
 
+    public void LevelDebug()
+    {
+        Time.timeScale = 1f;
+        chosenLevel = "Debug - Pirate";
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = false;
+        SceneManager.LoadScene(playerSetup);
+
+    }
+
     public void HowToPlay()
     {
         Time.timeScale = 1f;

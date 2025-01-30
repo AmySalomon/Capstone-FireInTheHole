@@ -72,6 +72,7 @@ public class JoinPlayer : MonoBehaviour
 
     }
 
+
     public void ReadyPlayer(int index)
     {
         playerConfigs[index].IsReady = true;

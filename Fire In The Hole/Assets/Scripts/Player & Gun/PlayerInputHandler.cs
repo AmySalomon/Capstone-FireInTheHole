@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.U2D;
 using static UnityEngine.InputSystem.InputAction;
+using XInputDotNetPure;
 
 public class PlayerInputHandler : MonoBehaviour
 {
@@ -23,7 +24,14 @@ public class PlayerInputHandler : MonoBehaviour
     private PlayerDeath playerDead;
     private InputDevice device;
 
+    [HideInInspector] public PlayerInput myInput;
+
+    private Gamepad myGamepad;
+
     private Vector2 playerDirection;
+
+    private float rumbleTime = 5;
+
     private void Awake()
     {
         playerMovement = GetComponentInChildren<PlayerMovement>();
@@ -35,7 +43,18 @@ public class PlayerInputHandler : MonoBehaviour
         controls = new PlayerControls();
     }
 
-   
+    private void Update()
+    {
+        if (rumbleTime > 0)
+        {
+            rumbleTime -= Time.deltaTime;
+            GamePad.SetVibration((PlayerIndex)myInput.playerIndex, .3f, .3f);
+        }
+        else
+        {
+            GamePad.SetVibration((PlayerIndex)myInput.playerIndex, 0, 0);
+        }
+    }
 
     public void InitializePlayer(PlayerConfig pc)
     {
@@ -49,6 +68,8 @@ public class PlayerInputHandler : MonoBehaviour
     private void Input_onActionTriggered(CallbackContext obj)
     {
         device = obj.control.device; //Assigns control type to device (keyboard or controller)
+
+        
 
         if (obj.action.name == controls.Player1.Move.name)
         {

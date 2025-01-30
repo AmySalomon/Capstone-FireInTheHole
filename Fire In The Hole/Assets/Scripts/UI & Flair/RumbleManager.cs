@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.InputSystem;
 public class RumbleManager : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -14,5 +14,10 @@ public class RumbleManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void RumblePulse(float lowFrequency, float highFrequency, float duration)
+    {
+
     }
 }

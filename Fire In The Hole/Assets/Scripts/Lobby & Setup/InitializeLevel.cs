@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class InitializeLevel : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class InitializeLevel : MonoBehaviour
             LeaderboardManager.leaderboardManager.playerScoreboards[i] = playerScores[i];
             var player = Instantiate(playerPrefab, playerSpawns[i].position, playerSpawns[i].rotation, gameObject.transform);
             player.GetComponentInChildren<PlayerInputHandler>().InitializePlayer(playerConfigs[i]);
+            player.GetComponentInChildren<PlayerInputHandler>().myInput = playerConfigs[i].Input;
             player.GetComponentInChildren<PlayerScore>().myScore = playerScores[i];
             player.GetComponentInChildren<PlayerScore>().mySprite = playerConfigs[i].PlayerSprite;
             player.GetComponentInChildren<PlayerScore>().SetSprite();

@@ -8,6 +8,8 @@ public class SpawnRing : MonoBehaviour
     public GameObject powerUp;
     public GameObject gunPickup;
 
+    public GameObject skydiveExplosion;
+
     public GameObject innerRing;
     public GameObject outerRing;
     public GameObject flashingArrows;
@@ -161,6 +163,7 @@ public class SpawnRing : MonoBehaviour
         {
             //if the lerp has ended, snap the circles to be the same size
             outerRing.transform.localScale = innerRing.transform.localScale;
+            Instantiate(skydiveExplosion, transform.position, transform.rotation);
             Destroy(this.gameObject);
         }
     }

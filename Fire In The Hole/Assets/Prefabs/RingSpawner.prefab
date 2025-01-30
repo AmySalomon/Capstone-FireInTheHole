@@ -490,6 +490,7 @@ MonoBehaviour:
   golfBall: {fileID: 2418453429810656359, guid: 4031563aec8778046a5edc5d43dcb23d, type: 3}
   powerUp: {fileID: 7631844770271239170, guid: ac2d026ab12e2b84684430477457e369, type: 3}
   gunPickup: {fileID: 7631844770271239170, guid: ac2d026ab12e2b84684430477457e369, type: 3}
+  skydiveExplosion: {fileID: 8977285105747890853, guid: f3c56af67d81f8b47952fb115069562e, type: 3}
   innerRing: {fileID: 7038277218828136491}
   outerRing: {fileID: 8692312855387847064}
   flashingArrows: {fileID: 1776790939820139707}

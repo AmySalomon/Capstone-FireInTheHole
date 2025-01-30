@@ -116,6 +116,13 @@ public class scr_meleeSwing : MonoBehaviour
                 golfBallLaser.TryGolfLaser(swingAim, currentSwingForce, outlineColor);
                 
             }
+            //rumble amount based on swingforce
+            myInput.rumbleTime = 0.1f;
+            if (currentSwingForce < 600) myInput.rumbleAmount = 0.1f;
+            else if (currentSwingForce < 1500) myInput.rumbleAmount = 0.2f;
+            else myInput.rumbleAmount = 0.4f;
+
+
                 yield return null;
         }
     }
@@ -146,10 +153,22 @@ public class scr_meleeSwing : MonoBehaviour
             {
                 Vector2 forceDirection = (swingAim).normalized;
                 rb.AddForce(forceDirection * currentSwingForce / 2);
-
-                if (currentSwingForce < 600) audioPlayer.PlayOneShot(weakHit);
-                else if (currentSwingForce < 1500) audioPlayer.PlayOneShot(normalHit);
-                else audioPlayer.PlayOneShot(strongHit);
+                myInput.rumbleTime = 0.3f;
+                if (currentSwingForce < 600)
+                {
+                    audioPlayer.PlayOneShot(weakHit);
+                    myInput.rumbleAmount = 0.4f;
+                }
+                else if (currentSwingForce < 1500)
+                {
+                    audioPlayer.PlayOneShot(normalHit);
+                    myInput.rumbleAmount = 0.7f;
+                }
+                else
+                {
+                    audioPlayer.PlayOneShot(strongHit);
+                    myInput.rumbleAmount = 1f;
+                }
 
                 //if you hit a golf ball, tell the golf ball that you hit it
                 if (rb.gameObject.TryGetComponent<scr_golfBall>(out scr_golfBall golfBall))

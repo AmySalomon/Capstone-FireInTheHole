@@ -39,6 +39,7 @@ public class ShootProjectile : MonoBehaviour
     public bool reloading = false;
 
     [HideInInspector] public bool isTryingToShoot;
+    private PlayerInputHandler rumbleHandler;
 
     [SerializeField] private GameObject reloadingText;
     [SerializeField] private TextMeshProUGUI magazineText;
@@ -57,6 +58,7 @@ public class ShootProjectile : MonoBehaviour
         audioPlayer = GetComponent<AudioSource>();
         muzzleFlash.enabled = false;
         reloadingText.SetActive(false);
+        rumbleHandler = GetComponentInParent<PlayerInputHandler>();
         UpdateWeapon(defaultWeapon); //Set starting weapon to player default weapon
 
         //gets the current camera's position for screen shake later
@@ -99,8 +101,14 @@ public class ShootProjectile : MonoBehaviour
                 return;
             }
             Debug.Log("shoot");
+
             audioPlayer.pitch = Random.Range(0.9f, 1.1f);
             audioPlayer.PlayOneShot(gunshot, 1f);
+            if (rumbleHandler.rumbleTime < 0.3)
+            {
+                rumbleHandler.rumbleTime = 0.3f;
+                rumbleHandler.rumbleAmount = 0.3f;
+            }
             shotType.ShootBullets(barrelEnd, launchForce, shotSpread);
             shootTimer = 0;
             Destroy(ammo_UI[ammoCurrent - 1]);

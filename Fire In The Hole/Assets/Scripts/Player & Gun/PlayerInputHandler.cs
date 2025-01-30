@@ -24,13 +24,14 @@ public class PlayerInputHandler : MonoBehaviour
     private PlayerDeath playerDead;
     private InputDevice device;
 
-    [HideInInspector] public PlayerInput myInput;
+    [HideInInspector] public int myInputIndex;
 
     private Gamepad myGamepad;
 
     private Vector2 playerDirection;
 
-    private float rumbleTime = 5;
+    public float rumbleTime = 0;
+    public float rumbleAmount = 0.1f;
 
     private void Awake()
     {
@@ -45,14 +46,16 @@ public class PlayerInputHandler : MonoBehaviour
 
     private void Update()
     {
+
         if (rumbleTime > 0)
         {
             rumbleTime -= Time.deltaTime;
-            GamePad.SetVibration((PlayerIndex)myInput.playerIndex, .3f, .3f);
+            GamePad.SetVibration((PlayerIndex)myInputIndex, rumbleAmount, rumbleAmount);
+            Debug.Log("MY INDEX IS: " + (PlayerIndex)myInputIndex);
         }
         else
         {
-            GamePad.SetVibration((PlayerIndex)myInput.playerIndex, 0, 0);
+            GamePad.SetVibration((PlayerIndex)myInputIndex, 0, 0);
         }
     }
 

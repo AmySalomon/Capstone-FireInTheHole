@@ -330,10 +330,22 @@ MonoBehaviour:
   - {fileID: 411776767}
   - {fileID: 876517044}
   - {fileID: 955075801}
+  DASHSpawns:
+  - {fileID: 511320202}
+  - {fileID: 1566732540}
+  - {fileID: 1338280246}
+  - {fileID: 2005199766}
+  SWINGSpawns:
+  - {fileID: 820509009}
+  - {fileID: 225110657}
+  - {fileID: 2052546667}
+  - {fileID: 337305292}
   playerPrefab: {fileID: 8370212098543078777, guid: 01d0b7e9a88b5364f8855d5c748de0bd, type: 3}
   tutorialFlagPrefab: {fileID: 690965899507012741, guid: 4367ff540abcd7e4082be22c18008a82, type: 3}
   tutorialBallPrefab: {fileID: 6651686632387158563, guid: cb9e6b0586fcbcc4faed2d76a1d5b3e8, type: 3}
   tutorialTurretPrefab: {fileID: 7250378306576156106, guid: 1dd05e1fe9d69c84da9ba69886af565f, type: 3}
+  tutorialTextDASHPrefab: {fileID: 1954245527669726390, guid: b91b95c906f4a88468e4f93e97b01abc, type: 3}
+  tutorialTextSWINGPrefab: {fileID: 1954245527669726390, guid: 13fb6f0b6dd977f4795e9427ed85a2d7, type: 3}
   sceneToGoTo: Blacklight
 --- !u!4 &30369629
 Transform:
@@ -2314,6 +2326,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 221089614}
   m_CullTransparentMesh: 1
+--- !u!1 &225110656
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 225110657}
+  m_Layer: 0
+  m_Name: SWINGSpawn2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &225110657
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225110656}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.48, y: -1.24, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2015568094}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &231087518
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3582,6 +3625,37 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &337305291
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 337305292}
+  m_Layer: 0
+  m_Name: SWINGSpawn4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &337305292
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 337305291}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.14, y: -1.19, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2015568094}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &349590001
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3944,23 +4018,41 @@ PrefabInstance:
       insertIndex: 3
       addedObject: {fileID: 1383845638}
     - targetCorrespondingSourceObject: {fileID: 9158550349686972837, guid: 06f8cbb26a42c804fbce4ee7e194e64e, type: 3}
-      insertIndex: 5
-      addedObject: {fileID: 1486822002}
+      insertIndex: 4
+      addedObject: {fileID: 511320202}
     - targetCorrespondingSourceObject: {fileID: 9158550349686972837, guid: 06f8cbb26a42c804fbce4ee7e194e64e, type: 3}
-      insertIndex: 6
-      addedObject: {fileID: 1068266209}
+      insertIndex: 5
+      addedObject: {fileID: 820509009}
     - targetCorrespondingSourceObject: {fileID: 9158550349686972837, guid: 06f8cbb26a42c804fbce4ee7e194e64e, type: 3}
       insertIndex: 7
-      addedObject: {fileID: 411776767}
+      addedObject: {fileID: 1486822002}
+    - targetCorrespondingSourceObject: {fileID: 9158550349686972837, guid: 06f8cbb26a42c804fbce4ee7e194e64e, type: 3}
+      insertIndex: 8
+      addedObject: {fileID: 1068266209}
     - targetCorrespondingSourceObject: {fileID: 9158550349686972837, guid: 06f8cbb26a42c804fbce4ee7e194e64e, type: 3}
       insertIndex: 9
-      addedObject: {fileID: 239334226}
+      addedObject: {fileID: 411776767}
     - targetCorrespondingSourceObject: {fileID: 9158550349686972837, guid: 06f8cbb26a42c804fbce4ee7e194e64e, type: 3}
       insertIndex: 10
-      addedObject: {fileID: 1318758530}
+      addedObject: {fileID: 1566732540}
     - targetCorrespondingSourceObject: {fileID: 9158550349686972837, guid: 06f8cbb26a42c804fbce4ee7e194e64e, type: 3}
       insertIndex: 11
+      addedObject: {fileID: 225110657}
+    - targetCorrespondingSourceObject: {fileID: 9158550349686972837, guid: 06f8cbb26a42c804fbce4ee7e194e64e, type: 3}
+      insertIndex: 13
+      addedObject: {fileID: 239334226}
+    - targetCorrespondingSourceObject: {fileID: 9158550349686972837, guid: 06f8cbb26a42c804fbce4ee7e194e64e, type: 3}
+      insertIndex: 14
+      addedObject: {fileID: 1318758530}
+    - targetCorrespondingSourceObject: {fileID: 9158550349686972837, guid: 06f8cbb26a42c804fbce4ee7e194e64e, type: 3}
+      insertIndex: 15
       addedObject: {fileID: 876517044}
+    - targetCorrespondingSourceObject: {fileID: 9158550349686972837, guid: 06f8cbb26a42c804fbce4ee7e194e64e, type: 3}
+      insertIndex: 16
+      addedObject: {fileID: 1338280246}
+    - targetCorrespondingSourceObject: {fileID: 9158550349686972837, guid: 06f8cbb26a42c804fbce4ee7e194e64e, type: 3}
+      insertIndex: 17
+      addedObject: {fileID: 2052546667}
     - targetCorrespondingSourceObject: {fileID: 9158550349686972837, guid: 06f8cbb26a42c804fbce4ee7e194e64e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1161607879}
@@ -3970,6 +4062,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 9158550349686972837, guid: 06f8cbb26a42c804fbce4ee7e194e64e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 955075801}
+    - targetCorrespondingSourceObject: {fileID: 9158550349686972837, guid: 06f8cbb26a42c804fbce4ee7e194e64e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2005199766}
+    - targetCorrespondingSourceObject: {fileID: 9158550349686972837, guid: 06f8cbb26a42c804fbce4ee7e194e64e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 337305292}
     - targetCorrespondingSourceObject: {fileID: 9158550349686972837, guid: 06f8cbb26a42c804fbce4ee7e194e64e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1071696728}
@@ -5543,6 +5641,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
   m_PrefabInstance: {fileID: 499829944}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &511320201
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 511320202}
+  m_Layer: 0
+  m_Name: DASHSpawn1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &511320202
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511320201}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.54, y: 2.75, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2015568094}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &515196986 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0dd7e2bc5af963f40a20a7733c904f86, type: 3}
@@ -11693,6 +11822,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 502e679a007328140a9baced7df9264c, type: 3}
   m_PrefabInstance: {fileID: 245128879}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &820509008
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 820509009}
+  m_Layer: 0
+  m_Name: SWINGSpawn1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &820509009
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820509008}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.14, y: 2.75, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2015568094}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &828997005
 GameObject:
   m_ObjectHideFlags: 0
@@ -11945,7 +12105,7 @@ Transform:
   m_GameObject: {fileID: 876517043}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.47, y: 3.27, z: 0}
+  m_LocalPosition: {x: 6.29, y: 3.27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16150,6 +16310,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 02a0dbd94807885478f8d78d34570217, type: 3}
   m_PrefabInstance: {fileID: 1336357259}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1338280245
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1338280246}
+  m_Layer: 0
+  m_Name: DASHSpawn3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1338280246
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338280245}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.3, y: 2.75, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2015568094}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1350176081
 GameObject:
   m_ObjectHideFlags: 0
@@ -17839,6 +18030,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1563117820}
   m_CullTransparentMesh: 1
+--- !u!1 &1566732539
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1566732540}
+  m_Layer: 0
+  m_Name: DASHSpawn2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1566732540
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566732539}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.3, y: -1.24, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2015568094}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1578513068
 GameObject:
   m_ObjectHideFlags: 0
@@ -19730,7 +19952,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_TargetDisplay: 0
 --- !u!224 &1761077859
 RectTransform:
@@ -22000,6 +22222,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0dd7e2bc5af963f40a20a7733c904f86, type: 3}
   m_PrefabInstance: {fileID: 331900229}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2005199765
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2005199766}
+  m_Layer: 0
+  m_Name: DASHSpawn4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2005199766
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005199765}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.54, y: -1.19, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2015568094}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2005353275
 GameObject:
   m_ObjectHideFlags: 0
@@ -22281,6 +22534,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2029886151}
   m_CullTransparentMesh: 1
+--- !u!1 &2052546666
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2052546667}
+  m_Layer: 0
+  m_Name: SWINGSpawn3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2052546667
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052546666}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.48, y: 2.75, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2015568094}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2054609847
 GameObject:
   m_ObjectHideFlags: 0

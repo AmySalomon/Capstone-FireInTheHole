@@ -72,22 +72,32 @@ public class PlayerDeath : MonoBehaviour
         //kills player, flashes kill indicator, waits to respawn player
         if (playerIsDead)
         {
-            transform.position = moveToPosition;
-            timer += Time.deltaTime;
+            if (setSpawnLocation != null)
+            {
+                //spawns player instantly if they die in the tutorial
+                respawnPosition = setSpawnLocation.position;
+                spawnRings = false;
+                StartCoroutine(SpawnPlayer());
+            }
+            else
+            {
+                transform.position = moveToPosition;
+                timer += Time.deltaTime;
 
-            //flash kill indicator
-            if (timer > 1) deathIcon.enabled = false;
-            else if (timer > 0.8) deathIcon.enabled = true;
-            else if (timer > 0.6) deathIcon.enabled = false;
-            else if (timer > 0.4) deathIcon.enabled = true;
-            else if (timer > 0.2) deathIcon.enabled = false;
-            else if (timer > 0) deathIcon.enabled = true;
+                //flash kill indicator
+                if (timer > 1) deathIcon.enabled = false;
+                else if (timer > 0.8) deathIcon.enabled = true;
+                else if (timer > 0.6) deathIcon.enabled = false;
+                else if (timer > 0.4) deathIcon.enabled = true;
+                else if (timer > 0.2) deathIcon.enabled = false;
+                else if (timer > 0) deathIcon.enabled = true;
 
-            if (spawnRings && timer > respawnIndicatorTime) SpawnRingIndicators();
-            if (timer > respawnTime) StartCoroutine(SpawnPlayer());
+                if (spawnRings && timer > respawnIndicatorTime) SpawnRingIndicators();
+                if (timer > respawnTime) StartCoroutine(SpawnPlayer());
+            }
         }
 
-        if (playerJustRespawned)
+        if (playerJustRespawned && setSpawnLocation == null)
         {
             invulnTimer += Time.deltaTime;
             //make player invulnerable
@@ -136,8 +146,8 @@ public class PlayerDeath : MonoBehaviour
             playerStuff.SetActive(true);
             playerCanvasStuff.SetActive(true);
             timer = 0;
-            //make player invulnerable
-            playerRigidbody.excludeLayers = bullet + golfBall;
+            //make player invulnerable, when not on tutorial
+            if (setSpawnLocation == false) playerRigidbody.excludeLayers = bullet + golfBall;
             //sets dashes to full
             dash.dashRechargeTimer = dash.dashRechargeAmount;
             //give player default gun
@@ -175,10 +185,6 @@ public class PlayerDeath : MonoBehaviour
         {
             transform.position = setSpawnLocation.position;
             respawnPosition = transform.position;
-            currentRingIndicator = GameObject.Instantiate(spawnIndicatorPrefab, transform.position, Quaternion.identity) as GameObject;
-            currentRingIndicator.GetComponent<SpawnRing>().spawnPlayer = true;
-            currentRingIndicator.GetComponent<SpawnRing>().myColor = myColor;
-            currentRingIndicator.GetComponent<SpawnRing>().mySprite = mySprite;
             spawnRings = false;
         }
         else if (spawnPosIsLegal() == true)

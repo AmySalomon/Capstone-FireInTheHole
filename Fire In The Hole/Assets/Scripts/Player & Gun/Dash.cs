@@ -45,6 +45,7 @@ public class Dash : MonoBehaviour
         playerMovement = GetComponent<PlayerMovement>();
         playerCollision = GetComponent<CircleCollider2D>();
         myColor = sprite.color;
+        dashRechargeTimer = dashRechargeAmount / 2;
     }
     void Update()
     {

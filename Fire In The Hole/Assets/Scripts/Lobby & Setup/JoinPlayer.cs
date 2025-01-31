@@ -21,16 +21,21 @@ public class JoinPlayer : MonoBehaviour
     [SerializeField] private Transform[] flagSpawns;
     [SerializeField] private Transform[] ballSpawns;
     [SerializeField] private Transform[] turretSpawns;
+    [SerializeField] private Transform[] DASHSpawns;
+    [SerializeField] private Transform[] SWINGSpawns;
     [SerializeField] private GameObject playerPrefab;
     [SerializeField] private GameObject tutorialFlagPrefab;
     [SerializeField] private GameObject tutorialBallPrefab;
     [SerializeField] private GameObject tutorialTurretPrefab;
+    [SerializeField] private GameObject tutorialTextDASHPrefab;
+    [SerializeField] private GameObject tutorialTextSWINGPrefab;
 
     public string sceneToGoTo;
     public static JoinPlayer Instance { get; private set; }
 
     private PlayerInputHandler[] playersActive;
     private TutorialTurret[] turretsActive;
+    private Canvas[] canvasesActive;
 
     private PlayerInputManager inputManager;
 
@@ -85,6 +90,8 @@ public class JoinPlayer : MonoBehaviour
         var tutorialBall = Instantiate(tutorialBallPrefab, ballSpawns[index].position, ballSpawns[index].rotation, gameObject.transform);
         player.GetComponentInChildren<PlayerInputHandler>().InitializePlayer(playerConfigs[index]);
         var tutorialTurret = Instantiate(tutorialTurretPrefab, turretSpawns[index].position, turretSpawns[index].rotation, gameObject.transform);
+        var tutorialDASHText = Instantiate(tutorialTextDASHPrefab, DASHSpawns[index].position, DASHSpawns[index].rotation, gameObject.transform);
+        var tutorialSWINGText = Instantiate(tutorialTextSWINGPrefab, SWINGSpawns[index].position, SWINGSpawns[index].rotation, gameObject.transform);
         shouldIDisableUI = true;
     }
 
@@ -101,10 +108,16 @@ public class JoinPlayer : MonoBehaviour
 
         //code added to handle the tutorial turrets not being destroyed when game starts
         turretsActive = GetComponentsInChildren<TutorialTurret>();
+        canvasesActive = GetComponentsInChildren<Canvas>();
 
         foreach (TutorialTurret turret in turretsActive)
         {
             Destroy(turret.gameObject);
+        }
+
+        foreach (Canvas canvas in canvasesActive)
+        {
+            Destroy(canvas.gameObject);
         }
     }
     //CODE USED TO MOVE TO THE LEVEL SCENE WHEN EVERYONE IS READY

@@ -5,21 +5,13 @@ using UnityEngine;
 public class DetectBulletCollision : MonoBehaviour
 {
     public PlayerDeath deathManager;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Bullet")
         {
+            //gets the vector direction from which the player was killed to use for the death animation
+            if (collision != null) deathManager.deathDirection = collision.transform.position - transform.position;
             deathManager.Died();
         }
     }

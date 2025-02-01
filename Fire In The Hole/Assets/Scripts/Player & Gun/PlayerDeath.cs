@@ -10,6 +10,9 @@ public class PlayerDeath : MonoBehaviour
     public GameObject playerCanvasStuff;
 
     public GameObject spawnIndicatorPrefab;
+    public GameObject deathAnimationPrefab;
+
+    [HideInInspector] public Vector3 deathDirection;
 
     [HideInInspector] public Color myColor;
     [HideInInspector] public Sprite mySprite;
@@ -36,7 +39,6 @@ public class PlayerDeath : MonoBehaviour
     private float timer = 0;
     private float invulnTimer = 0;
     private AudioSource killSound;
-    private SpriteRenderer deathIcon;
     private Dash dash;
     private ShootProjectile gun;
     public Rigidbody2D playerRigidbody;
@@ -58,10 +60,8 @@ public class PlayerDeath : MonoBehaviour
     private void Awake()
     {
         killSound = GetComponent<AudioSource>();
-        deathIcon = GetComponent<SpriteRenderer>();
         dash = GetComponentInChildren<Dash>();
         gun = GetComponentInChildren<ShootProjectile>();
-        deathIcon.enabled = false;
     }
     void Update()
     {
@@ -84,13 +84,6 @@ public class PlayerDeath : MonoBehaviour
                 transform.position = moveToPosition;
                 timer += Time.deltaTime;
 
-                //flash kill indicator
-                if (timer > 1) deathIcon.enabled = false;
-                else if (timer > 0.8) deathIcon.enabled = true;
-                else if (timer > 0.6) deathIcon.enabled = false;
-                else if (timer > 0.4) deathIcon.enabled = true;
-                else if (timer > 0.2) deathIcon.enabled = false;
-                else if (timer > 0) deathIcon.enabled = true;
 
                 if (spawnRings && timer > respawnIndicatorTime) SpawnRingIndicators();
                 if (timer > respawnTime) StartCoroutine(SpawnPlayer());
@@ -129,6 +122,13 @@ public class PlayerDeath : MonoBehaviour
         moveToPosition = playerStuff.transform.position;
         playerIsDead = true;
         killSound.Play();
+        if (setSpawnLocation == false)
+        {
+            var deadPlayer = Instantiate(deathAnimationPrefab, moveToPosition, Quaternion.identity);
+            deadPlayer.GetComponent<DeathAnimation>().receivedSprite = mySprite;
+            deadPlayer.GetComponent<DeathAnimation>().knockbackDirection = deathDirection;
+
+        }
         playerStuff.SetActive(false);
         playerCanvasStuff.SetActive(false);
     }
@@ -138,7 +138,6 @@ public class PlayerDeath : MonoBehaviour
         if (spawnRings == false)
         {
             transform.position = respawnPosition;
-            deathIcon.enabled = false;
             playerIsDead = false;
             //resets whether the rings should spawn or not (should only happen once per respawn)
             spawnRings = true;

@@ -1820,7 +1820,7 @@ GameObject:
   - component: {fileID: 7103122365907552541}
   - component: {fileID: 354105084488894072}
   - component: {fileID: 8356887763490835139}
-  m_Layer: 7
+  m_Layer: 5
   m_Name: Crosshair
   m_TagString: Untagged
   m_Icon: {fileID: 0}

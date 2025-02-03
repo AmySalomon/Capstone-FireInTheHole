@@ -33,6 +33,8 @@ public class scr_golfBall : MonoBehaviour
     public GameObject playerHitter;
 
     [HideInInspector]public Outline outline;
+
+    public GameObject textPopup;
     
 
     private void Start()
@@ -76,34 +78,6 @@ public class scr_golfBall : MonoBehaviour
         }
             
 
-        /*
-        if (player == null) //Temp replacement as instantialized players arent being assigned balls properly
-        {
-            Debug.Log("Assign Player In Inspector! [TEMP]");
-        }
-        else if (tempPlayerCheck == false) 
-        {
-            playerGolfSwing = player.GetComponent<scr_meleeSwing>();
-            interactionRange = playerGolfSwing.swingDistance;
-
-            directionArrowInstance = Instantiate(directionArrowPrefab, transform.position, Quaternion.identity);
-            directionArrowInstance.GetComponent<SpriteRenderer>().enabled = false; //Hide the arrow initially
-            tempPlayerCheck = true;
-        }
-
-        float distanceToPlayer = Vector2.Distance(player.position, transform.position);
-        isPlayerInRange = distanceToPlayer <= interactionRange;
-
-        if (isPlayerInRange && playerGolfSwing != null) //range check
-        {
-            ShowDirectionArrow();
-        }
-        else
-        {
-            HideDirectionArrow();
-        }
-        */
-
     }
 
     
@@ -132,6 +106,9 @@ public class scr_golfBall : MonoBehaviour
             playerHitter.GetComponentInChildren<PlayerScore>(true).IncreaseScore();
             AudioSource audio = other.GetComponent<AudioSource>();
             audio.Play();
+            var scoreText = Instantiate(textPopup, other.transform.position, transform.rotation);
+            scoreText.GetComponent<TextPopup>().myColor = outline.OutlineColor;
+            scoreText.GetComponent<TextPopup>().weaponPickup = "None";
             Destroy(gameObject);
         }
         //slows ball in sand trap

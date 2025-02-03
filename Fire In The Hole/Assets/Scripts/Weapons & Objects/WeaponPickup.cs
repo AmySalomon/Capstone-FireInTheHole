@@ -7,11 +7,14 @@ public class WeaponPickup : MonoBehaviour
     public WeaponClass[] weapon;
     public WeaponClass chosenWeapon;
     public SpriteRenderer weaponSprite;
+    public GameObject textPopup;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player") //if the gameobject is the player, update players weapon, then remove pickup
         {
             collision.gameObject.GetComponent<ShootProjectile>().UpdateWeapon(chosenWeapon);
+            var newPopup = Instantiate(textPopup, collision.transform.position, transform.rotation);
+            newPopup.GetComponent<TextPopup>().weaponPickup = chosenWeapon.name;
             Destroy(this.gameObject);
         }
     }

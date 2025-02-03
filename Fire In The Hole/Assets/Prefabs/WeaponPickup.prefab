@@ -234,3 +234,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bd6599bad3f49e5479765de110939cc3, type: 2}
   chosenWeapon: {fileID: 0}
   weaponSprite: {fileID: 4787526505093045353}
+  textPopup: {fileID: 646746251575243297, guid: 53368d7090da0e445a24ca9006476f60, type: 3}

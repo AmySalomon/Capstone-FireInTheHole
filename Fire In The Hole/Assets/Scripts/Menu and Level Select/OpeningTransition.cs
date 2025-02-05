@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SplashTransition : MonoBehaviour
+public class OpeningTransition : MonoBehaviour
 {
     //this script advances through the splash screen
     private float timer = 0;
@@ -13,7 +13,7 @@ public class SplashTransition : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (timer > 9.5)
+        if (timer > 9.0)
         {
             Time.timeScale = 1f;
             SceneManager.LoadScene("MainMenu");

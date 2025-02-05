@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: RocketLauncher
   m_EditorClassIdentifier: 
   deletionTime: 5
-  bullet: {fileID: 0}
-  bulletPrefab: {fileID: 2615455651010696115, guid: 963e965b7912787429ff0c5e80a4b331, type: 3}
+  bulletPrefab: {fileID: 2615455651010696115, guid: c5758431d757d0548abf92f59c725a8d, type: 3}
   explosion: {fileID: 8977285105747890853, guid: 971a4525b87347346a6e0f4ccdcf1249, type: 3}
   explosionRadius: 100000

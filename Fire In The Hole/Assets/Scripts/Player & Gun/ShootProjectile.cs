@@ -95,11 +95,6 @@ public class ShootProjectile : MonoBehaviour
         if (reloading) { return; }
         if (shootTimer >= shootDelay)
         {
-            if(ammoCurrent <= 0)
-            {
-                StartReloading();
-                return;
-            }
             Debug.Log("shoot");
 
             audioPlayer.pitch = Random.Range(0.9f, 1.1f);
@@ -109,17 +104,39 @@ public class ShootProjectile : MonoBehaviour
                 rumbleHandler.rumbleTime = 0.3f;
                 rumbleHandler.rumbleAmount = 0.3f;
             }
-            shotType.ShootBullets(barrelEnd, launchForce, shotSpread);
+            shotType.ShootBullets(barrelEnd, launchForce, shotSpread, this.gameObject);
             shootTimer = 0;
             Destroy(ammo_UI[ammoCurrent - 1]);
             ammo_UI.RemoveAt((int)ammoCurrent-1);
             ammoCurrent--;
-            if(ammoCurrent <=0 && magazineCount <= 0) //when the player fully exhausts all bullets and weapon magazines, switch to default weapon
+            AutoReloadCheck();
+        }
+        
+    }
+
+    public void AutoReloadCheck() // when the player is out of bullets, check if we need to switch to the default weapon otherwise try to reload
+    {
+        if (ammoCurrent <= 0) 
+        {
+            if (magazineCount <= 0)
             {
                 UpdateWeapon(defaultWeapon);
             }
+            else
+            {
+                StartReloading();
+            }
         }
-        
+    }
+
+    public void ManualReloadCheck() //when the player tries to reload, check if we need to switch to the default weapon
+    {
+        if(reloading) { return; }
+        if(magazineCount <= 0)
+        {
+            UpdateWeapon(defaultWeapon);
+        }
+        else { StartReloading(); }
     }
 
     public void UpdateWeapon(WeaponClass newWeapon) //Called on picking up a new Weapon

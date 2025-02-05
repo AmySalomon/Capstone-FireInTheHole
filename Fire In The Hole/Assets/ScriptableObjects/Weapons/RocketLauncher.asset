@@ -24,4 +24,5 @@ MonoBehaviour:
   gunshot: {fileID: 0}
   gunSprite: {fileID: 21300000, guid: 7a9974de703262d408686f41b0e3f36a, type: 3}
   behaviour: {fileID: 11400000, guid: e23f59878a8b45e45a57ee796d7b4e2c, type: 2}
-  bulletUI: {fileID: 0}
+  bulletUI: {fileID: 21300000, guid: d1699ac266c888d42b8aaa7f72582768, type: 3}
+  hasLaser: 0

@@ -102,6 +102,10 @@ public class PlayerInputHandler : MonoBehaviour
         {
             OnPause(obj);
         }
+        if (obj.action.name == controls.Player1.Reload.name)
+        {
+            OnReload(obj);
+        }
         else
         {
             return;
@@ -209,4 +213,15 @@ public class PlayerInputHandler : MonoBehaviour
         }
     }
 
+    public void OnReload(CallbackContext context)
+    {
+        if (PlayerPause.paused) { return; }
+
+        if (playerShoot != null && context.performed && playerCharge.isCharging == false && playerDash.isDashing == false && playerDead.playerIsDead == false && playerShoot.ammoCurrent != playerShoot.ammoMax)
+        {
+            Debug.Log("trying to reload");
+            playerShoot.ManualReloadCheck();
+        }
+
+    }
 }

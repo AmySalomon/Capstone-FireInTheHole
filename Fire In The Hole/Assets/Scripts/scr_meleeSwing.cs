@@ -56,6 +56,7 @@ public class scr_meleeSwing : MonoBehaviour
 
     //gets the swing animation script
     private SwingAnimation swingAnim;
+    public float balltype;
 
     public Color outlineColor;
     private void Awake()
@@ -153,6 +154,7 @@ public class scr_meleeSwing : MonoBehaviour
             rb = hit.collider.GetComponent<Rigidbody2D>();
             if (rb != null)
             {
+                if (balltype == 1) rb.gameObject.GetComponent<scr_balltype_bomb>().active = true;
                 forceDirection = (swingAim).normalized;
                 rb.AddForce(forceDirection * currentSwingForce / 2);
                 myInput.rumbleTime = 0.3f;

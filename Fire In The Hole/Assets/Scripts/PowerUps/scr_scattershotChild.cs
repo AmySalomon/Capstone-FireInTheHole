@@ -36,7 +36,13 @@ public class scr_scattershotChild : MonoBehaviour
                 GameObject Lgolfball;
 
                 Rgolfball = Instantiate(golfball, rightSpawnPosition, Quaternion.identity);
+                Rgolfball.GetComponent<scr_golfBall>().playerHitter = MeleeSwing.rb.gameObject.GetComponent<scr_golfBall>().playerHitter;
+                //Rgolfball.GetComponent<scr_golfBall>().outline.OutlineColor = MeleeSwing.outlineColor;
+
                 Lgolfball = Instantiate(golfball, leftSpawnPosition, Quaternion.identity);
+                Lgolfball.GetComponent<scr_golfBall>().playerHitter = MeleeSwing.rb.gameObject.GetComponent<scr_golfBall>().playerHitter;
+                //Lgolfball.GetComponent<scr_golfBall>().outline.OutlineColor = MeleeSwing.outlineColor;
+
 
                 Rigidbody2D rightRb = Rgolfball.GetComponent<Rigidbody2D>();
                 Rigidbody2D leftRb = Lgolfball.GetComponent<Rigidbody2D>();
@@ -57,7 +63,7 @@ public class scr_scattershotChild : MonoBehaviour
 
                 if (leftRb != null)
                 {
-                    leftRb.AddForce(leftForceDirection.normalized * dynamicForce / 2);
+                    leftRb.AddForce(leftForceDirection.normalized * dynamicForce / 2);   
                 }
                 active = false;
                 Debug.Log("Scattershot!");

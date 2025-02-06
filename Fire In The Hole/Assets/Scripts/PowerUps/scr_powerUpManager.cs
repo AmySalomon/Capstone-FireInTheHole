@@ -5,6 +5,7 @@ using UnityEngine;
 public class scr_powerUpManager : MonoBehaviour
 {
     public GameObject playerObj;
+    public bool isBomb = false; //bombPower up enabled?
 
     [System.Serializable]
     public class PowerUp

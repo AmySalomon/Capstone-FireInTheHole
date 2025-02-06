@@ -784,6 +784,7 @@ MonoBehaviour:
   gunAiming: {fileID: 6448943944460789078}
   golfAiming: {fileID: 6007203986983997689}
   golfCrosshair: {fileID: 2505075083874456128}
+  balltype: 0
   outlineColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!50 &6029596620006062017
 Rigidbody2D:
@@ -2691,9 +2692,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerObj: {fileID: 3358283545364179000}
+  isBomb: 0
   activePowerUps: []
   testPowerUp:
-    name: Scattershot
+    name: Bombball
     duration: 10
     isTemporary: 1
     effect: {fileID: 11400000, guid: ffc4648ba25de3a46be06582209cbfc5, type: 2}
@@ -2752,6 +2754,9 @@ MonoBehaviour:
   playerSwingAim: {fileID: 6007203986983997689}
   playerSprite: {fileID: 0}
   playerColor: {r: 0, g: 0, b: 0, a: 0}
+  myInputIndex: 0
+  rumbleTime: 0
+  rumbleAmount: 0.1
 --- !u!114 &4617527675341735179
 MonoBehaviour:
   m_ObjectHideFlags: 0

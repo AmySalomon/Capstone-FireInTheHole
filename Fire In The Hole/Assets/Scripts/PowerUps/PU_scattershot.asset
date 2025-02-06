@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e873c37be2c466c49b6d0eb56acaff87, type: 3}
   m_Name: PU_scattershot
   m_EditorClassIdentifier: 
-  speedMultiplier: 4
+  active: 0
+  puItem: {fileID: 0}
+  obj_PUscattershot: {fileID: 3860916334398126841, guid: 104230a53dceaaa499e1e20fbac5cc76, type: 3}
+  spawnOffset: 0.5

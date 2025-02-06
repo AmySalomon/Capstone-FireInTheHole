@@ -72,7 +72,7 @@ Material:
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _FadeDistance: 1
-    - _OutlineThickness: 0.003
+    - _OutlineThickness: 0.00356
     - _QueueControl: 0
     - _QueueOffset: 0
     - _SampleGI: 0

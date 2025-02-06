@@ -2698,7 +2698,7 @@ MonoBehaviour:
     name: Bombball
     duration: 10
     isTemporary: 1
-    effect: {fileID: 11400000, guid: ffc4648ba25de3a46be06582209cbfc5, type: 2}
+    effect: {fileID: 11400000, guid: b4e9f465dbb4de744adae5609fa97572, type: 2}
 --- !u!1 &8370212098543078777
 GameObject:
   m_ObjectHideFlags: 0

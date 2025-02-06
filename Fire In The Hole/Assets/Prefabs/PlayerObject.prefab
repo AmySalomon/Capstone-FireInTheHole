@@ -772,6 +772,8 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
+  rb: {fileID: 0}
+  forceDirection: {x: 0, y: 0}
   isCharging: 0
   currentSwingForce: 0
   chargeBarOffset: {x: 0, y: 2, z: 0}
@@ -782,6 +784,7 @@ MonoBehaviour:
   gunAiming: {fileID: 6448943944460789078}
   golfAiming: {fileID: 6007203986983997689}
   golfCrosshair: {fileID: 2505075083874456128}
+  balltype: 0
   outlineColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!50 &6029596620006062017
 Rigidbody2D:
@@ -2689,12 +2692,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerObj: {fileID: 3358283545364179000}
+  isBomb: 0
   activePowerUps: []
   testPowerUp:
-    name: SpeedBoost
-    duration: 0
-    isTemporary: 0
-    effect: {fileID: 11400000, guid: 48f1a0859b555544681f648d07b4c9ed, type: 2}
+    name: Bombball
+    duration: 10
+    isTemporary: 1
+    effect: {fileID: 11400000, guid: b4e9f465dbb4de744adae5609fa97572, type: 2}
 --- !u!1 &8370212098543078777
 GameObject:
   m_ObjectHideFlags: 0

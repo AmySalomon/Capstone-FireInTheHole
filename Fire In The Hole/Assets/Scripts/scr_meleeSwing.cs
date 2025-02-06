@@ -26,6 +26,8 @@ public class scr_meleeSwing : MonoBehaviour
     public Vector3 swingAim;
     public LayerMask interactableLayers;
     public LayerMask playerLayer;//for pvp player layer
+    public Rigidbody2D rb;
+    public Vector2 forceDirection;
 
     public bool isCharging = false;
     private bool canSwing = true;
@@ -54,6 +56,7 @@ public class scr_meleeSwing : MonoBehaviour
 
     //gets the swing animation script
     private SwingAnimation swingAnim;
+    public float balltype;
 
     public Color outlineColor;
     private void Awake()
@@ -148,10 +151,11 @@ public class scr_meleeSwing : MonoBehaviour
 
         foreach (RaycastHit2D hit in hits)
         {
-            Rigidbody2D rb = hit.collider.GetComponent<Rigidbody2D>();
+            rb = hit.collider.GetComponent<Rigidbody2D>();
             if (rb != null)
             {
-                Vector2 forceDirection = (swingAim).normalized;
+                if (balltype == 1) rb.gameObject.GetComponent<scr_balltype_bomb>().active = true;
+                forceDirection = (swingAim).normalized;
                 rb.AddForce(forceDirection * currentSwingForce / 2);
                 myInput.rumbleTime = 0.3f;
                 if (currentSwingForce < 600)
@@ -190,7 +194,7 @@ public class scr_meleeSwing : MonoBehaviour
             audioPlayer.PlayOneShot(missedHit);
         }
 
-        currentSwingForce = minSwingForce;
+        //currentSwingForce = minSwingForce;
 
         yield return new WaitForSeconds(swingCooldown);
         canSwing = true;

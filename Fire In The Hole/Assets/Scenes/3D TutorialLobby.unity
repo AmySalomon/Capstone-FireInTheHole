@@ -495,6 +495,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -1285705136899237961, guid: 66d425d8efb3cd545891bd15d420c0f5, type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: -1285705136899237961, guid: 66d425d8efb3cd545891bd15d420c0f5, type: 3}
       propertyPath: ShapeModule.alignToDirection
       value: 0
       objectReference: {fileID: 0}
@@ -11200,7 +11204,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 639984980}
-  - component: {fileID: 639984979}
   - component: {fileID: 639984978}
   m_Layer: 0
   m_Name: Music
@@ -11219,7 +11222,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -9010284469593096592, guid: 03236680b3327e643be992d6d321973c, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 4a361e7ff0a71fd428f0fab05b0f2667, type: 3}
+  m_audioClip: {fileID: 8300000, guid: fea7ec39d7602314b9913cc3126f0599, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.25
   m_Pitch: 1
@@ -11305,18 +11308,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &639984979
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 639984977}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9d23b8444fe1c84a972e24cdade2ea6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &639984980
 Transform:
   m_ObjectHideFlags: 0
@@ -15877,7 +15868,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -0.23213455, y: -41.924805}
+  m_AnchoredPosition: {x: -0.23213455, y: -41}
   m_SizeDelta: {x: 9, y: 1.1000061}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1226247806
@@ -15900,7 +15891,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ab81d648c6562e84c8dc7e491c8c71c9, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

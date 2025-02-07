@@ -672,7 +672,7 @@ MonoBehaviour:
   bullet: {fileID: 1829357051581644085, guid: 3e1fcf014be93dc48a4c3a2c57b06ff7, type: 3}
   barrelEnd: {fileID: 6244742067673680353}
   muzzleFlash: {fileID: 5551075140987685750}
-  gunshot: {fileID: 8300000, guid: dba23b0180ad4f14ab7da7a658ca92bc, type: 3}
+  gunshot: {fileID: 8300000, guid: 294e8b3cf7c23724aaa160f5b892d793, type: 3}
   launchForce: 400
   shootDelay: 0.2
   screenShake: 0
@@ -984,9 +984,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -2815080828377637210, guid: 03236680b3327e643be992d6d321973c, type: 2}
-  m_audioClip: {fileID: 8300000, guid: dba23b0180ad4f14ab7da7a658ca92bc, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 294e8b3cf7c23724aaa160f5b892d793, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1732,7 +1732,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 4
-  outlineColor: {r: 0, g: 0.55724955, b: 1, a: 1}
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
   outlineWidth: 2
   precomputeOutline: 0
   bakeKeys: []

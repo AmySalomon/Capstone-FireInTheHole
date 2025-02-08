@@ -60,7 +60,8 @@ public class PointAtVector : MonoBehaviour
             {
                 lastAimDir = aim;
             }
-            transform.transform.right = -aim;
+            transform.right = -aim;
+            if (transform.eulerAngles == new Vector3(transform.eulerAngles.x, 180, 0)) transform.eulerAngles = new Vector3(transform.eulerAngles.x, 0, 180.01f);
         }
         if (InputDevice == false) 
         {
@@ -77,6 +78,7 @@ public class PointAtVector : MonoBehaviour
             //Debug.Log(clampedMouseScreenPosition + " is the mouse position");
             aimDirection = (mouseWorldPosition - mainCamera.ViewportToScreenPoint(screenCenter)).normalized;
             transform.right = -aimDirection;
+            if (transform.eulerAngles == new Vector3(transform.eulerAngles.x, 180, 0)) transform.eulerAngles = new Vector3(transform.eulerAngles.x, 0, 180.01f);
             aim = aimDirection;
         }
     }

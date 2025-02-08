@@ -26,8 +26,8 @@ Transform:
   m_GameObject: {fileID: 156129010862490114}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.159, z: 0}
-  m_LocalScale: {x: 0.14250891, y: 0.20190223, z: 0.080762}
+  m_LocalPosition: {x: -0.118, y: 0.163, z: 0}
+  m_LocalScale: {x: 0.26095235, y: 0.23399317, z: 0.09359855}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 863565245139612386}
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: c22ab186204cc1241bf0e8e6a2201a33, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 10a6b83f81a90544cbd48046c3eda108, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -130,14 +130,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f31abf8e78811f4089832013da2b1af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame1: {fileID: 21300000, guid: c22ab186204cc1241bf0e8e6a2201a33, type: 3}
-  frame2: {fileID: 21300000, guid: 714a48ee71e206747a1f6d1f4eecf4a5, type: 3}
-  frame3: {fileID: 21300000, guid: 889b5a7031603c34fac067cbad0335ac, type: 3}
-  frame4: {fileID: 21300000, guid: 1900d9f5de8da514aae652af1a443557, type: 3}
-  frame5: {fileID: 21300000, guid: 8b4b495580bd4ab44a4bd5dd402adf4d, type: 3}
-  frame6: {fileID: 21300000, guid: 212a12ac5b8ec5342bdc89b152487a83, type: 3}
-  frame7: {fileID: 21300000, guid: 87f1a33d17af93f439b7bdf44e4af8c4, type: 3}
-  frame8: {fileID: 21300000, guid: e0fab03293a12cf43bd3c16e923416ec, type: 3}
+  frame2: {fileID: 21300000, guid: 10a6b83f81a90544cbd48046c3eda108, type: 3}
+  frame3: {fileID: 21300000, guid: 9dc400ce3e780f94fb7499dcf5352299, type: 3}
+  frame4: {fileID: 21300000, guid: 916e1b6c15fb5ce4797eda15da1ba745, type: 3}
+  frame5: {fileID: 21300000, guid: a0904e8a1a15f2840b394f4940f814c7, type: 3}
+  frame6: {fileID: 21300000, guid: 923c372c4d180774f8748944535b37c7, type: 3}
+  frame7: {fileID: 21300000, guid: 80f98d96c9f81e7418c6e0646c6a7718, type: 3}
+  frame8: {fileID: 21300000, guid: e106b0d9d2666d441a2661c96ba9b864, type: 3}
   interval: 0.1
 --- !u!58 &8436397617063568281
 CircleCollider2D:

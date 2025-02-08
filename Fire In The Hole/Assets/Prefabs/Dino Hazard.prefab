@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7722549612264204674}
   - component: {fileID: 650690676628081494}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AimDirection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 7736914816363714755}
   - component: {fileID: 4362850165619635162}
   - component: {fileID: 2996996953554926568}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino Hazard
   m_TagString: Wall
   m_Icon: {fileID: 0}

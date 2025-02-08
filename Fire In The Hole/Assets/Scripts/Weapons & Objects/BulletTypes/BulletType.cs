@@ -12,12 +12,12 @@ public class BulletType : ScriptableObject
     {
         if (collision.gameObject.tag == "MainCamera" || collision.gameObject.tag == "Wall")
         {
-            DeleteBullet(bullet);
+            DeleteBullet(bullet, playerShooter);
         }
 
         if (collision.gameObject.tag == "Player")
         {
-            DeleteBullet(bullet);
+            DeleteBullet(bullet, playerShooter);
         }
     }
     

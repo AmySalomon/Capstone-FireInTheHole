@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class Explosion : MonoBehaviour
 {
-    public double timer = 5;
-    public float radius = 2;
+    public double timer = 0.25;
+    public float radius = 0.5f;
     public float explosiveForce = 2000;
     public LayerMask interactables;
     public Vector3 explosionPos;
     public string golfballTag = "Ball";
+    public GameObject playerShooter;
     private void Start()
     {
         Debug.Log("I'm alive");
@@ -39,8 +40,13 @@ public class Explosion : MonoBehaviour
             {
                 Debug.Log("Extra Slay!");
 
-                Vector2 forceDirection = transform.position - hit.transform.position;
-                rb.AddForce(forceDirection.normalized * explosiveForce);
+                Vector2 forceDirection = hit.transform.position - transform.position;
+                rb.AddForce(forceDirection.normalized * explosiveForce/2);
+                if (rb.gameObject.TryGetComponent<scr_golfBall>(out scr_golfBall golfBall))
+                {
+                    golfBall.playerHitter = playerShooter;
+                    golfBall.outline.OutlineColor = playerShooter.GetComponent<scr_meleeSwing>().outlineColor;
+                }
             }
         }
     }

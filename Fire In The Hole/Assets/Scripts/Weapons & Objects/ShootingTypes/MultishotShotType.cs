@@ -9,7 +9,7 @@ public class MultishotShotType : ShotType
     public int bulletsPerShot;
     public float bulletOffset; // angle between each bullet
     public float startingAngle; // angle of the highest bullet
-    public override void ShootBullets(Transform barrelEnd, float launchForce, float spreadAngle) //shoot bullets in a spread
+    public override void ShootBullets(Transform barrelEnd, float launchForce, float spreadAngle, GameObject playerShooter) //shoot bullets in a spread
     {
         float currentAngle = startingAngle;
         for (int i = 0; i < bulletsPerShot; i++)

@@ -26,6 +26,8 @@ public class ExplodingBulletType : BulletType
         Debug.Log("making explosion?");
         GameObject explosionInstance = Instantiate(explosion);
         explosionInstance.transform.position = bullet.transform.position;
+        explosionInstance.TryGetComponent<Explosion>(out Explosion scriptThing);
+        scriptThing.playerShooter = playerShooter;
         base.DeleteBullet(bullet, playerShooter);
     }
     

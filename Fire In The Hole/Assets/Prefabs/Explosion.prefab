@@ -133,11 +133,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 187fb69b0711c544dba9ae4d0e396c26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 5
-  radius: 2
+  timer: 0.25
+  radius: 0.5
   explosiveForce: 2000
   interactables:
     serializedVersion: 2
     m_Bits: 64
   explosionPos: {x: 0, y: 0, z: 0}
   golfballTag: Ball
+  playerShooter: {fileID: 0}

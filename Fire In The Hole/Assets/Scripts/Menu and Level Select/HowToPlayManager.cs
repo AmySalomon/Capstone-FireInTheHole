@@ -42,5 +42,13 @@ public class HowToPlayManager : MonoBehaviour
         Cursor.visible = false;
         SceneManager.LoadScene("LevelSelect");
     }
+
+    public void BackToMain()
+    {
+        Time.timeScale = 1f;
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = false;
+        SceneManager.LoadScene("MainMenu");
+    }
 }
 

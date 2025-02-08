@@ -196,6 +196,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6840299821370079997}
   - component: {fileID: 5551075140987685750}
+  - component: {fileID: 5805227188589458422}
   m_Layer: 7
   m_Name: MuzzleFlash
   m_TagString: Untagged
@@ -211,13 +212,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1021831854784162192}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.7562542, w: 0.65427786}
-  m_LocalPosition: {x: 0.23, y: -1.15, z: 0}
-  m_LocalScale: {x: 2.4071, y: 2.4071, z: 2.4071}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -0.21, y: -0.7, z: 0}
+  m_LocalScale: {x: 0.24681678, y: 0.24681678, z: 0.24681678}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6244742067673680353}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -98.27}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!212 &5551075140987685750
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -259,7 +260,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 21300000, guid: dbf297a2b1527194099d176a8e21b84e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aa45c97be628c0140b82a5677d3dfeab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -270,6 +271,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5805227188589458422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021831854784162192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b77cd55adbe9d246bdcaa7d2d17b985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame1: {fileID: 21300000, guid: aa45c97be628c0140b82a5677d3dfeab, type: 3}
+  frame3: {fileID: 21300000, guid: f8b1fe54cde27514bace6ac610352103, type: 3}
+  frame5: {fileID: 21300000, guid: 593e41674c727c3458c33bafd434eec6, type: 3}
+  duration: 0.15
 --- !u!1 &1110302234424204934
 GameObject:
   m_ObjectHideFlags: 0
@@ -671,8 +688,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 1829357051581644085, guid: 3e1fcf014be93dc48a4c3a2c57b06ff7, type: 3}
   barrelEnd: {fileID: 6244742067673680353}
-  muzzleFlash: {fileID: 5551075140987685750}
-  gunshot: {fileID: 8300000, guid: dba23b0180ad4f14ab7da7a658ca92bc, type: 3}
+  muzzleFlash: {fileID: 1021831854784162192}
+  gunshot: {fileID: 8300000, guid: 294e8b3cf7c23724aaa160f5b892d793, type: 3}
   launchForce: 400
   shootDelay: 0.2
   screenShake: 0
@@ -772,6 +789,8 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
+  rb: {fileID: 0}
+  forceDirection: {x: 0, y: 0}
   isCharging: 0
   currentSwingForce: 0
   chargeBarOffset: {x: 0, y: 2, z: 0}
@@ -782,6 +801,7 @@ MonoBehaviour:
   gunAiming: {fileID: 6448943944460789078}
   golfAiming: {fileID: 6007203986983997689}
   golfCrosshair: {fileID: 2505075083874456128}
+  balltype: 0
   outlineColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!50 &6029596620006062017
 Rigidbody2D:
@@ -981,9 +1001,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -2815080828377637210, guid: 03236680b3327e643be992d6d321973c, type: 2}
-  m_audioClip: {fileID: 8300000, guid: dba23b0180ad4f14ab7da7a658ca92bc, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 294e8b3cf7c23724aaa160f5b892d793, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1729,7 +1749,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 4
-  outlineColor: {r: 0, g: 0.55724955, b: 1, a: 1}
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
   outlineWidth: 2
   precomputeOutline: 0
   bakeKeys: []
@@ -2313,7 +2333,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.85, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.79494, y: 0.79494, z: 0.79494}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1698695411582849876}
@@ -2330,13 +2350,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2ecfa3f44ddb6c4a9d0345c21336135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Frame1: {fileID: 21300000, guid: f0d43885f48920942afb96c655d0197b, type: 3}
-  Frame2: {fileID: 21300000, guid: acd25635175f7694887cadc9661daf70, type: 3}
-  Frame3: {fileID: 21300000, guid: 41b11ec1404d5fd4e856d3b59c275ed0, type: 3}
-  Frame4: {fileID: 21300000, guid: 6920727e02c11084693e1beeb5a5f2ba, type: 3}
-  Frame5: {fileID: 21300000, guid: 2656c10df26b71c4bbb3bbb424a393b9, type: 3}
-  Frame6: {fileID: 21300000, guid: 56d126c42516d19418f1f72f0698a414, type: 3}
-  Frame7: {fileID: 21300000, guid: 2440f2416739c0f4ca61b646aa27efaf, type: 3}
+  Frame1: {fileID: 21300000, guid: 7fe89415c8c39834f98012a48b8da41d, type: 3}
+  Frame2: {fileID: 21300000, guid: 8a502edfea8155946afe94c71f5c5fbd, type: 3}
+  Frame3: {fileID: 21300000, guid: 2b270a474bf1b6b40bb2bb1886b0478f, type: 3}
+  Frame4: {fileID: 21300000, guid: 196fbb16f40cb89469b4c5e71cea08b9, type: 3}
+  Frame5: {fileID: 21300000, guid: 3aae891dc2c0ee6498ba60c585d6d9a5, type: 3}
+  Frame6: {fileID: 21300000, guid: 6d037af0be08ae54289d9c39a9360959, type: 3}
+  Frame7: {fileID: 21300000, guid: f60761d44bce23b4f8d8ad42218aa843, type: 3}
   swingDuration: 0.5
 --- !u!212 &5837689894220406610
 SpriteRenderer:
@@ -2379,7 +2399,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: f0d43885f48920942afb96c655d0197b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7fe89415c8c39834f98012a48b8da41d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2689,12 +2709,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerObj: {fileID: 3358283545364179000}
+  isBomb: 0
   activePowerUps: []
   testPowerUp:
-    name: SpeedBoost
-    duration: 0
-    isTemporary: 0
-    effect: {fileID: 11400000, guid: 48f1a0859b555544681f648d07b4c9ed, type: 2}
+    name: Bombball
+    duration: 10
+    isTemporary: 1
+    effect: {fileID: 11400000, guid: b4e9f465dbb4de744adae5609fa97572, type: 2}
 --- !u!1 &8370212098543078777
 GameObject:
   m_ObjectHideFlags: 0

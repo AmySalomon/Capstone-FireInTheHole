@@ -6,6 +6,9 @@ using TMPro;
 public class TextPopup : MonoBehaviour
 {
     public AnimationCurve animationCurve;
+    public AudioClip niceShot1;
+    public AudioClip niceShot2;
+    public AudioClip niceShot3;
 
     public float timeToPopup = 2;
     public float timeToDelete = 3;
@@ -19,6 +22,7 @@ public class TextPopup : MonoBehaviour
     private float newYValue;
 
     private TextMeshProUGUI text;
+    private AudioSource audio;
 
     [HideInInspector] public Color myColor;
     private float newOpacityValue;
@@ -29,9 +33,29 @@ public class TextPopup : MonoBehaviour
     private void Start()
     {
         text = GetComponentInChildren<TextMeshProUGUI>();
+        audio = GetComponent<AudioSource>();
         startPosition = transform.position;
         endPosition = new Vector3(transform.position.x, transform.position.y + yModifier, transform.position.z);
-        if (weaponPickup == "None") text.text = "Nice Shot!";
+        if (weaponPickup == "None")
+        {
+            int whichClip = Random.Range(1, 4);
+            switch(whichClip)
+            {
+                case 1:
+                    audio.PlayOneShot(niceShot1);
+                    break;
+                case 2:
+                    audio.PlayOneShot(niceShot2);
+                    break;
+                case 3:
+                    audio.PlayOneShot(niceShot3);
+                    break;
+                default:
+                        audio.PlayOneShot(niceShot1);
+                    break;
+            }
+            text.text = "Nice Shot!";
+        }
 
         else myColor = new Color(1, .6f, 0);
 
@@ -46,7 +70,6 @@ public class TextPopup : MonoBehaviour
 
         Color colorTop = new Color(myColor.r, myColor.g, myColor.b);
         text.colorGradient = new VertexGradient(colorTop, colorTop, Color.white, Color.white);
-        
     }
 
     void Update()

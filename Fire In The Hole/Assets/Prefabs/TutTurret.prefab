@@ -26,8 +26,8 @@ Transform:
   m_GameObject: {fileID: 287929280396947737}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.142, y: -0.446, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.094, y: -0.465, z: 0}
+  m_LocalScale: {x: 0.1444, y: 0.1444, z: 0.1444}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8748769462106270259}
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: dbf297a2b1527194099d176a8e21b84e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aa45c97be628c0140b82a5677d3dfeab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -185,7 +185,7 @@ MonoBehaviour:
   shotDelay: 0.25
   muzzleFlashDuration: 0.1
   launchForce: 2
-  bullet: {fileID: 1829357051581644085, guid: 3e1fcf014be93dc48a4c3a2c57b06ff7, type: 3}
+  bullet: {fileID: 2615455651010696115, guid: 963e965b7912787429ff0c5e80a4b331, type: 3}
   barrelEnd: {fileID: 8748769462106270259}
   muzzleFlash: {fileID: 7949973427701987548}
 --- !u!1 &7893837439171443299

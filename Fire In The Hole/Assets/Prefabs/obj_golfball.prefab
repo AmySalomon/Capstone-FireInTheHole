@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 8555988945246564829}
   - component: {fileID: 7039773675726006005}
   - component: {fileID: 1309956234745881904}
+  - component: {fileID: 2577500060190213909}
   m_Layer: 6
   m_Name: obj_golfball
   m_TagString: Ball
@@ -614,3 +615,26 @@ MonoBehaviour:
   precomputeOutline: 1
   bakeKeys: []
   bakeValues: []
+--- !u!114 &2577500060190213909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2418453429810656359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1502ed7394dbba4eb94f2ce5bdb856a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bombTimer: 5
+  bombRadius: 5
+  explosionForce: 500
+  explosionEffect: {fileID: 8977285105747890853, guid: f3c56af67d81f8b47952fb115069562e, type: 3}
+  explosionAnimator: {fileID: 0}
+  spriteRenderer: {fileID: 3362427951106548886}
+  blinkColor: {r: 1, g: 0, b: 0, a: 1}
+  blinkInterval: 1
+  explosion: {fileID: 8977285105747890853, guid: f3c56af67d81f8b47952fb115069562e, type: 3}
+  golfBall: {fileID: 198056289403907709}
+  active: 0

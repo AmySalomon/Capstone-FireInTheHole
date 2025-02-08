@@ -5,6 +5,7 @@ using UnityEngine;
 public class scr_powerUpManager : MonoBehaviour
 {
     public GameObject playerObj;
+    public bool isBomb = false; //bombPower up enabled?
 
     [System.Serializable]
     public class PowerUp
@@ -25,7 +26,7 @@ public class scr_powerUpManager : MonoBehaviour
         //press 1 to test powerup
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            Debug.Log("Speed power up enabled");
+            Debug.Log(testPowerUp + " up enabled");
             AddPowerUp(testPowerUp, playerObj);
         }
     }

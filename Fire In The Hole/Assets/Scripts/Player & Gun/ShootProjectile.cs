@@ -11,7 +11,7 @@ public class ShootProjectile : MonoBehaviour
     //gets barrel position
     public Transform barrelEnd;
     //muzzle flash sprite
-    public SpriteRenderer muzzleFlash;
+    public GameObject muzzleFlash;
     //soundPlayer
     private AudioSource audioPlayer;
     //gunshot sound
@@ -56,7 +56,6 @@ public class ShootProjectile : MonoBehaviour
     {
         myCamera = GameObject.FindGameObjectWithTag("MainCamera");
         audioPlayer = GetComponent<AudioSource>();
-        muzzleFlash.enabled = false;
         reloadingText.SetActive(false);
         rumbleHandler = GetComponentInParent<PlayerInputHandler>();
         UpdateWeapon(defaultWeapon); //Set starting weapon to player default weapon
@@ -69,7 +68,6 @@ public class ShootProjectile : MonoBehaviour
     void Update()
     {
         shootTimer += Time.deltaTime;
-        muzzleFlash.enabled = false;
         if (reloading)
         {
             reloadTimer -= Time.deltaTime;
@@ -81,7 +79,6 @@ public class ShootProjectile : MonoBehaviour
         //Screenshake and muzzle flash
         if (shootTimer <= 0.1f)
         {
-            muzzleFlash.enabled = true;
             myCamera.transform.position = new Vector3(currentCameraX + Random.Range(0, screenShake), currentCameraY + Random.Range(0, screenShake), currentCameraZ + Random.Range(0, screenShake));
         }
 
@@ -96,7 +93,7 @@ public class ShootProjectile : MonoBehaviour
         if (shootTimer >= shootDelay)
         {
             Debug.Log("shoot");
-
+            muzzleFlash.GetComponent<MuzzleAnimation>().StartAnimation();
             audioPlayer.pitch = Random.Range(0.9f, 1.1f);
             audioPlayer.PlayOneShot(gunshot, 1f);
             if (rumbleHandler.rumbleTime < 0.3)

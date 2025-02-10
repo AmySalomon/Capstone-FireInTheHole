@@ -193,6 +193,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ec821020addccf46862005779b309d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletType: {fileID: 0}
+  bulletType: {fileID: 11400000, guid: 9d125d6420485d74cb3aadf0210bd939, type: 2}
   timer: 0
   deletionTime: 5

@@ -210,7 +210,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   aimReticle: {fileID: 6544181968759685040}
-  timeToSpit: 2
+  timeToSpit: 1
   spitForce: 15
 --- !u!58 &2996996953554926568
 CircleCollider2D:

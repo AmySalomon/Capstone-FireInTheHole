@@ -4,9 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.Audio;
 public class GameTimer : MonoBehaviour
 {
     [HideInInspector] public float timer;
+    private float countdownTimer;
+    private float endTimer;
     public float startingTime;
     public float runningOutTime;
     public string endScreenScene;
@@ -15,13 +18,24 @@ public class GameTimer : MonoBehaviour
 
     public static GameTimer gameTimer;
 
+    public TextMeshProUGUI countdownText;
+
     public int[] playerScores;
     public Transform[] playerScoreboards;
     public GameObject[] players;
 
     public bool timerStarted = false;
+
+    private float newVertScale;
+    private int count = 10;
+
+    public AudioMixer audioMixer;
+    private float musicLevel;
+    private AudioSource myWhistleSFX;
+    private bool soundOffWhistle = true;
     private void Awake()
     {
+        myWhistleSFX = GetComponent<AudioSource>();
         if(gameTimer != null)
         {
             Destroy(gameObject);
@@ -36,6 +50,7 @@ public class GameTimer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        countdownText.gameObject.transform.localScale = new Vector3(1, 0, 1);
         timer = startingTime;
         timerStarted = true;
     }
@@ -49,6 +64,8 @@ public class GameTimer : MonoBehaviour
             timer -= Time.deltaTime;
             updateTimer(timer);
             if (timer < runningOutTime) timerText.color = Color.red;
+            if (timer < 11) CountdownTime();
+            audioMixer.GetFloat("MusicParam", out musicLevel);
         }
         else
         {
@@ -65,20 +82,78 @@ public class GameTimer : MonoBehaviour
 
         timerText.text = string.Format("{0:00} : {1:00}", minutes, seconds);
     }
+
+    void CountdownTime()
+    {
+        countdownTimer += Time.deltaTime;
+        countdownText.text = count.ToString();
+        if (countdownTimer < 0.1)
+        {
+            //grow
+            newVertScale = Mathf.Lerp(0, 1, countdownTimer / 0.1f);
+            countdownText.gameObject.transform.localScale = new Vector3(1, newVertScale, 1);
+        }
+        
+        
+        else if (countdownTimer < 0.8)
+        {
+            //if the lerp has ended, snap the circle to have the normal scale
+            countdownText.gameObject.transform.localScale = new Vector3(1, 1, 1);
+        }
+
+        else if (countdownTimer < 1)
+        {
+            //shrink
+            newVertScale = Mathf.Lerp(1, 0, (countdownTimer - 0.8f) / 0.1f);
+            countdownText.gameObject.transform.localScale = new Vector3(1, newVertScale, 1);
+        }
+        else
+        {
+            //when a second has passed, reset this to the start, and lower the count variable.
+            count--;
+            countdownTimer = 0;
+        }
+    }    
+
     void EndGame()
     {
-        //get each player's final score, then load end screen
-        for(int i = 0; i < playerScoreboards.Length; i++)
+        //a small flourish after the game ends before moving to the end screen
+        Time.timeScale = 0;
+        endTimer += Time.unscaledDeltaTime;
+        countdownText.fontSize = 3;
+        countdownText.text = "IT'S OVER!";
+        //turns off the music, momentarily
+        audioMixer.SetFloat("MusicParam", -80);
+        if (soundOffWhistle == true)
         {
-            if(players[i] == null) { break; }
-            playerScores[i] = playerScoreboards[i].gameObject.GetComponent<ScoreTracker>().score;
-            playerScoreboards[i].gameObject.SetActive(false);
-            players[i].SetActive(false);
+            myWhistleSFX.Play();
+            soundOffWhistle = false;
         }
-        timer = 0;
-        timerStarted = false;
-        timerText.gameObject.SetActive(false);
-        timerUI.gameObject.SetActive(false);
-        SceneManager.LoadScene(endScreenScene);
+        if (endTimer < 0.2)
+        {
+            //shrink
+            newVertScale = Mathf.Lerp(0, 1, endTimer / 0.2f);
+            countdownText.gameObject.transform.localScale = new Vector3(1, newVertScale, 1);
+        }
+
+        if (endTimer > 3)
+        {
+            //get each player's final score, then load end screen
+            for (int i = 0; i < playerScoreboards.Length; i++)
+            {
+                if (players[i] == null) { break; }
+                playerScores[i] = playerScoreboards[i].gameObject.GetComponent<ScoreTracker>().score;
+                playerScoreboards[i].gameObject.SetActive(false);
+                players[i].SetActive(false);
+            }
+            timer = 0;
+            audioMixer.SetFloat("MusicParam", musicLevel);
+            timerStarted = false;
+            timerText.gameObject.SetActive(false);
+            countdownText.gameObject.SetActive(false);
+            timerUI.gameObject.SetActive(false);
+            SceneManager.LoadScene(endScreenScene);
+        }
+            
     }
 }

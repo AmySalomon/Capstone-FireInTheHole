@@ -23,7 +23,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Levels/OLD/Greybox/Blacklight.unity
     guid: 0330a577d3a5f994eb129d213044ace0
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Tests/MacicTesting.unity
     guid: 8b25af2e26bf2ef4d8e76044369185cb
   - enabled: 1

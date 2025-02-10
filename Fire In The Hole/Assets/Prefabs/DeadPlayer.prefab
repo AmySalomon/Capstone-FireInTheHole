@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4f99207333ef60e448e6b4e6bca188ce, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 67d29d8b0806cc349a4092f9cea22bc9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,13 +99,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35a77692a07f1d34782a1672b974aa56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bunny: {fileID: 21300000, guid: a64f13587ceb6c244942d4f0fc585900, type: 3}
+  bunny: {fileID: 21300000, guid: e7fe636262e49684abe6cf49f7bb088f, type: 3}
   deadBunny: {fileID: 21300000, guid: d88f494f86aa06846bd49985c3940809, type: 3}
-  walrus: {fileID: 21300000, guid: 4f99207333ef60e448e6b4e6bca188ce, type: 3}
+  walrus: {fileID: 21300000, guid: 67d29d8b0806cc349a4092f9cea22bc9, type: 3}
   deadWalrus: {fileID: 21300000, guid: f9da9cd4e3efac849ac40ed0b5228c01, type: 3}
-  newt: {fileID: 21300000, guid: f52ba02af6095b84e85ab0a2837dcfb9, type: 3}
+  newt: {fileID: 21300000, guid: 4e7578f783c9aad48969d928db9d92e1, type: 3}
   deadNewt: {fileID: 21300000, guid: b4d00c099f886c74da8256924bcd0802, type: 3}
-  duck: {fileID: 21300000, guid: f5b6367946b6f4548b955c5c90dc9165, type: 3}
+  duck: {fileID: 21300000, guid: 923662f470079da46950db69d9730d09, type: 3}
   deadDuck: {fileID: 21300000, guid: 36fd84f6c2301b3449bd3c32013bbf25, type: 3}
   risingSpeed: 0.1
   knockbackSpeed: 10

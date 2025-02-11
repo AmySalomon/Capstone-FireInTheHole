@@ -28,6 +28,22 @@ public class ReadyManager : MonoBehaviour
     public TextMeshProUGUI CountdownText;
 
     private float timer;
+
+    private void Start()
+    {
+        //Destroy game timer, and level intializer objects so they're not floating around on the main menu
+        GameObject[] GTObject;
+        GTObject = GameObject.FindGameObjectsWithTag("Timer");
+        foreach (GameObject timer in GTObject)
+            Destroy(timer);
+        Debug.Log("[ReadyManager]: Destroyed Game Timer.");
+        GameObject[] LevelInitializers;
+        LevelInitializers = GameObject.FindGameObjectsWithTag("LevelInitializer");
+        foreach (GameObject levelInits in LevelInitializers)
+            Destroy(levelInits);
+        Debug.Log("[ReadyManager]: Destroyed LevelInitializer.");
+    }
+
     // Update is called once per frame
     void Update()
     {

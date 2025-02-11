@@ -19,7 +19,7 @@ public class FlipGunSprite : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(gunRotation.eulerAngles);
+       // Debug.Log(gunRotation.eulerAngles);
         if (gunRotation.eulerAngles.z >= 90 && gunRotation.eulerAngles.z <= 270)
         {
             sprite.flipY = true;

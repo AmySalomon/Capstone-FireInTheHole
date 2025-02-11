@@ -8,20 +8,20 @@ public class BulletType : ScriptableObject
 {
     public float deletionTime; //how long the bullet lasts for
     public Rigidbody2D bulletPrefab; //the gameobject that's being spawned
-    public virtual void BulletCollision(Collision2D collision, GameObject bullet)
+    public virtual void BulletCollision(Collision2D collision, GameObject bullet, GameObject playerShooter)
     {
         if (collision.gameObject.tag == "MainCamera" || collision.gameObject.tag == "Wall")
         {
-            DeleteBullet(bullet);
+            DeleteBullet(bullet, playerShooter);
         }
 
         if (collision.gameObject.tag == "Player")
         {
-            DeleteBullet(bullet);
+            DeleteBullet(bullet, playerShooter);
         }
     }
     
-    public virtual void DeleteBullet(GameObject bullet)
+    public virtual void DeleteBullet(GameObject bullet, GameObject playerShooter)
     {
         Destroy(bullet);
     }

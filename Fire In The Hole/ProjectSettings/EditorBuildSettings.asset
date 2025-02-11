@@ -74,7 +74,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/OptionsMenu.unity
     guid: d7f2a7dd0b22549488a589ac387a773f
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Levels/3D/DEBUG/Debug - Pirate.unity
     guid: 603b6300402e7364f9bf07e6b138a592
   - enabled: 1

@@ -117,6 +117,7 @@ public class GameTimer : MonoBehaviour
 
     void EndGame()
     {
+        PauseMenu.functional = false; //do not let the pause menu work on the end screen <3
         //a small flourish after the game ends before moving to the end screen
         Time.timeScale = 0;
         endTimer += Time.unscaledDeltaTime;

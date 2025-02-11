@@ -36,7 +36,7 @@ public class IntroFlyBy : MonoBehaviour
     void Start()
     {
         timer = 0;
-
+        PlayerPause.paused = true;
         text = GetComponentInChildren<TextMeshProUGUI>();
         text.gameObject.transform.localScale = new Vector3(1, 0, 1);
 
@@ -65,6 +65,7 @@ public class IntroFlyBy : MonoBehaviour
         {
             myCamera.transform.position = new Vector3(firstCameraXPos, firstCameraYPos, firstCameraZPos);
             Time.timeScale = 1;
+            PlayerPause.paused = false;
             Destroy(gameObject);
         }
 

@@ -699,7 +699,7 @@ MonoBehaviour:
   shotType: {fileID: 0}
   shotSpread: 0
   hasLaser: 0
-  defaultWeapon: {fileID: 11400000, guid: 9557f9d64f6ee0b44a5176ec05d3c3fd, type: 2}
+  defaultWeapon: {fileID: 11400000, guid: 7c44063ba9ea1ad49bc1e98ae64d75a9, type: 2}
   currentWeapon: {fileID: 0}
   currentGunSprite: {fileID: 3455350185084445936}
   reloading: 0

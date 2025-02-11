@@ -403,7 +403,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 0
-  startingTime: 5
+  startingTime: 180
   runningOutTime: 60
   endScreenScene: EndingScene
   timerUI: {fileID: 638448158197664558}

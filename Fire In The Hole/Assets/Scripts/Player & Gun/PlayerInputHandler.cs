@@ -203,6 +203,7 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void OnPause(CallbackContext context)
     {
+        if (!PauseMenu.functional) { return; }
         if (playerPause != null && context.performed && !PlayerPause.paused)
         {
             playerPause.PauseGame(playerConfig.PlayerIndex);

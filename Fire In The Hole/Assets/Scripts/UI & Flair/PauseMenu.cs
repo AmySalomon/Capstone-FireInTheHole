@@ -6,9 +6,12 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public Transform pauseMenu;
-
+    public static bool functional = true;
+    public bool funcCopy;
     private void Start()
     {
+        functional = true;
+        funcCopy = functional;
         Debug.Log("Game is " + PlayerPause.paused);
         pauseMenu.gameObject.SetActive(false);
     }
@@ -48,5 +51,12 @@ public class PauseMenu : MonoBehaviour
         foreach (GameObject manager in PMObject)
             Destroy(manager);
         Debug.Log("[PauseMenu]: Destroyed Player Manager.");
+    }
+
+    public void NoPausing()
+    {
+        functional = false;
+        funcCopy = functional;
+
     }
 }

@@ -75,7 +75,7 @@ public class IntroFlyBy : MonoBehaviour
             //-1 to offset the end of the screen
             newZPos = Mathf.Lerp(cameraZoomZ, firstCameraZPos, aniCurve.Evaluate((timer - 6.1f) / 1f));
             newXPos = Mathf.Lerp(spawn4.transform.position.x + 1, firstCameraXPos, aniCurve.Evaluate((timer - 6.1f) / 1f));
-            newYPos = Mathf.Lerp(spawn4.transform.position.y + 1, firstCameraYPos, aniCurve.Evaluate((timer - 6.1f) / 1f));
+            newYPos = Mathf.Lerp(spawn4.transform.position.y, firstCameraYPos, aniCurve.Evaluate((timer - 6.1f) / 1f));
             myCamera.transform.position = new Vector3(newXPos, newYPos, newZPos);
         }
 
@@ -84,7 +84,7 @@ public class IntroFlyBy : MonoBehaviour
         {
             //-1 to offset the end of the screen
             newXPos = Mathf.Lerp(spawn3.transform.position.x - 1, spawn4.transform.position.x + 1, aniCurve.Evaluate((timer - 4.6f) / 1f));
-            newYPos = Mathf.Lerp(spawn3.transform.position.y - 1, spawn4.transform.position.y + 1, aniCurve.Evaluate((timer - 4.6f) / 1f));
+            newYPos = Mathf.Lerp(spawn3.transform.position.y - 1, spawn4.transform.position.y, aniCurve.Evaluate((timer - 4.6f) / 1f));
             myCamera.transform.position = new Vector3(newXPos, newYPos, newZPos);
         }
 
@@ -93,7 +93,7 @@ public class IntroFlyBy : MonoBehaviour
         {
             //-1 to offset the end of the screen
             newXPos = Mathf.Lerp(spawn2.transform.position.x - 1, spawn3.transform.position.x - 1, aniCurve.Evaluate((timer - 3.1f) / 1f));
-            newYPos = Mathf.Lerp(spawn2.transform.position.y + 1, spawn3.transform.position.y - 1, aniCurve.Evaluate((timer - 3.1f) / 1f));
+            newYPos = Mathf.Lerp(spawn2.transform.position.y, spawn3.transform.position.y - 1, aniCurve.Evaluate((timer - 3.1f) / 1f));
             myCamera.transform.position = new Vector3(newXPos, newYPos, newZPos);
         }
 
@@ -103,7 +103,7 @@ public class IntroFlyBy : MonoBehaviour
             cameraZoomZ = myCamera.transform.position.z;
             //-1 to offset the end of the screen
             newXPos = Mathf.Lerp(spawn1.transform.position.x + 1, spawn2.transform.position.x - 1, aniCurve.Evaluate((timer - 1.6f) / 1f));
-            newYPos = Mathf.Lerp(spawn1.transform.position.y - 1, spawn2.transform.position.y + 1, aniCurve.Evaluate((timer - 1.6f) / 1f));
+            newYPos = Mathf.Lerp(spawn1.transform.position.y - 1, spawn2.transform.position.y, aniCurve.Evaluate((timer - 1.6f) / 1f));
             myCamera.transform.position = new Vector3(newXPos, newYPos, newZPos);
         }
 

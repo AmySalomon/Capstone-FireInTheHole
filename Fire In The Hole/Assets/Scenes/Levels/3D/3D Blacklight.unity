@@ -4796,8 +4796,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   portalDestination: {fileID: 1524432081}
-  cooldown: 4
-  cooldownMax: 4
+  cooldown: 1
+  cooldownMax: 1
 --- !u!4 &348346094
 Transform:
   m_ObjectHideFlags: 0
@@ -16885,8 +16885,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   portalDestination: {fileID: 348346090}
-  cooldown: 4
-  cooldownMax: 4
+  cooldown: 1
+  cooldownMax: 1
 --- !u!4 &1524432085
 Transform:
   m_ObjectHideFlags: 0

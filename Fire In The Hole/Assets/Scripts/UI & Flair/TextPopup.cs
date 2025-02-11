@@ -68,6 +68,7 @@ public class TextPopup : MonoBehaviour
 
         if (weaponPickup == "TommyGun") text.text = "SMG";
 
+        if (weaponPickup == "RocketLauncher") text.text = "Rocket";
         Color colorTop = new Color(myColor.r, myColor.g, myColor.b);
         text.colorGradient = new VertexGradient(colorTop, colorTop, Color.white, Color.white);
     }

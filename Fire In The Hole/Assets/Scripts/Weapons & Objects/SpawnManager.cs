@@ -70,7 +70,7 @@ public class SpawnManager : MonoBehaviour
 
         if (needAWeaponSpawn == true) StartCoroutine(SpawnWeapon());
 
-        if (specialEvents == null) { return; } //if there is no hazards for the map, do not check for hazard related actions
+        if (specialEvents == null) { return; } //if there is no special events for the map, do not check for hazard related actions
 
         if (hazardTimer > currentSpawnTimeForHazards) needAHazardSpawn = true;
 

@@ -7,7 +7,6 @@ using UnityEngine;
 public class ExplodingBulletType : BulletType
 {
     public GameObject explosion;
-    public float explosionRadius;
 
     //When the bullet would despawn, create a harmful explosion in its place (then despawn)
     public override void BulletCollision(Collision2D collision, GameObject bullet, GameObject playerShooter)

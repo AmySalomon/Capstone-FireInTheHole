@@ -1,0 +1,2776 @@
+fileFormatVersion: 2
+guid: 3572f7a6c771d334dbe8a2ad2399b0aa
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6070
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d2dd9a0064a95e4a8931d140a8cb47a
+      internalID: -1943924337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_1
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 6070
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52ddbe2cab8a916438853499baf33d6b
+      internalID: -206079033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_2
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 6070
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7488b55970441d44da0a9e00501ae50c
+      internalID: -1085964984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_3
+      rect:
+        serializedVersion: 2
+        x: 1419
+        y: 6070
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8b57923480259c489f933d9c9e57d24
+      internalID: -1720643583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_4
+      rect:
+        serializedVersion: 2
+        x: 1892
+        y: 6070
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2321d6508a5909b4295c43b94d2fb9da
+      internalID: 140156892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_5
+      rect:
+        serializedVersion: 2
+        x: 2365
+        y: 6070
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5af9b3fbd9336e9498fae683830b5ec5
+      internalID: 1273478073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_6
+      rect:
+        serializedVersion: 2
+        x: 2838
+        y: 6070
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bc07e28969d46d44a58f32d2158cc88
+      internalID: 353185608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_7
+      rect:
+        serializedVersion: 2
+        x: 3311
+        y: 6070
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5eb47a56a0e4564f8f81713c8f59a25
+      internalID: 1688593187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_8
+      rect:
+        serializedVersion: 2
+        x: 3784
+        y: 6070
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d847122841fad044b8ef3b59e218a5f
+      internalID: 158445776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_9
+      rect:
+        serializedVersion: 2
+        x: 4257
+        y: 6070
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d3305b8b7e767b4085337c61a60f92b
+      internalID: 1204820482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_10
+      rect:
+        serializedVersion: 2
+        x: 4730
+        y: 6070
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d68872b9f92a64d40a93afcd8d6e932d
+      internalID: -1146779394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5463
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15ab0e601c5b74e449c03b19abf1b05f
+      internalID: -1463579294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_12
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 5463
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90428513149207542a0e14540aedf632
+      internalID: 415661166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_13
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 5463
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 387403acf3c147f4eb08192632cff978
+      internalID: -2043394323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_14
+      rect:
+        serializedVersion: 2
+        x: 1419
+        y: 5463
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 738e6a5c1af070640b5aa75ec50ae442
+      internalID: 553163894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_15
+      rect:
+        serializedVersion: 2
+        x: 1892
+        y: 5463
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f7ffa0f07b59b7419f3083cc1689449
+      internalID: 1258165607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_16
+      rect:
+        serializedVersion: 2
+        x: 2365
+        y: 5463
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deed05dd698bb5342bdc56a667fd9c52
+      internalID: 1877779163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_17
+      rect:
+        serializedVersion: 2
+        x: 2838
+        y: 5463
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34cc713c321ad7943af45e8865df5bfe
+      internalID: 1180780989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_18
+      rect:
+        serializedVersion: 2
+        x: 3311
+        y: 5463
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9680caa68b4e8cf4db6daeb430f26af4
+      internalID: 1979826983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_19
+      rect:
+        serializedVersion: 2
+        x: 3784
+        y: 5463
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bef3a24913ea2749a219fa78b622c71
+      internalID: 1089235060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_20
+      rect:
+        serializedVersion: 2
+        x: 4257
+        y: 5463
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17546d092de6d724ba4a31dd981d0946
+      internalID: 1473358305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_21
+      rect:
+        serializedVersion: 2
+        x: 4730
+        y: 5463
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8183baa52ee7a854b87e7abb21431b98
+      internalID: -1345534121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4856
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67321b731a06f864695d783e6dc8aba4
+      internalID: 1377188439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_23
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 4856
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee023709b433317429bba970cc3dd8f5
+      internalID: -296020509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_24
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 4856
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e316d3b11a2d5864a9d3dece963741da
+      internalID: -1760509148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_25
+      rect:
+        serializedVersion: 2
+        x: 1419
+        y: 4856
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d155fc1d7c7f5694bb041b71630c9dd3
+      internalID: 1378807119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_26
+      rect:
+        serializedVersion: 2
+        x: 1892
+        y: 4856
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2300d10dc54cdfb4da60ea909596580b
+      internalID: 1403758862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_27
+      rect:
+        serializedVersion: 2
+        x: 2365
+        y: 4856
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 600c034dfb461634991a6ec0ebad1569
+      internalID: -1824092054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_28
+      rect:
+        serializedVersion: 2
+        x: 2838
+        y: 4856
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7324a68d62b9dc47b17b8586708c850
+      internalID: 1802027275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_29
+      rect:
+        serializedVersion: 2
+        x: 3311
+        y: 4856
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fd8539f1a00fe34c98248dbb9579f82
+      internalID: 478250119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_30
+      rect:
+        serializedVersion: 2
+        x: 3784
+        y: 4856
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40fc256de3cb1df4a9d4fcd675317939
+      internalID: 1900862831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_31
+      rect:
+        serializedVersion: 2
+        x: 4257
+        y: 4856
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53f6a99d3b6c5ec4aa8b4437e3529b96
+      internalID: -688560306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_32
+      rect:
+        serializedVersion: 2
+        x: 4730
+        y: 4856
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae6b38486a1d0db4bafb55500f0e3649
+      internalID: -368495069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4249
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48a8ce8f79dba954f8eb71a8680753d0
+      internalID: 1032601006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_34
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 4249
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40693cef681f76b4db0ec72ced736920
+      internalID: -2136020203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_35
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 4249
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90069d0240875d8458b84f5d5d63296b
+      internalID: -1432991475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_36
+      rect:
+        serializedVersion: 2
+        x: 1419
+        y: 4249
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19e200edb5f20264599a608489149f27
+      internalID: -1966250105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_37
+      rect:
+        serializedVersion: 2
+        x: 1892
+        y: 4249
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42ac3a2d5ea924446b9265440c729604
+      internalID: -1445849969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_38
+      rect:
+        serializedVersion: 2
+        x: 2365
+        y: 4249
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee52143eb8909b84189d816343f1bad4
+      internalID: 172282028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_39
+      rect:
+        serializedVersion: 2
+        x: 2838
+        y: 4249
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fe26f4af1de73b4884356fc3a01d799
+      internalID: 1345469827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_40
+      rect:
+        serializedVersion: 2
+        x: 3311
+        y: 4249
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1258db6b41a49194c96f5f9859608b37
+      internalID: 80964784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_41
+      rect:
+        serializedVersion: 2
+        x: 3784
+        y: 4249
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eba2966303ec82348b9516aa64ee2fd8
+      internalID: 270414760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_42
+      rect:
+        serializedVersion: 2
+        x: 4257
+        y: 4249
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c60014f9472b660498675b0afdba4e9d
+      internalID: -1325703118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_43
+      rect:
+        serializedVersion: 2
+        x: 4730
+        y: 4249
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20054c1a2c58e3c4e97a8c5dfc5fb9d3
+      internalID: 1988368609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3642
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23b1b795f72e65b48848e04861af859e
+      internalID: 987223731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_45
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 3642
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 473050c0536682c42a0c0f860100ea67
+      internalID: 1866102819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_46
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 3642
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22194b7b0165a5c40a0932a387fd36ea
+      internalID: 342020706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_47
+      rect:
+        serializedVersion: 2
+        x: 1419
+        y: 3642
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2403038a17f6e6448f51387b277c3f3
+      internalID: 1142077628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_48
+      rect:
+        serializedVersion: 2
+        x: 1892
+        y: 3642
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b12197366ad771e49ba4ed33136cc912
+      internalID: 126471261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_49
+      rect:
+        serializedVersion: 2
+        x: 2365
+        y: 3642
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5fc841b64b9e8f4b86272b3d3bd5d28
+      internalID: 1852237605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_50
+      rect:
+        serializedVersion: 2
+        x: 2838
+        y: 3642
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82a368e24e31d554596f3323e58d9e4d
+      internalID: 1915495563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_51
+      rect:
+        serializedVersion: 2
+        x: 3311
+        y: 3642
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f57fd6fc04abd434fb5f167bbe2e2e84
+      internalID: -932280125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_52
+      rect:
+        serializedVersion: 2
+        x: 3784
+        y: 3642
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 223a9e1774f62ad449b36c284b8db37c
+      internalID: -128626595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_53
+      rect:
+        serializedVersion: 2
+        x: 4257
+        y: 3642
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc3be806b6957914cbc0825b269b410e
+      internalID: 2112549034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_54
+      rect:
+        serializedVersion: 2
+        x: 4730
+        y: 3642
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 032318e1d3dca644a8481d8074821b00
+      internalID: 1629327424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_55
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3035
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3f534d9d7c1a0e41ae0d1a48aa86cd5
+      internalID: 681342034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_56
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 3035
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b28b1a5f7bb13424ba91ce2b7170b44f
+      internalID: 1210815968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_57
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 3035
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 875752eb2c4f9c0498be85338f4c307c
+      internalID: -2107202905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_58
+      rect:
+        serializedVersion: 2
+        x: 1419
+        y: 3035
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26aea8929639b2b499ef13b8124cf81c
+      internalID: 2081156535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_59
+      rect:
+        serializedVersion: 2
+        x: 1892
+        y: 3035
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ead2c54c6a17b584f91381b72ac6bbf0
+      internalID: -2057903807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_60
+      rect:
+        serializedVersion: 2
+        x: 2365
+        y: 3035
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74082e3751cc41f4cb9e4e7a5e2c10b1
+      internalID: -383303833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_61
+      rect:
+        serializedVersion: 2
+        x: 2838
+        y: 3035
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d90e4581e9488544b19280213276500
+      internalID: 153549380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_62
+      rect:
+        serializedVersion: 2
+        x: 3311
+        y: 3035
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9feec26b27363ef439de90ae6bf76f80
+      internalID: -2070954578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_63
+      rect:
+        serializedVersion: 2
+        x: 3784
+        y: 3035
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 328ef0d84ebb2ac40822e8f374b44fc7
+      internalID: -278459812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_64
+      rect:
+        serializedVersion: 2
+        x: 4257
+        y: 3035
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dea714a3040263a4badf0129fd0b097e
+      internalID: 1945740121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_65
+      rect:
+        serializedVersion: 2
+        x: 4730
+        y: 3035
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55b4408b92eb2dc4aa74cc5d91ad2b2a
+      internalID: 1341298323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_66
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2428
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cc53602a98103b46b6fe0afa7411baa
+      internalID: -164444754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_67
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 2428
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f605832d4462a3c40870962c6e0f3c1a
+      internalID: -311383655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_68
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 2428
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c803f64eb9f13441a852cb136bdf00e
+      internalID: 1940746980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_69
+      rect:
+        serializedVersion: 2
+        x: 1419
+        y: 2428
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74c4ba9f526753c4fbc6cd653c5c3266
+      internalID: 337520774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_70
+      rect:
+        serializedVersion: 2
+        x: 1892
+        y: 2428
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26c294276651451488fde43fca083087
+      internalID: -616580168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_71
+      rect:
+        serializedVersion: 2
+        x: 2365
+        y: 2428
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0298cd22c7231e45a107b8a2527e457
+      internalID: 1618633941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_72
+      rect:
+        serializedVersion: 2
+        x: 2838
+        y: 2428
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc9211f661204b144ad96cc9de793730
+      internalID: -275050304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_73
+      rect:
+        serializedVersion: 2
+        x: 3311
+        y: 2428
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df6c938e46ec88c4f85cd84bf233d274
+      internalID: -1958172111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_74
+      rect:
+        serializedVersion: 2
+        x: 3784
+        y: 2428
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52dbbeb2d74d0a940b3952421926dd23
+      internalID: -421603907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_75
+      rect:
+        serializedVersion: 2
+        x: 4257
+        y: 2428
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73d9305be77300e40b0be360bf8eae2c
+      internalID: 427658230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_76
+      rect:
+        serializedVersion: 2
+        x: 4730
+        y: 2428
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 148ede3bb02e8e2439d7cdd649fa8ed1
+      internalID: -668591891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_77
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1821
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07f95beff68dff547b545dc26d219610
+      internalID: 1690488258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_78
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 1821
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96343695cff510a4092a7dc4d25279f6
+      internalID: 609099756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_79
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 1821
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21fc37a00eec82042adc33ba4f2ac4ed
+      internalID: -733939372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_80
+      rect:
+        serializedVersion: 2
+        x: 1419
+        y: 1821
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6cc92eccd430934c9c32eebd9ffb8b9
+      internalID: 1547249775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_81
+      rect:
+        serializedVersion: 2
+        x: 1892
+        y: 1821
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 110364d0bfb3d6049963876d3fa8a20e
+      internalID: 1339534840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_82
+      rect:
+        serializedVersion: 2
+        x: 2365
+        y: 1821
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94d101795e0a98c418b32454fef1da3f
+      internalID: 1534677682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_83
+      rect:
+        serializedVersion: 2
+        x: 2838
+        y: 1821
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc905ce54df6be847a66276981e68a79
+      internalID: -475565250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_84
+      rect:
+        serializedVersion: 2
+        x: 3311
+        y: 1821
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e786014fc456476409c15c9ffe111326
+      internalID: -18484507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_85
+      rect:
+        serializedVersion: 2
+        x: 3784
+        y: 1821
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41c4680fb7fec0343aa795eda567eae4
+      internalID: -134352822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_86
+      rect:
+        serializedVersion: 2
+        x: 4257
+        y: 1821
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79f363659281ed34c84b85b79ebbc497
+      internalID: 37593975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_87
+      rect:
+        serializedVersion: 2
+        x: 4730
+        y: 1821
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6ce995fa6d465945ae25bfe08c5533d
+      internalID: 280060009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_88
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1214
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca1c8a4df1f9ed24283dea1a0536d302
+      internalID: 1207375185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_89
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 1214
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3f7c7bf860ac4147a6d82f8aedd2fe2
+      internalID: -956405642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_90
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 1214
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d55027de059c5240b4bc0cfb13d8cb3
+      internalID: 578022799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_91
+      rect:
+        serializedVersion: 2
+        x: 1419
+        y: 1214
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1543b9dd29f635e4b9a2625cea8dd2b2
+      internalID: -326758058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_92
+      rect:
+        serializedVersion: 2
+        x: 1892
+        y: 1214
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc3dc124f7c9ca641a4295629a9715c5
+      internalID: -1287166432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_93
+      rect:
+        serializedVersion: 2
+        x: 2365
+        y: 1214
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e29c753a97527bb479bcb8753cb8e385
+      internalID: -506295769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_94
+      rect:
+        serializedVersion: 2
+        x: 2838
+        y: 1214
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 211f84d0950bf484ea65e26c7924ae35
+      internalID: 1382098418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_95
+      rect:
+        serializedVersion: 2
+        x: 3311
+        y: 1214
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5183b97b54e171469e7e59cd5a19fc9
+      internalID: 297409313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_96
+      rect:
+        serializedVersion: 2
+        x: 3784
+        y: 1214
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b87f7aafb0dbf0f4c92e76057fd2535a
+      internalID: -1917338881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_97
+      rect:
+        serializedVersion: 2
+        x: 4257
+        y: 1214
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66e6d1bc351a21f47a77c2f844485d77
+      internalID: -803200990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_98
+      rect:
+        serializedVersion: 2
+        x: 4730
+        y: 1214
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea19ae07aeecb954fa528a773f3ab214
+      internalID: -881614028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_99
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 607
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2c475cb727182f4894d68162ccbbb4e
+      internalID: -1647214649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_100
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 607
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3baf86dc21686a240bcbb5ca175c54df
+      internalID: 510408140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_101
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 607
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1d35c283c5a76948a9dcd87040427b3
+      internalID: 2002468401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_102
+      rect:
+        serializedVersion: 2
+        x: 1419
+        y: 607
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26f1bb9003d5c804cbbb1c095d7317e2
+      internalID: 1479265075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_103
+      rect:
+        serializedVersion: 2
+        x: 1892
+        y: 607
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 542f333b089b95443bd6f20ad9300b7b
+      internalID: 370939963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_104
+      rect:
+        serializedVersion: 2
+        x: 2365
+        y: 607
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c6c16a0382813d46ae99854198afdfe
+      internalID: 238034071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_105
+      rect:
+        serializedVersion: 2
+        x: 2838
+        y: 607
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6c14694090cb6c4da3fdbefd5f7eb21
+      internalID: -2049985178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_106
+      rect:
+        serializedVersion: 2
+        x: 3311
+        y: 607
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a04c448a33cb39b4cb3eb1a422e398e4
+      internalID: -1532188817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_107
+      rect:
+        serializedVersion: 2
+        x: 3784
+        y: 607
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee4e48bab37fb2446bb48a1f298058e6
+      internalID: 593145953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_108
+      rect:
+        serializedVersion: 2
+        x: 4257
+        y: 607
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f67b71636087234aa8a3bb817d7331d
+      internalID: 1057239904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_109
+      rect:
+        serializedVersion: 2
+        x: 4730
+        y: 607
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d3b3d8702110a14fb35947411dfd89c
+      internalID: 851234593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_110
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2433f87752baa994493facf77fe1b15e
+      internalID: 2088706636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_111
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 0
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd11757e757a3df49ae88bf5ad162ad3
+      internalID: -929495319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_112
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 0
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed4ee94be71bf84488c8921294047863
+      internalID: -1309121703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_113
+      rect:
+        serializedVersion: 2
+        x: 1419
+        y: 0
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c22c5ce0a250dda4ea4392a567604b42
+      internalID: 1718568838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_114
+      rect:
+        serializedVersion: 2
+        x: 1892
+        y: 0
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df644797c2bd6f644996938c04b23f4a
+      internalID: -1201912479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_115
+      rect:
+        serializedVersion: 2
+        x: 2365
+        y: 0
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 703d127942a704f419ce87ed770cbbb8
+      internalID: -1146041331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_116
+      rect:
+        serializedVersion: 2
+        x: 2838
+        y: 0
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c042fb59b5f9644ab11a83a5ed854f3
+      internalID: -2064764834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_117
+      rect:
+        serializedVersion: 2
+        x: 3311
+        y: 0
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5e4121d22396434c9e0ca95bf40f61c
+      internalID: 213022809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_118
+      rect:
+        serializedVersion: 2
+        x: 3784
+        y: 0
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dde63f734a324ed4eab8ab43f73f9642
+      internalID: -819582572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_119
+      rect:
+        serializedVersion: 2
+        x: 4257
+        y: 0
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b396249b4d5efe4c977e33e99a21be9
+      internalID: -2005025245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Duck (11  x 11)_120
+      rect:
+        serializedVersion: 2
+        x: 4730
+        y: 0
+        width: 473
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f874dfb268b762041b6ee1d32a19aa45
+      internalID: 126379346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Menu Duck (11  x 11)_0: -1943924337
+      Menu Duck (11  x 11)_1: -206079033
+      Menu Duck (11  x 11)_10: -1146779394
+      Menu Duck (11  x 11)_100: 510408140
+      Menu Duck (11  x 11)_101: 2002468401
+      Menu Duck (11  x 11)_102: 1479265075
+      Menu Duck (11  x 11)_103: 370939963
+      Menu Duck (11  x 11)_104: 238034071
+      Menu Duck (11  x 11)_105: -2049985178
+      Menu Duck (11  x 11)_106: -1532188817
+      Menu Duck (11  x 11)_107: 593145953
+      Menu Duck (11  x 11)_108: 1057239904
+      Menu Duck (11  x 11)_109: 851234593
+      Menu Duck (11  x 11)_11: -1463579294
+      Menu Duck (11  x 11)_110: 2088706636
+      Menu Duck (11  x 11)_111: -929495319
+      Menu Duck (11  x 11)_112: -1309121703
+      Menu Duck (11  x 11)_113: 1718568838
+      Menu Duck (11  x 11)_114: -1201912479
+      Menu Duck (11  x 11)_115: -1146041331
+      Menu Duck (11  x 11)_116: -2064764834
+      Menu Duck (11  x 11)_117: 213022809
+      Menu Duck (11  x 11)_118: -819582572
+      Menu Duck (11  x 11)_119: -2005025245
+      Menu Duck (11  x 11)_12: 415661166
+      Menu Duck (11  x 11)_120: 126379346
+      Menu Duck (11  x 11)_13: -2043394323
+      Menu Duck (11  x 11)_14: 553163894
+      Menu Duck (11  x 11)_15: 1258165607
+      Menu Duck (11  x 11)_16: 1877779163
+      Menu Duck (11  x 11)_17: 1180780989
+      Menu Duck (11  x 11)_18: 1979826983
+      Menu Duck (11  x 11)_19: 1089235060
+      Menu Duck (11  x 11)_2: -1085964984
+      Menu Duck (11  x 11)_20: 1473358305
+      Menu Duck (11  x 11)_21: -1345534121
+      Menu Duck (11  x 11)_22: 1377188439
+      Menu Duck (11  x 11)_23: -296020509
+      Menu Duck (11  x 11)_24: -1760509148
+      Menu Duck (11  x 11)_25: 1378807119
+      Menu Duck (11  x 11)_26: 1403758862
+      Menu Duck (11  x 11)_27: -1824092054
+      Menu Duck (11  x 11)_28: 1802027275
+      Menu Duck (11  x 11)_29: 478250119
+      Menu Duck (11  x 11)_3: -1720643583
+      Menu Duck (11  x 11)_30: 1900862831
+      Menu Duck (11  x 11)_31: -688560306
+      Menu Duck (11  x 11)_32: -368495069
+      Menu Duck (11  x 11)_33: 1032601006
+      Menu Duck (11  x 11)_34: -2136020203
+      Menu Duck (11  x 11)_35: -1432991475
+      Menu Duck (11  x 11)_36: -1966250105
+      Menu Duck (11  x 11)_37: -1445849969
+      Menu Duck (11  x 11)_38: 172282028
+      Menu Duck (11  x 11)_39: 1345469827
+      Menu Duck (11  x 11)_4: 140156892
+      Menu Duck (11  x 11)_40: 80964784
+      Menu Duck (11  x 11)_41: 270414760
+      Menu Duck (11  x 11)_42: -1325703118
+      Menu Duck (11  x 11)_43: 1988368609
+      Menu Duck (11  x 11)_44: 987223731
+      Menu Duck (11  x 11)_45: 1866102819
+      Menu Duck (11  x 11)_46: 342020706
+      Menu Duck (11  x 11)_47: 1142077628
+      Menu Duck (11  x 11)_48: 126471261
+      Menu Duck (11  x 11)_49: 1852237605
+      Menu Duck (11  x 11)_5: 1273478073
+      Menu Duck (11  x 11)_50: 1915495563
+      Menu Duck (11  x 11)_51: -932280125
+      Menu Duck (11  x 11)_52: -128626595
+      Menu Duck (11  x 11)_53: 2112549034
+      Menu Duck (11  x 11)_54: 1629327424
+      Menu Duck (11  x 11)_55: 681342034
+      Menu Duck (11  x 11)_56: 1210815968
+      Menu Duck (11  x 11)_57: -2107202905
+      Menu Duck (11  x 11)_58: 2081156535
+      Menu Duck (11  x 11)_59: -2057903807
+      Menu Duck (11  x 11)_6: 353185608
+      Menu Duck (11  x 11)_60: -383303833
+      Menu Duck (11  x 11)_61: 153549380
+      Menu Duck (11  x 11)_62: -2070954578
+      Menu Duck (11  x 11)_63: -278459812
+      Menu Duck (11  x 11)_64: 1945740121
+      Menu Duck (11  x 11)_65: 1341298323
+      Menu Duck (11  x 11)_66: -164444754
+      Menu Duck (11  x 11)_67: -311383655
+      Menu Duck (11  x 11)_68: 1940746980
+      Menu Duck (11  x 11)_69: 337520774
+      Menu Duck (11  x 11)_7: 1688593187
+      Menu Duck (11  x 11)_70: -616580168
+      Menu Duck (11  x 11)_71: 1618633941
+      Menu Duck (11  x 11)_72: -275050304
+      Menu Duck (11  x 11)_73: -1958172111
+      Menu Duck (11  x 11)_74: -421603907
+      Menu Duck (11  x 11)_75: 427658230
+      Menu Duck (11  x 11)_76: -668591891
+      Menu Duck (11  x 11)_77: 1690488258
+      Menu Duck (11  x 11)_78: 609099756
+      Menu Duck (11  x 11)_79: -733939372
+      Menu Duck (11  x 11)_8: 158445776
+      Menu Duck (11  x 11)_80: 1547249775
+      Menu Duck (11  x 11)_81: 1339534840
+      Menu Duck (11  x 11)_82: 1534677682
+      Menu Duck (11  x 11)_83: -475565250
+      Menu Duck (11  x 11)_84: -18484507
+      Menu Duck (11  x 11)_85: -134352822
+      Menu Duck (11  x 11)_86: 37593975
+      Menu Duck (11  x 11)_87: 280060009
+      Menu Duck (11  x 11)_88: 1207375185
+      Menu Duck (11  x 11)_89: -956405642
+      Menu Duck (11  x 11)_9: 1204820482
+      Menu Duck (11  x 11)_90: 578022799
+      Menu Duck (11  x 11)_91: -326758058
+      Menu Duck (11  x 11)_92: -1287166432
+      Menu Duck (11  x 11)_93: -506295769
+      Menu Duck (11  x 11)_94: 1382098418
+      Menu Duck (11  x 11)_95: 297409313
+      Menu Duck (11  x 11)_96: -1917338881
+      Menu Duck (11  x 11)_97: -803200990
+      Menu Duck (11  x 11)_98: -881614028
+      Menu Duck (11  x 11)_99: -1647214649
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

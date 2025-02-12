@@ -1,0 +1,4118 @@
+fileFormatVersion: 2
+guid: a34b01491ca7ded408399b851dfb552c
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1222
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46f0365467ed5464b86db7f2568a662c
+      internalID: -1281371048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_1
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 1222
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1691d5366a1cb5e44937abf2fbbef077
+      internalID: 907635616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_2
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 1222
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df99fbfd283d83745adf67b75c9aa390
+      internalID: -2031582153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_3
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 1222
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd00633961791094da452a91626cd28a
+      internalID: 2109791514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_4
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 1222
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 982bb47112cc4dd46b848670a175ebb1
+      internalID: 1061297232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_5
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 1222
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 637eb2536d1e8734790ca7a7b0a0148e
+      internalID: -766801960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_6
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 1222
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1d6a75850865874e9834e08f288ae57
+      internalID: 1809775200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_7
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 1222
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38cbc25523c3b3042992b0d6e4002fbe
+      internalID: -431820055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_8
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 1222
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9359ef5122f1c5846a7132203761d3f1
+      internalID: -239603094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_9
+      rect:
+        serializedVersion: 2
+        x: 1287
+        y: 1222
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d13c6fe89c13ada49ade1a0ca9a26701
+      internalID: -764801249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_10
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 1222
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8537a2818c7fdb244b7fd7d3c8625d36
+      internalID: -727897352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_11
+      rect:
+        serializedVersion: 2
+        x: 1573
+        y: 1222
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63518b5ddb30d4a4fac8aaf7a7b89dad
+      internalID: 225912850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_12
+      rect:
+        serializedVersion: 2
+        x: 1716
+        y: 1222
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f46b7aa289b50794e8d8b5634ee24d6e
+      internalID: 1902360697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1128
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb9d11ce98795a5428d0846312787d3c
+      internalID: -2075532947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_14
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 1128
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 178349de03419fb4eb31a79f0af89c18
+      internalID: 91467147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_15
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 1128
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7d603574a822174e9494be6f072ff85
+      internalID: -1096619138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_16
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 1128
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6647c0d9b1f0d824bbc9b0e32c806473
+      internalID: -199321152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_17
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 1128
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1497c4d08c0a1f4c93e003467ac0e64
+      internalID: -1623378538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_18
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 1128
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22d067b4413f6f44ba5a46034780212e
+      internalID: -1385609299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_19
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 1128
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ed46cf79eaadd14087a27f1e5fd5c7b
+      internalID: -1101874257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_20
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 1128
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6a0a8d28642a32449f5aa60d4def07d
+      internalID: 389501262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_21
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 1128
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe059d0eeb250a24b95c2b6b1829ae82
+      internalID: -908546437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_22
+      rect:
+        serializedVersion: 2
+        x: 1287
+        y: 1128
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bb7504dcc4774d4d8ccb78c92cadbb6
+      internalID: 583429495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_23
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 1128
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 549719096daa8dd4ea3250c42faa4323
+      internalID: -195643533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_24
+      rect:
+        serializedVersion: 2
+        x: 1573
+        y: 1128
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 366ef7cf61fec0645bbd920b1b0395f5
+      internalID: -5306119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_25
+      rect:
+        serializedVersion: 2
+        x: 1716
+        y: 1128
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08bdc71dfb427454aa5a6f5a28e5c748
+      internalID: -498472121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1034
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47a920b74589cd049b3fabad3dda8747
+      internalID: 377327334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_27
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 1034
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea41dd58455b54b4da822fcbaea7ca45
+      internalID: 901512353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_28
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 1034
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dea2c96341c92a47884471ad95b2d75
+      internalID: 988437652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_29
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 1034
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db67f2ce743495e42bf0c7746abf514b
+      internalID: 1764680258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_30
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 1034
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0597ab40928c3f44faf1f4e0ae6355ba
+      internalID: 38499752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_31
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 1034
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44d5edbc5e543b449b9754c480bf4de9
+      internalID: -740987364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_32
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 1034
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 348dcd4264d787b4eb82a774d1df96f3
+      internalID: -13139606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_33
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 1034
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 817fbd9ff92a78a4a9bafcd8b739d8d8
+      internalID: 335389206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_34
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 1034
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a91d52e9529d294408cebfb9f7dbe9af
+      internalID: 1520231920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_35
+      rect:
+        serializedVersion: 2
+        x: 1287
+        y: 1034
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15901cf52a0dc5c499bbcf7ae8b76b3b
+      internalID: 2028313260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_36
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 1034
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1d1a0ae0c7aaf343976e69d62608360
+      internalID: 1650761925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_37
+      rect:
+        serializedVersion: 2
+        x: 1573
+        y: 1034
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a98f69d735073514ca120c1873159d9f
+      internalID: -961813094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_38
+      rect:
+        serializedVersion: 2
+        x: 1716
+        y: 1034
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 758d4838cf16c9341b97404d5cb832d4
+      internalID: -667541353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_39
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 940
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31fe50f883cf1df43afd052f037910c6
+      internalID: 820289936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_40
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 940
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2d8b124f5528154c8674e5a8de528b8
+      internalID: 242516695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_41
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 940
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eae8157efba4f742ae5b7c404251d02
+      internalID: 705279252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_42
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 940
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b38be2be0a601d4a94e5d6dd71addef
+      internalID: 277942065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_43
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 940
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aa7796d40a4e38419b8a5a67aeebce2
+      internalID: -214791661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_44
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 940
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65ae7aea027d8aa408b56591c5fd9bef
+      internalID: 1145041906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_45
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 940
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed761471a76da8d44bede3a51e91a4e8
+      internalID: 1544160441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_46
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 940
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aef565f8c2872941b8e84cc3187cb3c
+      internalID: 1448050301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_47
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 940
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbd4d2a539431ca4da33bc190582c011
+      internalID: -1215492618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_48
+      rect:
+        serializedVersion: 2
+        x: 1287
+        y: 940
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8f0af5c6942f5b438873c14015b5207
+      internalID: -916581603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_49
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 940
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c983a12baffa58d4bb7915fe9505e91c
+      internalID: 291162808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_50
+      rect:
+        serializedVersion: 2
+        x: 1573
+        y: 940
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2931d57cd5260c54985c8deefef6f156
+      internalID: 1124001333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_51
+      rect:
+        serializedVersion: 2
+        x: 1716
+        y: 940
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 848509fc0dd44ba42848213edbcdf450
+      internalID: 631388783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_52
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 846
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45f995159d6de404481b8d00ade2980d
+      internalID: 1054071171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_53
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 846
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80f04cd0980e838479170003a2bb358f
+      internalID: 1323862040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_54
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 846
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be17e6334ccb424469d50315be8c3bb9
+      internalID: 358052110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_55
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 846
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46dba986093d2654f83bac583d0a2228
+      internalID: -517120084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_56
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 846
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7604141c5bbc1c4fb04da5790b977e2
+      internalID: 312871151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_57
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 846
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5982937de067c3c48a4075d52c790159
+      internalID: 470534461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_58
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 846
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c946af280da69041ab1ee7f3f8818a8
+      internalID: 117975095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_59
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 846
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 588fe61da3b31374493189d64d8e10ad
+      internalID: 135151227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_60
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 846
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfa2f892aab374445887b8577b80f0c3
+      internalID: -324395981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_61
+      rect:
+        serializedVersion: 2
+        x: 1287
+        y: 846
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6872aa1b828c987429cb11143fdb3485
+      internalID: 1283984127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_62
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 846
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 929b546c95b6b8d43a0ff1b12a842b48
+      internalID: 413091537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_63
+      rect:
+        serializedVersion: 2
+        x: 1573
+        y: 846
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d1c4ecfe6d0bc844b81b8f3a1069d11
+      internalID: -1916090491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_64
+      rect:
+        serializedVersion: 2
+        x: 1716
+        y: 846
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bcfbc9c8db8e6044bb2049d3873da50
+      internalID: 1555696143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_65
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 752
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28edf9c9216742342985749b84e6884c
+      internalID: 1687735930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_66
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 752
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94c2f6852ec63ac47af55390d2b724d7
+      internalID: -1400781199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_67
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 752
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f16e9e1d600cf454aa60965cce32ba46
+      internalID: -120432493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_68
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 752
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cab5504d2464ad488cf516a1e77af7d
+      internalID: -102107681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_69
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 752
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebc95d85ea033d546b392e656147b969
+      internalID: -1392157360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_70
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 752
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2018c2045ba48864da95762ae4e37717
+      internalID: -839653064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_71
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 752
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da40e9ab2707a8349b91d610d98c6abd
+      internalID: 1355290003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_72
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 752
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e449729752b2fdb408f5a52f9039b0a0
+      internalID: -1157351486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_73
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 752
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a034ccb4089195848a93094748dc909b
+      internalID: 699558542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_74
+      rect:
+        serializedVersion: 2
+        x: 1287
+        y: 752
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 047624071ff78d948b0b9fd59c427af2
+      internalID: 2037190728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_75
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 752
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f086c97d2ec76384c94267bdc1e992cf
+      internalID: 1475527137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_76
+      rect:
+        serializedVersion: 2
+        x: 1573
+        y: 752
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9245393b6618dd41ab77ffc7efbbf32
+      internalID: 1377823343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_77
+      rect:
+        serializedVersion: 2
+        x: 1716
+        y: 752
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62670db2caf1a6c4e89ebce560992ce9
+      internalID: -683595326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_78
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 658
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cbae9d2cb7faed47bc162019d6387e2
+      internalID: 1201519808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_79
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 658
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6857a6b7f52af34ab6c7ee762b125c9
+      internalID: -936815684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_80
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 658
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d9308774c4e92247bac021913f18334
+      internalID: 325984486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_81
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 658
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 614ecced93640bb43b907919c694772d
+      internalID: 510172740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_82
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 658
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 160434b416566164eba451419e4b9d7e
+      internalID: 637374291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_83
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 658
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 288df55ebfb96784e99b51950dc30840
+      internalID: -1369216761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_84
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 658
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acd5ca95080296444b343d02ff83d947
+      internalID: 165741417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_85
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 658
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a333724ca20b33b4abf98016a78be7a6
+      internalID: -1171784928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_86
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 658
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4371a189307d99d4d98f222da0de3e1d
+      internalID: -363249372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_87
+      rect:
+        serializedVersion: 2
+        x: 1287
+        y: 658
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dec4d5e384681154db5d18744389fb3b
+      internalID: -74819324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_88
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 658
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c2916717870ad541b3f2bc56f9092d6
+      internalID: 1133405020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_89
+      rect:
+        serializedVersion: 2
+        x: 1573
+        y: 658
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daac339d3ef03ff45a69dccbfc70dba0
+      internalID: -1238539500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_90
+      rect:
+        serializedVersion: 2
+        x: 1716
+        y: 658
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da20df6547fcde6408d8f1ff65e78335
+      internalID: 114700947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_91
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 564
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2208a2e70f6bf924f954a908c87e0064
+      internalID: 1664918197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_92
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 564
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac44656c012a0d04581ac7d79961cd13
+      internalID: 1299022074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_93
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 564
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ab84af5ab02ab848bea59f157feb0be
+      internalID: -817787987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_94
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 564
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3f27cd54f274f945a45ba8351421e6e
+      internalID: -912319821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_95
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 564
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ccf2aaa783c97540aceb630835898f6
+      internalID: -354492168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_96
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 564
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 226c269356c8eb44faa99dcebfe07738
+      internalID: -202530889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_97
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 564
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e4f57811d6c1a74c9432e319adfc98a
+      internalID: 683023521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_98
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 564
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7900932875cda3649971cfc692475963
+      internalID: 441871224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_99
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 564
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1120b30873bae954ebbe7d8710be7af4
+      internalID: -1780651475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_100
+      rect:
+        serializedVersion: 2
+        x: 1287
+        y: 564
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc4579cc65cee184f866f60f62a32a5f
+      internalID: -1686434716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_101
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 564
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4adb9a22245bcd0458dcaa63a36765cc
+      internalID: -2137277595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_102
+      rect:
+        serializedVersion: 2
+        x: 1573
+        y: 564
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48087009f898aee46bb1e81647748e4d
+      internalID: -1127705151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_103
+      rect:
+        serializedVersion: 2
+        x: 1716
+        y: 564
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33f0af2f72da02f46893ef01b581a14d
+      internalID: 868444453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_104
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 470
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 943f8afbe71935340a5a206aae2e47f9
+      internalID: 568130633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_105
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 470
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7483b0d7faadbdb4d847ac04b6110d8a
+      internalID: -2112388994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_106
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 470
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6357f265632941a4bae0a0fb3bb4052c
+      internalID: 2142815828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_107
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 470
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc1f7b49658aabb48866fa0e8c9a3a7b
+      internalID: -1014862793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_108
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 470
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aadb045a4371e2408d70668331e760a
+      internalID: -1909337987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_109
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 470
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa8d4fc55a806d844bcea175bd0a4593
+      internalID: 805524137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_110
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 470
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 975458048f6ee4a46ac93225d6f60ead
+      internalID: -1654066178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_111
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 470
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4111c2efeff1b6541b634e9dbc44162c
+      internalID: -1551084436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_112
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 470
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40bae57b21010fc4ea0a99c8afb98731
+      internalID: 750025146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_113
+      rect:
+        serializedVersion: 2
+        x: 1287
+        y: 470
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b94804dedf803548a05e6cccd4fbb25
+      internalID: 1835981221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_114
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 470
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4870d27e98e8c604f804c6cd340942b3
+      internalID: 678439261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_115
+      rect:
+        serializedVersion: 2
+        x: 1573
+        y: 470
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65b4c3e6c9dcd0f4684fa348aee36d7b
+      internalID: 1396470086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_116
+      rect:
+        serializedVersion: 2
+        x: 1716
+        y: 470
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab261327412ebc14aafacc6120d8ffbe
+      internalID: -233595722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_117
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 376
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27d8a4f78fade594c8c5c9f1bd4550d1
+      internalID: 705774997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_118
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 376
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9105bc301e0b8c749888d08eac9433a3
+      internalID: -1027706637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_119
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 376
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75d71f7b4952c7b49aed83d02683fbee
+      internalID: 2119543792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_120
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 376
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee102376eaa2f9443b2fbdf9b39eb4e7
+      internalID: -1263138220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_121
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 376
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acb25342b055eba4c892bba6786d2a2c
+      internalID: 1082864482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_122
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 376
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73721e03c67a78746b03fc8bd8a2112b
+      internalID: 1549558372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_123
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 376
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afa3f871ee556024ead62352d3c23571
+      internalID: -1299397081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_124
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 376
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12a76138db185744a98c797eb7253274
+      internalID: -1532663239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_125
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 376
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0cbb1b6343c7df4eadef524ac591018
+      internalID: -1534680292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_126
+      rect:
+        serializedVersion: 2
+        x: 1287
+        y: 376
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e35d47d949d76041b4414ef47d05a73
+      internalID: -994900106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_127
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 376
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 542717c99d36b9b4fa6dd0fe498d728d
+      internalID: -28811137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_128
+      rect:
+        serializedVersion: 2
+        x: 1573
+        y: 376
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f46efd9ad93a8548b87d35767a16816
+      internalID: 1413462512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_129
+      rect:
+        serializedVersion: 2
+        x: 1716
+        y: 376
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2af1e90810b21954f9df4f47e67bf78d
+      internalID: -1704812786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_130
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 282
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8001f0eaf3ef8b64c8642918f2b5bb40
+      internalID: -949700972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_131
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 282
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d04cb36c17423645896a4378a56f936
+      internalID: 306274797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_132
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 282
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67b8b585c2b54a94b8205b93d02fa087
+      internalID: 1524898336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_133
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 282
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf285185562993941bf34f50a55691be
+      internalID: 836771869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_134
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 282
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a53e637fede79be42a5cb74d2f285ca6
+      internalID: 969172372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_135
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 282
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fa448dcb15ae8644ae51fd0a7c20b48
+      internalID: 886497397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_136
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 282
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b6b56dd62c3807489fef67a644b3357
+      internalID: 576367304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_137
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 282
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7222c42e893012d43970f4b2d38d9cc7
+      internalID: -948003911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_138
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 282
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e463c668352b9443b212da97ed30b44
+      internalID: -671675755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_139
+      rect:
+        serializedVersion: 2
+        x: 1287
+        y: 282
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 869b7c98c2d8cf24ea042b941e762f4a
+      internalID: -2067307117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_140
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 282
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43b179618084f4046ad57b11c8f78bea
+      internalID: 374644702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_141
+      rect:
+        serializedVersion: 2
+        x: 1573
+        y: 282
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d90ef9d6c2bc09f4eafdcb35837b24bc
+      internalID: -1297354805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_142
+      rect:
+        serializedVersion: 2
+        x: 1716
+        y: 282
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ca03ad6516b2164fa4b8577489ba214
+      internalID: 234953031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_143
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 188
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b5767f71e5bb6443a6bb12176ec4da0
+      internalID: 1513176961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_144
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 188
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad05eb0fb788433418f51efa989db8ed
+      internalID: -1865090867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_145
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 188
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f422caa3215cfe4fb9d04c3054b9866
+      internalID: -1368636977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_146
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 188
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0f11d50992f1984ea0e1dba9e7007a3
+      internalID: 787738240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_147
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 188
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e26aea996f9bf0d4f80e8dcc07806973
+      internalID: 998112019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_148
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 188
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4b81495e96cf86469ea65460108cc07
+      internalID: 184275532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_149
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 188
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c35244b55164a5e488ebb571a673f3b4
+      internalID: -860930045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_150
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 188
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aab3ff9c83db2294d8e2c109b8d44172
+      internalID: -1046923304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_151
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 188
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec78ebfd8ce70d444949a7f876f51f3e
+      internalID: 1348926701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_152
+      rect:
+        serializedVersion: 2
+        x: 1287
+        y: 188
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0ef5291a758f9445849971a1d792312
+      internalID: -1372514520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_153
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 188
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea73c77c922891143a98fdc3bc81d02f
+      internalID: -37462437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_154
+      rect:
+        serializedVersion: 2
+        x: 1573
+        y: 188
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f0af006dee0fcf4ea246f4be911b32c
+      internalID: -1937039539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_155
+      rect:
+        serializedVersion: 2
+        x: 1716
+        y: 188
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc164f661d97f1f4fb82ba974183b026
+      internalID: 1680597125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_156
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 94
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19fcdebed82986849be31946e908cf07
+      internalID: 1679221131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_157
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 94
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7628c06e1c065764aa2d23fe442c7254
+      internalID: -1474856452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_158
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 94
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3271be04856c70c46841dca82163a84b
+      internalID: 69413891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_159
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 94
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 535a6949a274b0f439f58f193c0c6bd1
+      internalID: -760324321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_160
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 94
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2405edbe1f6768a4f8cc141735b6e55b
+      internalID: 1837634163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_161
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 94
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c7491d83cf651844816d3dc41233f3f
+      internalID: 1973389784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_162
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 94
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e7bded88cf64f84d90ff4c34a3d0bd0
+      internalID: -105241182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_163
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 94
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e170a69ea1e4a1340843eb0b44026ce9
+      internalID: -1525850312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_164
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 94
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b94f5972bbd94d49af05b42097c2cef
+      internalID: -588639030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_165
+      rect:
+        serializedVersion: 2
+        x: 1287
+        y: 94
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf51c4c66d28fa04e884dfe23ce7228d
+      internalID: -713560849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_166
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 94
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6b82ceb73253c345b79b58641e8a081
+      internalID: -296609626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_167
+      rect:
+        serializedVersion: 2
+        x: 1573
+        y: 94
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44f38c9f8ab4f224795303a4844ba884
+      internalID: 87107255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_168
+      rect:
+        serializedVersion: 2
+        x: 1716
+        y: 94
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63674c8be205fa447a5671a00fce3fd0
+      internalID: 1993316603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_169
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adadf62841dfcc041acfad4b6a189ad8
+      internalID: -83886843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_170
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 0
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b9ed252bbfafa14aac28d053469af64
+      internalID: 569115430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_171
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 0
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c52c484559cef440a7ff95192a7ccc0
+      internalID: -711406089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_172
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 0
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 860124d255878624389b77ff52ff6d94
+      internalID: -1855419881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_173
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 0
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fb3c68357e59c841b102ebf81dad900
+      internalID: -1727864128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_174
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 0
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61345f2ee1bdaca428e475650e15d5fe
+      internalID: -854848390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_175
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 0
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d4a767e0d43e1f48add2273f7fb5eb3
+      internalID: -748194402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_176
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 0
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 954b734926704934f940f6002df8ad98
+      internalID: 1566222342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_177
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 0
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a81eb703f66211546b3e84b6e277729b
+      internalID: 1296925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_178
+      rect:
+        serializedVersion: 2
+        x: 1287
+        y: 0
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fffde5c797ffe5d4bb5adf41c1eb0316
+      internalID: -122379399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_179
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 0
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea7335341f2bc834ca4eef5f187c084e
+      internalID: -1630390038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_180
+      rect:
+        serializedVersion: 2
+        x: 1573
+        y: 0
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 870448ce822a7e0458de6891af048865
+      internalID: -956817909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Newt (13 x 14)_181
+      rect:
+        serializedVersion: 2
+        x: 1716
+        y: 0
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e43cd35561377874eb70b8c3d2c31942
+      internalID: 1327764587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Menu Newt (13 x 14)_0: -1281371048
+      Menu Newt (13 x 14)_1: 907635616
+      Menu Newt (13 x 14)_10: -727897352
+      Menu Newt (13 x 14)_100: -1686434716
+      Menu Newt (13 x 14)_101: -2137277595
+      Menu Newt (13 x 14)_102: -1127705151
+      Menu Newt (13 x 14)_103: 868444453
+      Menu Newt (13 x 14)_104: 568130633
+      Menu Newt (13 x 14)_105: -2112388994
+      Menu Newt (13 x 14)_106: 2142815828
+      Menu Newt (13 x 14)_107: -1014862793
+      Menu Newt (13 x 14)_108: -1909337987
+      Menu Newt (13 x 14)_109: 805524137
+      Menu Newt (13 x 14)_11: 225912850
+      Menu Newt (13 x 14)_110: -1654066178
+      Menu Newt (13 x 14)_111: -1551084436
+      Menu Newt (13 x 14)_112: 750025146
+      Menu Newt (13 x 14)_113: 1835981221
+      Menu Newt (13 x 14)_114: 678439261
+      Menu Newt (13 x 14)_115: 1396470086
+      Menu Newt (13 x 14)_116: -233595722
+      Menu Newt (13 x 14)_117: 705774997
+      Menu Newt (13 x 14)_118: -1027706637
+      Menu Newt (13 x 14)_119: 2119543792
+      Menu Newt (13 x 14)_12: 1902360697
+      Menu Newt (13 x 14)_120: -1263138220
+      Menu Newt (13 x 14)_121: 1082864482
+      Menu Newt (13 x 14)_122: 1549558372
+      Menu Newt (13 x 14)_123: -1299397081
+      Menu Newt (13 x 14)_124: -1532663239
+      Menu Newt (13 x 14)_125: -1534680292
+      Menu Newt (13 x 14)_126: -994900106
+      Menu Newt (13 x 14)_127: -28811137
+      Menu Newt (13 x 14)_128: 1413462512
+      Menu Newt (13 x 14)_129: -1704812786
+      Menu Newt (13 x 14)_13: -2075532947
+      Menu Newt (13 x 14)_130: -949700972
+      Menu Newt (13 x 14)_131: 306274797
+      Menu Newt (13 x 14)_132: 1524898336
+      Menu Newt (13 x 14)_133: 836771869
+      Menu Newt (13 x 14)_134: 969172372
+      Menu Newt (13 x 14)_135: 886497397
+      Menu Newt (13 x 14)_136: 576367304
+      Menu Newt (13 x 14)_137: -948003911
+      Menu Newt (13 x 14)_138: -671675755
+      Menu Newt (13 x 14)_139: -2067307117
+      Menu Newt (13 x 14)_14: 91467147
+      Menu Newt (13 x 14)_140: 374644702
+      Menu Newt (13 x 14)_141: -1297354805
+      Menu Newt (13 x 14)_142: 234953031
+      Menu Newt (13 x 14)_143: 1513176961
+      Menu Newt (13 x 14)_144: -1865090867
+      Menu Newt (13 x 14)_145: -1368636977
+      Menu Newt (13 x 14)_146: 787738240
+      Menu Newt (13 x 14)_147: 998112019
+      Menu Newt (13 x 14)_148: 184275532
+      Menu Newt (13 x 14)_149: -860930045
+      Menu Newt (13 x 14)_15: -1096619138
+      Menu Newt (13 x 14)_150: -1046923304
+      Menu Newt (13 x 14)_151: 1348926701
+      Menu Newt (13 x 14)_152: -1372514520
+      Menu Newt (13 x 14)_153: -37462437
+      Menu Newt (13 x 14)_154: -1937039539
+      Menu Newt (13 x 14)_155: 1680597125
+      Menu Newt (13 x 14)_156: 1679221131
+      Menu Newt (13 x 14)_157: -1474856452
+      Menu Newt (13 x 14)_158: 69413891
+      Menu Newt (13 x 14)_159: -760324321
+      Menu Newt (13 x 14)_16: -199321152
+      Menu Newt (13 x 14)_160: 1837634163
+      Menu Newt (13 x 14)_161: 1973389784
+      Menu Newt (13 x 14)_162: -105241182
+      Menu Newt (13 x 14)_163: -1525850312
+      Menu Newt (13 x 14)_164: -588639030
+      Menu Newt (13 x 14)_165: -713560849
+      Menu Newt (13 x 14)_166: -296609626
+      Menu Newt (13 x 14)_167: 87107255
+      Menu Newt (13 x 14)_168: 1993316603
+      Menu Newt (13 x 14)_169: -83886843
+      Menu Newt (13 x 14)_17: -1623378538
+      Menu Newt (13 x 14)_170: 569115430
+      Menu Newt (13 x 14)_171: -711406089
+      Menu Newt (13 x 14)_172: -1855419881
+      Menu Newt (13 x 14)_173: -1727864128
+      Menu Newt (13 x 14)_174: -854848390
+      Menu Newt (13 x 14)_175: -748194402
+      Menu Newt (13 x 14)_176: 1566222342
+      Menu Newt (13 x 14)_177: 1296925
+      Menu Newt (13 x 14)_178: -122379399
+      Menu Newt (13 x 14)_179: -1630390038
+      Menu Newt (13 x 14)_18: -1385609299
+      Menu Newt (13 x 14)_180: -956817909
+      Menu Newt (13 x 14)_181: 1327764587
+      Menu Newt (13 x 14)_19: -1101874257
+      Menu Newt (13 x 14)_2: -2031582153
+      Menu Newt (13 x 14)_20: 389501262
+      Menu Newt (13 x 14)_21: -908546437
+      Menu Newt (13 x 14)_22: 583429495
+      Menu Newt (13 x 14)_23: -195643533
+      Menu Newt (13 x 14)_24: -5306119
+      Menu Newt (13 x 14)_25: -498472121
+      Menu Newt (13 x 14)_26: 377327334
+      Menu Newt (13 x 14)_27: 901512353
+      Menu Newt (13 x 14)_28: 988437652
+      Menu Newt (13 x 14)_29: 1764680258
+      Menu Newt (13 x 14)_3: 2109791514
+      Menu Newt (13 x 14)_30: 38499752
+      Menu Newt (13 x 14)_31: -740987364
+      Menu Newt (13 x 14)_32: -13139606
+      Menu Newt (13 x 14)_33: 335389206
+      Menu Newt (13 x 14)_34: 1520231920
+      Menu Newt (13 x 14)_35: 2028313260
+      Menu Newt (13 x 14)_36: 1650761925
+      Menu Newt (13 x 14)_37: -961813094
+      Menu Newt (13 x 14)_38: -667541353
+      Menu Newt (13 x 14)_39: 820289936
+      Menu Newt (13 x 14)_4: 1061297232
+      Menu Newt (13 x 14)_40: 242516695
+      Menu Newt (13 x 14)_41: 705279252
+      Menu Newt (13 x 14)_42: 277942065
+      Menu Newt (13 x 14)_43: -214791661
+      Menu Newt (13 x 14)_44: 1145041906
+      Menu Newt (13 x 14)_45: 1544160441
+      Menu Newt (13 x 14)_46: 1448050301
+      Menu Newt (13 x 14)_47: -1215492618
+      Menu Newt (13 x 14)_48: -916581603
+      Menu Newt (13 x 14)_49: 291162808
+      Menu Newt (13 x 14)_5: -766801960
+      Menu Newt (13 x 14)_50: 1124001333
+      Menu Newt (13 x 14)_51: 631388783
+      Menu Newt (13 x 14)_52: 1054071171
+      Menu Newt (13 x 14)_53: 1323862040
+      Menu Newt (13 x 14)_54: 358052110
+      Menu Newt (13 x 14)_55: -517120084
+      Menu Newt (13 x 14)_56: 312871151
+      Menu Newt (13 x 14)_57: 470534461
+      Menu Newt (13 x 14)_58: 117975095
+      Menu Newt (13 x 14)_59: 135151227
+      Menu Newt (13 x 14)_6: 1809775200
+      Menu Newt (13 x 14)_60: -324395981
+      Menu Newt (13 x 14)_61: 1283984127
+      Menu Newt (13 x 14)_62: 413091537
+      Menu Newt (13 x 14)_63: -1916090491
+      Menu Newt (13 x 14)_64: 1555696143
+      Menu Newt (13 x 14)_65: 1687735930
+      Menu Newt (13 x 14)_66: -1400781199
+      Menu Newt (13 x 14)_67: -120432493
+      Menu Newt (13 x 14)_68: -102107681
+      Menu Newt (13 x 14)_69: -1392157360
+      Menu Newt (13 x 14)_7: -431820055
+      Menu Newt (13 x 14)_70: -839653064
+      Menu Newt (13 x 14)_71: 1355290003
+      Menu Newt (13 x 14)_72: -1157351486
+      Menu Newt (13 x 14)_73: 699558542
+      Menu Newt (13 x 14)_74: 2037190728
+      Menu Newt (13 x 14)_75: 1475527137
+      Menu Newt (13 x 14)_76: 1377823343
+      Menu Newt (13 x 14)_77: -683595326
+      Menu Newt (13 x 14)_78: 1201519808
+      Menu Newt (13 x 14)_79: -936815684
+      Menu Newt (13 x 14)_8: -239603094
+      Menu Newt (13 x 14)_80: 325984486
+      Menu Newt (13 x 14)_81: 510172740
+      Menu Newt (13 x 14)_82: 637374291
+      Menu Newt (13 x 14)_83: -1369216761
+      Menu Newt (13 x 14)_84: 165741417
+      Menu Newt (13 x 14)_85: -1171784928
+      Menu Newt (13 x 14)_86: -363249372
+      Menu Newt (13 x 14)_87: -74819324
+      Menu Newt (13 x 14)_88: 1133405020
+      Menu Newt (13 x 14)_89: -1238539500
+      Menu Newt (13 x 14)_9: -764801249
+      Menu Newt (13 x 14)_90: 114700947
+      Menu Newt (13 x 14)_91: 1664918197
+      Menu Newt (13 x 14)_92: 1299022074
+      Menu Newt (13 x 14)_93: -817787987
+      Menu Newt (13 x 14)_94: -912319821
+      Menu Newt (13 x 14)_95: -354492168
+      Menu Newt (13 x 14)_96: -202530889
+      Menu Newt (13 x 14)_97: 683023521
+      Menu Newt (13 x 14)_98: 441871224
+      Menu Newt (13 x 14)_99: -1780651475
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

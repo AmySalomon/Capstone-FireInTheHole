@@ -1,0 +1,1434 @@
+fileFormatVersion: 2
+guid: 8e21cee514a31cc4f9900e4e2683540e
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4325
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2f717abc6ed0894a97533d94c53573f
+      internalID: 1068236701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_1
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 4325
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c480ab13c849d354a892f5db47a8eb26
+      internalID: 645475494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_2
+      rect:
+        serializedVersion: 2
+        x: 1674
+        y: 4325
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df3e4ce079cf3bb4a957e593097182a3
+      internalID: -1589877908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_3
+      rect:
+        serializedVersion: 2
+        x: 2511
+        y: 4325
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a5d69abde5e07e4e8581d77e2b36a5a
+      internalID: -1711251920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_4
+      rect:
+        serializedVersion: 2
+        x: 3348
+        y: 4325
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0399205241ad90640853e7c9d636142c
+      internalID: 1958709737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_5
+      rect:
+        serializedVersion: 2
+        x: 4185
+        y: 4325
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19aa1882143628f4a9cd4675ad7a89ec
+      internalID: 359102244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_6
+      rect:
+        serializedVersion: 2
+        x: 5022
+        y: 4325
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11b8549a1d401f84191fc9af3d609b06
+      internalID: -1411967110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_7
+      rect:
+        serializedVersion: 2
+        x: 5859
+        y: 4325
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 462dd4c30fb48a14db2f9bfbf73170b8
+      internalID: -1833602070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_8
+      rect:
+        serializedVersion: 2
+        x: 6696
+        y: 4325
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f68f1eb1fff8be44b1ae328ac218602
+      internalID: 1791114618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_9
+      rect:
+        serializedVersion: 2
+        x: 7533
+        y: 4325
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2116a3552f70a48479502e01a9030170
+      internalID: -565073671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3460
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8684e01475f4a145969b906f7008723
+      internalID: 285877372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_11
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 3460
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1090d7a1ca014fb4e8c8bdd05719462b
+      internalID: 769627314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_12
+      rect:
+        serializedVersion: 2
+        x: 1674
+        y: 3460
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 701101db6bbe03f419f31c44b35f1166
+      internalID: 1756850307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_13
+      rect:
+        serializedVersion: 2
+        x: 2511
+        y: 3460
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5f985cbb61b63b418d181abde98beac
+      internalID: -1582439233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_14
+      rect:
+        serializedVersion: 2
+        x: 3348
+        y: 3460
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c78389035294b64e953df0e0062f99e
+      internalID: 574079344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_15
+      rect:
+        serializedVersion: 2
+        x: 4185
+        y: 3460
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfb2f17fdd7823c49afe2191997a0a10
+      internalID: 9957117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_16
+      rect:
+        serializedVersion: 2
+        x: 5022
+        y: 3460
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e024979aedda9a8469f2161cf39c9b20
+      internalID: -1956096647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_17
+      rect:
+        serializedVersion: 2
+        x: 5859
+        y: 3460
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 594ae817897d5474198081860ab4e7b9
+      internalID: 299897396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_18
+      rect:
+        serializedVersion: 2
+        x: 6696
+        y: 3460
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1f786ad29858fe4c88d3e475a98a2a2
+      internalID: 962695848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_19
+      rect:
+        serializedVersion: 2
+        x: 7533
+        y: 3460
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dc10a5038d93b34c81d9cf22a4620e0
+      internalID: -1779633110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2595
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 885abf7935b554c4591683ad77afe58d
+      internalID: 1028879893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_21
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 2595
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1f9458b42b8e06499ed156b1ac581cf
+      internalID: 178711900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_22
+      rect:
+        serializedVersion: 2
+        x: 1674
+        y: 2595
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7664645329351d4b9b13e4a5456c6c3
+      internalID: -1273908329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_23
+      rect:
+        serializedVersion: 2
+        x: 2511
+        y: 2595
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11ddfac3828d0c54e927086e0e937fa9
+      internalID: -668038845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_24
+      rect:
+        serializedVersion: 2
+        x: 3348
+        y: 2595
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf4bf262020322943aaeaa82b6ee7302
+      internalID: -836105672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_25
+      rect:
+        serializedVersion: 2
+        x: 4185
+        y: 2595
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebdfd35df4b65c541a7f3e605e48e87e
+      internalID: -1647916927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_26
+      rect:
+        serializedVersion: 2
+        x: 5022
+        y: 2595
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a03651db1a1c564280cf7d2ec90180a
+      internalID: 1399191213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_27
+      rect:
+        serializedVersion: 2
+        x: 5859
+        y: 2595
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0002f1abe14426f499c8c8fa947124ba
+      internalID: 1000485210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_28
+      rect:
+        serializedVersion: 2
+        x: 6696
+        y: 2595
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6e810e4176aa6442aa89299dd805a2e
+      internalID: 637033368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_29
+      rect:
+        serializedVersion: 2
+        x: 7533
+        y: 2595
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89055d59f05653b48af91aa886bfc935
+      internalID: -1164524305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1730
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd1590f4afcc468439b0f098384040d5
+      internalID: -30337945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_31
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 1730
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c386ce36075f3c4aac5ce0e8488ae96
+      internalID: 1034614399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_32
+      rect:
+        serializedVersion: 2
+        x: 1674
+        y: 1730
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4af49831649835149b37339b3086141a
+      internalID: 1452660916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_33
+      rect:
+        serializedVersion: 2
+        x: 2511
+        y: 1730
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91c11c8ca48d6754c8190cf732748f7a
+      internalID: 529758112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_34
+      rect:
+        serializedVersion: 2
+        x: 3348
+        y: 1730
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9bc1499d279d5a4192699afb7b4f7f3
+      internalID: 1200608356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_35
+      rect:
+        serializedVersion: 2
+        x: 4185
+        y: 1730
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69080a23a0f8b1540aed0ffbb0fa1958
+      internalID: -1637829921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_36
+      rect:
+        serializedVersion: 2
+        x: 5022
+        y: 1730
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdfea0f688681aa4ab21ddfdf6650ec1
+      internalID: 2111381134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_37
+      rect:
+        serializedVersion: 2
+        x: 5859
+        y: 1730
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 336dc478bdcffc947b5d82a2f5b9d95c
+      internalID: -989916368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_38
+      rect:
+        serializedVersion: 2
+        x: 6696
+        y: 1730
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d36587d31cd1f44ebd2ce5091af2a3a
+      internalID: -978558579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_39
+      rect:
+        serializedVersion: 2
+        x: 7533
+        y: 1730
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55bac40dcdc0d0340bdb6c8616cf22e6
+      internalID: -1523502044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 865
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fd109e539e6bce46b9a905430a64d6e
+      internalID: -98050081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_41
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 865
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 684e1612fb03c95499b551f6c6e8135f
+      internalID: -971433672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_42
+      rect:
+        serializedVersion: 2
+        x: 1674
+        y: 865
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 959be22d4007d694780e11ff2199f750
+      internalID: 1499523728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_43
+      rect:
+        serializedVersion: 2
+        x: 2511
+        y: 865
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30f57e9576b3dfd49b2c027ad5541c03
+      internalID: -101567496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_44
+      rect:
+        serializedVersion: 2
+        x: 3348
+        y: 865
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4b09de3aa284f34da4f66eecb2b6048
+      internalID: -1616747010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_45
+      rect:
+        serializedVersion: 2
+        x: 4185
+        y: 865
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4842f670f918c9f47b4c913acacba195
+      internalID: -1737561964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_46
+      rect:
+        serializedVersion: 2
+        x: 5022
+        y: 865
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d6b6fab329d0c04f98ea785d3e1a858
+      internalID: -1626372759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_47
+      rect:
+        serializedVersion: 2
+        x: 5859
+        y: 865
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0434283e8f4e7d41a5ffae7d0a4fe5e
+      internalID: -1842575439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_48
+      rect:
+        serializedVersion: 2
+        x: 6696
+        y: 865
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c2942a8b5c8f4e4ba06e27b286d18e9
+      internalID: -1126948694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_49
+      rect:
+        serializedVersion: 2
+        x: 7533
+        y: 865
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f923c3c3928ba14085adcf838aa2a64
+      internalID: 1179186550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a30176a529c56042a7511030e79886d
+      internalID: 180606323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_51
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 0
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 633ba91cc99554e46bdd66ecc5f6e0a7
+      internalID: -575053888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_52
+      rect:
+        serializedVersion: 2
+        x: 1674
+        y: 0
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddfbb040bc64a2241b0fa24580d209c8
+      internalID: 1315276983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_53
+      rect:
+        serializedVersion: 2
+        x: 2511
+        y: 0
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bfc5a9ed4249c14db710c300a742390
+      internalID: -1760961379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_54
+      rect:
+        serializedVersion: 2
+        x: 3348
+        y: 0
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6816e18e77bcd1944a59af477241dd7c
+      internalID: 847832298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_55
+      rect:
+        serializedVersion: 2
+        x: 4185
+        y: 0
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3cf177abb809c3439fe5955912a4507
+      internalID: -595648159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_56
+      rect:
+        serializedVersion: 2
+        x: 5022
+        y: 0
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c13139f5f9ace44bb96eff98fd00f41
+      internalID: -69216027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_57
+      rect:
+        serializedVersion: 2
+        x: 5859
+        y: 0
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1701abab9dff18445bddd99dda3fa06d
+      internalID: 1110166656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_58
+      rect:
+        serializedVersion: 2
+        x: 6696
+        y: 0
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f687fd4d3ab41b546a79f86139bbf8ca
+      internalID: 1379957629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Explosion (10 x 6)_59
+      rect:
+        serializedVersion: 2
+        x: 7533
+        y: 0
+        width: 837
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bcfb1563febc1842a7368e2541b3cc5
+      internalID: -217959715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Menu Explosion (10 x 6)_0: 1068236701
+      Menu Explosion (10 x 6)_1: 645475494
+      Menu Explosion (10 x 6)_10: 285877372
+      Menu Explosion (10 x 6)_11: 769627314
+      Menu Explosion (10 x 6)_12: 1756850307
+      Menu Explosion (10 x 6)_13: -1582439233
+      Menu Explosion (10 x 6)_14: 574079344
+      Menu Explosion (10 x 6)_15: 9957117
+      Menu Explosion (10 x 6)_16: -1956096647
+      Menu Explosion (10 x 6)_17: 299897396
+      Menu Explosion (10 x 6)_18: 962695848
+      Menu Explosion (10 x 6)_19: -1779633110
+      Menu Explosion (10 x 6)_2: -1589877908
+      Menu Explosion (10 x 6)_20: 1028879893
+      Menu Explosion (10 x 6)_21: 178711900
+      Menu Explosion (10 x 6)_22: -1273908329
+      Menu Explosion (10 x 6)_23: -668038845
+      Menu Explosion (10 x 6)_24: -836105672
+      Menu Explosion (10 x 6)_25: -1647916927
+      Menu Explosion (10 x 6)_26: 1399191213
+      Menu Explosion (10 x 6)_27: 1000485210
+      Menu Explosion (10 x 6)_28: 637033368
+      Menu Explosion (10 x 6)_29: -1164524305
+      Menu Explosion (10 x 6)_3: -1711251920
+      Menu Explosion (10 x 6)_30: -30337945
+      Menu Explosion (10 x 6)_31: 1034614399
+      Menu Explosion (10 x 6)_32: 1452660916
+      Menu Explosion (10 x 6)_33: 529758112
+      Menu Explosion (10 x 6)_34: 1200608356
+      Menu Explosion (10 x 6)_35: -1637829921
+      Menu Explosion (10 x 6)_36: 2111381134
+      Menu Explosion (10 x 6)_37: -989916368
+      Menu Explosion (10 x 6)_38: -978558579
+      Menu Explosion (10 x 6)_39: -1523502044
+      Menu Explosion (10 x 6)_4: 1958709737
+      Menu Explosion (10 x 6)_40: -98050081
+      Menu Explosion (10 x 6)_41: -971433672
+      Menu Explosion (10 x 6)_42: 1499523728
+      Menu Explosion (10 x 6)_43: -101567496
+      Menu Explosion (10 x 6)_44: -1616747010
+      Menu Explosion (10 x 6)_45: -1737561964
+      Menu Explosion (10 x 6)_46: -1626372759
+      Menu Explosion (10 x 6)_47: -1842575439
+      Menu Explosion (10 x 6)_48: -1126948694
+      Menu Explosion (10 x 6)_49: 1179186550
+      Menu Explosion (10 x 6)_5: 359102244
+      Menu Explosion (10 x 6)_50: 180606323
+      Menu Explosion (10 x 6)_51: -575053888
+      Menu Explosion (10 x 6)_52: 1315276983
+      Menu Explosion (10 x 6)_53: -1760961379
+      Menu Explosion (10 x 6)_54: 847832298
+      Menu Explosion (10 x 6)_55: -595648159
+      Menu Explosion (10 x 6)_56: -69216027
+      Menu Explosion (10 x 6)_57: 1110166656
+      Menu Explosion (10 x 6)_58: 1379957629
+      Menu Explosion (10 x 6)_59: -217959715
+      Menu Explosion (10 x 6)_6: -1411967110
+      Menu Explosion (10 x 6)_7: -1833602070
+      Menu Explosion (10 x 6)_8: 1791114618
+      Menu Explosion (10 x 6)_9: -565073671
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

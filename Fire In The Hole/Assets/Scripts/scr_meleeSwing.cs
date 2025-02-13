@@ -137,6 +137,7 @@ public class scr_meleeSwing : MonoBehaviour
     {
         isCharging = false;
         canSwing = false;
+        meleeHitbox.enabled = true;
 
         RaycastHit2D[] hits = Physics2D.CircleCastAll(golfCrosshair.transform.position, swingRadius, swingAim.normalized, swingDistance, interactableLayers);
 
@@ -169,13 +170,11 @@ public class scr_meleeSwing : MonoBehaviour
                 {
                     audioPlayer.PlayOneShot(normalHit);
                     myInput.rumbleAmount = 0.7f;
-                    meleeHitbox.enabled = true;
                 }
                 else
                 {
                     audioPlayer.PlayOneShot(strongHit);
                     myInput.rumbleAmount = 1f;
-                    meleeHitbox.enabled = true;
                 }
 
                 //if you hit a golf ball, tell the golf ball that you hit it

@@ -309,61 +309,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""Controller"",
-                    ""id"": ""4f5e7258-4e45-488f-a79b-f8af4fae6eb5"",
-                    ""path"": ""2DVector(mode=2)"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""MenuMove"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""up"",
-                    ""id"": ""4a0207ed-a7b7-45da-a319-f97befd4d9f0"",
-                    ""path"": ""<Gamepad>/leftStick/up"",
-                    ""interactions"": """",
-                    ""processors"": ""AxisDeadzone(min=0.3,max=0.925)"",
-                    ""groups"": """",
-                    ""action"": ""MenuMove"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""aeac84f3-88cf-40f0-8ac6-2b4372322b7d"",
-                    ""path"": ""<Gamepad>/leftStick/down"",
-                    ""interactions"": """",
-                    ""processors"": ""AxisDeadzone(min=0.3,max=0.925)"",
-                    ""groups"": """",
-                    ""action"": ""MenuMove"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""left"",
-                    ""id"": ""e3559665-159f-4680-8b85-4a702db5da75"",
-                    ""path"": ""<Gamepad>/leftStick/left"",
-                    ""interactions"": """",
-                    ""processors"": ""AxisDeadzone(min=0.3,max=0.925)"",
-                    ""groups"": """",
-                    ""action"": ""MenuMove"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""right"",
-                    ""id"": ""cb09c02a-73a6-4582-a270-99865a4f289f"",
-                    ""path"": ""<Gamepad>/leftStick/right"",
-                    ""interactions"": """",
-                    ""processors"": ""AxisDeadzone(min=0.3,max=0.925)"",
-                    ""groups"": """",
-                    ""action"": ""MenuMove"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
                     ""name"": """",
                     ""id"": ""973a069a-b473-4da7-9455-16a2b76bb8b2"",
                     ""path"": ""<Gamepad>/leftTrigger"",
@@ -483,6 +428,17 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""action"": ""MenuMove"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""54359ca7-2f3e-40c5-ab41-9ead3e8db10d"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": ""StickDeadzone(min=0.4,max=0.925)"",
+                    ""groups"": ""Controller"",
+                    ""action"": ""MenuMove"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
@@ -621,61 +577,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             ],
             ""bindings"": [
                 {
-                    ""name"": ""Controller"",
-                    ""id"": ""9180a885-3791-4559-80b9-860b58f14f7c"",
-                    ""path"": ""2DVector(mode=2)"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""MenuMove"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""up"",
-                    ""id"": ""b3930a68-0da2-4420-b41f-552831d6a517"",
-                    ""path"": ""<Gamepad>/leftStick/up"",
-                    ""interactions"": """",
-                    ""processors"": ""AxisDeadzone(min=0.1,max=0.925)"",
-                    ""groups"": """",
-                    ""action"": ""MenuMove"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""800de9c4-83aa-4da5-b2aa-f786852e2434"",
-                    ""path"": ""<Gamepad>/leftStick/down"",
-                    ""interactions"": """",
-                    ""processors"": ""AxisDeadzone(min=0.1,max=0.925)"",
-                    ""groups"": """",
-                    ""action"": ""MenuMove"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""left"",
-                    ""id"": ""06fba71d-1b84-4fe0-a875-2ae50925db99"",
-                    ""path"": ""<Gamepad>/leftStick/left"",
-                    ""interactions"": """",
-                    ""processors"": ""AxisDeadzone(min=0.1)"",
-                    ""groups"": """",
-                    ""action"": ""MenuMove"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""right"",
-                    ""id"": ""bd80338b-c97d-4399-90e7-d347593358f1"",
-                    ""path"": ""<Gamepad>/leftStick/right"",
-                    ""interactions"": """",
-                    ""processors"": ""AxisDeadzone(min=0.1)"",
-                    ""groups"": """",
-                    ""action"": ""MenuMove"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
                     ""name"": ""Keyboard"",
                     ""id"": ""510f2e3b-adb0-48c2-93ca-e77b90e5a28b"",
                     ""path"": ""2DVector"",
@@ -729,6 +630,17 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""action"": ""MenuMove"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""96386881-430d-4eb2-9307-34bd9912674b"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": ""StickDeadzone(min=0.4,max=0.925)"",
+                    ""groups"": ""Controller"",
+                    ""action"": ""MenuMove"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",

@@ -1906,6 +1906,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4514714592416382338}
   - component: {fileID: 2562731744779541477}
+  - component: {fileID: 7261888871113065085}
   m_Layer: 3
   m_Name: MeleelHitbox
   m_TagString: Bullet
@@ -1957,12 +1958,39 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.7, y: 0}
   m_Size: {x: 4, y: 6}
   m_Direction: 0
+--- !u!50 &7261888871113065085
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5759982717688340829}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 128
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 1919
+  m_Interpolate: 0
+  m_SleepingMode: 2
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &6173911817124226815
 GameObject:
   m_ObjectHideFlags: 0

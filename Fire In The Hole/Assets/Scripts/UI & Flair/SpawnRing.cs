@@ -20,6 +20,8 @@ public class SpawnRing : MonoBehaviour
 
     public Sprite squareRing;
     public Sprite hexagonRing;
+    public Sprite ballDrop;
+    public Sprite weaponDrop;
 
 
     [HideInInspector] public bool spawnBall = false;
@@ -55,7 +57,7 @@ public class SpawnRing : MonoBehaviour
     void Start()
     {
         respawnRb = GetComponent<Rigidbody2D>();
-
+        playerSkydive.transform.localPosition = new Vector3(0, 0, -9);
         //if player spawning, then change colors and size of the rings to match the player spawn animation
         if (spawnPlayer)
         {
@@ -67,7 +69,6 @@ public class SpawnRing : MonoBehaviour
             innerRing.GetComponent<SpriteRenderer>().sprite = hexagonRing;
             flashingArrows.GetComponent<SpriteRenderer>().color = new Color(myColor.r, myColor.g, myColor.b, 0.9f);
             warningIcon.GetComponent<SpriteRenderer>().color = myColor;
-            playerSkydive.transform.localPosition = new Vector3(0, 0, -9);
             playerSkydive.GetComponent<SpriteRenderer>().sprite = mySprite;
             golfballIcon.SetActive(false);
             ammoIcon.SetActive(false);
@@ -76,7 +77,6 @@ public class SpawnRing : MonoBehaviour
         {
             flashingArrows.SetActive(false);
             warningIcon.SetActive(false);
-            playerSkydive.SetActive(false);
         }
 
         if (spawnBall)
@@ -85,6 +85,8 @@ public class SpawnRing : MonoBehaviour
             outerRing.GetComponent<SpriteRenderer>().color = Color.white;
             innerRing.GetComponent<SpriteRenderer>().color = Color.white;
             golfballIcon.GetComponent<SpriteRenderer>().color = Color.white;
+            playerSkydive.transform.localScale = new Vector3 (0.45f, 0.45f, 0.45f);
+            playerSkydive.GetComponent<SpriteRenderer>().sprite = ballDrop;
             ammoIcon.SetActive(false);
         }
         else if (spawnGun)
@@ -95,6 +97,8 @@ public class SpawnRing : MonoBehaviour
             ammoIcon.GetComponent<SpriteRenderer>().color = new Color32(231, 100, 0, 255);
             outerRing.GetComponent<SpriteRenderer>().sprite = squareRing;
             innerRing.GetComponent<SpriteRenderer>().sprite = squareRing;
+            playerSkydive.GetComponent<SpriteRenderer>().sprite = weaponDrop;
+            playerSkydive.transform.localScale = new Vector3(0.35f, 0.35f, 0.35f);
             golfballIcon.SetActive(false);
         }
         //making endScale (the end of the lerp) the same size as the smaller ring. making startScale (the start of the lerp) the same size as the bigger ring.
@@ -117,6 +121,7 @@ public class SpawnRing : MonoBehaviour
         else
         {
             SpawnAnimation();
+            ItemSkydiveAnimation();
         }
         time += Time.deltaTime;
     }
@@ -174,6 +179,15 @@ public class SpawnRing : MonoBehaviour
         if (time > playerTimeToSpawn - 1)
         {
             newSkydivePosition = Mathf.Lerp(-9, 0, time - playerTimeToSpawn + 1 / 1);
+            playerSkydive.transform.localPosition = new Vector3(0, 0, newSkydivePosition);
+        }
+    }
+
+    void ItemSkydiveAnimation()
+    {
+        if (time > timeToSpawn - 1)
+        {
+            newSkydivePosition = Mathf.Lerp(-9, 0, time - timeToSpawn + 1 / 1);
             playerSkydive.transform.localPosition = new Vector3(0, 0, newSkydivePosition);
         }
     }

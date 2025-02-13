@@ -500,6 +500,8 @@ MonoBehaviour:
   playerSkydive: {fileID: 3367597996012162018}
   squareRing: {fileID: 21300000, guid: a3b44480af2eae248afed9a5829975e8, type: 3}
   hexagonRing: {fileID: 21300000, guid: a4d8b8f2646f0ad438e37ba68244aecf, type: 3}
+  ballDrop: {fileID: 21300000, guid: 3257895ddd09baa4db57f0680a9d3965, type: 3}
+  weaponDrop: {fileID: 21300000, guid: da9908017d4ea9448b7d204ea4af06cc, type: 3}
   spawnBall: 0
   spawnGun: 0
   spawnPowerup: 0

@@ -26,6 +26,16 @@ public class VolcanoHazard : MonoBehaviour
     //timer specifically for the ring indicators, needs to count upwards.
     float time = 0;
 
+    //soundPlayer
+    private AudioSource audioPlayer;
+
+    //Explosion audio
+    public AudioClip meteorExplosion;
+
+    //One Explosion Bool
+    bool explosionSound = true;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,7 +49,6 @@ public class VolcanoHazard : MonoBehaviour
         this.GetComponent<SpriteRenderer>().color = new Color(1.0f, 0.0f, 0.0f, 0.5f);
         startingColour = GetComponent<SpriteRenderer>().color;
         exploding = false;
-
     }
 
     // Update is called once per frame
@@ -57,6 +66,19 @@ public class VolcanoHazard : MonoBehaviour
             if(lingerTimer <= 0)
             {
                 Destroy(this.gameObject);
+            }
+            else if (lingerTimer <= 1.5)
+            {
+                if (explosionSound == true)
+                {
+                    //Audio Player <3
+                    audioPlayer = GetComponent<AudioSource>();
+
+                    //Play Meteor Sound
+                    audioPlayer.pitch = Random.Range(0.9f, 1.1f);
+                    audioPlayer.PlayOneShot(meteorExplosion, 1f);
+                    explosionSound = false;
+                }
             }
         }//when timer elapses, make area harmful
         else if(timeToImpact <= 0)

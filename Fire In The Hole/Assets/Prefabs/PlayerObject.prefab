@@ -791,7 +791,7 @@ MonoBehaviour:
     m_Bits: 128
   rb: {fileID: 0}
   forceDirection: {x: 0, y: 0}
-  meleeHitbox: {fileID: 0}
+  meleeHitbox: {fileID: 2562731744779541477}
   isCharging: 0
   currentSwingForce: 0
   chargeBarOffset: {x: 0, y: 2, z: 0}

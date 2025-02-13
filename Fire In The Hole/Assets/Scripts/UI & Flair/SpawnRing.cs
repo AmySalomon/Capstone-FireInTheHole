@@ -81,10 +81,10 @@ public class SpawnRing : MonoBehaviour
 
         if (spawnBall)
         {
-            //bright yellowish green
-            outerRing.GetComponent<SpriteRenderer>().color = new Color32(123, 211, 0, 255);
-            innerRing.GetComponent<SpriteRenderer>().color = new Color32(123, 211, 0, 255);
-            golfballIcon.GetComponent<SpriteRenderer>().color = new Color32(123, 211, 0, 255);
+            //white
+            outerRing.GetComponent<SpriteRenderer>().color = Color.white;
+            innerRing.GetComponent<SpriteRenderer>().color = Color.white;
+            golfballIcon.GetComponent<SpriteRenderer>().color = Color.white;
             ammoIcon.SetActive(false);
         }
         else if (spawnGun)

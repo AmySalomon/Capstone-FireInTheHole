@@ -29,11 +29,20 @@ public class DinoHazard : MonoBehaviour
 
     private GameObject eatenBall;
 
+    //soundPlayer
+    private AudioSource audioPlayer;
+
+    //Dino audio
+    public AudioClip dinoRoar;
+
     // Start is called before the first frame update
     void Start()
     {
         firstPosition = transform.rotation;
         endPosition = Quaternion.Euler(0, 0,firstPosition.eulerAngles.z + maxRotationDegrees);
+
+        //Get Audio Player
+        audioPlayer = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -54,6 +63,11 @@ public class DinoHazard : MonoBehaviour
                 eatenBall.GetComponent<TrailRenderer>().enabled = true;
                 //reset variables for next time
                 spitTimer = 0;
+
+                //Play Dino Sound
+                audioPlayer.pitch = Random.Range(0.9f, 1.1f);
+                audioPlayer.PlayOneShot(dinoRoar, 1f);
+
                 tryingToSpit = false;
             }
         }

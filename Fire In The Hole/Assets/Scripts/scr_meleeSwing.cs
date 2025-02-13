@@ -28,6 +28,7 @@ public class scr_meleeSwing : MonoBehaviour
     public LayerMask playerLayer;//for pvp player layer
     public Rigidbody2D rb;
     public Vector2 forceDirection;
+    public CapsuleCollider2D meleeHitbox;
 
     public bool isCharging = false;
     private bool canSwing = true;
@@ -61,6 +62,7 @@ public class scr_meleeSwing : MonoBehaviour
     public Color outlineColor;
     private void Awake()
     {
+        meleeHitbox.enabled = false;
         audioPlayer = GetComponent<AudioSource>();
         swingChargeBar.gameObject.SetActive(false);
         spriteObject = GetComponentInChildren<SpritePicker>();
@@ -167,11 +169,13 @@ public class scr_meleeSwing : MonoBehaviour
                 {
                     audioPlayer.PlayOneShot(normalHit);
                     myInput.rumbleAmount = 0.7f;
+                    meleeHitbox.enabled = true;
                 }
                 else
                 {
                     audioPlayer.PlayOneShot(strongHit);
                     myInput.rumbleAmount = 1f;
+                    meleeHitbox.enabled = true;
                 }
 
                 //if you hit a golf ball, tell the golf ball that you hit it
@@ -197,6 +201,7 @@ public class scr_meleeSwing : MonoBehaviour
         //currentSwingForce = minSwingForce;
 
         yield return new WaitForSeconds(swingCooldown);
+        meleeHitbox.enabled = false;
         canSwing = true;
     }
 

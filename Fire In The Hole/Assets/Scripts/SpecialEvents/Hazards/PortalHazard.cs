@@ -9,7 +9,17 @@ public class PortalHazard : MonoBehaviour
     public float cooldownMax = 4;
     public static List<GameObject> collisionList = new List<GameObject>();
 
-    
+    //soundPlayer
+    private AudioSource audioPlayer;
+
+    //Portal audio
+    public AudioClip portalWoosh;
+
+    //Start
+    private void Start()
+    {
+        audioPlayer = GetComponent<AudioSource>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -24,6 +34,10 @@ public class PortalHazard : MonoBehaviour
             spawnOffset.y *= -1;
             Debug.Log("spawnOffset is " + spawnOffset);
             collision.attachedRigidbody.position = portalDestination.transform.position-spawnOffset;
+
+            //Play Portal Sound
+            audioPlayer.pitch = Random.Range(0.9f, 1.1f);
+            audioPlayer.PlayOneShot(portalWoosh, 1f);
         }
 
     }

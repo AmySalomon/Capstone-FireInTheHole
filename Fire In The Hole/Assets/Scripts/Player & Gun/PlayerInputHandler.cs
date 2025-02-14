@@ -19,7 +19,7 @@ public class PlayerInputHandler : MonoBehaviour
     private PlayerPause playerPause;
     [HideInInspector] public Sprite playerSprite;
     [HideInInspector] public Color playerColor;
-
+    public PlayerIndex myIndex;
     private PlayerControls controls;
     private PlayerDeath playerDead;
     private InputDevice device;
@@ -32,6 +32,7 @@ public class PlayerInputHandler : MonoBehaviour
 
     public float rumbleTime = 0;
     public float rumbleAmount = 0.1f;
+    public bool rumbling = false;
 
     private void Awake()
     {
@@ -42,6 +43,8 @@ public class PlayerInputHandler : MonoBehaviour
         playerDead = GetComponent<PlayerDeath>();
         playerPause = GetComponent<PlayerPause>();
         controls = new PlayerControls();
+        AssignPlayerIndex();
+
     }
 
     private void Update()
@@ -224,5 +227,37 @@ public class PlayerInputHandler : MonoBehaviour
             playerShoot.ManualReloadCheck();
         }
 
+    }
+
+    public IEnumerator StartRumble() //make the controller vibrate for rumbleTime seconds, then stop
+    {
+        if (!rumbling)
+        {
+            rumbling = true;
+            GamePad.SetVibration(myIndex, rumbleAmount, rumbleAmount);
+            yield return new WaitForSeconds(rumbleTime);
+            GamePad.SetVibration(myIndex, 0, 0);
+            rumbling = false;
+        }
+        else
+        {
+            yield return null;
+        }
+    }
+
+    //PlayerIndex uses enums of One, Two, Three, Four. Our Indexing starts at 0, so we must convert it
+    public void AssignPlayerIndex()
+    {
+        switch(playerConfig.PlayerIndex)
+        {
+            case 0:
+                myIndex = (PlayerIndex)1; break;
+            case 1:
+                myIndex = (PlayerIndex)2; break;
+            case 2:
+                myIndex = (PlayerIndex)3; break;
+            case 3:
+                myIndex = (PlayerIndex)4; break;
+        }
     }
 }

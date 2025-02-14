@@ -164,17 +164,17 @@ public class scr_meleeSwing : MonoBehaviour
                 if (currentSwingForce < 600)
                 {
                     audioPlayer.PlayOneShot(weakHit);
-                    myInput.rumbleAmount = 0.4f;
+                    StartCoroutine(myInput.StartRumble(0.4f, 0.1f)); //vibrate the controller based on shot strength
                 }
                 else if (currentSwingForce < 1500)
                 {
                     audioPlayer.PlayOneShot(normalHit);
-                    myInput.rumbleAmount = 0.7f;
+                    StartCoroutine(myInput.StartRumble(0.7f, 0.2f));
                 }
                 else
                 {
                     audioPlayer.PlayOneShot(strongHit);
-                    myInput.rumbleAmount = 1f;
+                    StartCoroutine(myInput.StartRumble(1f, 0.3f)); //vibrate the controller based on shot strength
                 }
 
                 //if you hit a golf ball, tell the golf ball that you hit it

@@ -45,7 +45,7 @@ public class PointAtVector : MonoBehaviour
         }
         if (InputDevice == false)
         {
-            Debug.Log("Aiming with Mouse");
+           // Debug.Log("Aiming with Mouse");
         }
     }
     void Update()

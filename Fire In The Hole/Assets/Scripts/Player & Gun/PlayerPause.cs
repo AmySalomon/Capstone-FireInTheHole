@@ -43,11 +43,11 @@ public class PlayerPause : MonoBehaviour
 
     public void GetPauseMenu(Transform currentPauseMenu)
     {
-        Debug.Log("currentPauseMenu is "+ currentPauseMenu);
+        //Debug.Log("currentPauseMenu is "+ currentPauseMenu);
         
         pauseMenu = currentPauseMenu;
 
-        Debug.Log("UPDATED pauseMenu is currently " + pauseMenu.name + " and currentPauseMenu is " + currentPauseMenu);
+       // Debug.Log("UPDATED pauseMenu is currently " + pauseMenu.name + " and currentPauseMenu is " + currentPauseMenu);
 
     }
 }

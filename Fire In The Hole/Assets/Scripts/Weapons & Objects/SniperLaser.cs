@@ -31,7 +31,7 @@ public class SniperLaser : MonoBehaviour
     {
 
          RaycastHit2D hitObject = Physics2D.Raycast(myTransform.position, -transform.up, 1000, 1 << LayerMask.NameToLayer("Wall"));
-        if (!golfSwing.isCharging && gunType.hasLaser)
+        if (!golfSwing.isCharging && gunType.hasLaser && !gunType.reloading) //draw the laser only when the player has a sniper, and is not charging a swing or reloading
         {
             lineRenderer.enabled = true;
             DrawLaser(myTransform.position, hitObject.point);

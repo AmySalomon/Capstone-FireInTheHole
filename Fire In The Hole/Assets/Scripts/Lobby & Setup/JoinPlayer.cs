@@ -140,7 +140,7 @@ public class JoinPlayer : MonoBehaviour
     public void HandlePlayerJoin(PlayerInput pi)
     {
         Debug.Log("Player Joined " + pi.playerIndex);
-        Debug.Log("AAAAAH");
+        //Debug.Log("AAAAAH");
         if(!playerConfigs.Exists(p => p.PlayerIndex == pi.playerIndex))
         {
             pi.transform.SetParent(transform);

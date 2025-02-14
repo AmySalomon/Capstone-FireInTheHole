@@ -43,7 +43,7 @@ public class PlayerInputHandler : MonoBehaviour
         playerDead = GetComponent<PlayerDeath>();
         playerPause = GetComponent<PlayerPause>();
         controls = new PlayerControls();
-        AssignPlayerIndex();
+        //AssignPlayerIndex();
 
     }
 
@@ -73,6 +73,7 @@ public class PlayerInputHandler : MonoBehaviour
         playerSprite = playerConfig.PlayerSprite;
         playerColor = playerConfig.PlayerColor;
         Debug.Log("init");
+        AssignPlayerIndex();
     }
 
     private void Input_onActionTriggered(CallbackContext obj)
@@ -136,13 +137,13 @@ public class PlayerInputHandler : MonoBehaviour
 
         if (playerShoot != null && context.performed && playerCharge.isCharging == false && playerDash.isDashing == false && playerDead.playerIsDead == false)
         {
-            Debug.Log("trying to shoot");
+            //Debug.Log("trying to shoot");
             playerShoot.isTryingToShoot = true;
         }
 
         if (playerShoot != null && context.canceled)
         {
-            Debug.Log("trying to shoot");
+            //Debug.Log("trying to shoot");
             playerShoot.isTryingToShoot = false;
         }
     }
@@ -166,7 +167,7 @@ public class PlayerInputHandler : MonoBehaviour
         {
             if (device is Gamepad)
             {
-                Debug.Log("trying to aim Gamepad");
+               // Debug.Log("trying to aim Gamepad");
                 playerAim.IsAiming(context.ReadValue<Vector2>());
                 playerAim.InputDevice = true;
                 playerSwingAim.IsAiming(context.ReadValue<Vector2>());
@@ -174,7 +175,7 @@ public class PlayerInputHandler : MonoBehaviour
             }
             else if (device is Mouse)
             {
-                Debug.Log("trying to aim Mouse");
+               // Debug.Log("trying to aim Mouse");
                 playerAim.IsAiming(context.ReadValue<Vector2>());
                 playerAim.InputDevice = false;
                 playerSwingAim.IsAiming(context.ReadValue<Vector2>());
@@ -229,13 +230,22 @@ public class PlayerInputHandler : MonoBehaviour
 
     }
 
-    public IEnumerator StartRumble() //make the controller vibrate for rumbleTime seconds, then stop
+    public IEnumerator StartRumble(float rumbleValue, float rumbleTimer) //make the controller vibrate for rumbleTime seconds, then stop
     {
+        Debug.Log("trying to rumble controller " + myIndex);
+        if(device is Mouse)
+        {
+            Debug.Log("This is a Mouse " + myIndex);
+            yield break;
+        }
+        rumbleAmount = rumbleValue;
+        rumbleTime = rumbleTimer;
         if (!rumbling)
         {
             rumbling = true;
             GamePad.SetVibration(myIndex, rumbleAmount, rumbleAmount);
             yield return new WaitForSeconds(rumbleTime);
+            Debug.Log(" done rumble controller " + myIndex);
             GamePad.SetVibration(myIndex, 0, 0);
             rumbling = false;
         }
@@ -251,13 +261,14 @@ public class PlayerInputHandler : MonoBehaviour
         switch(playerConfig.PlayerIndex)
         {
             case 0:
-                myIndex = (PlayerIndex)1; break;
+                myIndex = (PlayerIndex)0; break;
             case 1:
-                myIndex = (PlayerIndex)2; break;
+                myIndex = (PlayerIndex)1; break;
             case 2:
-                myIndex = (PlayerIndex)3; break;
+                myIndex = (PlayerIndex)2; break;
             case 3:
-                myIndex = (PlayerIndex)4; break;
+                myIndex = (PlayerIndex)3; break;
         }
+        Debug.Log("Player "+ playerConfig.PlayerIndex +" is "+ myIndex.ToString());
     }
 }

@@ -124,6 +124,7 @@ MonoBehaviour:
   playerHitter: {fileID: 0}
   outline: {fileID: 0}
   textPopup: {fileID: 646746251575243297, guid: 53368d7090da0e445a24ca9006476f60, type: 3}
+  wallHitImpact: {fileID: 803181029017805290, guid: f80cbe750951cf94c81903fc740ac95e, type: 3}
 --- !u!114 &5962355038522605745
 MonoBehaviour:
   m_ObjectHideFlags: 0

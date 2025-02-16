@@ -196,3 +196,5 @@ MonoBehaviour:
   bulletType: {fileID: 11400000, guid: 9d125d6420485d74cb3aadf0210bd939, type: 2}
   timer: 0
   deletionTime: 5
+  playerShooter: {fileID: 0}
+  wallHitImpact: {fileID: 803181029017805290, guid: f80cbe750951cf94c81903fc740ac95e, type: 3}

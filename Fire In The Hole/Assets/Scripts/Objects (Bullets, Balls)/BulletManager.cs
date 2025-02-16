@@ -8,6 +8,7 @@ public class BulletManager : MonoBehaviour
     public float timer;
     public float deletionTime = 5;
     public GameObject playerShooter;
+    public GameObject wallHitImpact;
 
     void Start()
     {
@@ -29,6 +30,12 @@ public class BulletManager : MonoBehaviour
     //when the bullet collides with something, check the scriptableobject for what it should do
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.tag == "Wall")
+        {
+            var hitImpact = Instantiate(wallHitImpact, transform.position, Quaternion.identity);
+            hitImpact.transform.rotation = Quaternion.FromToRotation(Vector2.right, collision.GetContact(0).normal.normalized);
+        }
+            
         bulletType.BulletCollision(collision, this.gameObject, playerShooter);
     }
 

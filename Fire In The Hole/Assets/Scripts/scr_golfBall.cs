@@ -25,6 +25,7 @@ public class scr_golfBall : MonoBehaviour
     public Gradient normalGradient;
 
     public float minVelocityToKill = 8;
+    private float minVelocityToWallImpact = 3;
 
     bool tempPlayerCheck = false;
 
@@ -35,7 +36,10 @@ public class scr_golfBall : MonoBehaviour
     [HideInInspector]public Outline outline;
 
     public GameObject textPopup;
-    
+
+    public GameObject wallHitImpact;
+    private Quaternion hitDirection;
+    private float newZDirection;
 
     private void Start()
     {
@@ -129,20 +133,31 @@ public class scr_golfBall : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        int golfSwing = Random.Range(1, 4);
-
-        switch (golfSwing)
+        if (collision.gameObject.tag == "Wall")
         {
-            case 1:
-                audioSource.PlayOneShot(bounce1);
-                break;
-            case 2:
-                audioSource.PlayOneShot(bounce2);
-                break;
-            case 3:
-                audioSource.PlayOneShot(bounce3);
-                break;
+            int golfSwing = Random.Range(1, 4);
+
+            switch (golfSwing)
+            {
+                case 1:
+                    audioSource.PlayOneShot(bounce1);
+                    break;
+                case 2:
+                    audioSource.PlayOneShot(bounce2);
+                    break;
+                case 3:
+                    audioSource.PlayOneShot(bounce3);
+                    break;
+            }
+
+            
+            var hitImpact = Instantiate(wallHitImpact, transform.position, Quaternion.identity);
+            hitImpact.transform.rotation = Quaternion.FromToRotation(transform.right, collision.GetContact(0).normal.normalized);
+            
+
         }
+
+        
     }
 
     private void OnDrawGizmosSelected()

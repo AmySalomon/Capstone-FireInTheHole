@@ -260,6 +260,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 02a0dbd94807885478f8d78d34570217, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 02a0dbd94807885478f8d78d34570217, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: 02a0dbd94807885478f8d78d34570217, type: 3}
       propertyPath: m_Name
       value: stone_smallG (1)
@@ -603,6 +611,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -610,6 +622,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (45)
@@ -673,6 +689,10 @@ PrefabInstance:
       value: -90
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: f2372bfc413500a4687586ed82cfb2ef, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f2372bfc413500a4687586ed82cfb2ef, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -680,6 +700,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: f2372bfc413500a4687586ed82cfb2ef, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: f2372bfc413500a4687586ed82cfb2ef, type: 3}
       propertyPath: m_Name
       value: fence_gate
@@ -751,6 +775,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -758,6 +786,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (12)
@@ -821,6 +853,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -828,6 +864,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (37)
@@ -891,9 +931,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4c1bc6d0789ed7f43b6021dde661c883, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
       propertyPath: m_Name
       value: tree_pineGroundB (11)
@@ -956,6 +1004,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 02a0dbd94807885478f8d78d34570217, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 02a0dbd94807885478f8d78d34570217, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: 02a0dbd94807885478f8d78d34570217, type: 3}
       propertyPath: m_Name
       value: stone_smallG (2)
@@ -1296,6 +1352,10 @@ PrefabInstance:
       value: 90
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -1303,6 +1363,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (34)
@@ -1375,6 +1439,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 704ed60cca4b85c4491debc93fc753ad, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 704ed60cca4b85c4491debc93fc753ad, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -1382,6 +1450,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 704ed60cca4b85c4491debc93fc753ad, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: 704ed60cca4b85c4491debc93fc753ad, type: 3}
       propertyPath: m_Name
       value: fence_corner
@@ -1445,9 +1517,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 75fcb258bbf3c134e9a12956ccadf1df, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 75fcb258bbf3c134e9a12956ccadf1df, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 4c1bc6d0789ed7f43b6021dde661c883, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 75fcb258bbf3c134e9a12956ccadf1df, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: 75fcb258bbf3c134e9a12956ccadf1df, type: 3}
       propertyPath: m_Name
       value: tree_pineDefaultB (9)
@@ -1506,6 +1586,10 @@ PrefabInstance:
       value: 90
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -1513,6 +1597,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (22)
@@ -1647,6 +1735,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 02a0dbd94807885478f8d78d34570217, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 02a0dbd94807885478f8d78d34570217, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: 02a0dbd94807885478f8d78d34570217, type: 3}
       propertyPath: m_Name
       value: stone_smallG (1)
@@ -1920,6 +2016,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -1927,6 +2027,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (8)
@@ -1989,6 +2093,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 02a0dbd94807885478f8d78d34570217, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 02a0dbd94807885478f8d78d34570217, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: 02a0dbd94807885478f8d78d34570217, type: 3}
       propertyPath: m_Name
       value: stone_smallG (1)
@@ -2052,9 +2164,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 75fcb258bbf3c134e9a12956ccadf1df, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 75fcb258bbf3c134e9a12956ccadf1df, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 4c1bc6d0789ed7f43b6021dde661c883, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 75fcb258bbf3c134e9a12956ccadf1df, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: 75fcb258bbf3c134e9a12956ccadf1df, type: 3}
       propertyPath: m_Name
       value: tree_pineDefaultB (7)
@@ -2123,6 +2243,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -2130,6 +2254,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (60)
@@ -2193,6 +2321,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -2200,6 +2332,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (66)
@@ -2396,10 +2532,50 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -724493364965441153, guid: ab0b4bf25e2f6ce46bc9f124e8e78370, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -724493364965441153, guid: ab0b4bf25e2f6ce46bc9f124e8e78370, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: ab0b4bf25e2f6ce46bc9f124e8e78370, type: 3}
       propertyPath: m_Name
       value: vehicle (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2717756171294132697, guid: ab0b4bf25e2f6ce46bc9f124e8e78370, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2717756171294132697, guid: ab0b4bf25e2f6ce46bc9f124e8e78370, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
+    - target: {fileID: 3758833742942399946, guid: ab0b4bf25e2f6ce46bc9f124e8e78370, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3758833742942399946, guid: ab0b4bf25e2f6ce46bc9f124e8e78370, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
+    - target: {fileID: 7038207622098808634, guid: ab0b4bf25e2f6ce46bc9f124e8e78370, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7038207622098808634, guid: ab0b4bf25e2f6ce46bc9f124e8e78370, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
+    - target: {fileID: 8449996119470504636, guid: ab0b4bf25e2f6ce46bc9f124e8e78370, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8449996119470504636, guid: ab0b4bf25e2f6ce46bc9f124e8e78370, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2587,6 +2763,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 02a0dbd94807885478f8d78d34570217, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 02a0dbd94807885478f8d78d34570217, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: 02a0dbd94807885478f8d78d34570217, type: 3}
       propertyPath: m_Name
       value: stone_smallG
@@ -2650,9 +2834,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 75fcb258bbf3c134e9a12956ccadf1df, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 75fcb258bbf3c134e9a12956ccadf1df, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 4c1bc6d0789ed7f43b6021dde661c883, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 75fcb258bbf3c134e9a12956ccadf1df, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: 75fcb258bbf3c134e9a12956ccadf1df, type: 3}
       propertyPath: m_Name
       value: tree_pineDefaultB (6)
@@ -2711,6 +2903,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -2718,6 +2914,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (39)
@@ -2781,6 +2981,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -2788,6 +2992,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (1)
@@ -2985,9 +3193,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 75fcb258bbf3c134e9a12956ccadf1df, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 75fcb258bbf3c134e9a12956ccadf1df, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 4c1bc6d0789ed7f43b6021dde661c883, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 75fcb258bbf3c134e9a12956ccadf1df, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: 75fcb258bbf3c134e9a12956ccadf1df, type: 3}
       propertyPath: m_Name
       value: tree_pineDefaultB (5)
@@ -3522,9 +3738,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 502e679a007328140a9baced7df9264c, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 502e679a007328140a9baced7df9264c, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 502e679a007328140a9baced7df9264c, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: 502e679a007328140a9baced7df9264c, type: 3}
       propertyPath: m_Name
       value: stump_old
@@ -3620,6 +3844,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -3627,6 +3855,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (63)
@@ -3894,10 +4126,50 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: -724493364965441153, guid: c82bda5b975bec945839efae034ee9f9, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -724493364965441153, guid: c82bda5b975bec945839efae034ee9f9, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: c82bda5b975bec945839efae034ee9f9, type: 3}
       propertyPath: m_Name
       value: vehicle-convertible (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2717756171294132697, guid: c82bda5b975bec945839efae034ee9f9, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2717756171294132697, guid: c82bda5b975bec945839efae034ee9f9, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
+    - target: {fileID: 3758833742942399946, guid: c82bda5b975bec945839efae034ee9f9, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3758833742942399946, guid: c82bda5b975bec945839efae034ee9f9, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
+    - target: {fileID: 7038207622098808634, guid: c82bda5b975bec945839efae034ee9f9, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7038207622098808634, guid: c82bda5b975bec945839efae034ee9f9, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
+    - target: {fileID: 8449996119470504636, guid: c82bda5b975bec945839efae034ee9f9, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8449996119470504636, guid: c82bda5b975bec945839efae034ee9f9, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3952,6 +4224,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -3959,6 +4235,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (48)
@@ -4413,9 +4693,17 @@ PrefabInstance:
       value: -90
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 0dd7e2bc5af963f40a20a7733c904f86, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 0dd7e2bc5af963f40a20a7733c904f86, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: b45b68ceb36139e498944db289324ef5, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 0dd7e2bc5af963f40a20a7733c904f86, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: 0dd7e2bc5af963f40a20a7733c904f86, type: 3}
       propertyPath: m_Name
       value: cliff_stepsCorner_rock (3)
@@ -4822,6 +5110,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -4829,6 +5121,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (3)
@@ -5003,6 +5299,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -5010,6 +5310,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (57)
@@ -5072,6 +5376,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e5352d65e9a9b5d45a3349518fb15e77, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e5352d65e9a9b5d45a3349518fb15e77, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e5352d65e9a9b5d45a3349518fb15e77, type: 3}
       propertyPath: m_Name
       value: stone_largeF
@@ -5368,6 +5680,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -5375,6 +5691,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (44)
@@ -5443,6 +5763,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -5450,6 +5774,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (14)
@@ -5512,6 +5840,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 02a0dbd94807885478f8d78d34570217, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 02a0dbd94807885478f8d78d34570217, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: 02a0dbd94807885478f8d78d34570217, type: 3}
       propertyPath: m_Name
       value: stone_smallG (1)
@@ -5980,6 +6316,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -5987,6 +6327,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (59)
@@ -6289,9 +6633,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4c1bc6d0789ed7f43b6021dde661c883, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
       propertyPath: m_Name
       value: tree_pineGroundB (5)
@@ -6455,9 +6807,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 75fcb258bbf3c134e9a12956ccadf1df, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 75fcb258bbf3c134e9a12956ccadf1df, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 4c1bc6d0789ed7f43b6021dde661c883, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 75fcb258bbf3c134e9a12956ccadf1df, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: 75fcb258bbf3c134e9a12956ccadf1df, type: 3}
       propertyPath: m_Name
       value: tree_pineDefaultB
@@ -6650,6 +7010,10 @@ PrefabInstance:
       value: 90
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -6657,6 +7021,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (53)
@@ -7038,9 +7406,17 @@ PrefabInstance:
       value: -90
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 0dd7e2bc5af963f40a20a7733c904f86, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 0dd7e2bc5af963f40a20a7733c904f86, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: b45b68ceb36139e498944db289324ef5, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 0dd7e2bc5af963f40a20a7733c904f86, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: 0dd7e2bc5af963f40a20a7733c904f86, type: 3}
       propertyPath: m_Name
       value: cliff_stepsCorner_rock (5)
@@ -7103,6 +7479,10 @@ PrefabInstance:
       value: 90.001
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -7110,6 +7490,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (69)
@@ -7278,9 +7662,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4c1bc6d0789ed7f43b6021dde661c883, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
       propertyPath: m_Name
       value: tree_pineGroundB (4)
@@ -7413,6 +7805,10 @@ PrefabInstance:
       value: 90
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -7420,6 +7816,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (54)
@@ -7519,6 +7919,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -7526,6 +7930,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (19)
@@ -7723,9 +8131,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4c1bc6d0789ed7f43b6021dde661c883, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
       propertyPath: m_Name
       value: tree_pineGroundB (12)
@@ -12510,6 +12926,10 @@ PrefabInstance:
       value: -90
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: f2372bfc413500a4687586ed82cfb2ef, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f2372bfc413500a4687586ed82cfb2ef, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -12517,6 +12937,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: f2372bfc413500a4687586ed82cfb2ef, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: f2372bfc413500a4687586ed82cfb2ef, type: 3}
       propertyPath: m_Name
       value: fence_gate (1)
@@ -12584,6 +13008,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -12591,6 +13019,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (26)
@@ -12653,6 +13085,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 02a0dbd94807885478f8d78d34570217, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 02a0dbd94807885478f8d78d34570217, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: 02a0dbd94807885478f8d78d34570217, type: 3}
       propertyPath: m_Name
       value: stone_smallG (2)
@@ -12716,6 +13156,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -12723,6 +13167,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (7)
@@ -13477,6 +13925,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -13484,6 +13936,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (55)
@@ -13547,6 +14003,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -13554,6 +14014,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (35)
@@ -14035,6 +14499,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -14042,6 +14510,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (43)
@@ -14117,9 +14589,17 @@ PrefabInstance:
       value: -90
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 2bbf40d0db540b648813bc42693b1eca, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 2bbf40d0db540b648813bc42693b1eca, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: b45b68ceb36139e498944db289324ef5, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 2bbf40d0db540b648813bc42693b1eca, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: 2bbf40d0db540b648813bc42693b1eca, type: 3}
       propertyPath: m_Name
       value: cliff_steps_rock (1)
@@ -14535,6 +15015,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -14542,6 +15026,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (21)
@@ -14826,6 +15314,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -14833,6 +15325,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (16)
@@ -15373,9 +15869,17 @@ PrefabInstance:
       value: -90
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 2bbf40d0db540b648813bc42693b1eca, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 2bbf40d0db540b648813bc42693b1eca, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: b45b68ceb36139e498944db289324ef5, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 2bbf40d0db540b648813bc42693b1eca, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: 2bbf40d0db540b648813bc42693b1eca, type: 3}
       propertyPath: m_Name
       value: cliff_steps_rock
@@ -15434,6 +15938,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -15441,6 +15949,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (46)
@@ -15673,6 +16185,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e765558b19da91e459eaef1daeb4faae, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e765558b19da91e459eaef1daeb4faae, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e765558b19da91e459eaef1daeb4faae, type: 3}
       propertyPath: m_Name
       value: stone_largeA
@@ -15804,10 +16324,50 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: -724493364965441153, guid: c82bda5b975bec945839efae034ee9f9, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -724493364965441153, guid: c82bda5b975bec945839efae034ee9f9, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: c82bda5b975bec945839efae034ee9f9, type: 3}
       propertyPath: m_Name
       value: vehicle-convertible
       objectReference: {fileID: 0}
+    - target: {fileID: 2717756171294132697, guid: c82bda5b975bec945839efae034ee9f9, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2717756171294132697, guid: c82bda5b975bec945839efae034ee9f9, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
+    - target: {fileID: 3758833742942399946, guid: c82bda5b975bec945839efae034ee9f9, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3758833742942399946, guid: c82bda5b975bec945839efae034ee9f9, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
+    - target: {fileID: 7038207622098808634, guid: c82bda5b975bec945839efae034ee9f9, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7038207622098808634, guid: c82bda5b975bec945839efae034ee9f9, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
+    - target: {fileID: 8449996119470504636, guid: c82bda5b975bec945839efae034ee9f9, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8449996119470504636, guid: c82bda5b975bec945839efae034ee9f9, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15862,6 +16422,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -15869,6 +16433,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (62)
@@ -15932,9 +16500,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4c1bc6d0789ed7f43b6021dde661c883, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
       propertyPath: m_Name
       value: tree_pineGroundB (8)
@@ -16094,6 +16670,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -16101,6 +16681,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (6)
@@ -16274,6 +16858,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -16281,6 +16869,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (27)
@@ -16343,10 +16935,50 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -724493364965441153, guid: ab0b4bf25e2f6ce46bc9f124e8e78370, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -724493364965441153, guid: ab0b4bf25e2f6ce46bc9f124e8e78370, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: ab0b4bf25e2f6ce46bc9f124e8e78370, type: 3}
       propertyPath: m_Name
       value: vehicle
       objectReference: {fileID: 0}
+    - target: {fileID: 2717756171294132697, guid: ab0b4bf25e2f6ce46bc9f124e8e78370, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2717756171294132697, guid: ab0b4bf25e2f6ce46bc9f124e8e78370, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
+    - target: {fileID: 3758833742942399946, guid: ab0b4bf25e2f6ce46bc9f124e8e78370, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3758833742942399946, guid: ab0b4bf25e2f6ce46bc9f124e8e78370, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
+    - target: {fileID: 7038207622098808634, guid: ab0b4bf25e2f6ce46bc9f124e8e78370, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7038207622098808634, guid: ab0b4bf25e2f6ce46bc9f124e8e78370, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
+    - target: {fileID: 8449996119470504636, guid: ab0b4bf25e2f6ce46bc9f124e8e78370, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8449996119470504636, guid: ab0b4bf25e2f6ce46bc9f124e8e78370, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16537,6 +17169,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 02a0dbd94807885478f8d78d34570217, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 02a0dbd94807885478f8d78d34570217, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: 02a0dbd94807885478f8d78d34570217, type: 3}
       propertyPath: m_Name
       value: stone_smallG
@@ -16948,6 +17588,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -16955,6 +17599,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (49)
@@ -17385,6 +18033,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -17392,6 +18044,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (5)
@@ -17459,6 +18115,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -17466,6 +18126,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (13)
@@ -17976,6 +18640,10 @@ PrefabInstance:
       value: -90
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: f2372bfc413500a4687586ed82cfb2ef, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f2372bfc413500a4687586ed82cfb2ef, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -17983,6 +18651,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: f2372bfc413500a4687586ed82cfb2ef, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: f2372bfc413500a4687586ed82cfb2ef, type: 3}
       propertyPath: m_Name
       value: fence_gate (2)
@@ -18062,9 +18734,17 @@ PrefabInstance:
       value: -90
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 0dd7e2bc5af963f40a20a7733c904f86, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 0dd7e2bc5af963f40a20a7733c904f86, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: b45b68ceb36139e498944db289324ef5, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 0dd7e2bc5af963f40a20a7733c904f86, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: 0dd7e2bc5af963f40a20a7733c904f86, type: 3}
       propertyPath: m_Name
       value: cliff_stepsCorner_rock (4)
@@ -18164,6 +18844,10 @@ PrefabInstance:
       value: 90
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -18171,6 +18855,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (68)
@@ -18233,6 +18921,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -270
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: d64f5e33a03678e4fb93eaa6814553c3, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: d64f5e33a03678e4fb93eaa6814553c3, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: d64f5e33a03678e4fb93eaa6814553c3, type: 3}
       propertyPath: m_Name
       value: stone_largeB
@@ -18295,6 +18991,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e5352d65e9a9b5d45a3349518fb15e77, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e5352d65e9a9b5d45a3349518fb15e77, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e5352d65e9a9b5d45a3349518fb15e77, type: 3}
       propertyPath: m_Name
       value: stone_largeF
@@ -18536,6 +19240,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -18543,6 +19251,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (52)
@@ -18711,6 +19423,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -18718,6 +19434,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (17)
@@ -18781,6 +19501,10 @@ PrefabInstance:
       value: 90
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -18788,6 +19512,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (70)
@@ -18888,6 +19616,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e5352d65e9a9b5d45a3349518fb15e77, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e5352d65e9a9b5d45a3349518fb15e77, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e5352d65e9a9b5d45a3349518fb15e77, type: 3}
       propertyPath: m_Name
       value: stone_largeF
@@ -18982,6 +19718,10 @@ PrefabInstance:
       value: 90
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -18989,6 +19729,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (33)
@@ -19052,9 +19796,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4c1bc6d0789ed7f43b6021dde661c883, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
       propertyPath: m_Name
       value: tree_pineGroundB (7)
@@ -19259,9 +20011,17 @@ PrefabInstance:
       value: -90
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 0dd7e2bc5af963f40a20a7733c904f86, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 0dd7e2bc5af963f40a20a7733c904f86, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: b45b68ceb36139e498944db289324ef5, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 0dd7e2bc5af963f40a20a7733c904f86, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: 0dd7e2bc5af963f40a20a7733c904f86, type: 3}
       propertyPath: m_Name
       value: cliff_stepsCorner_rock (1)
@@ -19320,6 +20080,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -19327,6 +20091,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (56)
@@ -19390,9 +20158,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4c1bc6d0789ed7f43b6021dde661c883, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
       propertyPath: m_Name
       value: tree_pineGroundB (2)
@@ -19666,6 +20442,10 @@ PrefabInstance:
       value: 90
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -19673,6 +20453,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (23)
@@ -20019,6 +20803,10 @@ PrefabInstance:
       value: -90
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: f2372bfc413500a4687586ed82cfb2ef, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f2372bfc413500a4687586ed82cfb2ef, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -20026,6 +20814,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: f2372bfc413500a4687586ed82cfb2ef, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: f2372bfc413500a4687586ed82cfb2ef, type: 3}
       propertyPath: m_Name
       value: fence_gate (3)
@@ -20202,6 +20994,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 02a0dbd94807885478f8d78d34570217, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 02a0dbd94807885478f8d78d34570217, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: 02a0dbd94807885478f8d78d34570217, type: 3}
       propertyPath: m_Name
       value: stone_smallG
@@ -20335,6 +21135,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -20342,6 +21146,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (29)
@@ -20405,9 +21213,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4c1bc6d0789ed7f43b6021dde661c883, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
       propertyPath: m_Name
       value: tree_pineGroundB (9)
@@ -20645,6 +21461,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -20652,6 +21472,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (36)
@@ -20715,6 +21539,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -20722,6 +21550,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (41)
@@ -20815,6 +21647,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e765558b19da91e459eaef1daeb4faae, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e765558b19da91e459eaef1daeb4faae, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e765558b19da91e459eaef1daeb4faae, type: 3}
       propertyPath: m_Name
       value: stone_largeA
@@ -21016,6 +21856,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -270
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: d64f5e33a03678e4fb93eaa6814553c3, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: d64f5e33a03678e4fb93eaa6814553c3, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: d64f5e33a03678e4fb93eaa6814553c3, type: 3}
       propertyPath: m_Name
       value: stone_largeB
@@ -21079,6 +21927,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -21086,6 +21938,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (50)
@@ -21394,6 +22250,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -21401,6 +22261,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (51)
@@ -21994,9 +22858,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 75fcb258bbf3c134e9a12956ccadf1df, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 75fcb258bbf3c134e9a12956ccadf1df, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 4c1bc6d0789ed7f43b6021dde661c883, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 75fcb258bbf3c134e9a12956ccadf1df, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: 75fcb258bbf3c134e9a12956ccadf1df, type: 3}
       propertyPath: m_Name
       value: tree_pineDefaultB (8)
@@ -22055,6 +22927,10 @@ PrefabInstance:
       value: 90
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -22062,6 +22938,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (71)
@@ -22230,9 +23110,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4c1bc6d0789ed7f43b6021dde661c883, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
       propertyPath: m_Name
       value: tree_pineGroundB (3)
@@ -22291,6 +23179,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -22298,6 +23190,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (38)
@@ -22469,9 +23365,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 75fcb258bbf3c134e9a12956ccadf1df, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 75fcb258bbf3c134e9a12956ccadf1df, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 4c1bc6d0789ed7f43b6021dde661c883, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 75fcb258bbf3c134e9a12956ccadf1df, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: 75fcb258bbf3c134e9a12956ccadf1df, type: 3}
       propertyPath: m_Name
       value: tree_pineDefaultB (4)
@@ -22669,6 +23573,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -22676,6 +23584,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (2)
@@ -22754,6 +23666,10 @@ PrefabInstance:
       value: -90.00101
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -22761,6 +23677,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (32)
@@ -23091,6 +24011,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -23098,6 +24022,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (47)
@@ -23266,9 +24194,17 @@ PrefabInstance:
       value: 88.693
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: f6a3ed6dcbcfefe4a9181fc51486a43c, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f6a3ed6dcbcfefe4a9181fc51486a43c, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: f6a3ed6dcbcfefe4a9181fc51486a43c, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: f6a3ed6dcbcfefe4a9181fc51486a43c, type: 3}
       propertyPath: m_Name
       value: log_stack
@@ -23403,6 +24339,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -23410,6 +24350,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (65)
@@ -23473,6 +24417,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -23480,6 +24428,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (58)
@@ -23543,6 +24495,10 @@ PrefabInstance:
       value: -90
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -23550,6 +24506,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (30)
@@ -23613,6 +24573,10 @@ PrefabInstance:
       value: -90
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -23620,6 +24584,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (31)
@@ -23789,6 +24757,10 @@ PrefabInstance:
       value: -90
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -23796,6 +24768,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (67)
@@ -23858,6 +24834,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e5352d65e9a9b5d45a3349518fb15e77, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e5352d65e9a9b5d45a3349518fb15e77, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e5352d65e9a9b5d45a3349518fb15e77, type: 3}
       propertyPath: m_Name
       value: stone_largeF
@@ -24031,9 +25015,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4c1bc6d0789ed7f43b6021dde661c883, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
       propertyPath: m_Name
       value: tree_pineGroundB (10)
@@ -24097,6 +25089,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -24104,6 +25100,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (40)
@@ -24167,6 +25167,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -24174,6 +25178,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (10)
@@ -24721,9 +25729,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4c1bc6d0789ed7f43b6021dde661c883, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
       propertyPath: m_Name
       value: tree_pineGroundB (1)
@@ -24782,6 +25798,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -24789,6 +25809,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (42)
@@ -24852,6 +25876,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -24859,6 +25887,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (64)
@@ -25127,6 +26159,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -270
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: d64f5e33a03678e4fb93eaa6814553c3, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: d64f5e33a03678e4fb93eaa6814553c3, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: d64f5e33a03678e4fb93eaa6814553c3, type: 3}
       propertyPath: m_Name
       value: stone_largeB
@@ -25190,6 +26230,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -25197,6 +26241,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (15)
@@ -25272,9 +26320,17 @@ PrefabInstance:
       value: 90
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 4cb022b86fd44344f9a69dc2ce305df7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 4cb022b86fd44344f9a69dc2ce305df7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 4cb022b86fd44344f9a69dc2ce305df7, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: 4cb022b86fd44344f9a69dc2ce305df7, type: 3}
       propertyPath: m_Name
       value: log_stackLarge
@@ -25333,6 +26389,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -25340,6 +26400,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (11)
@@ -25477,6 +26541,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 02a0dbd94807885478f8d78d34570217, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 02a0dbd94807885478f8d78d34570217, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: 02a0dbd94807885478f8d78d34570217, type: 3}
       propertyPath: m_Name
       value: stone_smallG
@@ -25540,9 +26612,17 @@ PrefabInstance:
       value: -90
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 0dd7e2bc5af963f40a20a7733c904f86, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 0dd7e2bc5af963f40a20a7733c904f86, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: b45b68ceb36139e498944db289324ef5, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 0dd7e2bc5af963f40a20a7733c904f86, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: 0dd7e2bc5af963f40a20a7733c904f86, type: 3}
       propertyPath: m_Name
       value: cliff_stepsCorner_rock
@@ -25601,6 +26681,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -25608,6 +26692,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (20)
@@ -25781,9 +26869,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 75fcb258bbf3c134e9a12956ccadf1df, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 75fcb258bbf3c134e9a12956ccadf1df, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 4c1bc6d0789ed7f43b6021dde661c883, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 75fcb258bbf3c134e9a12956ccadf1df, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: 75fcb258bbf3c134e9a12956ccadf1df, type: 3}
       propertyPath: m_Name
       value: tree_pineDefaultB (3)
@@ -25842,9 +26938,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 75fcb258bbf3c134e9a12956ccadf1df, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 75fcb258bbf3c134e9a12956ccadf1df, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 4c1bc6d0789ed7f43b6021dde661c883, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 75fcb258bbf3c134e9a12956ccadf1df, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: 75fcb258bbf3c134e9a12956ccadf1df, type: 3}
       propertyPath: m_Name
       value: tree_pineDefaultB (2)
@@ -25974,6 +27078,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e765558b19da91e459eaef1daeb4faae, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e765558b19da91e459eaef1daeb4faae, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e765558b19da91e459eaef1daeb4faae, type: 3}
       propertyPath: m_Name
       value: stone_largeA
@@ -26076,9 +27188,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4c1bc6d0789ed7f43b6021dde661c883, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
       propertyPath: m_Name
       value: tree_pineGroundB
@@ -26137,6 +27257,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -26144,6 +27268,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (61)
@@ -26385,6 +27513,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 02a0dbd94807885478f8d78d34570217, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 02a0dbd94807885478f8d78d34570217, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: 02a0dbd94807885478f8d78d34570217, type: 3}
       propertyPath: m_Name
       value: stone_smallG (2)
@@ -26485,6 +27621,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 02a0dbd94807885478f8d78d34570217, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 02a0dbd94807885478f8d78d34570217, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: 02a0dbd94807885478f8d78d34570217, type: 3}
       propertyPath: m_Name
       value: stone_smallG (2)
@@ -26548,6 +27692,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -26555,6 +27703,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (9)
@@ -26617,6 +27769,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -270
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: d64f5e33a03678e4fb93eaa6814553c3, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: d64f5e33a03678e4fb93eaa6814553c3, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: d64f5e33a03678e4fb93eaa6814553c3, type: 3}
       propertyPath: m_Name
       value: stone_largeB
@@ -26749,6 +27909,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -26756,6 +27920,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (4)
@@ -26818,6 +27986,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e765558b19da91e459eaef1daeb4faae, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e765558b19da91e459eaef1daeb4faae, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e765558b19da91e459eaef1daeb4faae, type: 3}
       propertyPath: m_Name
       value: stone_largeA
@@ -27272,6 +28448,10 @@ PrefabInstance:
       value: 90
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 704ed60cca4b85c4491debc93fc753ad, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 704ed60cca4b85c4491debc93fc753ad, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -27279,6 +28459,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 704ed60cca4b85c4491debc93fc753ad, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: 704ed60cca4b85c4491debc93fc753ad, type: 3}
       propertyPath: m_Name
       value: fence_corner (2)
@@ -27453,9 +28637,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 75fcb258bbf3c134e9a12956ccadf1df, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 75fcb258bbf3c134e9a12956ccadf1df, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 4c1bc6d0789ed7f43b6021dde661c883, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 75fcb258bbf3c134e9a12956ccadf1df, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: 75fcb258bbf3c134e9a12956ccadf1df, type: 3}
       propertyPath: m_Name
       value: tree_pineDefaultB (1)
@@ -27514,6 +28706,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -27521,6 +28717,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (28)
@@ -27865,6 +29065,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -27872,6 +29076,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (24)
@@ -28281,9 +29489,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4c1bc6d0789ed7f43b6021dde661c883, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b4b0d7066a19b44697e44b5c3d70d85, type: 3}
       propertyPath: m_Name
       value: tree_pineGroundB (6)
@@ -28342,6 +29558,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -28349,6 +29569,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (18)
@@ -29158,9 +30382,17 @@ PrefabInstance:
       value: -90
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 0dd7e2bc5af963f40a20a7733c904f86, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 0dd7e2bc5af963f40a20a7733c904f86, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: b45b68ceb36139e498944db289324ef5, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 0dd7e2bc5af963f40a20a7733c904f86, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: 0dd7e2bc5af963f40a20a7733c904f86, type: 3}
       propertyPath: m_Name
       value: cliff_stepsCorner_rock (2)
@@ -29295,6 +30527,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
@@ -29302,6 +30538,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f45854845dc57b2498b2224315340e2f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb1d35d875b0b949b53664800dae5d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e3b51df403c8e57478d1b5b0e33cccf7, type: 3}
       propertyPath: m_Name
       value: fence_simple (25)

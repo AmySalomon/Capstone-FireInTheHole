@@ -100,7 +100,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   niceShot1: {fileID: 8300000, guid: b68a4585355a14b439393156a7c25ae6, type: 3}
   niceShot2: {fileID: 8300000, guid: 9c66f9db1b15b9a468c5a7f9846e60e2, type: 3}
-  niceShot3: {fileID: 8300000, guid: e9be8075fc4d86e489714a1a0ff0fcd0, type: 3}
+  niceShot3: {fileID: 8300000, guid: fb9811b504d95814cb84fb0acc12cdf6, type: 3}
   timeToPopup: 2
   timeToDelete: 3
   yModifier: 1

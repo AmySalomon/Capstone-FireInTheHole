@@ -30,6 +30,8 @@ public class TextPopup : MonoBehaviour
     private float endOpacity = 0;
 
     [HideInInspector] public string weaponPickup;
+
+    public GameObject confetti;
     private void Start()
     {
         text = GetComponentInChildren<TextMeshProUGUI>();
@@ -55,6 +57,8 @@ public class TextPopup : MonoBehaviour
                     break;
             }
             text.text = "Nice Shot!";
+
+            Instantiate(confetti, startPosition, Quaternion.identity);
         }
 
         else myColor = new Color(1, .6f, 0);

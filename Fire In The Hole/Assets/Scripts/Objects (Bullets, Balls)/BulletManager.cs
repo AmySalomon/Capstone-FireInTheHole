@@ -30,13 +30,13 @@ public class BulletManager : MonoBehaviour
     //when the bullet collides with something, check the scriptableobject for what it should do
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        bulletType.BulletCollision(collision, this.gameObject, playerShooter);
+
         if (collision.gameObject.tag == "Wall")
         {
             var hitImpact = Instantiate(wallHitImpact, transform.position, Quaternion.identity);
             hitImpact.transform.rotation = Quaternion.FromToRotation(Vector2.right, collision.GetContact(0).normal.normalized);
         }
-            
-        bulletType.BulletCollision(collision, this.gameObject, playerShooter);
     }
 
     public void UpdateBulletType()//Get all the info of the BulletType

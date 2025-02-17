@@ -106,6 +106,7 @@ MonoBehaviour:
   yModifier: 1
   myColor: {r: 0, g: 0, b: 0, a: 0}
   weaponPickup: 
+  confetti: {fileID: 4543650874273503688, guid: ca2430a619806d34b8d9617722a4d2e6, type: 3}
 --- !u!82 &2976153532008506645
 AudioSource:
   m_ObjectHideFlags: 0

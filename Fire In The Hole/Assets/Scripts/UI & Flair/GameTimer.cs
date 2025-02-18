@@ -30,9 +30,13 @@ public class GameTimer : MonoBehaviour
     private int count = 10;
 
     public AudioMixer audioMixer;
+    public AudioSource musicPlayer;
+    public AudioSource scaryMusicPlayer;
+    public AudioClip scaryMusic;
     private float musicLevel;
     private AudioSource myWhistleSFX;
     private bool soundOffWhistle = true;
+    private bool playScaryMusic = true;
     private void Awake()
     {
         myWhistleSFX = GetComponent<AudioSource>();
@@ -65,7 +69,21 @@ public class GameTimer : MonoBehaviour
             updateTimer(timer);
             if (timer < runningOutTime) timerText.color = Color.red;
             if (timer < 11) CountdownTime();
+
+            //new music management
             audioMixer.GetFloat("MusicParam", out musicLevel);
+
+            if (timer <= runningOutTime)
+            {
+                if (playScaryMusic == true)
+                {
+                    //Sub normal music for scary music at 60 seconds left!
+                    Destroy(musicPlayer); //Destroy OG music
+                    scaryMusicPlayer.PlayOneShot(scaryMusic, 1f); //Play scary music
+                    //Debug.Log("WORKS!");
+                    playScaryMusic = false;
+                }
+            }
         }
         else
         {
@@ -107,6 +125,7 @@ public class GameTimer : MonoBehaviour
             newVertScale = Mathf.Lerp(1, 0, (countdownTimer - 0.8f) / 0.1f);
             countdownText.gameObject.transform.localScale = new Vector3(1, newVertScale, 1);
         }
+
         else
         {
             //when a second has passed, reset this to the start, and lower the count variable.

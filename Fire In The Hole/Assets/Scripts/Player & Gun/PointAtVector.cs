@@ -17,6 +17,7 @@ public class PointAtVector : MonoBehaviour
     public Camera mainCamera;
     private Vector3 screenCenter;
     public GameObject player;
+    public Vector3 mouseWorldPosition;
 
     [SerializeField] private float aimRadius = 2f;
 
@@ -66,17 +67,9 @@ public class PointAtVector : MonoBehaviour
         if (InputDevice == false) 
         {
             Vector3 mouseScreenPosition = Input.mousePosition;
-            Vector3 offset = mouseScreenPosition - screenCenter;
-
-            if (offset.magnitude > aimRadius)
-            {
-                offset = offset.normalized * aimRadius;
-            }
-
-            Vector3 clampedMouseScreenPosition = screenCenter + offset;
-            Vector3 mouseWorldPosition = mainCamera.ViewportToScreenPoint(clampedMouseScreenPosition);
-            //Debug.Log(clampedMouseScreenPosition + " is the mouse position");
-            aimDirection = (mouseWorldPosition - mainCamera.ViewportToScreenPoint(screenCenter)).normalized;
+            mouseWorldPosition = mainCamera.ScreenToWorldPoint(new Vector3(mouseScreenPosition.x, mouseScreenPosition.y, mainCamera.transform.position.z * -1));
+            mouseWorldPosition.z = transform.position.z;
+            aimDirection = (mouseWorldPosition - transform.position).normalized;
             transform.right = -aimDirection;
             if (transform.eulerAngles == new Vector3(transform.eulerAngles.x, 180, 0)) transform.eulerAngles = new Vector3(transform.eulerAngles.x, 0, 180.01f);
             aim = aimDirection;

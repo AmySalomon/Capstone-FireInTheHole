@@ -9,6 +9,7 @@ public class scr_mouseAim : MonoBehaviour
     private Vector2 aimAngle;
     private Vector3 aimDirection;
     private Camera mainCamera;
+    public Vector3 mouseWorldPosition;
 
     [SerializeField] private float aimRadius = 5f;
 
@@ -30,10 +31,10 @@ public class scr_mouseAim : MonoBehaviour
     void Update()
     {
         Vector3 mouseScreenPosition = Input.mousePosition;
-        Vector3 mouseWorldPosition = mainCamera.ScreenToWorldPoint(mouseScreenPosition);
+        mouseWorldPosition = mainCamera.ScreenToWorldPoint(mouseScreenPosition);
         mouseWorldPosition.z = transform.position.z;
         aimDirection = (mouseWorldPosition - transform.position).normalized;
-        mouseWorldPosition = transform.position + aimDirection * Mathf.Min(aimRadius, Vector3.Distance(transform.position, mouseWorldPosition));
+        //mouseWorldPosition = transform.position + aimDirection * Mathf.Min(aimRadius, Vector3.Distance(transform.position, mouseWorldPosition));
         transform.right = aimDirection;
 
     }

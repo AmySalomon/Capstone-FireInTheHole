@@ -50,6 +50,7 @@ MonoBehaviour:
   InputDevice: 0
   mainCamera: {fileID: 0}
   player: {fileID: 3358283545364179000}
+  mouseWorldPosition: {x: 0, y: 0, z: 0}
   aimRadius: 3
 --- !u!1 &1000412141575831137
 GameObject:
@@ -1444,6 +1445,7 @@ MonoBehaviour:
   InputDevice: 0
   mainCamera: {fileID: 0}
   player: {fileID: 3358283545364179000}
+  mouseWorldPosition: {x: 0, y: 0, z: 0}
   aimRadius: 3
 --- !u!1 &4438179308414730306
 GameObject:
@@ -1822,6 +1824,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7103122365907552541}
   - component: {fileID: 354105084488894072}
+  - component: {fileID: 1875662403170988520}
   m_Layer: 5
   m_Name: Crosshair
   m_TagString: Untagged
@@ -1896,6 +1899,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1875662403170988520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5509045739118667847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fed7fd20ad0b3c44aa09f1fc09bedf2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PointAtVector: {fileID: 0}
+  obj_crosshair: {fileID: 5509045739118667847}
 --- !u!1 &5759982717688340829
 GameObject:
   m_ObjectHideFlags: 0
@@ -2829,9 +2846,11 @@ MonoBehaviour:
   playerSwingAim: {fileID: 6007203986983997689}
   playerSprite: {fileID: 0}
   playerColor: {r: 0, g: 0, b: 0, a: 0}
+  myIndex: 0
   myInputIndex: 0
   rumbleTime: 0
   rumbleAmount: 0.1
+  rumbling: 0
 --- !u!114 &4617527675341735179
 MonoBehaviour:
   m_ObjectHideFlags: 0

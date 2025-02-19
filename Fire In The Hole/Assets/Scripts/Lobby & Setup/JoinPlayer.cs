@@ -29,6 +29,10 @@ public class JoinPlayer : MonoBehaviour
     [SerializeField] private GameObject tutorialTurretPrefab;
     [SerializeField] private GameObject tutorialTextDASHPrefab;
     [SerializeField] private GameObject tutorialTextSWINGPrefab;
+    [SerializeField] private GameObject transitionZonePrefab;
+
+    [SerializeField] private GameObject golfTutStuff;
+    [SerializeField] private GameObject dashTutStuff;
 
     public string sceneToGoTo;
     public static JoinPlayer Instance { get; private set; }
@@ -83,15 +87,24 @@ public class JoinPlayer : MonoBehaviour
         playerConfigs[index].IsReady = true;
 
         //this code adds the player into the scene once theyre readied up, at their spawn point, and disables the hud for character selection
+        //these two first ones are parents of their respective tutorial necessities. They will be disabled when that section is over.
+        var myDashTutStuff = Instantiate(dashTutStuff, new Vector3(0, 0, 0), Quaternion.identity, gameObject.transform);
+        myDashTutStuff.GetComponent<LobbyHoleIdentity>().flagNumber = index + 1;
+        var myGolfTutStuff = Instantiate(golfTutStuff, new Vector3(0, 0, 0), Quaternion.identity, gameObject.transform);
+        myGolfTutStuff.GetComponent<LobbyHoleIdentity>().flagNumber = index + 1;
         var player = Instantiate(playerPrefab, playerSpawns[index].position, playerSpawns[index].rotation, gameObject.transform);
         player.GetComponent<PlayerDeath>().setSpawnLocation = playerSpawns[index];
-        var tutorialFlag = Instantiate(tutorialFlagPrefab, flagSpawns[index].position, flagSpawns[index].rotation, gameObject.transform);
+        player.GetComponent<PlayerDeath>().myIndex = index + 1;
+        var tutorialFlag = Instantiate(tutorialFlagPrefab, flagSpawns[index].position, flagSpawns[index].rotation, myGolfTutStuff.transform);
         tutorialFlag.GetComponent<LobbyHoleIdentity>().flagNumber = index + 1;
-        var tutorialBall = Instantiate(tutorialBallPrefab, ballSpawns[index].position, ballSpawns[index].rotation, gameObject.transform);
+        var tutorialBall = Instantiate(tutorialBallPrefab, ballSpawns[index].position, ballSpawns[index].rotation, myGolfTutStuff.transform);
         player.GetComponentInChildren<PlayerInputHandler>().InitializePlayer(playerConfigs[index]);
-        var tutorialTurret = Instantiate(tutorialTurretPrefab, turretSpawns[index].position, turretSpawns[index].rotation, gameObject.transform);
-        var tutorialDASHText = Instantiate(tutorialTextDASHPrefab, DASHSpawns[index].position, DASHSpawns[index].rotation, gameObject.transform);
-        var tutorialSWINGText = Instantiate(tutorialTextSWINGPrefab, SWINGSpawns[index].position, SWINGSpawns[index].rotation, gameObject.transform);
+        var tutorialTurret = Instantiate(tutorialTurretPrefab, turretSpawns[index].position, turretSpawns[index].rotation, myDashTutStuff.transform);
+        var tutorialDASHText = Instantiate(tutorialTextDASHPrefab, DASHSpawns[index].position, DASHSpawns[index].rotation, myDashTutStuff.transform);
+        var tutorialSWINGText = Instantiate(tutorialTextSWINGPrefab, SWINGSpawns[index].position, SWINGSpawns[index].rotation, myGolfTutStuff.transform);
+        var transitionZone = Instantiate(transitionZonePrefab, flagSpawns[index].position, flagSpawns[index].rotation, gameObject.transform);
+        transitionZone.GetComponent<TutorialAdvanceZone>().myIndex = index + 1;
+        myGolfTutStuff.transform.position = new Vector3 (500 + index * 10, 500 + index * 10, 0);
         shouldIDisableUI = true;
     }
 
@@ -165,6 +178,44 @@ public class JoinPlayer : MonoBehaviour
                 shouldDisableButton4 = true;
                 break;
         }
+    }
+
+    //once the player moves into the trigger for the TutorialAdvanceZone script, this activates, resetting the tutorial for stage 2.
+    public void DisableDashTutorial(int currentIndex)
+    {
+        var allTutorials = GetComponentsInChildren<LobbyHoleIdentity>();
+
+        foreach (LobbyHoleIdentity i in allTutorials)
+        {
+            if (i.gameObject.tag == "GolfTut")
+            {
+                if (i.flagNumber == currentIndex)
+                {
+                    i.gameObject.transform.position = new Vector3(0, 0, 0);
+                }
+            }
+
+            else if (i.gameObject.tag == "DashTut")
+            {
+                if (i.flagNumber == currentIndex)
+                {
+                    i.gameObject.SetActive(false);
+                }
+            }
+        }
+
+        playersActive = GetComponentsInChildren<PlayerInputHandler>();
+
+        foreach (PlayerInputHandler player in playersActive)
+        {
+            if (player.GetComponent<PlayerDeath>().myIndex == currentIndex)
+            {
+                player.GetComponentInChildren<PlayerMovement>().gameObject.transform.position = player.GetComponent<PlayerDeath>().setSpawnLocation.transform.position;
+            }
+        }
+
+
+
     }
 }
 

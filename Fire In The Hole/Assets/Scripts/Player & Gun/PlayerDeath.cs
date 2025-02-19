@@ -54,6 +54,8 @@ public class PlayerDeath : MonoBehaviour
 
     [HideInInspector] public Transform setSpawnLocation;
 
+    [HideInInspector] public int myIndex;
+
     //gets the current ring indicator, in order to move it for the helldivers respawn
     private GameObject currentRingIndicator;
 

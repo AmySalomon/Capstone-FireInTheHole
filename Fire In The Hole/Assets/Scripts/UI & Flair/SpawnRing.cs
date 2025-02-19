@@ -123,6 +123,8 @@ public class SpawnRing : MonoBehaviour
             SpawnAnimation();
             ItemSkydiveAnimation();
         }
+
+        if (spawnPowerup) SpawnInThing(); //Temp for power up until animation is in
         time += Time.deltaTime;
     }
 
@@ -206,6 +208,7 @@ public class SpawnRing : MonoBehaviour
 
         else if (spawnPowerup)
         {
+            Instantiate(powerUp, transform.position, transform.rotation);
             //add spawn powerup code later, in accordance with the SpawnManager script
         }
 

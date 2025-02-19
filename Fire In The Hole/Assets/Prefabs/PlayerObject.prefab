@@ -50,6 +50,7 @@ MonoBehaviour:
   InputDevice: 0
   mainCamera: {fileID: 0}
   player: {fileID: 3358283545364179000}
+  mouseWorldPosition: {x: 0, y: 0, z: 0}
   aimRadius: 3
 --- !u!1 &1000412141575831137
 GameObject:
@@ -1444,6 +1445,7 @@ MonoBehaviour:
   InputDevice: 0
   mainCamera: {fileID: 0}
   player: {fileID: 3358283545364179000}
+  mouseWorldPosition: {x: 0, y: 0, z: 0}
   aimRadius: 3
 --- !u!1 &4438179308414730306
 GameObject:
@@ -1822,6 +1824,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7103122365907552541}
   - component: {fileID: 354105084488894072}
+  - component: {fileID: 1875662403170988520}
   m_Layer: 5
   m_Name: Crosshair
   m_TagString: Untagged
@@ -1896,6 +1899,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1875662403170988520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5509045739118667847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fed7fd20ad0b3c44aa09f1fc09bedf2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PointAtVector: {fileID: 0}
+  obj_crosshair: {fileID: 5509045739118667847}
 --- !u!1 &5759982717688340829
 GameObject:
   m_ObjectHideFlags: 0
@@ -7573,7 +7590,7 @@ MonoBehaviour:
     name: Bombball
     duration: 10
     isTemporary: 1
-    effect: {fileID: 11400000, guid: b4e9f465dbb4de744adae5609fa97572, type: 2}
+    effect: {fileID: 11400000, guid: 48f1a0859b555544681f648d07b4c9ed, type: 2}
 --- !u!1 &8370212098543078777
 GameObject:
   m_ObjectHideFlags: 0

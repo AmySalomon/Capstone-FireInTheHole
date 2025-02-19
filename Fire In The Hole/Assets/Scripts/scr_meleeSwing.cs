@@ -157,7 +157,11 @@ public class scr_meleeSwing : MonoBehaviour
             rb = hit.collider.GetComponent<Rigidbody2D>();
             if (rb != null)
             {
-                if (balltype == 1) rb.gameObject.GetComponent<scr_balltype_bomb>().active = true;
+                /*if (balltype == 1)
+                {
+                    rb.gameObject.GetComponent<scr_balltype_bomb>().active = true;
+                    rb.gameObject.GetComponent<scr_golfBall>().balltype = 1;
+                } //Remove when balltype not PU */
                 forceDirection = (swingAim).normalized;
                 rb.AddForce(forceDirection * currentSwingForce / 2);
                 myInput.rumbleTime = 0.3f;

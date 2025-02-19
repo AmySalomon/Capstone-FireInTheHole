@@ -15,4 +15,3 @@ MonoBehaviour:
   deletionTime: 5
   bulletPrefab: {fileID: 2615455651010696115, guid: c5758431d757d0548abf92f59c725a8d, type: 3}
   explosion: {fileID: 8977285105747890853, guid: 971a4525b87347346a6e0f4ccdcf1249, type: 3}
-  explosionRadius: 100000

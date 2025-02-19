@@ -10,11 +10,14 @@ public class scr_golfBall : MonoBehaviour
     public string golfHoleTag = "GolfHole";
     public string sandTrapTag = "Sand";
 
+    public float balltype = 0; //0 = regular golfball, 1 = bomball, 2 = scattershot, 3 = bouncing betty
+    private scr_balltype_bomb scr_Balltype_Bomb;
+
     private GameObject directionArrowInstance;
     private bool isPlayerInRange = false;
     private scr_meleeSwing playerGolfSwing;
-    private Rigidbody2D myRigidbody;
-    private SpriteRenderer mySprite;
+    public Rigidbody2D myRigidbody;
+    public SpriteRenderer mySprite;
     private TrailRenderer myTrail;
 
     private AudioSource audioSource;
@@ -25,6 +28,7 @@ public class scr_golfBall : MonoBehaviour
     public Gradient normalGradient;
 
     public float minVelocityToKill = 8;
+    private float minVelocityToWallImpact = 3;
 
     bool tempPlayerCheck = false;
 
@@ -32,10 +36,25 @@ public class scr_golfBall : MonoBehaviour
     //player who last hit the golfball
     public GameObject playerHitter;
 
+    //Special golf ball chance variables
+    [Header("Special Ball Chance")]
+    public float specialChance = 0.30f;
+
+    [Header("Special Ball Type Chances (Should sum to 1)")] //1.0 = 100% and 0.5 = 50% etc etc etc
+    public float type1Chance = 0.5f;
+    public float type2Chance = 0.5f;
+    public float type3Chance = 0f;
+    public float type4Chance = 0f;
+
+    public GameObject bombModel;
+
     [HideInInspector]public Outline outline;
 
     public GameObject textPopup;
-    
+
+    public GameObject wallHitImpact;
+    private Quaternion hitDirection;
+    private float newZDirection;
 
     private void Start()
     {
@@ -45,6 +64,8 @@ public class scr_golfBall : MonoBehaviour
         mySprite = GetComponent<SpriteRenderer>();
         myTrail = GetComponent<TrailRenderer>();
         outline = GetComponent<Outline>();
+        scr_Balltype_Bomb = GetComponent<scr_balltype_bomb>();
+        AssignRandomType();
     }
 
     private void Update()
@@ -76,11 +97,46 @@ public class scr_golfBall : MonoBehaviour
             mySprite.color = Color.white;
             myTrail.colorGradient = normalGradient;
         }
-            
+           
+        if (balltype == 1)
+        {
+            Color color = mySprite.color;
+            color.a = 0f;
+            outline.OutlineColor = color; //outline needs alpha set to 0 or just low because it shines through the bomb model lol
+        }
 
     }
 
-    
+    void AssignRandomType()
+    {
+        float chance = Random.value; //Roll for special ball
+
+        if (chance < specialChance)
+        {
+            //Here we can change the spawn ring variable because here means that the ball WILL be special.
+            //Roll for special type
+            float specialRoll = Random.value;
+
+            if (specialRoll < type1Chance)
+            {
+                bombModel.SetActive(true);
+                scr_Balltype_Bomb.enabled = true;
+                balltype = 1;
+            }
+            else if (specialRoll < type1Chance + type2Chance)
+                balltype = 2;
+            else if (specialRoll < type1Chance + type2Chance + type3Chance)
+                balltype = 3;
+            else
+                balltype = 4;
+        }
+        else
+        {
+            balltype = 0; //Normal ball
+        }
+    }
+
+
     private void ShowDirectionArrow()
     {
         directionArrowInstance.GetComponent<SpriteRenderer>().enabled = true;
@@ -109,6 +165,7 @@ public class scr_golfBall : MonoBehaviour
             var scoreText = Instantiate(textPopup, other.transform.position, transform.rotation);
             scoreText.GetComponent<TextPopup>().myColor = outline.OutlineColor;
             scoreText.GetComponent<TextPopup>().weaponPickup = "None";
+            if (balltype == 1) scr_Balltype_Bomb.Explode();
             Destroy(gameObject);
         }
         //slows ball in sand trap
@@ -129,20 +186,31 @@ public class scr_golfBall : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        int golfSwing = Random.Range(1, 4);
-
-        switch (golfSwing)
+        if (collision.gameObject.tag == "Wall")
         {
-            case 1:
-                audioSource.PlayOneShot(bounce1);
-                break;
-            case 2:
-                audioSource.PlayOneShot(bounce2);
-                break;
-            case 3:
-                audioSource.PlayOneShot(bounce3);
-                break;
+            int golfSwing = Random.Range(1, 4);
+
+            switch (golfSwing)
+            {
+                case 1:
+                    audioSource.PlayOneShot(bounce1);
+                    break;
+                case 2:
+                    audioSource.PlayOneShot(bounce2);
+                    break;
+                case 3:
+                    audioSource.PlayOneShot(bounce3);
+                    break;
+            }
+
+            
+            var hitImpact = Instantiate(wallHitImpact, transform.position, Quaternion.identity);
+            hitImpact.transform.rotation = Quaternion.FromToRotation(transform.right, collision.GetContact(0).normal.normalized);
+            
+
         }
+
+        
     }
 
     private void OnDrawGizmosSelected()

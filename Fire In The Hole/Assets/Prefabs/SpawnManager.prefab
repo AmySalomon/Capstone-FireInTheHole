@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hazardPrefab: {fileID: 5214778925187614226, guid: 0fc4879413606d34d82111d725322ea2, type: 3}
+  specialEvents: {fileID: 0}
   ringSpawnerPrefab: {fileID: 8514672411319002925, guid: e058e74139c55d54abb9013e309da4ea, type: 3}
   levelXMin: -8.5
   levelXMax: 8.5
@@ -53,13 +54,13 @@ MonoBehaviour:
   levelYMax: 5
   SpawnTimeForGolfBalls: 5
   SpawnTimeForWeapons: 10
+  SpawnTimeForPowerUps: 15
   minSpawnTimeForHazards: 3
   maxSpawnTimeForHazards: 6
   currentSpawnTimeForHazards: 0
   golfBallLimit: 3
   weaponLimit: 3
-  hazardSpawnLimit: 5
-  meteorsToSpawn: 0
+  PowerupLimit: 3
 --- !u!58 &455177589352024495
 CircleCollider2D:
   m_ObjectHideFlags: 0

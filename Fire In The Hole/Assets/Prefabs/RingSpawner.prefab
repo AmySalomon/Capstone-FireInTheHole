@@ -488,7 +488,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   golfBall: {fileID: 2418453429810656359, guid: 4031563aec8778046a5edc5d43dcb23d, type: 3}
-  powerUp: {fileID: 7631844770271239170, guid: ac2d026ab12e2b84684430477457e369, type: 3}
+  powerUp: {fileID: 6386908862290327705, guid: 0a13f736299cc2240a43a4b485996df2, type: 3}
   gunPickup: {fileID: 7631844770271239170, guid: ac2d026ab12e2b84684430477457e369, type: 3}
   skydiveExplosion: {fileID: 8977285105747890853, guid: f3c56af67d81f8b47952fb115069562e, type: 3}
   innerRing: {fileID: 7038277218828136491}
@@ -525,10 +525,10 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1535
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2

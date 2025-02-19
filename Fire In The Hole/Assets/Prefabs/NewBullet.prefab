@@ -144,7 +144,7 @@ Rigidbody2D:
     m_Bits: 8
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!70 &6354600699199822506
 CapsuleCollider2D:
@@ -196,3 +196,7 @@ MonoBehaviour:
   bulletType: {fileID: 11400000, guid: 9d125d6420485d74cb3aadf0210bd939, type: 2}
   timer: 0
   deletionTime: 5
+  playerShooter: {fileID: 0}
+  wallHitImpact: {fileID: 803181029017805290, guid: f80cbe750951cf94c81903fc740ac95e, type: 3}
+  bounceMaterial: {fileID: 6200000, guid: f685cd95ae6a77c4bb8257300ca184bb, type: 2}
+  canBounce: 0

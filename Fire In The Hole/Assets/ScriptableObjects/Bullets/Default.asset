@@ -13,5 +13,4 @@ MonoBehaviour:
   m_Name: Default
   m_EditorClassIdentifier: 
   deletionTime: 5
-  bullet: {fileID: 0}
   bulletPrefab: {fileID: 2615455651010696115, guid: 963e965b7912787429ff0c5e80a4b331, type: 3}

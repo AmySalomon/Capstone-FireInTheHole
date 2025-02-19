@@ -18,6 +18,8 @@ TagManager:
   - LevelInitializer
   - Low Tide
   - High Tide
+  - DashTut
+  - GolfTut
   layers:
   - Default
   - TransparentFX

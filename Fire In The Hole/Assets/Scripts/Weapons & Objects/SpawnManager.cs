@@ -24,14 +24,17 @@ public class SpawnManager : MonoBehaviour
     private bool needAGolfSpawn = false;
     private bool needAWeaponSpawn = false;
     private bool needAHazardSpawn = false;
+    public bool needAPowerUpSpawn = false;
 
     //Timers until next spawncheck occurs
     private float golfBallTimer = 0;
     private float weaponTimer = 0;
     private float hazardTimer = 0;
+    public float powerUpTimer = 0;
 
     public float SpawnTimeForGolfBalls;
     public float SpawnTimeForWeapons;
+    public float SpawnTimeForPowerUps;
     public float minSpawnTimeForHazards;
     public float maxSpawnTimeForHazards;
     [SerializeField] private float currentSpawnTimeForHazards;
@@ -39,6 +42,7 @@ public class SpawnManager : MonoBehaviour
     //Maximum amount of weapon powerups / golfballs that can be on screen at once
     public float golfBallLimit = 3;
     public float weaponLimit = 4;
+    public float PowerupLimit = 5; //change as needed
     
 
     private void Start()
@@ -60,6 +64,8 @@ public class SpawnManager : MonoBehaviour
         golfBallTimer += Time.deltaTime;
         weaponTimer += Time.deltaTime;
         hazardTimer += Time.deltaTime;
+        powerUpTimer += Time.deltaTime;
+
         //when the timer elapses and there aren't more than golfBallLimit balls on screen, spawn a golfball
         if (golfBallTimer > SpawnTimeForGolfBalls && GolfBallLimitCheck()) needAGolfSpawn = true;
 
@@ -70,11 +76,17 @@ public class SpawnManager : MonoBehaviour
 
         if (needAWeaponSpawn == true) StartCoroutine(SpawnWeapon());
 
+        if (powerUpTimer > SpawnTimeForPowerUps) needAPowerUpSpawn = true;
+        Debug.Log(needAPowerUpSpawn);
+        if (needAPowerUpSpawn == true) StartCoroutine(SpawnPowerup());
+
         if (specialEvents == null) { return; } //if there is no special events for the map, do not check for hazard related actions
 
         if (hazardTimer > currentSpawnTimeForHazards) needAHazardSpawn = true;
 
         if (needAHazardSpawn == true) StartCoroutine(SpawnHazard());
+
+
 
     }
 
@@ -104,6 +116,22 @@ public class SpawnManager : MonoBehaviour
         }
 
         yield return null;
+    }
+
+    IEnumerator SpawnPowerup()
+    {
+        Debug.Log("trying to spawn PowerUp");
+        if (spawnPosIsLegal(0.5f) == true)
+        {
+            
+            powerUpTimer = 0;
+            needAPowerUpSpawn = false;
+            GameObject newPowerUp = GameObject.Instantiate(ringSpawnerPrefab, transform.position, Quaternion.identity) as GameObject;
+            newPowerUp.GetComponent<SpawnRing>().spawnPowerup = true;
+            //newPowerUp.GetComponent <SpawnRing>().SpawnInThing();
+            StopCoroutine(SpawnPowerup());
+        }
+            yield return null;
     }
 
     IEnumerator SpawnHazard()
@@ -167,7 +195,7 @@ public class SpawnManager : MonoBehaviour
         return amountFound < golfBallLimit;
     }
 
-    //returns true if there are not at maximum amount of power ups on screen
+    //returns true if there are not at maximum amount of weapons on screen
     public bool WeaponLimitCheck()
     {
         int amountFound;
@@ -175,6 +203,16 @@ public class SpawnManager : MonoBehaviour
         Debug.Log("found " + amountFound + " weapons");
         weaponTimer = 0;
         return amountFound < weaponLimit;
+    }
+
+    //returns true if there are not at maximum amount of power ups on screen
+    public bool PowerUpLimitCheck()
+    {
+        int amountFound;
+        amountFound = FindObjectsOfType<scr_powerUpPickup>().Length;
+        Debug.Log("found " + amountFound + " power ups");
+        powerUpTimer = 0;
+        return amountFound < PowerupLimit;
     }
 
     //randomly choose the timer until the next hazard spawn between the minimum and maximum spawn time

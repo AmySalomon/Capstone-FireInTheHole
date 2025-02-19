@@ -21,9 +21,9 @@ public class scr_balltype_bomb : MonoBehaviour
     public scr_golfBall golfBall;
     public bool active = false;
 
-    // Start is called before the first frame update
     void Start()
     {
+        spriteRenderer.enabled = true;
         rb = GetComponent<Rigidbody2D>();
         if (spriteRenderer)
         {
@@ -39,10 +39,9 @@ public class scr_balltype_bomb : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (golfBall.playerHitter != null && active == true)
+        if (golfBall.playerHitter != null && golfBall.balltype == 1) //checks if ball was hit by a player and if the power up is active (needs changing for ball type)
         {
             isTriggered = true;
             InvokeRepeating("Blink", 0f, blinkInterval);
@@ -50,7 +49,7 @@ public class scr_balltype_bomb : MonoBehaviour
         }
     }
 
-    void Explode()
+    public void Explode()
     {
         CancelInvoke("Blink");
         if (spriteRenderer)
@@ -58,19 +57,16 @@ public class scr_balltype_bomb : MonoBehaviour
             spriteRenderer.color = originalColor;
         }
 
-        // Play explosion animation
-        if (explosionAnimator)
+        if (explosionAnimator) //trigger explode animation
         {
             explosionAnimator.SetTrigger("Explode");
         }
 
-        // Instantiate explosion effect
-        if (explosion)
+        if (explosion) //instantiate explosion
         {
             Instantiate(explosion, transform.position, Quaternion.identity);
         }
 
-        // Apply force to nearby objects
         Collider[] colliders = Physics.OverlapSphere(transform.position, bombRadius);
         foreach (Collider nearbyObject in colliders)
         {

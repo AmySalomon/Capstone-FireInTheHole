@@ -457,7 +457,7 @@
                     "path": "<Keyboard>/r",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard",
                     "action": "Reload",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -503,6 +503,15 @@
                     "name": "Select",
                     "type": "Button",
                     "id": "b8a8c026-8e2f-49f0-be56-ca7407d926a2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Cancel",
+                    "type": "Button",
+                    "id": "237d135a-19e2-4587-9461-74005cb14fa8",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -606,6 +615,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3b8ee37c-6ec6-4c10-af25-48f66ca17a5c",
+                    "path": "*/{Cancel}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Cancel",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

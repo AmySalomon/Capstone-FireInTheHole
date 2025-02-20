@@ -161,6 +161,11 @@ public class JoinPlayer : MonoBehaviour
         }
     }
 
+    public void HandlePlayerLeave(PlayerInput pi)
+    {
+        //Debug.Log("Player Left " + pi.playerIndex);
+        playerConfigs.Remove(new PlayerConfig(pi));
+    }
     public void DisableButton(int buttonNumber)
     {
         switch (buttonNumber)
@@ -176,6 +181,25 @@ public class JoinPlayer : MonoBehaviour
                 break;
             case 4:
                 shouldDisableButton4 = true;
+                break;
+        }
+    }
+
+    public void EnableButton(int buttonNumber)
+    {
+        switch (buttonNumber)
+        {
+            case 1:
+                shouldDisableButton1 = false;
+                break;
+            case 2:
+                shouldDisableButton2 = false;
+                break;
+            case 3:
+                shouldDisableButton3 = false;
+                break;
+            case 4:
+                shouldDisableButton4 = false;
                 break;
         }
     }

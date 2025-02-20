@@ -96,7 +96,7 @@ public class ShootProjectile : MonoBehaviour
             muzzleFlash.GetComponent<MuzzleAnimation>().StartAnimation();
             audioPlayer.pitch = Random.Range(0.9f, 1.1f);
             audioPlayer.PlayOneShot(gunshot, 1f);
-            StartCoroutine(rumbleHandler.StartRumble(0.1f, 0.3f));
+            rumbleHandler.RumbleCheck(0.1f, 0.3f);
             shotType.ShootBullets(barrelEnd, launchForce, shotSpread, this.gameObject);
             shootTimer = 0;
             Destroy(ammo_UI[ammoCurrent - 1]);

@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.InputSystem;
+using UnityEngine.U2D;
+using static UnityEngine.InputSystem.InputAction;
+using XInputDotNetPure;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem.UI;
+using System;
 
 public class SetupMenuController : MonoBehaviour
 {
@@ -17,20 +24,66 @@ public class SetupMenuController : MonoBehaviour
     [SerializeField] private Button readyButton;
 
     [HideInInspector] public WhatButtonAmI buttonToDisable;
+    [HideInInspector] public GameObject currentWindow;
 
     [SerializeField] private Button characterButton1;
     [SerializeField] private Button characterButton2;
     [SerializeField] private Button characterButton3;
     [SerializeField] private Button characterButton4;
+    [SerializeField] private Button selectedButton;
 
     private RectTransform rectTransform;
 
-    private float ignoreInputTime = 1.5f;
+    public float ignoreInputTime = 1.5f;
     private bool inputEnabled;
+    public GameObject currentPanel;
+    public MultiplayerEventSystem multiplayerEventSystem;
+    public PlayerInput myInput;
+    private InputDevice device;
+    public InputSystemUIInputModule module;
+    private PlayerControls controls;
 
-    public void SetPlayerIndex(int pi)
+    private void Awake()
+    {
+        currentPanel = menuPanel;
+        multiplayerEventSystem = gameObject.GetComponentInChildren<MultiplayerEventSystem>();
+        controls = new PlayerControls();
+    }
+
+    private void MyInput_onActionTriggered(CallbackContext obj)
+    {
+        device = obj.control.device;
+
+        if(obj.action.name == controls.Menus.Cancel.name)
+        {
+            GoBack();
+        }
+    }
+
+    public void GoBack()
+    {
+        if(currentPanel == null) { return; }
+
+        if(currentPanel == menuPanel)
+        {
+            Debug.Log("Lol lmao");
+        }
+
+        if(currentPanel == readyPanel)
+        {
+            multiplayerEventSystem.SetSelectedGameObject(null); //needed so the readybutton is also automatically pressed once a character is picked again
+            readyPanel.SetActive(false);
+            menuPanel.SetActive(true);
+            EnableThisButton(selectedButton);
+            currentPanel = menuPanel;
+            selectedButton.Select();
+        }
+    }
+    public void SetPlayerIndex(int pi, PlayerInput input)
     {
         PlayerIndex = pi;
+        myInput = input;
+        myInput.onActionTriggered += MyInput_onActionTriggered;
         rectTransform = GetComponent<RectTransform>();
         //Debug.Log(pi);
         titleText.SetText("Player " +(pi + 1).ToString());
@@ -74,8 +127,13 @@ public class SetupMenuController : MonoBehaviour
         if (JoinPlayer.Instance.shouldDisableButton2) characterButton2.interactable = false;
         if (JoinPlayer.Instance.shouldDisableButton3) characterButton3.interactable = false;
         if (JoinPlayer.Instance.shouldDisableButton4) characterButton4.interactable = false;
+        if (!JoinPlayer.Instance.shouldDisableButton1) characterButton1.interactable = true;
+        if (!JoinPlayer.Instance.shouldDisableButton2) characterButton2.interactable = true;
+        if (!JoinPlayer.Instance.shouldDisableButton3) characterButton3.interactable = true;
+        if (!JoinPlayer.Instance.shouldDisableButton4) characterButton4.interactable = true;
     }
 
+    
     public void SetSprite(Sprite sprite)
     {
         if(!inputEnabled) { return; }
@@ -84,6 +142,7 @@ public class SetupMenuController : MonoBehaviour
         readyPanel.SetActive(true);
         readyButton.Select();
         menuPanel.SetActive(false);
+        currentPanel = readyPanel;
     }
 
     public void SetVictorySprite(Sprite sprite)
@@ -103,12 +162,17 @@ public class SetupMenuController : MonoBehaviour
     public void DisableThisButton(Button button)
     {
         if (!inputEnabled) { return; }
-
         buttonToDisable = button.gameObject.GetComponent<WhatButtonAmI>();
         JoinPlayer.Instance.DisableButton(buttonToDisable.buttonNumber);
         //the joinplayer instance will now trigger a bool, that disables this button in the update function of this class, for all versions of this class.
+        selectedButton = button;
     }
 
+    public void EnableThisButton(Button button)
+    {
+        JoinPlayer.Instance.EnableButton(buttonToDisable.buttonNumber);
+
+    }
 
     public void ReadyPlayer()
     {
@@ -116,7 +180,6 @@ public class SetupMenuController : MonoBehaviour
 
         JoinPlayer.Instance.ReadyPlayer(PlayerIndex);
         readyButton.gameObject.SetActive(false);
-
         //this disables the UI panel after selecting character. in future, we will have to make a way to return to this UI panel after selecting a character
         gameObject.SetActive(false);
     }

@@ -80,7 +80,7 @@ public class PlayerInputHandler : MonoBehaviour
     {
         device = obj.control.device; //Assigns control type to device (keyboard or controller)
 
-        
+
 
         if (obj.action.name == controls.Player1.Move.name)
         {
@@ -102,7 +102,7 @@ public class PlayerInputHandler : MonoBehaviour
         {
             HoldSwing(obj);
         }
-        if(obj.action.name == controls.Player1.Pause.name)
+        if (obj.action.name == controls.Player1.Pause.name)
         {
             OnPause(obj);
         }
@@ -110,19 +110,23 @@ public class PlayerInputHandler : MonoBehaviour
         {
             OnReload(obj);
         }
+        if (obj.action.name == controls.Menus.Cancel.name)
+        {
+            OnCancelMenu(obj);
+        }
         else
         {
             return;
         }
 
 
-   
+
     }
 
     public void OnMove(CallbackContext context)
     {
         playerDirection = context.ReadValue<Vector2>();
-        if(PlayerPause.paused) { return; }
+        if (PlayerPause.paused) { return; }
         if (playerMovement != null)
         {
             Debug.Log("trying to move");
@@ -167,7 +171,7 @@ public class PlayerInputHandler : MonoBehaviour
         {
             if (device is Gamepad)
             {
-               // Debug.Log("trying to aim Gamepad");
+                // Debug.Log("trying to aim Gamepad");
                 playerAim.IsAiming(context.ReadValue<Vector2>());
                 playerAim.InputDevice = true;
                 playerSwingAim.IsAiming(context.ReadValue<Vector2>());
@@ -175,7 +179,7 @@ public class PlayerInputHandler : MonoBehaviour
             }
             else if (device is Mouse)
             {
-               // Debug.Log("trying to aim Mouse");
+                // Debug.Log("trying to aim Mouse");
                 playerAim.IsAiming(context.ReadValue<Vector2>());
                 playerAim.InputDevice = false;
                 playerSwingAim.IsAiming(context.ReadValue<Vector2>());
@@ -192,7 +196,7 @@ public class PlayerInputHandler : MonoBehaviour
         {
             if (playerCharge.isCharging) playerDash.dashChargeBar.gameObject.SetActive(false);
             playerCharge.StartCharging();
-            
+
         }
 
         if (context.canceled)
@@ -233,32 +237,47 @@ public class PlayerInputHandler : MonoBehaviour
     public IEnumerator StartRumble(float rumbleValue, float rumbleTimer) //make the controller vibrate for rumbleTime seconds, then stop
     {
         Debug.Log("trying to rumble controller " + myIndex);
-        if(device is Mouse)
+        if (device is Mouse)
         {
             Debug.Log("This is a Mouse " + myIndex);
             yield break;
         }
         rumbleAmount = rumbleValue;
         rumbleTime = rumbleTimer;
-        if (!rumbling)
-        {
-            rumbling = true;
-            GamePad.SetVibration(myIndex, 65535*rumbleAmount, 65535*rumbleAmount); //65535 is the max amount of rumble, rumble amount is taking a percentage of that
-            yield return new WaitForSeconds(rumbleTime);
-            Debug.Log(" done rumble controller " + myIndex);
-            GamePad.SetVibration(myIndex, 0, 0);
-            rumbling = false;
-        }
-        else
-        {
-            yield return null;
-        }
+
+        rumbling = true;
+        GamePad.SetVibration(myIndex, 65535 * rumbleAmount, 65535 * rumbleAmount); //65535 is the max amount of rumble, rumble amount is taking a percentage of that
+        yield return new WaitForSeconds(rumbleTime);
+        Debug.Log(" done rumble controller " + myIndex);
+        GamePad.SetVibration(myIndex, 0, 0);
+        rumbling = false;
+
     }
 
+    public void RumbleCheck(float rumbleValue, float rumbleTimer)
+    {
+        if (device is Mouse)
+        {
+            Debug.Log("This is a Mouse " + myIndex);
+            return;
+        }
+
+        if (rumbling) //if vibrating already, stop the old one and replace with new vibration
+        {
+            StopCoroutine(nameof(StartRumble));
+        }
+        StartCoroutine(StartRumble(rumbleValue, rumbleTimer));
+
+    }
+
+    public void OnCancelMenu(CallbackContext context)
+    {
+
+    }
     //PlayerIndex uses enums of One, Two, Three, Four. Our Indexing starts at 0, so we must convert it
     public void AssignPlayerIndex()
     {
-        switch(playerConfig.PlayerIndex)
+        switch (playerConfig.PlayerIndex)
         {
             case 0:
                 myIndex = (PlayerIndex)0; break;
@@ -269,6 +288,6 @@ public class PlayerInputHandler : MonoBehaviour
             case 3:
                 myIndex = (PlayerIndex)3; break;
         }
-        Debug.Log("Player "+ playerConfig.PlayerIndex +" is "+ myIndex.ToString());
+        Debug.Log("Player " + playerConfig.PlayerIndex + " is " + myIndex.ToString());
     }
 }

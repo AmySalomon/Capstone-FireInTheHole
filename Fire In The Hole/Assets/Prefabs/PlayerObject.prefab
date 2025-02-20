@@ -687,11 +687,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2dbe8aa0aaf4f94685bcc30e6981e9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 1829357051581644085, guid: 3e1fcf014be93dc48a4c3a2c57b06ff7, type: 3}
+  bullet: {fileID: 2615455651010696115, guid: 963e965b7912787429ff0c5e80a4b331, type: 3}
   barrelEnd: {fileID: 6244742067673680353}
   muzzleFlash: {fileID: 1021831854784162192}
   gunshot: {fileID: 8300000, guid: 294e8b3cf7c23724aaa160f5b892d793, type: 3}
   launchForce: 400
+  isBounce: 0
   shootDelay: 0.2
   screenShake: 0
   ammoMax: 0
@@ -7584,12 +7585,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerObj: {fileID: 3358283545364179000}
-  isBomb: 0
-  activePowerUps: []
+  duration: 0
+  isTemporary: 0
+  activePowerUp: {fileID: 0}
+  tempActivePowerUp: {fileID: 0}
+  PlayerDeath: {fileID: 4617527675341735179}
+  isDead: 0
   testPowerUp:
     name: Bombball
-    duration: 10
-    isTemporary: 1
     effect: {fileID: 11400000, guid: 48f1a0859b555544681f648d07b4c9ed, type: 2}
 --- !u!1 &8370212098543078777
 GameObject:
@@ -7664,6 +7667,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStuff: {fileID: 3358283545364179000}
   playerCanvasStuff: {fileID: 3949027636941628624}
+  playerPowerUpManager: {fileID: 3809131345792987206}
   spawnIndicatorPrefab: {fileID: 8514672411319002925, guid: e058e74139c55d54abb9013e309da4ea, type: 3}
   deathAnimationPrefab: {fileID: 5802931762181437889, guid: 66d425d8efb3cd545891bd15d420c0f5, type: 3}
   deathDirection: {x: 0, y: 0, z: 0}
@@ -7689,6 +7693,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   setSpawnLocation: {fileID: 0}
+  myIndex: 0
 --- !u!82 &7798374392852686781
 AudioSource:
   m_ObjectHideFlags: 0

@@ -8,6 +8,7 @@ public class PlayerDeath : MonoBehaviour
 {
     public GameObject playerStuff;
     public GameObject playerCanvasStuff;
+    public scr_powerUpManager playerPowerUpManager;
 
     public GameObject spawnIndicatorPrefab;
     public GameObject deathAnimationPrefab;
@@ -131,6 +132,7 @@ public class PlayerDeath : MonoBehaviour
             deadPlayer.GetComponent<DeathAnimation>().knockbackDirection = deathDirection;
 
         }
+        playerPowerUpManager.RemovePowerUp();
         playerStuff.SetActive(false);
         playerCanvasStuff.SetActive(false);
     }
@@ -146,6 +148,7 @@ public class PlayerDeath : MonoBehaviour
             playerStuff.transform.localPosition = Vector2.zero;
             playerStuff.SetActive(true);
             playerCanvasStuff.SetActive(true);
+            playerPowerUpManager.RemovePowerUp();
             timer = 0;
             //make player invulnerable, when not on tutorial
             if (setSpawnLocation == false) playerRigidbody.excludeLayers = bullet + golfBall;

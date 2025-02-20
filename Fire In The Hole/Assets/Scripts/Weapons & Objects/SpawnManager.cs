@@ -76,7 +76,7 @@ public class SpawnManager : MonoBehaviour
 
         if (needAWeaponSpawn == true) StartCoroutine(SpawnWeapon());
 
-        if (powerUpTimer > SpawnTimeForPowerUps) needAPowerUpSpawn = true;
+        if (powerUpTimer > SpawnTimeForPowerUps && PowerUpLimitCheck()) needAPowerUpSpawn = true;
         Debug.Log(needAPowerUpSpawn);
         if (needAPowerUpSpawn == true) StartCoroutine(SpawnPowerup());
 

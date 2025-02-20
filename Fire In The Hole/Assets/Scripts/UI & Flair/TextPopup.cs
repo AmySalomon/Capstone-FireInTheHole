@@ -30,6 +30,7 @@ public class TextPopup : MonoBehaviour
     private float endOpacity = 0;
 
     [HideInInspector] public string weaponPickup;
+    [HideInInspector] public string powerupPickup;
 
     public GameObject confetti;
     private void Start()
@@ -41,7 +42,7 @@ public class TextPopup : MonoBehaviour
         if (weaponPickup == "None")
         {
             int whichClip = Random.Range(1, 4);
-            switch(whichClip)
+            switch (whichClip)
             {
                 case 1:
                     audio.PlayOneShot(niceShot1);
@@ -53,7 +54,7 @@ public class TextPopup : MonoBehaviour
                     audio.PlayOneShot(niceShot3);
                     break;
                 default:
-                        audio.PlayOneShot(niceShot1);
+                    audio.PlayOneShot(niceShot1);
                     break;
             }
             text.text = "Nice Shot!";
@@ -61,19 +62,39 @@ public class TextPopup : MonoBehaviour
             Instantiate(confetti, startPosition, Quaternion.identity);
         }
 
-        else myColor = new Color(1, .6f, 0);
+        else
 
 
-        if (weaponPickup == "Shotgun") text.text = "Shotgun";
+        if (weaponPickup == "Shotgun")
+        {
+            text.text = "Shotgun";
+            myColor = new Color(1, .6f, 0);
+        }
 
+        if (weaponPickup == "Sniper") 
+        {
+            text.text = "Sniper";
+            myColor = new Color(1, .6f, 0);
+        }
 
-        if (weaponPickup == "Sniper") text.text = "Sniper";
+        if (weaponPickup == "TommyGun")
+        {
+            text.text = "SMG";
+            myColor = new Color(1, .6f, 0);
+        }
 
+        if (weaponPickup == "RocketLauncher")
+        {
+            text.text = "Rocket";
+            myColor = new Color(1, .6f, 0);
+        }
 
-        if (weaponPickup == "TommyGun") text.text = "SMG";
-
-        if (weaponPickup == "RocketLauncher") text.text = "Rocket";
-        Color colorTop = new Color(myColor.r, myColor.g, myColor.b);
+        if (weaponPickup == "PU_speed Boost")
+        {
+            text.text = "Speed Up";
+            myColor = new Color(0.61f, 0.2f, 0.92f);
+        }
+            Color colorTop = new Color(myColor.r, myColor.g, myColor.b);
         text.colorGradient = new VertexGradient(colorTop, colorTop, Color.white, Color.white);
     }
 

@@ -7,6 +7,7 @@ public class scr_powerUpPickup : MonoBehaviour
     public scr_powerUpEffect[] powerUps;
     public scr_powerUpEffect powerUpEffect;
     public SpriteRenderer powerUpSprite;
+    public GameObject textPopup;
     public float duration = 10f;
     
     // Start is called before the first frame update
@@ -20,6 +21,8 @@ public class scr_powerUpPickup : MonoBehaviour
             collision.gameObject.GetComponentInChildren<scr_powerUpManager>().activePowerUp = powerUpEffect;
             collision.gameObject.GetComponentInChildren<scr_powerUpManager>().isTemporary = true;
             collision.gameObject.GetComponentInChildren<scr_powerUpManager>().duration = duration;
+            var newPopup = Instantiate(textPopup, collision.transform.position, transform.rotation);
+            newPopup.GetComponent<TextPopup>().weaponPickup = powerUpEffect.name;
             //var newPopup = Instantiate(textPopup, collision.transform.position, transform.rotation);
             //newPopup.GetComponent<TextPopup>().weaponPickup = chosenWeapon.name;
             Destroy(this.gameObject);

@@ -60,11 +60,8 @@ public class scr_powerUpManager : MonoBehaviour
     {
         yield return new WaitForSeconds(duration);
 
-        if (powerUp != null && player != null)
-        {
-            powerUp.RemoveEffect(player);
-            Debug.Log("Powerup removed!");
-        }
+        powerUp.RemoveEffect(player);
+        Debug.Log("Powerup removed!");
 
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class scr_golfBall : MonoBehaviour
 {
@@ -10,8 +11,7 @@ public class scr_golfBall : MonoBehaviour
     public string golfHoleTag = "GolfHole";
     public string sandTrapTag = "Sand";
 
-    public float balltype = 0; //0 = regular golfball, 1 = bomball, 2 = scattershot, 3 = bouncing betty
-    private scr_balltype_bomb scr_Balltype_Bomb;
+
 
     private GameObject directionArrowInstance;
     private bool isPlayerInRange = false;
@@ -36,6 +36,10 @@ public class scr_golfBall : MonoBehaviour
     //player who last hit the golfball
     public GameObject playerHitter;
 
+    public float balltype = 0; //0 = regular golfball, 1 = bomball, 2 = scattershot, 3 = bouncing betty
+    private scr_balltype_bomb scr_Balltype_Bomb;
+    private scr_scattershotChild scr_Balltype_Scatter;
+
     //Special golf ball chance variables
     [Header("Special Ball Chance")]
     public float specialChance = 0.30f;
@@ -47,6 +51,7 @@ public class scr_golfBall : MonoBehaviour
     public float type4Chance = 0f;
 
     public GameObject bombModel;
+    public string tutorialLvlText;
 
     [HideInInspector]public Outline outline;
 
@@ -65,6 +70,7 @@ public class scr_golfBall : MonoBehaviour
         myTrail = GetComponent<TrailRenderer>();
         outline = GetComponent<Outline>();
         scr_Balltype_Bomb = GetComponent<scr_balltype_bomb>();
+        scr_Balltype_Scatter = GetComponent<scr_scattershotChild>();
         AssignRandomType();
     }
 
@@ -110,8 +116,8 @@ public class scr_golfBall : MonoBehaviour
     void AssignRandomType()
     {
         float chance = Random.value; //Roll for special ball
-
-        if (chance < specialChance)
+        Scene scene = SceneManager.GetActiveScene();
+        if (chance < specialChance && scene.name != tutorialLvlText)
         {
             //Here we can change the spawn ring variable because here means that the ball WILL be special.
             //Roll for special type
@@ -124,7 +130,10 @@ public class scr_golfBall : MonoBehaviour
                 balltype = 1;
             }
             else if (specialRoll < type1Chance + type2Chance)
+            {
+                scr_Balltype_Scatter.enabled = true;
                 balltype = 2;
+            }
             else if (specialRoll < type1Chance + type2Chance + type3Chance)
                 balltype = 3;
             else

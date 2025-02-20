@@ -26,7 +26,7 @@ public class scr_PU_scattershot : scr_powerUpEffect
     void AddChild(GameObject child, GameObject player)
     {
         puItem = Instantiate(child, player.transform);
-        puItem.GetComponent<scr_scattershotChild>().player = player;
+       // puItem.GetComponent<scr_scattershotChild>().player = player;
         puItem.gameObject.SetActive(true);
     }
 

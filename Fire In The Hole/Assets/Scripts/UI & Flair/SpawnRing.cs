@@ -16,12 +16,14 @@ public class SpawnRing : MonoBehaviour
     public GameObject warningIcon;
     public GameObject golfballIcon;
     public GameObject ammoIcon;
+    public GameObject powerupIcon;
     public GameObject playerSkydive;
 
     public Sprite squareRing;
     public Sprite hexagonRing;
     public Sprite ballDrop;
     public Sprite weaponDrop;
+    public Sprite powerupDrop;
 
 
     [HideInInspector] public bool spawnBall = false;
@@ -72,6 +74,7 @@ public class SpawnRing : MonoBehaviour
             playerSkydive.GetComponent<SpriteRenderer>().sprite = mySprite;
             golfballIcon.SetActive(false);
             ammoIcon.SetActive(false);
+            powerupIcon.SetActive(false);
         }
         else
         {
@@ -88,6 +91,7 @@ public class SpawnRing : MonoBehaviour
             playerSkydive.transform.localScale = new Vector3 (0.45f, 0.45f, 0.45f);
             playerSkydive.GetComponent<SpriteRenderer>().sprite = ballDrop;
             ammoIcon.SetActive(false);
+            powerupIcon.SetActive(false);
         }
         else if (spawnGun)
         {
@@ -100,6 +104,20 @@ public class SpawnRing : MonoBehaviour
             playerSkydive.GetComponent<SpriteRenderer>().sprite = weaponDrop;
             playerSkydive.transform.localScale = new Vector3(0.35f, 0.35f, 0.35f);
             golfballIcon.SetActive(false);
+            powerupIcon.SetActive(false);
+        }
+
+        else if (spawnPowerup)
+        {
+            //bright purple
+            outerRing.GetComponent<SpriteRenderer>().color = new Color32(155, 52, 235, 255);
+            innerRing.GetComponent<SpriteRenderer>().color = new Color32(155, 52, 235, 255);
+            powerupIcon.GetComponent<SpriteRenderer>().color = new Color32(155, 52, 235, 255);
+            outerRing.GetComponent<SpriteRenderer>().sprite = squareRing;
+            innerRing.GetComponent<SpriteRenderer>().sprite = squareRing;
+            playerSkydive.GetComponent<SpriteRenderer>().sprite = powerupDrop;
+            golfballIcon.SetActive(false);
+            ammoIcon.SetActive(false);
         }
         //making endScale (the end of the lerp) the same size as the smaller ring. making startScale (the start of the lerp) the same size as the bigger ring.
         //using X makes it possible to make it a float, and x/y should be the same, anyway.
@@ -124,7 +142,6 @@ public class SpawnRing : MonoBehaviour
             ItemSkydiveAnimation();
         }
 
-        if (spawnPowerup) SpawnInThing(); //Temp for power up until animation is in
         time += Time.deltaTime;
     }
 

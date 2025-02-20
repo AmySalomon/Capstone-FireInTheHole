@@ -18,7 +18,7 @@ MonoBehaviour:
   magazineCount: 1
   shootDelay: 0.7
   reloadSpeed: 0.6
-  launchForce: 300
+  launchForce: 330
   screenShake: 0.2
   shotSpread: 5
   gunshot: {fileID: 0}

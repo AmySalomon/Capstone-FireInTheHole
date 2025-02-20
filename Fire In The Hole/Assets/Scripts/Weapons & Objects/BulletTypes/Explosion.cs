@@ -5,7 +5,7 @@ using UnityEngine;
 public class Explosion : MonoBehaviour
 {
     public double timer = 0.25;
-    public float radius = 0.5f;
+    public float radius = 0.75f;
     public float explosiveForce = 2000;
     public LayerMask interactables;
     public Vector3 explosionPos;

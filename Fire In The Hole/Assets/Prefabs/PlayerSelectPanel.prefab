@@ -943,7 +943,6 @@ GameObject:
   - component: {fileID: 7399633284772202671}
   - component: {fileID: 8291726411481725799}
   - component: {fileID: 251597564800859670}
-  - component: {fileID: 2063769184851493643}
   m_Layer: 5
   m_Name: PlayerSelectPanel
   m_TagString: Untagged
@@ -1006,39 +1005,8 @@ MonoBehaviour:
   characterButton3: {fileID: 780566372770016048}
   characterButton4: {fileID: 3877045505451169570}
   selectedButton: {fileID: 0}
-  ignoreInputTime: 1.5
-  currentPanel: {fileID: 0}
-  multiplayerEventSystem: {fileID: 0}
-  myInput: {fileID: 0}
-  module: {fileID: 0}
---- !u!114 &2063769184851493643
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2816264120269556153}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 582b7d52a3b66bb44ba715009375ae3a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onTriggered:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 251597564800859670}
-        m_TargetAssemblyTypeName: SetupMenuController, Assembly-CSharp
-        m_MethodName: GoBack
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  inputModule: {fileID: 2926604804098259339}
+  multiplayerEventSystem: {fileID: 5967761728997745633}
+  module: {fileID: 2926604804098259339}
 --- !u!1 &2919025965054858436
 GameObject:
   m_ObjectHideFlags: 0

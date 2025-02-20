@@ -34,13 +34,13 @@ public class SetupMenuController : MonoBehaviour
 
     private RectTransform rectTransform;
 
-    public float ignoreInputTime = 1.5f;
+    private float ignoreInputTime = 1.5f;
     private bool inputEnabled;
-    public GameObject currentPanel;
-    public MultiplayerEventSystem multiplayerEventSystem;
-    public PlayerInput myInput;
+    private GameObject currentPanel;
+    [SerializeField] private MultiplayerEventSystem multiplayerEventSystem;
+    private PlayerInput myInput;
     private InputDevice device;
-    public InputSystemUIInputModule module;
+    [SerializeField] private InputSystemUIInputModule module;
     private PlayerControls controls;
 
     private void Awake()
@@ -56,27 +56,31 @@ public class SetupMenuController : MonoBehaviour
 
         if(obj.action.name == controls.Menus.Cancel.name)
         {
-            GoBack();
+            GoBack(obj);
         }
     }
 
-    public void GoBack()
+    public void GoBack(CallbackContext context)
     {
-        if(currentPanel == null) { return; }
-
-        if(currentPanel == menuPanel)
+        if (context.performed)
         {
-            Debug.Log("Lol lmao");
-        }
+            if (currentPanel == null) { return; }
 
-        if(currentPanel == readyPanel)
-        {
-            multiplayerEventSystem.SetSelectedGameObject(null); //needed so the readybutton is also automatically pressed once a character is picked again
-            readyPanel.SetActive(false);
-            menuPanel.SetActive(true);
-            EnableThisButton(selectedButton);
-            currentPanel = menuPanel;
-            selectedButton.Select();
+            if (currentPanel == menuPanel)
+            {
+                Debug.Log("Lol lmao");
+            }
+
+            if (currentPanel == readyPanel)
+            {
+                multiplayerEventSystem.SetSelectedGameObject(null); //needed so the readybutton is not automatically pressed once a character is picked again
+                readyPanel.SetActive(false);
+                menuPanel.SetActive(true);
+                EnableThisButton(selectedButton);
+                currentPanel = menuPanel;
+                multiplayerEventSystem.SetSelectedGameObject(selectedButton.gameObject);
+                Debug.Log("Player "+myInput.playerIndex+" has cancelled");
+            }
         }
     }
     public void SetPlayerIndex(int pi, PlayerInput input)
@@ -140,7 +144,7 @@ public class SetupMenuController : MonoBehaviour
 
         JoinPlayer.Instance.SetPlayerSprite(PlayerIndex, sprite);
         readyPanel.SetActive(true);
-        readyButton.Select();
+        multiplayerEventSystem.SetSelectedGameObject(readyButton.gameObject);
         menuPanel.SetActive(false);
         currentPanel = readyPanel;
     }

@@ -23,6 +23,7 @@ public class ShootProjectile : MonoBehaviour
     //the launch force of the bullet being shot
     public float launchForce = -1200f;
 
+    public bool isBounce = false;
 
     public float shootDelay; //time between shots
     public float screenShake; //how hard screen shakes
@@ -85,6 +86,17 @@ public class ShootProjectile : MonoBehaviour
         if (isTryingToShoot)
         {
             ShootAction();
+        }
+
+        if (isBounce == true)
+        {
+            var bulletManager = bullet.GetComponent<BulletManager>();
+            bulletManager.canBounce = true;
+        }
+        else
+        {
+            var bulletManager = bullet.GetComponent<BulletManager>();
+            bulletManager.canBounce = false;
         }
     }
     public void ShootAction()

@@ -29,6 +29,8 @@ public class scr_golfBall : MonoBehaviour
 
     public float minVelocityToKill = 8;
     private float minVelocityToWallImpact = 3;
+    public Renderer ballRenderer;
+    private Color originalBallColor;
 
     bool tempPlayerCheck = false;
 
@@ -51,6 +53,7 @@ public class scr_golfBall : MonoBehaviour
     public float type4Chance = 0f;
 
     public GameObject bombModel;
+    public GameObject ballModel;
     public string tutorialLvlText;
 
     [HideInInspector]public Outline outline;
@@ -69,6 +72,7 @@ public class scr_golfBall : MonoBehaviour
         mySprite = GetComponent<SpriteRenderer>();
         myTrail = GetComponent<TrailRenderer>();
         outline = GetComponent<Outline>();
+        originalBallColor = ballRenderer.material.color;
         scr_Balltype_Bomb = GetComponent<scr_balltype_bomb>();
         scr_Balltype_Scatter = GetComponent<scr_scattershotChild>();
         AssignRandomType();
@@ -93,6 +97,7 @@ public class scr_golfBall : MonoBehaviour
         {
             gameObject.tag = "Bullet";
             mySprite.color = Color.red;
+            ballRenderer.material.SetColor("_BaseColor",Color.red);
             myTrail.colorGradient = killSpeedGradient;
 
         }
@@ -101,6 +106,7 @@ public class scr_golfBall : MonoBehaviour
         {
             gameObject.tag = "Ball";
             mySprite.color = Color.white;
+            ballRenderer.material.SetColor("_BaseColor", originalBallColor);
             myTrail.colorGradient = normalGradient;
         }
            
@@ -126,6 +132,7 @@ public class scr_golfBall : MonoBehaviour
             if (specialRoll < type1Chance)
             {
                 bombModel.SetActive(true);
+                ballModel.SetActive(false);
                 scr_Balltype_Bomb.enabled = true;
                 balltype = 1;
             }

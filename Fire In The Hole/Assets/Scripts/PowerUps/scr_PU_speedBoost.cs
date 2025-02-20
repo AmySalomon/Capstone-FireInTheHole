@@ -6,12 +6,15 @@ using UnityEngine;
 public class scr_PU_speedBoost : scr_powerUpEffect
 {
     public float speedMultiplier = 4f;
+    //public PlayerMovement playerMovement;
+    public float originalSpeed = 3;
 
     public override void ApplyEffect(GameObject player)
     {
         var PlayerMovement = player.GetComponent<PlayerMovement>();
         if (PlayerMovement != null)
         {
+            PlayerMovement.currentMoveSpeed = originalSpeed;
             PlayerMovement.currentMoveSpeed *= speedMultiplier;
             //Debug.Log("speedBoosted!");
         }
@@ -22,7 +25,7 @@ public class scr_PU_speedBoost : scr_powerUpEffect
         var PlayerMovement = player.GetComponent<PlayerMovement>();
         if (PlayerMovement != null)
         {
-            PlayerMovement.currentMoveSpeed /= speedMultiplier;
+            PlayerMovement.currentMoveSpeed = originalSpeed;
         }
     }
 }

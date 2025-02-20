@@ -50,17 +50,20 @@ public class scr_powerUpManager : MonoBehaviour
     {
         if (player == null) return;
 
-        //aapply powerup
-        newPowerUp.ApplyEffect(player);
-        
-
-        if (isTemporary)
+        if (tempActivePowerUp != null)
         {
+            tempActivePowerUp.RemoveEffect(player);
             if (activeCoroutine != null)
             {
                 StopCoroutine(activeCoroutine);
             }
+        }
 
+        newPowerUp.ApplyEffect(player);
+        tempActivePowerUp = newPowerUp;
+
+        if (isTemporary)
+        {
             activeCoroutine = StartCoroutine(RemovePowerUpAfterDuration(newPowerUp, player));
         }
     }

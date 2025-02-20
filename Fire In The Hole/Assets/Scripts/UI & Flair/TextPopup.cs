@@ -94,7 +94,12 @@ public class TextPopup : MonoBehaviour
             text.text = "Speed Up";
             myColor = new Color(0.61f, 0.2f, 0.92f);
         }
-            Color colorTop = new Color(myColor.r, myColor.g, myColor.b);
+        if (weaponPickup == "PU_bouncyBullet")
+        {
+            text.text = "Ricochet";
+            myColor = new Color(0.61f, 0.2f, 0.92f);
+        }
+        Color colorTop = new Color(myColor.r, myColor.g, myColor.b);
         text.colorGradient = new VertexGradient(colorTop, colorTop, Color.white, Color.white);
     }
 

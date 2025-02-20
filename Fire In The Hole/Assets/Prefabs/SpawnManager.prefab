@@ -52,9 +52,11 @@ MonoBehaviour:
   levelXMax: 8.5
   levelYMin: -5
   levelYMax: 5
+  needAPowerUpSpawn: 0
+  powerUpTimer: 0
   SpawnTimeForGolfBalls: 5
   SpawnTimeForWeapons: 10
-  SpawnTimeForPowerUps: 15
+  SpawnTimeForPowerUps: 14
   minSpawnTimeForHazards: 3
   maxSpawnTimeForHazards: 6
   currentSpawnTimeForHazards: 0

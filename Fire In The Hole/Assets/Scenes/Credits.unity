@@ -2484,6 +2484,7 @@ GameObject:
   - component: {fileID: 726397704}
   - component: {fileID: 726397703}
   - component: {fileID: 726397702}
+  - component: {fileID: 726397706}
   m_Layer: 5
   m_Name: Canvas (1)
   m_TagString: Untagged
@@ -2582,6 +2583,34 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &726397706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726397701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 582b7d52a3b66bb44ba715009375ae3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onTriggered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1653597619}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: GoToMain
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  inputModule: {fileID: 1997839957}
 --- !u!1 &727193345
 GameObject:
   m_ObjectHideFlags: 0
@@ -5772,7 +5801,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 269315806}
   m_Direction: 2
   m_Value: 0.9999999
-  m_Size: 0.1525702
+  m_Size: 0.15257019
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -5998,7 +6027,7 @@ MonoBehaviour:
   m_PointAction: {fileID: 0}
   m_MoveAction: {fileID: 5707518712884579917, guid: 87467c364baca9c49b14e3af90d00e3b, type: 3}
   m_SubmitAction: {fileID: 2556067248684489493, guid: 87467c364baca9c49b14e3af90d00e3b, type: 3}
-  m_CancelAction: {fileID: 0}
+  m_CancelAction: {fileID: 1026527800928812438, guid: 87467c364baca9c49b14e3af90d00e3b, type: 3}
   m_LeftClickAction: {fileID: 0}
   m_MiddleClickAction: {fileID: 0}
   m_RightClickAction: {fileID: 0}

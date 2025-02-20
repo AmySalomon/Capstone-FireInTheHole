@@ -532,6 +532,7 @@ GameObject:
   m_Component:
   - component: {fileID: 338269648}
   - component: {fileID: 338269647}
+  - component: {fileID: 338269649}
   m_Layer: 0
   m_Name: OptionsMenuManager
   m_TagString: Untagged
@@ -573,6 +574,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &338269649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 338269646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 582b7d52a3b66bb44ba715009375ae3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onTriggered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 338269647}
+        m_TargetAssemblyTypeName: OptionsMenuManager, Assembly-CSharp
+        m_MethodName: LevelSelect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  inputModule: {fileID: 1997839957}
 --- !u!1 &354839821
 GameObject:
   m_ObjectHideFlags: 0
@@ -3125,7 +3154,7 @@ MonoBehaviour:
   m_PointAction: {fileID: 0}
   m_MoveAction: {fileID: 5707518712884579917, guid: 87467c364baca9c49b14e3af90d00e3b, type: 3}
   m_SubmitAction: {fileID: 2556067248684489493, guid: 87467c364baca9c49b14e3af90d00e3b, type: 3}
-  m_CancelAction: {fileID: 0}
+  m_CancelAction: {fileID: 1026527800928812438, guid: 87467c364baca9c49b14e3af90d00e3b, type: 3}
   m_LeftClickAction: {fileID: 0}
   m_MiddleClickAction: {fileID: 0}
   m_RightClickAction: {fileID: 0}

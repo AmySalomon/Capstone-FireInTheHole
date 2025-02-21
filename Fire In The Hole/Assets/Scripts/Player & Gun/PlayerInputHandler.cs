@@ -64,6 +64,15 @@ public class PlayerInputHandler : MonoBehaviour
         {
             GamePad.SetVibration((PlayerIndex)myInputIndex, 0, 0);
         }*/
+
+        if (device is Gamepad)
+        {
+            playerAim.InputDevice = true;
+        }
+        else if (device is Mouse)
+        {
+            playerAim.InputDevice = false;
+        }
     }
 
     public void InitializePlayer(PlayerConfig pc)

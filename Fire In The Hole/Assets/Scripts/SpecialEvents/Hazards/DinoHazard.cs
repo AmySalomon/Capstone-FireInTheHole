@@ -29,6 +29,8 @@ public class DinoHazard : MonoBehaviour
 
     private GameObject eatenBall;
 
+    private MeshRenderer[] ballMeshes;
+    private SpriteRenderer[] ballSprites;
     //soundPlayer
     private AudioSource audioPlayer;
 
@@ -57,10 +59,20 @@ public class DinoHazard : MonoBehaviour
                 //effectively, turn the ball back on
                 eatenBall.transform.position = aimReticle.transform.position;
                 eatenBall.GetComponent<Rigidbody2D>().velocity = transform.right * spitForce;
-                eatenBall.GetComponent<SpriteRenderer>().enabled = true;
+                
                 eatenBall.GetComponent<CircleCollider2D>().enabled = true;
                 eatenBall.GetComponent<Outline>().enabled = true;
                 eatenBall.GetComponent<TrailRenderer>().enabled = true;
+                ballMeshes = eatenBall.GetComponentsInChildren<MeshRenderer>();
+                ballSprites = eatenBall.GetComponentsInChildren<SpriteRenderer>();
+                foreach (MeshRenderer mesh in ballMeshes)
+                {
+                    mesh.enabled = true;
+                }
+                foreach (SpriteRenderer sprite in ballSprites)
+                {
+                    sprite.enabled = true;
+                }
                 //reset variables for next time
                 spitTimer = 0;
 
@@ -132,6 +144,16 @@ public class DinoHazard : MonoBehaviour
                 eatenBall.GetComponent<TrailRenderer>().enabled = false;
                 //this is done to make sure it doesn't slow down and reset the player who last hit it.
                 eatenBall.GetComponent<Rigidbody2D>().velocity = new Vector2(10, 10);
+                ballMeshes = eatenBall.GetComponentsInChildren<MeshRenderer>();
+                ballSprites = eatenBall.GetComponentsInChildren<SpriteRenderer>();
+                foreach (MeshRenderer mesh in ballMeshes)
+                {
+                    mesh.enabled = false;
+                }
+                foreach (SpriteRenderer sprite in ballSprites)
+                {
+                    sprite.enabled = false;
+                }
                 StopAllCoroutines();
                 tryingToSpit = true;
             }

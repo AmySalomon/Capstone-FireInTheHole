@@ -121,7 +121,7 @@ public class TextPopup : MonoBehaviour
         }
         else
         {
-            //Destroy(gameObject);
+            Destroy(gameObject);
         }
     }
 }

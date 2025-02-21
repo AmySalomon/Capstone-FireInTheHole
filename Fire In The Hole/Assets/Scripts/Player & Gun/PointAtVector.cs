@@ -10,7 +10,7 @@ public class PointAtVector : MonoBehaviour
     [HideInInspector] public Vector2 aim;
     private Vector2 lastAimDir;
     private float angle;
-    public bool InputDevice; //True == Controller, false == Keyboard & Mouse
+    public bool InputDevice = true; //True == Controller, false == Keyboard & Mouse
 
     //Mouse Variables hehe
     private Vector3 aimDirection;

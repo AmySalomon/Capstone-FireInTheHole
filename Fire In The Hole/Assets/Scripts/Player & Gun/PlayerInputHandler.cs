@@ -64,6 +64,15 @@ public class PlayerInputHandler : MonoBehaviour
         {
             GamePad.SetVibration((PlayerIndex)myInputIndex, 0, 0);
         }*/
+
+        if (device is Gamepad)
+        {
+            playerAim.InputDevice = true;
+        }
+        else if (device is Mouse)
+        {
+            playerAim.InputDevice = false;
+        }
     }
 
     public void InitializePlayer(PlayerConfig pc)
@@ -80,7 +89,7 @@ public class PlayerInputHandler : MonoBehaviour
     {
         device = obj.control.device; //Assigns control type to device (keyboard or controller)
 
-        
+
 
         if (obj.action.name == controls.Player1.Move.name)
         {

@@ -26,7 +26,15 @@ public class scr_mouseCrosshair : MonoBehaviour
             {
                 obj_crosshair.transform.position = PointAtVector.mouseWorldPosition;
                 obj_Controllercrosshair.enabled = false;
-                obj_crosshair.enabled = true;
+
+                if (Input.GetKey(KeyCode.Mouse1))
+                {
+                    obj_crosshair.enabled = false;
+                }
+                else
+                {
+                    obj_crosshair.enabled = true;
+                }
             }
             else
             {

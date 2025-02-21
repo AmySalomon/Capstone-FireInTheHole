@@ -178,6 +178,12 @@ public class SetupMenuController : MonoBehaviour
 
     }
 
+    public void SetScoreboard(Sprite sprite)
+    {
+        if (!inputEnabled) { return; }
+        JoinPlayer.Instance.SetScoreboardSprite(PlayerIndex, sprite);
+    }
+
     public void DisableThisButton(Button button)
     {
         if (!inputEnabled) { return; }

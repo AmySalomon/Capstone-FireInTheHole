@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class InitializeLevel : MonoBehaviour
 {
@@ -19,9 +20,11 @@ public class InitializeLevel : MonoBehaviour
         var playerConfigs = JoinPlayer.Instance.GetPlayerConfigs().ToArray();
         for (int i = 0; i < playerConfigs.Length; i++)
         {
+            
             //only show player scoreboard if a player is assined to it
             playerScores[i].gameObject.SetActive(true);
-            playerScores[i].gameObject.GetComponent<ScoreTracker>().HideScoreLeader(); 
+            playerScores[i].gameObject.GetComponent<ScoreTracker>().HideScoreLeader();
+            playerScores[i].gameObject.GetComponent<Image>().sprite = playerConfigs[i].ScoreboardSprite;
             GameTimer.gameTimer.playerScoreboards[i] = playerScores[i];
             LeaderboardManager.leaderboardManager.playerScoreboards[i] = playerScores[i];
             var player = Instantiate(playerPrefab, playerSpawns[i].position, playerSpawns[i].rotation, gameObject.transform);

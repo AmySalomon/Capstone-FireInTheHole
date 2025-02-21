@@ -5549,7 +5549,7 @@ PrefabInstance:
     - target: {fileID: 7129663365810361743, guid: ee16cafbe26cae640a4e3da3def6f611, type: 3}
       propertyPath: scaryMusic
       value: 
-      objectReference: {fileID: 8300000, guid: dd635866f870a2b49acf489d61b9ef51, type: 3}
+      objectReference: {fileID: 8300000, guid: e8970f132bbf79c418e8d1cdb191ea90, type: 3}
     - target: {fileID: 7129663365810361743, guid: ee16cafbe26cae640a4e3da3def6f611, type: 3}
       propertyPath: musicPlayer
       value: 
@@ -7999,7 +7999,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -9010284469593096592, guid: 03236680b3327e643be992d6d321973c, type: 2}
-  m_audioClip: {fileID: 8300000, guid: dd635866f870a2b49acf489d61b9ef51, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e8970f132bbf79c418e8d1cdb191ea90, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.25
   m_Pitch: 1

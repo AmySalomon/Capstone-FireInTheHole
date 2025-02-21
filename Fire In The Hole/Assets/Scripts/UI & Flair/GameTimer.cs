@@ -172,6 +172,11 @@ public class GameTimer : MonoBehaviour
             timerText.gameObject.SetActive(false);
             countdownText.gameObject.SetActive(false);
             timerUI.gameObject.SetActive(false);
+            PlayerInputHandler[] playerInputHandler = FindObjectsOfType<PlayerInputHandler>(); //stop all controllers from rumbling!
+            foreach (PlayerInputHandler p in playerInputHandler)
+            {
+                p.StopAllCoroutines();
+            }
             SceneManager.LoadScene(endScreenScene);
         }
             

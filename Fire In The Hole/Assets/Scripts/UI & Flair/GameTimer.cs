@@ -37,6 +37,7 @@ public class GameTimer : MonoBehaviour
     private AudioSource myWhistleSFX;
     private bool soundOffWhistle = true;
     private bool playScaryMusic = true;
+    private static string currentScene = "Null"; //Detects scene name
     private void Awake()
     {
         myWhistleSFX = GetComponent<AudioSource>();
@@ -57,11 +58,24 @@ public class GameTimer : MonoBehaviour
         countdownText.gameObject.transform.localScale = new Vector3(1, 0, 1);
         timer = startingTime;
         timerStarted = true;
+        SceneNameUpdate(); //Check scene name
     }
 
     // Update is called once per frame
     void Update()
     {
+        SceneNameUpdate(); //Check scene name
+        if (currentScene == "EndingScene")
+        {
+            Time.timeScale = 1f;
+            //Debug.Log(Time.timeScale);
+        }
+        if (currentScene == "MainMenu")
+        {
+            Destroy(gameObject);
+            Debug.Log("GameTimer: Killed it!");
+        }
+
         if (!timerStarted) return;
         if (timer > 0)
         {
@@ -138,7 +152,12 @@ public class GameTimer : MonoBehaviour
     {
         PauseMenu.functional = false; //do not let the pause menu work on the end screen <3
         //a small flourish after the game ends before moving to the end screen
-        Time.timeScale = 0;
+        if (currentScene != "EndingScene")
+        {
+            Time.timeScale = 0;
+            //Debug.Log("GameTimer: WE AREN'T IN END");
+        }
+        //Time.timeScale = 0;
         endTimer += Time.unscaledDeltaTime;
         countdownText.fontSize = 3;
         countdownText.text = "IT'S OVER!";
@@ -180,5 +199,13 @@ public class GameTimer : MonoBehaviour
             SceneManager.LoadScene(endScreenScene);
         }
             
+    }
+
+    void SceneNameUpdate() //Update the scene name
+    {
+        // Get the current scene name
+        Scene currentLevel = SceneManager.GetActiveScene();
+        currentScene = currentLevel.name;
+        //Debug.Log("Loaded Level: " + currentScene);
     }
 }

@@ -132,9 +132,9 @@ public class PlayerDeath : MonoBehaviour
             deadPlayer.GetComponent<DeathAnimation>().knockbackDirection = deathDirection;
 
         }
-        playerPowerUpManager.RemovePowerUp();
         playerStuff.SetActive(false);
         playerCanvasStuff.SetActive(false);
+        playerPowerUpManager.RemovePowerUp();
     }
 
     IEnumerator SpawnPlayer()
@@ -148,7 +148,6 @@ public class PlayerDeath : MonoBehaviour
             playerStuff.transform.localPosition = Vector2.zero;
             playerStuff.SetActive(true);
             playerCanvasStuff.SetActive(true);
-            playerPowerUpManager.RemovePowerUp();
             timer = 0;
             //make player invulnerable, when not on tutorial
             if (setSpawnLocation == false) playerRigidbody.excludeLayers = bullet + golfBall;
@@ -157,6 +156,7 @@ public class PlayerDeath : MonoBehaviour
             //give player default gun
             gun.UpdateWeapon(gun.defaultWeapon);
             playerJustRespawned = true;
+            playerPowerUpManager.RemovePowerUp();
             StopCoroutine(SpawnPlayer());
         }
 

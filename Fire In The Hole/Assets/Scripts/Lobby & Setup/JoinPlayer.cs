@@ -91,6 +91,11 @@ public class JoinPlayer : MonoBehaviour
 
     }
 
+    public void SetScoreboardSprite(int index, Sprite sprite)
+    {
+        playerConfigs[index].ScoreboardSprite = sprite;
+
+    }
 
     public void ReadyPlayer(int index)
     {
@@ -275,5 +280,6 @@ public class PlayerConfig
 
     public Sprite LastPlaceSprite { get; set; }
 
+    public Sprite ScoreboardSprite { get; set; }
     public bool placed { get; set; }
 }

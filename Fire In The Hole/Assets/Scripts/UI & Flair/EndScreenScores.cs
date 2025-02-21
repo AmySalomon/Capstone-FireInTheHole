@@ -168,7 +168,7 @@ public class EndScreenScores : MonoBehaviour
             if (players[i].GetComponent<PlayerConfigInfo>().placed == true) { continue; } //if the player has already been placed, skip them
             if (scores[i] >= placementScore)
             {
-                playerPlacements[2].GetComponent<Image>().sprite = players[i].GetComponent<PlayerConfigInfo>().playerConfigPublic.VictorySprite;
+                playerPlacements[2].GetComponent<Image>().sprite = players[i].GetComponent<PlayerConfigInfo>().playerConfigPublic.ThirdPlaceSprite;
                 players[i].GetComponent<PlayerConfigInfo>().placed = true;
                 playerPlacements[2].GetComponentInChildren<TextMeshProUGUI>().text = placementScore.ToString();
                 break;
@@ -193,7 +193,7 @@ public class EndScreenScores : MonoBehaviour
             if (players[i].GetComponent<PlayerConfigInfo>().placed == true) { continue; } //if the player has already been placed, skip them
             if (scores[i] >= placementScore)
             {
-                playerPlacements[3].GetComponent<Image>().sprite = players[i].GetComponent<PlayerConfigInfo>().playerConfigPublic.VictorySprite;
+                playerPlacements[3].GetComponent<Image>().sprite = players[i].GetComponent<PlayerConfigInfo>().playerConfigPublic.LastPlaceSprite;
                 players[i].GetComponent<PlayerConfigInfo>().placed = true;
                 playerPlacements[3].GetComponentInChildren<TextMeshProUGUI>().text = placementScore.ToString();
                 break;

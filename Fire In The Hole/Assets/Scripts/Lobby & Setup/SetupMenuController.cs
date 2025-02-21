@@ -155,6 +155,21 @@ public class SetupMenuController : MonoBehaviour
         JoinPlayer.Instance.SetVictorySprite(PlayerIndex, sprite);
 
     }
+
+    public void SetThirdPlaceSprite(Sprite sprite)
+    {
+        if (!inputEnabled) { return; }
+        JoinPlayer.Instance.SetThirdPlaceSprite(PlayerIndex, sprite);
+
+    }
+
+    public void SetLastPlaceSprite(Sprite sprite)
+    {
+        if (!inputEnabled) { return; }
+        JoinPlayer.Instance.SetLastPlaceSprite(PlayerIndex, sprite);
+
+    }
+
     public void SetColor(string color)
     {
         if (!inputEnabled) { return; }

@@ -75,6 +75,16 @@ public class JoinPlayer : MonoBehaviour
         playerConfigs[index].VictorySprite = sprite;
 
     }
+    public void SetThirdPlaceSprite(int index, Sprite sprite)
+    {
+        playerConfigs[index].ThirdPlaceSprite = sprite;
+
+    }
+    public void SetLastPlaceSprite(int index, Sprite sprite)
+    {
+        playerConfigs[index].LastPlaceSprite = sprite;
+
+    }
     public void SetPlayerColor(int index, Color color)
     {
         playerConfigs[index].PlayerColor = color;
@@ -260,6 +270,10 @@ public class PlayerConfig
     public Color PlayerColor { get; set; }
 
     public Sprite VictorySprite { get; set; }
+
+    public Sprite ThirdPlaceSprite { get; set; }
+
+    public Sprite LastPlaceSprite { get; set; }
 
     public bool placed { get; set; }
 }

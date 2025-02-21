@@ -329,6 +329,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 5929407385660315283}
+        m_TargetAssemblyTypeName: SetupMenuController, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8413510811574065865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1879,10 +1891,14 @@ MonoBehaviour:
   menuPanel: {fileID: 1912417658463271931}
   readyButton: {fileID: 5217252657665682384}
   buttonToDisable: {fileID: 0}
+  currentWindow: {fileID: 0}
   characterButton1: {fileID: 4272354091422997315}
   characterButton2: {fileID: 832465231538636353}
   characterButton3: {fileID: 2826793428331164030}
   characterButton4: {fileID: 3316700359808552826}
+  selectedButton: {fileID: 0}
+  multiplayerEventSystem: {fileID: 0}
+  module: {fileID: 0}
 --- !u!1 &6994863724816987244
 GameObject:
   m_ObjectHideFlags: 0

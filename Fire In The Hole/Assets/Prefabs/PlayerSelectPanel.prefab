@@ -239,7 +239,7 @@ MonoBehaviour:
         m_MethodName: SetVictorySprite
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: 5f671d0e88df0cd439b4dab44cba83f6, type: 3}
+          m_ObjectArgument: {fileID: 21300000, guid: c4e3e348f21008f469e35369da9cdbb8, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -712,7 +712,7 @@ MonoBehaviour:
         m_MethodName: SetVictorySprite
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: 818e310fcdc162441b9af6822d2f0fd1, type: 3}
+          m_ObjectArgument: {fileID: 21300000, guid: 3054ea68cea8ef44b99358e944e03f63, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -1171,7 +1171,7 @@ MonoBehaviour:
         m_MethodName: SetVictorySprite
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: 4be919761f065ca45812be090642285a, type: 3}
+          m_ObjectArgument: {fileID: 21300000, guid: afd3cbb172066964b9cc47d6b396e64d, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -1885,7 +1885,7 @@ MonoBehaviour:
         m_MethodName: SetVictorySprite
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: 73a771bdc0b5576418ef90ced15d4cef, type: 3}
+          m_ObjectArgument: {fileID: 21300000, guid: 4682c469abd783b4cbc5fbd25af3d1d8, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0

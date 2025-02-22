@@ -9,8 +9,8 @@ using UnityEngine.Audio;
 public class OptionsMenuManager : MonoBehaviour
 {
     //Volume Sliders
-    public Slider masterVol, musicVol, soundVol;
-    public float masterVolTemp, musicVolTemp, soundVolTemp;
+    public Slider masterVol, musicVol, soundVol, voiceVol;
+    public float masterVolTemp, musicVolTemp, soundVolTemp, voiceVolTemp;
     public AudioMixer mainAudioMixer;
 
     //Change Audio Sliders
@@ -53,6 +53,19 @@ public class OptionsMenuManager : MonoBehaviour
         soundVolTemp = soundVol.value;
     }
 
+    public void ChangeVoiceVolume()
+    {
+        if (voiceVol.value <= -20) //The lowest setting 
+        {
+            mainAudioMixer.SetFloat("VoiceParam", -80);
+        }
+        else
+        {
+            mainAudioMixer.SetFloat("VoiceParam", voiceVol.value);
+        }
+        voiceVolTemp = voiceVol.value;
+    }
+
     void Start()
     {
         //Match Audio Sliders to Audio Mixer
@@ -62,6 +75,8 @@ public class OptionsMenuManager : MonoBehaviour
         musicVol.value = music;
         mainAudioMixer.GetFloat("SoundParam", out float sound);
         soundVol.value = sound;
+        mainAudioMixer.GetFloat("VoiceParam", out float voice);
+        soundVol.value = voice;
     }
 
     //Return to level select.

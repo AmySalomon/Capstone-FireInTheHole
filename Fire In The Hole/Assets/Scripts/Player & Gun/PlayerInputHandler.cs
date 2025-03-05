@@ -253,14 +253,15 @@ public class PlayerInputHandler : MonoBehaviour
         }
         rumbleAmount = rumbleValue;
         rumbleTime = rumbleTimer;
-
-        rumbling = true;
-        GamePad.SetVibration(myIndex, 65535 * rumbleAmount, 65535 * rumbleAmount); //65535 is the max amount of rumble, rumble amount is taking a percentage of that
-        yield return new WaitForSeconds(rumbleTime);
-        Debug.Log(" done rumble controller " + myIndex);
-        GamePad.SetVibration(myIndex, 0, 0);
-        rumbling = false;
-
+        if (OptionsMenuManager.noVibrate == false)
+        {
+            rumbling = true;
+            GamePad.SetVibration(myIndex, 65535 * rumbleAmount, 65535 * rumbleAmount); //65535 is the max amount of rumble, rumble amount is taking a percentage of that
+            yield return new WaitForSeconds(rumbleTime);
+            Debug.Log(" done rumble controller " + myIndex);
+            GamePad.SetVibration(myIndex, 0, 0);
+            rumbling = false;
+        }
     }
 
     public void RumbleCheck(float rumbleValue, float rumbleTimer)

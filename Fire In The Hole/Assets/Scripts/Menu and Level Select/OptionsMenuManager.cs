@@ -8,10 +8,18 @@ using UnityEngine.Audio;
 
 public class OptionsMenuManager : MonoBehaviour
 {
+    //Access Toggle Option
+    public static bool noVibrate;
+
     //Volume Sliders
     public Slider masterVol, musicVol, soundVol, voiceVol;
     public float masterVolTemp, musicVolTemp, soundVolTemp, voiceVolTemp;
     public AudioMixer mainAudioMixer;
+
+    //Vibrate Toggle
+    public Toggle vibrateToggle;
+    private bool toggleIsSet = false;
+    private bool rumbling = false;
 
     //Change Audio Sliders
     public void ChangeMasterVolume()
@@ -66,8 +74,45 @@ public class OptionsMenuManager : MonoBehaviour
         voiceVolTemp = voiceVol.value;
     }
 
+    //Change Toggle
+    public void ChangeVibrate()
+    {
+        if (toggleIsSet == true)
+        {
+            if (noVibrate == true)
+            {
+                noVibrate = false;
+            }
+            else if (noVibrate == false)
+            {
+                noVibrate = true;
+            }
+            else
+            {
+                Debug.Log("[OptionsMenuManager]: Vibrate toggle broke.");
+            }
+            Debug.Log(noVibrate);
+        }
+    }
+
     void Start()
     {
+        //Match toggle visuals to actual toggle.
+        if (noVibrate == false)
+        {
+            vibrateToggle.isOn = true;
+            toggleIsSet = true;
+        }
+        else if (noVibrate == true)
+        {
+            vibrateToggle.isOn = false;
+            toggleIsSet = true;
+        }
+        else
+        {
+            Debug.Log("[OptionsMenuManager]: (In Start) Vibrate toggle broke.");
+        }
+
         //Match Audio Sliders to Audio Mixer
         mainAudioMixer.GetFloat("MasterParam", out float master);
         masterVol.value = master;
@@ -86,6 +131,15 @@ public class OptionsMenuManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = false;
         SceneManager.LoadScene("LevelSelect");
+    }
+
+    //Return to main menu.
+    public void MainMenu()
+    {
+        Time.timeScale = 1f;
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = false;
+        SceneManager.LoadScene("MainMenu");
     }
 
     //Kill LevelSelectManager!!!

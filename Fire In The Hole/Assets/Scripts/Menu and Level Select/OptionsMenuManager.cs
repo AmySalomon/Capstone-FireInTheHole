@@ -91,7 +91,7 @@ public class OptionsMenuManager : MonoBehaviour
             {
                 Debug.Log("[OptionsMenuManager]: Vibrate toggle broke.");
             }
-            Debug.Log(noVibrate);
+            //Debug.Log(noVibrate);
         }
     }
 

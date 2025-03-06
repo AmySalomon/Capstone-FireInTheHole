@@ -299,7 +299,7 @@ MonoBehaviour:
   ballRenderer: {fileID: 7151202848779533152}
   playerHitter: {fileID: 0}
   balltype: 0
-  specialChance: 0.3
+  specialChance: 0.5
   type1Chance: 0.33
   type2Chance: 0.33
   type3Chance: 0.34

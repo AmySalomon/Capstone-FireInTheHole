@@ -73,6 +73,9 @@ public class DinoHazard : MonoBehaviour
                 {
                     sprite.enabled = true;
                 }
+                //this is necessary so that the dinosaurs do not enable the legs on the walking ball sprites
+                var legsSprite = eatenBall.GetComponentInChildren<FlipAnim>();
+                legsSprite.GetComponent<SpriteRenderer>().enabled = false;
                 //reset variables for next time
                 spitTimer = 0;
 

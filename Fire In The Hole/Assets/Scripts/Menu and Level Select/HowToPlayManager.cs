@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class HowToPlayManager : MonoBehaviour
 {
+    //Transition
+    public Animator transition;
+    public float transitionTime;
+
     private void Awake()
     {
         //No duplicate LevelSelectManager!!!
@@ -35,20 +39,34 @@ public class HowToPlayManager : MonoBehaviour
         }
     }
 
-    public void BackToSelect()
+    IEnumerator LoadLevel(string nextScene) //Transition
     {
+        transition.SetTrigger("Exit");
+
+        yield return new WaitForSeconds(transitionTime);
+
         Time.timeScale = 1f;
+        SceneManager.LoadScene(nextScene);
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = false;
-        SceneManager.LoadScene("LevelSelect");
+    }
+
+    public void BackToSelect()
+    {
+        /*Time.timeScale = 1f;
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = false;
+        SceneManager.LoadScene("LevelSelect");*/
+        StartCoroutine(LoadLevel("LevelSelect"));
     }
 
     public void BackToMain()
     {
-        Time.timeScale = 1f;
+        /*Time.timeScale = 1f;
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = false;
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("MainMenu");*/
+        StartCoroutine(LoadLevel("MainMenu"));
     }
 }
 

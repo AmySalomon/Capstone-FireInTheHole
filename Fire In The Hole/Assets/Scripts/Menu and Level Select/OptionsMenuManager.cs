@@ -21,6 +21,10 @@ public class OptionsMenuManager : MonoBehaviour
     private bool toggleIsSet = false;
     private bool rumbling = false;
 
+    //Transition
+    public Animator transition;
+    public float transitionTime;
+
     //Change Audio Sliders
     public void ChangeMasterVolume()
     {
@@ -95,6 +99,18 @@ public class OptionsMenuManager : MonoBehaviour
         }
     }
 
+    IEnumerator LoadLevel(string nextScene) //Transition
+    {
+        transition.SetTrigger("Exit");
+
+        yield return new WaitForSeconds(transitionTime);
+
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(nextScene);
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = false;
+    }
+
     void Start()
     {
         //Match toggle visuals to actual toggle.
@@ -127,19 +143,21 @@ public class OptionsMenuManager : MonoBehaviour
     //Return to level select.
     public void LevelSelect()
     {
-        Time.timeScale = 1f;
+        /*Time.timeScale = 1f;
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = false;
-        SceneManager.LoadScene("LevelSelect");
+        SceneManager.LoadScene("LevelSelect");*/
+        StartCoroutine(LoadLevel("LevelSelect"));
     }
 
     //Return to main menu.
     public void MainMenu()
     {
-        Time.timeScale = 1f;
+        /*Time.timeScale = 1f;
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = false;
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("MainMenu");*/
+        StartCoroutine(LoadLevel("MainMenu"));
     }
 
     //Kill LevelSelectManager!!!

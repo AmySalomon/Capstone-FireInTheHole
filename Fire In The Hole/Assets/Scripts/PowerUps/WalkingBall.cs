@@ -11,6 +11,8 @@ public class WalkingBall : MonoBehaviour
     private bool walking;
     private Vector2 randomDirection;
     private float walkSpeed = 1;
+    private bool negativeX = false;
+    private bool negativeY = false;
 
     public SpriteRenderer walkingFeet;
     public scr_golfBall golfBall;
@@ -57,13 +59,18 @@ public class WalkingBall : MonoBehaviour
             stepCount++;
             if (stepCount >= maxSteps)
             {
-                float randomX = Random.Range(-1, 1);
-                float randomY = Random.Range(-1, 1);
+                float randomX = Random.Range(-1.0f, 1.0f);
+                float randomY = Random.Range(-1.0f, 1.0f);
+                if (randomX < 0) negativeX = true;
+                if (randomY < 0) negativeY = true;
                 randomDirection = new Vector2(randomX, randomY);
                 randomDirection.Normalize();
+                //if (negativeX) randomDirection.x = randomDirection.x * -1;
+                //if (negativeY) randomDirection.y = randomDirection.y * -1;
                 stepCount = 0;
             }
             golfBall.myRigidbody.velocity = randomDirection * walkSpeed;
+            Debug.Log(randomDirection + " THIS IS THE RANDOM DIRECTION VECTOR");
         }
     }
 }

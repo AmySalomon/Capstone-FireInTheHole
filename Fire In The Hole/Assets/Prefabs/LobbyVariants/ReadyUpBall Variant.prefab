@@ -8,6 +8,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 198056289403907709, guid: 4031563aec8778046a5edc5d43dcb23d, type: 3}
+      propertyPath: bombModel
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 198056289403907709, guid: 4031563aec8778046a5edc5d43dcb23d, type: 3}
+      propertyPath: type1Chance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198056289403907709, guid: 4031563aec8778046a5edc5d43dcb23d, type: 3}
+      propertyPath: type2Chance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198056289403907709, guid: 4031563aec8778046a5edc5d43dcb23d, type: 3}
+      propertyPath: type3Chance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198056289403907709, guid: 4031563aec8778046a5edc5d43dcb23d, type: 3}
+      propertyPath: specialChance
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2418453429810656359, guid: 4031563aec8778046a5edc5d43dcb23d, type: 3}
       propertyPath: m_Name
       value: ReadyUpBall Variant
@@ -59,6 +79,7 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 5294721900104960908, guid: 4031563aec8778046a5edc5d43dcb23d, type: 3}
     - {fileID: 2577500060190213909, guid: 4031563aec8778046a5edc5d43dcb23d, type: 3}
+    - {fileID: 7201672575842233359, guid: 4031563aec8778046a5edc5d43dcb23d, type: 3}
     m_RemovedGameObjects:
     - {fileID: 5088744315955933748, guid: 4031563aec8778046a5edc5d43dcb23d, type: 3}
     m_AddedGameObjects: []

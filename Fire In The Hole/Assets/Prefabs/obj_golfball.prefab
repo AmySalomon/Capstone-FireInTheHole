@@ -1465,7 +1465,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkDelay: 0.5
-  maxSteps: 50
+  maxSteps: 200
   walkingFeet: {fileID: 784211787088646470}
   golfBall: {fileID: 198056289403907709}
 --- !u!114 &5029086065803665751

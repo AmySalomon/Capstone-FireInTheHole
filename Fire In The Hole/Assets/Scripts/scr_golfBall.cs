@@ -38,9 +38,10 @@ public class scr_golfBall : MonoBehaviour
     //player who last hit the golfball
     public GameObject playerHitter;
 
-    public float balltype = 0; //0 = regular golfball, 1 = bomball, 2 = scattershot, 3 = bouncing betty
+    public float balltype = 0; //0 = regular golfball, 1 = bomball, 2 = scattershot, 3 = walking
     private scr_balltype_bomb scr_Balltype_Bomb;
     private scr_scattershotChild scr_Balltype_Scatter;
+    private WalkingBall scr_Balltype_Walking;
 
     //Special golf ball chance variables
     [Header("Special Ball Chance")]
@@ -75,6 +76,7 @@ public class scr_golfBall : MonoBehaviour
         originalBallColor = ballRenderer.material.color;
         scr_Balltype_Bomb = GetComponent<scr_balltype_bomb>();
         scr_Balltype_Scatter = GetComponent<scr_scattershotChild>();
+        scr_Balltype_Walking = GetComponent<WalkingBall>();
         AssignRandomType();
     }
 
@@ -138,11 +140,15 @@ public class scr_golfBall : MonoBehaviour
             }
             else if (specialRoll < type1Chance + type2Chance)
             {
-                scr_Balltype_Scatter.enabled = true;
+                scr_Balltype_Walking.enabled = true;
                 balltype = 2;
             }
             else if (specialRoll < type1Chance + type2Chance + type3Chance)
+            {
+                scr_Balltype_Scatter.enabled = true;
                 balltype = 3;
+            }
+                
             else
                 balltype = 4;
         }

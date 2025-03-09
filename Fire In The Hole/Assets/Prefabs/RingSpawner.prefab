@@ -263,7 +263,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &3592282740676156920
@@ -600,6 +600,7 @@ MonoBehaviour:
   mySprite: {fileID: 0}
   respawnMoveSpeed: 1.5
   respawnMovement: {x: 0, y: 0}
+  smokeExplosion: {fileID: 8977285105747890853, guid: 32ae0058d7e6428468f625534770768b, type: 3}
 --- !u!58 &5698814288169694434
 CircleCollider2D:
   m_ObjectHideFlags: 0

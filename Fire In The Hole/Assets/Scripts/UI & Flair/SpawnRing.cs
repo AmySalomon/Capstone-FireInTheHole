@@ -55,6 +55,8 @@ public class SpawnRing : MonoBehaviour
 
     private Rigidbody2D respawnRb;
 
+    public GameObject smokeExplosion;
+
     // Start is called before removthe first frame update
     void Start()
     {
@@ -228,7 +230,7 @@ public class SpawnRing : MonoBehaviour
             Instantiate(powerUp, transform.position, transform.rotation);
             //add spawn powerup code later, in accordance with the SpawnManager script
         }
-
+        Instantiate(smokeExplosion, transform.position, transform.rotation);
         Destroy(this.gameObject);
     }
 

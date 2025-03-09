@@ -152,6 +152,7 @@ public class PlayerInputHandler : MonoBehaviour
         {
             //Debug.Log("trying to shoot");
             playerShoot.isTryingToShoot = true;
+            playerDead.tryingToAttack = true;
         }
 
         if (playerShoot != null && context.canceled)
@@ -169,6 +170,8 @@ public class PlayerInputHandler : MonoBehaviour
         {
             Debug.Log("trying to dash");
             playerDash.PressDash();
+            //to stop player from holding shoot while dashing
+            playerShoot.isTryingToShoot = false;
         }
     }
 
@@ -205,6 +208,9 @@ public class PlayerInputHandler : MonoBehaviour
         {
             if (playerCharge.isCharging) playerDash.dashChargeBar.gameObject.SetActive(false);
             playerCharge.StartCharging();
+            playerDead.tryingToAttack = true;
+            //to stop player from holding shoot to shoot during swing charge
+            playerShoot.isTryingToShoot = false;
 
         }
 
@@ -214,6 +220,7 @@ public class PlayerInputHandler : MonoBehaviour
             {
                 playerDash.dashChargeBar.gameObject.SetActive(true);
                 StartCoroutine(playerCharge.Swing());
+                playerDead.tryingToAttack = true;
             }
         }
     }

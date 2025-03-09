@@ -37,7 +37,6 @@ public class WalkingBall : MonoBehaviour
                 golfBall.playerHitter = null;
                 walking = true;
                 walkingFeet.enabled = true;
-                Debug.Log(walking);
             }
         }
         //if it moves, reset the timer.
@@ -70,7 +69,6 @@ public class WalkingBall : MonoBehaviour
                 stepCount = 0;
             }
             golfBall.myRigidbody.velocity = randomDirection * walkSpeed;
-            Debug.Log(randomDirection + " THIS IS THE RANDOM DIRECTION VECTOR");
         }
     }
 }

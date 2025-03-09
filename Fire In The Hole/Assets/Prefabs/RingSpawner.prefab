@@ -598,7 +598,7 @@ MonoBehaviour:
   timeToAppear: 0.3
   myColor: {r: 1, g: 1, b: 1, a: 1}
   mySprite: {fileID: 0}
-  respawnMoveSpeed: 1.5
+  respawnMoveSpeed: 1
   respawnMovement: {x: 0, y: 0}
   smokeExplosion: {fileID: 8977285105747890853, guid: 32ae0058d7e6428468f625534770768b, type: 3}
 --- !u!58 &5698814288169694434

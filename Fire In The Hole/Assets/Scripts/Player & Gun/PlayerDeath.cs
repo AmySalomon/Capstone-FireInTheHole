@@ -57,6 +57,8 @@ public class PlayerDeath : MonoBehaviour
 
     [HideInInspector] public int myIndex;
 
+    [HideInInspector] public bool tryingToAttack = false;
+
     //gets the current ring indicator, in order to move it for the helldivers respawn
     private GameObject currentRingIndicator;
 
@@ -96,6 +98,8 @@ public class PlayerDeath : MonoBehaviour
         if (playerJustRespawned && setSpawnLocation == null)
         {
             invulnTimer += Time.deltaTime;
+            //this is to turn off invulnerability early IF the player is trying to attack others off of spawn
+            if (tryingToAttack == true) invulnTimer += invulnRespawnTime * 0.8f;
             //make player invulnerable
             playerRigidbody.excludeLayers = bullet + golfBall;
             //flash player sprite when invulnerable, when time runs out, re-enable player damage via layers
@@ -106,6 +110,7 @@ public class PlayerDeath : MonoBehaviour
                 invulnTimer = 0;
                 playerJustRespawned = false;
             }
+            
             else if (invulnTimer > invulnRespawnTime / 10 * 10) playerSprite.enabled = false;
             else if (invulnTimer > invulnRespawnTime / 10 * 9) playerSprite.enabled = true;
             else if (invulnTimer > invulnRespawnTime / 10 * 8) playerSprite.enabled = false;
@@ -117,7 +122,7 @@ public class PlayerDeath : MonoBehaviour
             else if (invulnTimer > invulnRespawnTime / 10 * 2) playerSprite.enabled = false;
             else if (invulnTimer > 0) playerSprite.enabled = true;
         }
-        
+        tryingToAttack = false;
     }
 
     public void Died()

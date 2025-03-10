@@ -1181,6 +1181,7 @@ MonoBehaviour:
   playerSetup: 3D TutorialLobby
   transition: {fileID: 808950196}
   transitionTime: 1
+  eventSystem: {fileID: 1997839958}
 --- !u!1 &384395137
 GameObject:
   m_ObjectHideFlags: 0
@@ -3009,7 +3010,7 @@ MonoBehaviour:
   quitPanel: {fileID: 0}
   quitCancelButton: {fileID: 0}
   playButton: {fileID: 0}
-  eventSystem: {fileID: 0}
+  eventSystem: {fileID: 1997839958}
   transition: {fileID: 808950196}
   transitionTime: 1
 --- !u!4 &1165294265

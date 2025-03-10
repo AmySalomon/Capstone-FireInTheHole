@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class HowToPlayManager : MonoBehaviour
 {
     //Transition
     public Animator transition;
     public float transitionTime;
+    public EventSystem eventSystem;
 
     private void Awake()
     {
@@ -41,6 +43,7 @@ public class HowToPlayManager : MonoBehaviour
 
     IEnumerator LoadLevel(string nextScene) //Transition
     {
+        eventSystem.SetSelectedGameObject(null);
         transition.SetTrigger("Exit");
 
         yield return new WaitForSeconds(transitionTime);

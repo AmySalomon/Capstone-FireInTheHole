@@ -564,6 +564,7 @@ MonoBehaviour:
   vibrateToggle: {fileID: 949538243}
   transition: {fileID: 1838759291}
   transitionTime: 1
+  eventSystem: {fileID: 1997839958}
 --- !u!4 &338269648
 Transform:
   m_ObjectHideFlags: 0

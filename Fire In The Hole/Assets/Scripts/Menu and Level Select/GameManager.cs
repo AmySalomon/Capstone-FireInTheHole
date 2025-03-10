@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator LoadLevel(string nextScene) //Transition
     {
+        eventSystem.SetSelectedGameObject(null);
         transition.SetTrigger("Exit");
 
         yield return new WaitForSeconds(transitionTime);

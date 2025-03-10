@@ -1156,6 +1156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transition: {fileID: 931051565}
   transitionTime: 1
+  eventSystem: {fileID: 1029081315}
 --- !u!4 &851029960
 Transform:
   m_ObjectHideFlags: 0

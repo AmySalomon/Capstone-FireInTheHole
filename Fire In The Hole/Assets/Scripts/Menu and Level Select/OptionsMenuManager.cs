@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
+using UnityEngine.EventSystems;
 
 public class OptionsMenuManager : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class OptionsMenuManager : MonoBehaviour
     //Transition
     public Animator transition;
     public float transitionTime;
+    public EventSystem eventSystem;
 
     //Change Audio Sliders
     public void ChangeMasterVolume()
@@ -101,6 +103,7 @@ public class OptionsMenuManager : MonoBehaviour
 
     IEnumerator LoadLevel(string nextScene) //Transition
     {
+        eventSystem.SetSelectedGameObject(null);
         transition.SetTrigger("Exit");
 
         yield return new WaitForSeconds(transitionTime);

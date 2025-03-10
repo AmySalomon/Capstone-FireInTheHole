@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class LevelSelectManager : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class LevelSelectManager : MonoBehaviour
     //Transition
     public Animator transition;
     public float transitionTime;
+    public EventSystem eventSystem;
 
     private void Awake()
     {
@@ -55,6 +57,7 @@ public class LevelSelectManager : MonoBehaviour
 
     IEnumerator LoadLevel(string nextScene) //Transition
     {
+        eventSystem.SetSelectedGameObject(null);
         transition.SetTrigger("Exit");
 
         yield return new WaitForSeconds(transitionTime);

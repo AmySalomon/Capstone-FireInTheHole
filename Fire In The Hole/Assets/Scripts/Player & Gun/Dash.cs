@@ -37,7 +37,9 @@ public class Dash : MonoBehaviour
     public LayerMask none;
 
     private Gradient originalGradient;
+    private Gradient originalDashCooldownGradient;
     public Gradient burnDashGradient;
+    public Gradient burnDashCooldownGradient;
 
     [HideInInspector] public bool BurningDash = false;
 
@@ -54,12 +56,16 @@ public class Dash : MonoBehaviour
         dashRechargeTimer = dashRechargeAmount / 2;
         originalGradient = trail.colorGradient;
         burningDashSprite.enabled = false;
+        originalDashCooldownGradient = dashChargeBar.gradient;
     }
     void Update()
     {
         DashRechargeUpdate();
         DashAction();
         dashChargeBar.SetCharge(dashRechargeTimer);
+
+        if (BurningDash) dashChargeBar.gradient = burnDashCooldownGradient;
+        else dashChargeBar.gradient = originalDashCooldownGradient;
     }
 
     public void PressDash()

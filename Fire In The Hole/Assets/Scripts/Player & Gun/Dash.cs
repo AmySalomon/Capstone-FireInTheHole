@@ -35,7 +35,13 @@ public class Dash : MonoBehaviour
     public LayerMask bullet;
     public LayerMask golfBall;
     public LayerMask none;
-   
+
+    private Gradient originalGradient;
+    public Gradient burnDashGradient;
+
+    [HideInInspector] public bool BurningDash = false;
+
+    public SpriteRenderer burningDashSprite;
 
     private void Awake()
     {
@@ -46,6 +52,8 @@ public class Dash : MonoBehaviour
         playerCollision = GetComponent<CircleCollider2D>();
         myColor = sprite.color;
         dashRechargeTimer = dashRechargeAmount / 2;
+        originalGradient = trail.colorGradient;
+        burningDashSprite.enabled = false;
     }
     void Update()
     {
@@ -77,16 +85,30 @@ public class Dash : MonoBehaviour
             rb.velocity = newMovement * dashSpeed;
             sprite.color = new Color32(0, 215, 255, 255);
             playerCollision.excludeLayers = bullet + golfBall;
-            
-            
+            //activates when burning dash powerup is active
+            if (BurningDash == true)
+            {
+                //slows down the dash timer, so that it lasts slightly longer
+                timer -= Time.deltaTime / 3;
+                //speeds up the dash
+                rb.velocity *= 1.2f;
+                playerCollision.gameObject.tag = "Bullet";
+                trail.colorGradient = burnDashGradient;
+                sprite.color = new Color32(255, 0, 0, 255);
+                burningDashSprite.enabled = true;
+                burningDashSprite.transform.Rotate(new Vector3(0, 0, 3));
+            }
         }
         else
         {
             sprite.color = myColor;
             timer = 0;
+            trail.colorGradient = originalGradient;
             trail.emitting = false;
             playerCollision.excludeLayers = none;
             isDashing = false;
+            playerCollision.gameObject.tag = "Player";
+            burningDashSprite.enabled = false;
         }
 
     }
@@ -107,12 +129,14 @@ public class Dash : MonoBehaviour
         if (dashRechargeTimer >= dashRechargeAmount/2)
         {
             FirstHalf.color = new Color32(0, 247, 255, 255);
+            if (BurningDash == true) FirstHalf.color = new Color32(255, 0, 0, 255);
         }
 
         //If dash cooldown
         if (dashRechargeTimer >= dashRechargeAmount)
         {
             LastHalf.color = new Color32(0, 247, 255, 255);
+            if (BurningDash == true) LastHalf.color = new Color32(255, 0, 0, 255);
             dashRechargeTimer = dashRechargeAmount;
             return;
         }

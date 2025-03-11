@@ -19,3 +19,5 @@ public class scr_PU_BouncyBullet : scr_powerUpEffect
        player.GetComponentInChildren<ShootProjectile>().isBounce = false;
     }
 }
+
+

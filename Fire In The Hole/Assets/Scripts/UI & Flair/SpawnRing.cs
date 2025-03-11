@@ -228,7 +228,6 @@ public class SpawnRing : MonoBehaviour
         else if (spawnPowerup)
         {
             Instantiate(powerUp, transform.position, transform.rotation);
-            //add spawn powerup code later, in accordance with the SpawnManager script
         }
         Instantiate(smokeExplosion, transform.position, transform.rotation);
         Destroy(this.gameObject);

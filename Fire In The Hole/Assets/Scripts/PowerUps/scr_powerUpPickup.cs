@@ -15,7 +15,7 @@ public class scr_powerUpPickup : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player") //if the gameobject is the player, update players weapon, then remove pickup
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Player")) //if the gameobject is the player, update players weapon, then remove pickup
         {
             //collision.gameObject.GetComponent<scr_powerUpManager>().Powerup
             collision.gameObject.GetComponentInChildren<scr_powerUpManager>().activePowerUp = powerUpEffect;

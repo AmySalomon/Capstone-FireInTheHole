@@ -101,6 +101,7 @@ MonoBehaviour:
   powerUps:
   - {fileID: 11400000, guid: 48f1a0859b555544681f648d07b4c9ed, type: 2}
   - {fileID: 11400000, guid: 5c3ca957ed7d8354381368861df67297, type: 2}
+  - {fileID: 11400000, guid: 3766f122236747545b2b408982d699ec, type: 2}
   powerUpEffect: {fileID: 0}
   powerUpSprite: {fileID: 0}
   textPopup: {fileID: 646746251575243297, guid: 53368d7090da0e445a24ca9006476f60, type: 3}

@@ -49,6 +49,7 @@ public class PlayerDeath : MonoBehaviour
     //layermasks we want to exclude for player respawn invulnerability
     public LayerMask bullet;
     public LayerMask golfBall;
+    public LayerMask ballBullet;
     public LayerMask none;
 
     private Vector3 respawnPosition;
@@ -101,7 +102,7 @@ public class PlayerDeath : MonoBehaviour
             //this is to turn off invulnerability early IF the player is trying to attack others off of spawn
             if (tryingToAttack == true) invulnTimer += invulnRespawnTime * 0.8f;
             //make player invulnerable
-            playerRigidbody.excludeLayers = bullet + golfBall;
+            playerRigidbody.excludeLayers = bullet + golfBall + ballBullet;
             //flash player sprite when invulnerable, when time runs out, re-enable player damage via layers
             if (invulnTimer > invulnRespawnTime)
             {

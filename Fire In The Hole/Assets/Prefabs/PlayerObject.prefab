@@ -7966,6 +7966,9 @@ MonoBehaviour:
   golfBall:
     serializedVersion: 2
     m_Bits: 64
+  ballBullet:
+    serializedVersion: 2
+    m_Bits: 1024
   none:
     serializedVersion: 2
     m_Bits: 0

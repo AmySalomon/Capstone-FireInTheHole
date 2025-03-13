@@ -7,9 +7,10 @@ public class PlayerScore : MonoBehaviour
     public Transform myScore;
     public Sprite mySprite;
     public Transform scoreLeaderSprite;
-    public void IncreaseScore()
+    public void IncreaseScore(int value)
     {
-        myScore.GetComponent<ScoreTracker>().UpdateScore();
+        Debug.Log("trying to call increase score to increase points by "+ value);
+        myScore.GetComponent<ScoreTracker>().UpdateScore(value);
         LeaderboardManager.leaderboardManager.FindScoreLead();
     }
 

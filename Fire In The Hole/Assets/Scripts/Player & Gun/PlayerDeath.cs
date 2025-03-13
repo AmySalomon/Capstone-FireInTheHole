@@ -203,6 +203,7 @@ public class PlayerDeath : MonoBehaviour
             currentRingIndicator.GetComponent<SpawnRing>().spawnPlayer = true;
             currentRingIndicator.GetComponent<SpawnRing>().myColor = myColor;
             currentRingIndicator.GetComponent<SpawnRing>().mySprite = mySprite;
+            currentRingIndicator.GetComponent<SpawnRing>().playerRespawning = playerStuff;
             spawnRings = false;
         }
     }

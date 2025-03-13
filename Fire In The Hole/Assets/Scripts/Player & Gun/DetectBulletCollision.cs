@@ -5,13 +5,23 @@ using UnityEngine;
 public class DetectBulletCollision : MonoBehaviour
 {
     public PlayerDeath deathManager;
+    [SerializeField] public int killValueRef = 1; //how many points a player's life is worth
+    private int killValue = 1;
+    public GameObject playerKiller;
 
+    private void Start()
+    {
+        killValue = killValueRef;
+    }
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Bullet")
         {
             //gets the vector direction from which the player was killed to use for the death animation
             if (collision != null) deathManager.deathDirection = collision.transform.position - transform.position;
+            //if a player was killed by someone, give them points
+            playerKiller = IdentifyKillerCollision(collision);
+            GiveKillCredit(playerKiller);
             deathManager.Died();
         }
     }
@@ -22,7 +32,68 @@ public class DetectBulletCollision : MonoBehaviour
         {
             //gets the vector direction from which the player was killed to use for the death animation
             if (collision != null) deathManager.deathDirection = collision.transform.position - transform.position;
+            //if a player was killed by someone, give them points
+            playerKiller = IdentifyKillerCollider(collision);
+            GiveKillCredit(playerKiller);
             deathManager.Died();
         }
+    }
+
+    public void GiveKillCredit(GameObject playerShooter) //assign the player who killed the gameobject this is attached to points
+    {
+        if(playerShooter == null || playerShooter == this.gameObject) return;
+        playerShooter.GetComponent<PlayerScore>().IncreaseScore(killValue);
+    }
+
+    public GameObject IdentifyKillerCollider(Collider2D collision)
+    {
+        GameObject killer = null;
+        if (collision.gameObject.TryGetComponent<BulletManager>(out BulletManager bulletManager)) //if they died via gun
+        {
+            killer = bulletManager.playerShooter;
+        }
+        if (collision.gameObject.TryGetComponent<Explosion>(out Explosion explosion)) //if they died via rocket launcher explosion
+        {
+            killer = explosion.playerShooter;
+        }
+        if(collision.gameObject.TryGetComponent<scr_golfBall>(out scr_golfBall ball)) //if they died via golf ball
+        {
+            killer = ball.playerHitter.GetComponentInChildren<PlayerScore>().gameObject;
+        }
+        if (collision.gameObject.GetComponentInParent<scr_meleeSwing>()) //if they died via melee attack
+        {
+            killer = collision.gameObject.GetComponentInParent<PlayerScore>().gameObject;
+        }
+        if(collision.gameObject.TryGetComponent<ExplosionAnimation>(out  ExplosionAnimation explosionAnimation)) //if they died via another player respawning
+        {
+            killer = explosionAnimation.explosionCreator;
+        }
+        return killer;
+    }
+
+    public GameObject IdentifyKillerCollision(Collision2D collision)
+    {
+        GameObject killer = null;
+        if (collision.gameObject.TryGetComponent<BulletManager>(out BulletManager bulletManager)) //if they died via gun
+        {
+            killer = bulletManager.playerShooter;
+        }
+        if (collision.gameObject.TryGetComponent<Explosion>(out Explosion explosion)) //if they died via rocket launcher explosion
+        {
+            killer = explosion.playerShooter;
+        }
+        if (collision.gameObject.TryGetComponent<scr_golfBall>(out scr_golfBall ball)) //if they died via golf ball
+        {
+            killer = ball.playerHitter.GetComponentInChildren<PlayerScore>().gameObject;
+        }
+        if (collision.gameObject.GetComponentInParent<scr_meleeSwing>()) //if they died via melee attack
+        {
+            killer = collision.gameObject.GetComponentInParent<PlayerScore>().gameObject;
+        }
+        if (collision.gameObject.TryGetComponent<ExplosionAnimation>(out ExplosionAnimation explosionAnimation)) //if they died via another player respawning
+        {
+            killer = explosionAnimation.explosionCreator;
+        }
+        return killer;
     }
 }

@@ -12,13 +12,15 @@ public class ScoreTracker : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //done to reset player scores to zero
         score = -1;
-        UpdateScore();
+        UpdateScore(1);
     }
 
-    public void UpdateScore()
+    public void UpdateScore(int value) //increase the player's score by value
     {
-        score++;
+        score += value;
+        Debug.Log("Increased score by " + value + ". score is now: " + score);
         scoreText.text = score.ToString()+ " POINTS";
     }
 

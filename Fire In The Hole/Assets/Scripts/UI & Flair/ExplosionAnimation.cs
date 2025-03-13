@@ -17,6 +17,7 @@ public class ExplosionAnimation : MonoBehaviour
     private float timer;
     public float interval;
 
+    public GameObject explosionCreator;
     private void Start()
     {
         mySprite = GetComponentInChildren<SpriteRenderer>();

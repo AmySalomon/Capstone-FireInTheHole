@@ -18,9 +18,9 @@ MonoBehaviour:
   magazineCount: 7
   shootDelay: 0
   reloadSpeed: 0.7
-  launchForce: 1250
+  launchForce: 800
   screenShake: 0.2
-  shotSpread: 1
+  shotSpread: 3
   gunshot: {fileID: 0}
   gunSprite: {fileID: 21300000, guid: dd1254fda64a7b04fba945cef285e278, type: 3}
   behaviour: {fileID: 11400000, guid: dc96fdaebba5a524fa0b65132053b6dd, type: 2}

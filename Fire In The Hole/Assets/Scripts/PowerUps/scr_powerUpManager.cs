@@ -70,7 +70,10 @@ public class scr_powerUpManager : MonoBehaviour
 
     public void RemovePowerUp()
     {
-        tempActivePowerUp.RemoveEffect(playerObj);
+        if (tempActivePowerUp != null)
+        {
+            tempActivePowerUp.RemoveEffect(playerObj);
+        }
         //tempActivePowerUp = null;
     }
 

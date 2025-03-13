@@ -19,6 +19,7 @@ public class MultishotShotType : ShotType
             bulletInstance.AddForce(Quaternion.AngleAxis(-currentAngle, -barrelEnd.forward) * -barrelEnd.up * launchForce);
             currentAngle -= bulletOffset;
             bulletInstance.GetComponent<BulletManager>().bulletType = bulletType;
+            bulletInstance.GetComponent<BulletManager>().playerShooter = playerShooter;
         }
     }
     

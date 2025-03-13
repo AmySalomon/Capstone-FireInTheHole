@@ -10,7 +10,7 @@ public class scr_golfBall : MonoBehaviour
     private float interactionRange;
     public string golfHoleTag = "GolfHole";
     public string sandTrapTag = "Sand";
-
+    public int ballValue = 5;
 
 
     private GameObject directionArrowInstance;
@@ -181,7 +181,7 @@ public class scr_golfBall : MonoBehaviour
     {
         if (other.CompareTag(golfHoleTag))
         {
-            playerHitter.GetComponentInChildren<PlayerScore>(true).IncreaseScore();
+            playerHitter.GetComponentInChildren<PlayerScore>(true).IncreaseScore(ballValue);
             AudioSource audio = other.GetComponent<AudioSource>();
             audio.Play();
             var scoreText = Instantiate(textPopup, other.transform.position, transform.rotation);

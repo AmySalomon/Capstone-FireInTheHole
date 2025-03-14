@@ -23,12 +23,14 @@ public class JoinPlayer : MonoBehaviour
     [SerializeField] private Transform[] turretSpawns;
     [SerializeField] private Transform[] DASHSpawns;
     [SerializeField] private Transform[] SWINGSpawns;
+    [SerializeField] private Transform[] coverSpawns;
     [SerializeField] private GameObject playerPrefab;
     [SerializeField] private GameObject tutorialFlagPrefab;
     [SerializeField] private GameObject tutorialBallPrefab;
     [SerializeField] private GameObject tutorialTurretPrefab;
     [SerializeField] private GameObject tutorialTextDASHPrefab;
     [SerializeField] private GameObject tutorialTextSWINGPrefab;
+    [SerializeField] private GameObject coverPrefab;
     [SerializeField] private GameObject transitionZonePrefab;
 
     [SerializeField] private GameObject golfTutStuff;
@@ -119,6 +121,8 @@ public class JoinPlayer : MonoBehaviour
         var tutorialSWINGText = Instantiate(tutorialTextSWINGPrefab, SWINGSpawns[index].position, SWINGSpawns[index].rotation, myGolfTutStuff.transform);
         var transitionZone = Instantiate(transitionZonePrefab, flagSpawns[index].position, flagSpawns[index].rotation, gameObject.transform);
         transitionZone.GetComponent<TutorialAdvanceZone>().myIndex = index + 1;
+        var tutCover = Instantiate(coverPrefab, coverSpawns[index].position, Quaternion.identity, myGolfTutStuff.transform);
+        tutCover.GetComponent<DisappearOvertime>().shouldIDelete = false;
         myGolfTutStuff.transform.position = new Vector3 (500 + index * 10, 500 + index * 10, 0);
         shouldIDisableUI = true;
     }
@@ -231,6 +235,7 @@ public class JoinPlayer : MonoBehaviour
                 if (i.flagNumber == currentIndex)
                 {
                     i.gameObject.transform.position = new Vector3(0, 0, 0);
+                    i.gameObject.GetComponentInChildren<DisappearOvertime>().shouldIDelete = true;
                 }
             }
 
@@ -242,6 +247,8 @@ public class JoinPlayer : MonoBehaviour
                 }
             }
         }
+
+        
 
         playersActive = GetComponentsInChildren<PlayerInputHandler>();
 

@@ -1897,6 +1897,7 @@ GameObject:
   - component: {fileID: 4271349150141182393}
   - component: {fileID: 7739393383190996016}
   - component: {fileID: 6379753032686096732}
+  - component: {fileID: 8868912346583957209}
   m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
@@ -2002,6 +2003,35 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &8868912346583957209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5085900501264061409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6daf945e554acd43967271795536af7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isRunning: 0
+  bunnyRun1: {fileID: 21300000, guid: 41b49f9fc6ca10b41b6e13d6c1aab209, type: 3}
+  bunnyRun2: {fileID: 21300000, guid: f9d74bb418a15704b999b35a0caf9964, type: 3}
+  bunnyRun3: {fileID: 21300000, guid: 51097335910e98a48bf3aa91c87d0473, type: 3}
+  bunnyRun4: {fileID: 21300000, guid: 3c6f4bee47d873a46bd112f9adf282c9, type: 3}
+  duckRun1: {fileID: 21300000, guid: f97a6f7143d94334a89a38184ba68569, type: 3}
+  duckRun2: {fileID: 21300000, guid: 30ee6f2cf7adf644995f58c59b225c8a, type: 3}
+  duckRun3: {fileID: 21300000, guid: 756823ed96073234ba2c153603680632, type: 3}
+  duckRun4: {fileID: 21300000, guid: fee10005a42cbbf4497ebe4e0cc7b894, type: 3}
+  newtRun1: {fileID: 21300000, guid: d1d88a742da8df74ba15dac2625100ee, type: 3}
+  newtRun2: {fileID: 21300000, guid: 3f3af26cdb5475040a7480fae7b2b75c, type: 3}
+  newtRun3: {fileID: 21300000, guid: 7d389f01480e2c84688a26404e604506, type: 3}
+  newtRun4: {fileID: 21300000, guid: 6771d38bdb52caa4991b61eb2fa7bd42, type: 3}
+  walrusRun1: {fileID: 21300000, guid: 25d60579c3a41b94a95b0e697bb16b37, type: 3}
+  walrusRun2: {fileID: 21300000, guid: e589047f3a2d01949966f53fbf3bf991, type: 3}
+  walrusRun3: {fileID: 21300000, guid: 2157950cb539c8b4fa0f5cb2427e0735, type: 3}
+  walrusRun4: {fileID: 21300000, guid: c4700c20675300445a78a9732456c670, type: 3}
 --- !u!1 &5180968451179702059
 GameObject:
   m_ObjectHideFlags: 0

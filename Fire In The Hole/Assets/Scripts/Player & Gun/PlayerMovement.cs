@@ -28,12 +28,14 @@ public class PlayerMovement : MonoBehaviour
     private bool facingLeft = false;
     private bool facingRight = false;
 
+    private RunningAnim runningAnimation;
+
     // Start is called before the first frame update
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         dashCheck = GetComponent<Dash>();
-
+        runningAnimation = GetComponentInChildren<RunningAnim>();
         //starts movespeed as current movdespeed
         currentMoveSpeed = moveSpeed;
     }
@@ -45,6 +47,11 @@ public class PlayerMovement : MonoBehaviour
         if (movement.magnitude < 0.125)
         {
             movement = Vector2.zero;
+            runningAnimation.isRunning = false;
+        }
+        else
+        {
+            runningAnimation.isRunning = true;
         }
     }
 

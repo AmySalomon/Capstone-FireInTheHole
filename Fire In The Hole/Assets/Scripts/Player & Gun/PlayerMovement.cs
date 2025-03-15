@@ -30,6 +30,8 @@ public class PlayerMovement : MonoBehaviour
 
     private RunningAnim runningAnimation;
 
+    private WaterSplash waterAnim;
+
     // Start is called before the first frame update
     private void Awake()
     {
@@ -38,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
         runningAnimation = GetComponentInChildren<RunningAnim>();
         //starts movespeed as current movdespeed
         currentMoveSpeed = moveSpeed;
+        waterAnim = GetComponentInChildren<WaterSplash>();
     }
 
     public void MovePlayer(Vector2 vector)
@@ -129,6 +132,7 @@ public class PlayerMovement : MonoBehaviour
         if (other.CompareTag(sandTrapTag))
         {
             currentMoveSpeed = sandMoveSpeed;
+            waterAnim.amInWater = true;
         }
     }
 
@@ -138,6 +142,7 @@ public class PlayerMovement : MonoBehaviour
         if (other.CompareTag(sandTrapTag))
         {
             currentMoveSpeed = moveSpeed;
+            waterAnim.amInWater = false;
         }
     }
 }

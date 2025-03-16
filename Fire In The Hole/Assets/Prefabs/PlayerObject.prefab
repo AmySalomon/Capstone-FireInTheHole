@@ -8277,12 +8277,24 @@ PrefabInstance:
       value: WaterSplash
       objectReference: {fileID: 0}
     - target: {fileID: 7763706554530426741, guid: 529a05159d7ca6b4c9ee13898fe6d4c1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.4627281
+      objectReference: {fileID: 0}
+    - target: {fileID: 7763706554530426741, guid: 529a05159d7ca6b4c9ee13898fe6d4c1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.4627281
+      objectReference: {fileID: 0}
+    - target: {fileID: 7763706554530426741, guid: 529a05159d7ca6b4c9ee13898fe6d4c1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.4627281
+      objectReference: {fileID: 0}
+    - target: {fileID: 7763706554530426741, guid: 529a05159d7ca6b4c9ee13898fe6d4c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7763706554530426741, guid: 529a05159d7ca6b4c9ee13898fe6d4c1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.66
+      value: 2.33
       objectReference: {fileID: 0}
     - target: {fileID: 7763706554530426741, guid: 529a05159d7ca6b4c9ee13898fe6d4c1, type: 3}
       propertyPath: m_LocalPosition.z

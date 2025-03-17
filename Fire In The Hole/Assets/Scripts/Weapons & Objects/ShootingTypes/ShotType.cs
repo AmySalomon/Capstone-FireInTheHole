@@ -17,6 +17,7 @@ public class ShotType : ScriptableObject
         bulletInstance.AddRelativeForce(Vector2.down * launchForce);
         bulletInstance.GetComponent<BulletManager>().bulletType = bulletType;
         bulletInstance.GetComponent<BulletManager>().playerShooter = playerShooter;
+        bulletInstance.GetComponent<BulletManager>().launchForce = launchForce;
         bulletInstance.GetComponent<BulletManager>().UpdateBulletType();
     }
     

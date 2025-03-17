@@ -11,6 +11,7 @@ public class BulletManager : MonoBehaviour
     public GameObject wallHitImpact;
     private Rigidbody2D myRigidbody;
     public PhysicsMaterial2D bounceMaterial;
+    public float launchForce; //the force the bullet was launched at
 
     [HideInInspector] public bool canBounce = false;
 
@@ -72,4 +73,19 @@ public class BulletManager : MonoBehaviour
     {
         bulletType.DeleteBullet(this.gameObject, playerShooter);
     }
+
+    public void GolfBallOffset(Collider2D collision)
+    {
+        if (collision.gameObject.TryGetComponent<scr_golfBall>(out scr_golfBall golfBall))
+        {
+            golfBall.playerHitter = playerShooter;
+            golfBall.outline.OutlineColor = playerShooter.GetComponent<scr_meleeSwing>().outlineColor;
+            Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
+            Vector2 forceDirection = rb.transform.position - this.gameObject.transform.position;
+            //collision.GetComponent<Rigidbody2D>().AddForce(-forceDirection.normalized*(launchForce), ForceMode2D.Force);
+            collision.GetComponent<Rigidbody2D>().AddForce(-gameObject.transform.up * launchForce/10);
+            bulletType.DeleteBullet(this.gameObject, playerShooter);
+        }
+    }
+
 }

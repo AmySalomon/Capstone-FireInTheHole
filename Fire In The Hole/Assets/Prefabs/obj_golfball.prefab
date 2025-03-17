@@ -231,6 +231,7 @@ MonoBehaviour:
   directionArrowPrefab: {fileID: 3008977995450802778, guid: 32629b242ae621e458f00bd051371e80, type: 3}
   golfHoleTag: GolfHole
   sandTrapTag: Sand
+  ballValue: 5
   myRigidbody: {fileID: 2347447381634443944}
   mySprite: {fileID: 3362427951106548886}
   bounce1: {fileID: 8300000, guid: 42dcec202047c1141b1425b32d017750, type: 3}

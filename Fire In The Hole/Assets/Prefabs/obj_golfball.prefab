@@ -189,6 +189,7 @@ GameObject:
   - component: {fileID: 7201672575842233359}
   - component: {fileID: 5029086065803665751}
   - component: {fileID: 5294721900104960908}
+  - component: {fileID: 4101080339064764375}
   m_Layer: 6
   m_Name: obj_golfball
   m_TagString: Ball
@@ -213,6 +214,7 @@ Transform:
   - {fileID: 7384569223799544353}
   - {fileID: 5652269655283226589}
   - {fileID: 3426345760593027571}
+  - {fileID: 7710061447241885608}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &198056289403907709
@@ -301,10 +303,10 @@ MonoBehaviour:
   playerHitter: {fileID: 0}
   balltype: 0
   specialChance: 0.5
-  type1Chance: 0.33
-  type2Chance: 0.33
-  type3Chance: 0.34
-  type4Chance: 0
+  type1Chance: 0.25
+  type2Chance: 0.25
+  type3Chance: 0.25
+  type4Chance: 0.25
   bombModel: {fileID: 5088744315955933748}
   ballModel: {fileID: 322736457042949509}
   tutorialLvlText: 3D Tutorial Lobby
@@ -1503,6 +1505,19 @@ MonoBehaviour:
   rbGolfBall: {fileID: 2347447381634443944}
   gbOutline: {fileID: 1309956234745881904}
   clone: 0
+--- !u!114 &4101080339064764375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2418453429810656359}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84b19613eea12284cbe99111cc9b4567, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 8977285105747890853, guid: 8b62f86990cbb96448969b262cdcb652, type: 3}
 --- !u!1 &4395762624424758017
 GameObject:
   m_ObjectHideFlags: 0
@@ -1668,6 +1683,37 @@ Transform:
   - {fileID: 8848650122071041726}
   - {fileID: 5608399162575366286}
   m_Father: {fileID: 4783666163594909496}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5458277692889815304
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7710061447241885608}
+  m_Layer: 0
+  m_Name: --bouncestuff--
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7710061447241885608
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5458277692889815304}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.2861395, y: -0.018528681, z: -2.3579218}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 5.5897145}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4292043681957677503}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8994699049523705556
 GameObject:

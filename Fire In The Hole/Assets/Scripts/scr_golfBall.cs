@@ -42,6 +42,7 @@ public class scr_golfBall : MonoBehaviour
     private scr_balltype_bomb scr_Balltype_Bomb;
     private scr_scattershotChild scr_Balltype_Scatter;
     private WalkingBall scr_Balltype_Walking;
+    private scr_BT_Bounce scr_Balltype_Bounce;
 
     //Special golf ball chance variables
     [Header("Special Ball Chance")]
@@ -78,6 +79,7 @@ public class scr_golfBall : MonoBehaviour
         scr_Balltype_Bomb = GetComponent<scr_balltype_bomb>();
         scr_Balltype_Scatter = GetComponent<scr_scattershotChild>();
         scr_Balltype_Walking = GetComponent<WalkingBall>();
+        scr_Balltype_Bounce = GetComponent<scr_BT_Bounce>();
         AssignRandomType();
 
         waterAnim = GetComponentInChildren<WaterSplash>();
@@ -151,9 +153,12 @@ public class scr_golfBall : MonoBehaviour
                 scr_Balltype_Scatter.enabled = true;
                 balltype = 3;
             }
-                
             else
+            {
+                scr_Balltype_Bounce.enabled = true;
+                scr_Balltype_Bounce.bounceEnabled = true;
                 balltype = 4;
+            }
         }
         else
         {

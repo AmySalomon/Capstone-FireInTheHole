@@ -63,6 +63,12 @@ public class PlayerDeath : MonoBehaviour
     //gets the current ring indicator, in order to move it for the helldivers respawn
     private GameObject currentRingIndicator;
 
+    //shield PU variables
+    public bool shieldActive = false;
+    public SpriteRenderer shieldSprite;
+    //permanent shield variables (for us to test always having shield)
+    public scr_permaShield shieldScript;
+
     private void Awake()
     {
         killSound = GetComponent<AudioSource>();
@@ -122,25 +128,48 @@ public class PlayerDeath : MonoBehaviour
             else if (invulnTimer > invulnRespawnTime / 10 * 3) playerSprite.enabled = true;
             else if (invulnTimer > invulnRespawnTime / 10 * 2) playerSprite.enabled = false;
             else if (invulnTimer > 0) playerSprite.enabled = true;
+
+            if (shieldScript != null) //this is for the perma shield if we decide to go with it.
+            {
+                shieldScript.DisableShieldTemporarily();
+            }
         }
         tryingToAttack = false;
+
+        if (shieldActive == true)
+        {
+            shieldSprite.enabled = true;
+        }
     }
 
     public void Died()
     {
-        moveToPosition = playerStuff.transform.position;
-        playerIsDead = true;
-        killSound.Play();
-        if (setSpawnLocation == false)
+        if (shieldActive == true)
         {
-            var deadPlayer = Instantiate(deathAnimationPrefab, moveToPosition, Quaternion.identity);
-            deadPlayer.GetComponent<DeathAnimation>().receivedSprite = mySprite;
-            deadPlayer.GetComponent<DeathAnimation>().knockbackDirection = deathDirection;
+            shieldActive = false;
+            shieldSprite.enabled = false;
+            if (shieldScript != null) //this is for the perma shield if we decide to go with it.
+            {
+                shieldScript.DisableShieldTemporarily();
+            }
+        }
+        else
+        {
+            moveToPosition = playerStuff.transform.position;
+            playerIsDead = true;
+            killSound.Play();
+            if (setSpawnLocation == false)
+            {
+                var deadPlayer = Instantiate(deathAnimationPrefab, moveToPosition, Quaternion.identity);
+                deadPlayer.GetComponent<DeathAnimation>().receivedSprite = mySprite;
+                deadPlayer.GetComponent<DeathAnimation>().knockbackDirection = deathDirection;
+
+            }
+            playerStuff.SetActive(false);
+            playerCanvasStuff.SetActive(false);
+            playerPowerUpManager.RemovePowerUp();
 
         }
-        playerStuff.SetActive(false);
-        playerCanvasStuff.SetActive(false);
-        playerPowerUpManager.RemovePowerUp();
     }
 
     IEnumerator SpawnPlayer()

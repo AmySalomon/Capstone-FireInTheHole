@@ -9,6 +9,11 @@ public class TutorialAdvanceZone : MonoBehaviour
 
     [HideInInspector] public int myIndex;
 
+    private bool advance = false;
+
+    private float timer = 0;
+
+    public float timeToAdvance = 0.3f;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,15 +23,22 @@ public class TutorialAdvanceZone : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (advance)
+        {
+            timer += Time.deltaTime;
+            if (timer > timeToAdvance)
+            {
+                parentManager.DisableDashTutorial(myIndex);
+                gameObject.SetActive(false);
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
-            parentManager.DisableDashTutorial(myIndex);
-            gameObject.SetActive(false);
+            advance = true;
         }
     }
 }

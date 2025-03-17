@@ -28,8 +28,6 @@ public class IntroFlyBy : MonoBehaviour
 
     private bool youSuckFirstFrame = false;
 
-    private float cameraZoomZ;
-
     private float newVertScale;
 
     // Start is called before the first frame update
@@ -59,6 +57,33 @@ public class IntroFlyBy : MonoBehaviour
         }
 
         ChangeText();
+
+        var playerConfigs = JoinPlayer.Instance.GetPlayerConfigs().ToArray();
+
+        if (playerConfigs.Length == 4)
+        {
+            FourPlayers();
+        }
+
+        if (playerConfigs.Length == 3)
+        {
+            ThreePlayers();
+        }
+
+        if (playerConfigs.Length == 2)
+        {
+            TwoPlayers();
+        }
+
+        if (playerConfigs.Length == 1)
+        {
+            OnePlayer();
+        }
+
+    }
+
+    void FourPlayers()
+    {
         //THE FOLLOWING IFS ARE IN REVERSE ORDER, IN ORDER TO PROPERLY ANIMATE AT THE CORRECT TIMES.
         //set camera position and time back to normal before self-destructing
         if (timer > 7.6f)
@@ -73,7 +98,7 @@ public class IntroFlyBy : MonoBehaviour
         else if (timer > 6.1f)
         {
             //-1 to offset the end of the screen
-            newZPos = Mathf.Lerp(cameraZoomZ, firstCameraZPos, aniCurve.Evaluate((timer - 6.1f) / 1f));
+            newZPos = Mathf.Lerp(-3, firstCameraZPos, aniCurve.Evaluate((timer - 6.1f) / 1f));
             newXPos = Mathf.Lerp(spawn4.transform.position.x + 1, firstCameraXPos, aniCurve.Evaluate((timer - 6.1f) / 1f));
             newYPos = Mathf.Lerp(spawn4.transform.position.y, firstCameraYPos, aniCurve.Evaluate((timer - 6.1f) / 1f));
             myCamera.transform.position = new Vector3(newXPos, newYPos, newZPos);
@@ -100,10 +125,139 @@ public class IntroFlyBy : MonoBehaviour
         //to player2
         else if (timer > 1.6f)
         {
-            cameraZoomZ = myCamera.transform.position.z;
             //-1 to offset the end of the screen
             newXPos = Mathf.Lerp(spawn1.transform.position.x + 1, spawn2.transform.position.x - 1, aniCurve.Evaluate((timer - 1.6f) / 1f));
             newYPos = Mathf.Lerp(spawn1.transform.position.y - 1, spawn2.transform.position.y, aniCurve.Evaluate((timer - 1.6f) / 1f));
+            myCamera.transform.position = new Vector3(newXPos, newYPos, newZPos);
+        }
+
+        //to player 1
+        else if (timer > 0.1f)
+        {
+            //zooms the camera in
+            newZPos = Mathf.Lerp(firstCameraZPos, -3, aniCurve.Evaluate((timer - 0.1f) / 1f));
+            //+1 to offset the end of the screen
+            newXPos = Mathf.Lerp(firstCameraXPos, spawn1.transform.position.x + 1, aniCurve.Evaluate((timer - 0.1f) / 1f));
+            newYPos = Mathf.Lerp(firstCameraYPos, spawn1.transform.position.y - 1, aniCurve.Evaluate((timer - 0.1f) / 1f));
+            myCamera.transform.position = new Vector3(newXPos, newYPos, newZPos);
+        }
+    }
+
+    void ThreePlayers()
+    {
+        //THE FOLLOWING IFS ARE IN REVERSE ORDER, IN ORDER TO PROPERLY ANIMATE AT THE CORRECT TIMES.
+        //set camera position and time back to normal before self-destructing
+        if (timer > 7.6f)
+        {
+            myCamera.transform.position = new Vector3(firstCameraXPos, firstCameraYPos, firstCameraZPos);
+            Time.timeScale = 1;
+            PlayerPause.paused = false;
+            Destroy(gameObject);
+        }
+
+        //back to OG position
+        else if (timer > 6.1f)
+        {
+            //-1 to offset the end of the screen
+            newZPos = Mathf.Lerp(-3, firstCameraZPos, aniCurve.Evaluate((timer - 6.1f) / 1f));
+            newXPos = Mathf.Lerp(spawn3.transform.position.x - 1, firstCameraXPos, aniCurve.Evaluate((timer - 6.1f) / 1f));
+            newYPos = Mathf.Lerp(spawn3.transform.position.y -1, firstCameraYPos, aniCurve.Evaluate((timer - 6.1f) / 1f));
+            myCamera.transform.position = new Vector3(newXPos, newYPos, newZPos);
+        }
+
+
+        //to player3
+        else if (timer > 4.1f)
+        {
+            //-1 to offset the end of the screen
+            newXPos = Mathf.Lerp(spawn2.transform.position.x - 1, spawn3.transform.position.x - 1, aniCurve.Evaluate((timer - 4.1f) / 1f));
+            newYPos = Mathf.Lerp(spawn2.transform.position.y, spawn3.transform.position.y - 1, aniCurve.Evaluate((timer - 4.1f) / 1f));
+            myCamera.transform.position = new Vector3(newXPos, newYPos, newZPos);
+        }
+
+        //to player2
+        else if (timer > 2.1f)
+        {
+            //-1 to offset the end of the screen
+            newXPos = Mathf.Lerp(spawn1.transform.position.x + 1, spawn2.transform.position.x - 1, aniCurve.Evaluate((timer - 2.1f) / 1f));
+            newYPos = Mathf.Lerp(spawn1.transform.position.y - 1, spawn2.transform.position.y, aniCurve.Evaluate((timer - 2.1f) / 1f));
+            myCamera.transform.position = new Vector3(newXPos, newYPos, newZPos);
+        }
+
+        //to player 1
+        else if (timer > 0.1f)
+        {
+            //zooms the camera in
+            newZPos = Mathf.Lerp(firstCameraZPos, -3, aniCurve.Evaluate((timer - 0.1f) / 1f));
+            //+1 to offset the end of the screen
+            newXPos = Mathf.Lerp(firstCameraXPos, spawn1.transform.position.x + 1, aniCurve.Evaluate((timer - 0.1f) / 1f));
+            newYPos = Mathf.Lerp(firstCameraYPos, spawn1.transform.position.y - 1, aniCurve.Evaluate((timer - 0.1f) / 1f));
+            myCamera.transform.position = new Vector3(newXPos, newYPos, newZPos);
+        }
+    }
+
+    void TwoPlayers()
+    {
+        //THE FOLLOWING IFS ARE IN REVERSE ORDER, IN ORDER TO PROPERLY ANIMATE AT THE CORRECT TIMES.
+        //set camera position and time back to normal before self-destructing
+        if (timer > 7.6f)
+        {
+            myCamera.transform.position = new Vector3(firstCameraXPos, firstCameraYPos, firstCameraZPos);
+            Time.timeScale = 1;
+            PlayerPause.paused = false;
+            Destroy(gameObject);
+        }
+
+        //back to OG position
+        else if (timer > 6.1f)
+        {
+            //-1 to offset the end of the screen
+            newZPos = Mathf.Lerp(-3, firstCameraZPos, aniCurve.Evaluate((timer - 6.1f) / 1f));
+            newXPos = Mathf.Lerp(spawn2.transform.position.x - 1, firstCameraXPos, aniCurve.Evaluate((timer - 6.1f) / 1f));
+            newYPos = Mathf.Lerp(spawn2.transform.position.y, firstCameraYPos, aniCurve.Evaluate((timer - 6.1f) / 1f));
+            myCamera.transform.position = new Vector3(newXPos, newYPos, newZPos);
+        }
+
+        //to player2
+        else if (timer > 3.1f)
+        {
+            //-1 to offset the end of the screen
+            newXPos = Mathf.Lerp(spawn1.transform.position.x + 1, spawn2.transform.position.x - 1, aniCurve.Evaluate((timer - 3.1f) / 1f));
+            newYPos = Mathf.Lerp(spawn1.transform.position.y - 1, spawn2.transform.position.y, aniCurve.Evaluate((timer - 3.1f) / 1f));
+            myCamera.transform.position = new Vector3(newXPos, newYPos, newZPos);
+        }
+
+        //to player 1
+        else if (timer > 0.1f)
+        {
+            //zooms the camera in
+            newZPos = Mathf.Lerp(firstCameraZPos, -3, aniCurve.Evaluate((timer - 0.1f) / 1f));
+            //+1 to offset the end of the screen
+            newXPos = Mathf.Lerp(firstCameraXPos, spawn1.transform.position.x + 1, aniCurve.Evaluate((timer - 0.1f) / 1f));
+            newYPos = Mathf.Lerp(firstCameraYPos, spawn1.transform.position.y - 1, aniCurve.Evaluate((timer - 0.1f) / 1f));
+            myCamera.transform.position = new Vector3(newXPos, newYPos, newZPos);
+        }
+    }
+
+    void OnePlayer()
+    {
+        //THE FOLLOWING IFS ARE IN REVERSE ORDER, IN ORDER TO PROPERLY ANIMATE AT THE CORRECT TIMES.
+        //set camera position and time back to normal before self-destructing
+        if (timer > 7.6f)
+        {
+            myCamera.transform.position = new Vector3(firstCameraXPos, firstCameraYPos, firstCameraZPos);
+            Time.timeScale = 1;
+            PlayerPause.paused = false;
+            Destroy(gameObject);
+        }
+
+        //back to OG position
+        else if (timer > 6.1f)
+        {
+            //-1 to offset the end of the screen
+            newZPos = Mathf.Lerp(-3, firstCameraZPos, aniCurve.Evaluate((timer - 6.1f) / 1f));
+            newXPos = Mathf.Lerp(spawn1.transform.position.x + 1, firstCameraXPos, aniCurve.Evaluate((timer - 6.1f) / 1f));
+            newYPos = Mathf.Lerp(spawn1.transform.position.y - 1, firstCameraYPos, aniCurve.Evaluate((timer - 6.1f) / 1f));
             myCamera.transform.position = new Vector3(newXPos, newYPos, newZPos);
         }
 

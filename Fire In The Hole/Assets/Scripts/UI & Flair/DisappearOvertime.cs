@@ -6,18 +6,19 @@ public class DisappearOvertime : MonoBehaviour
 {
     private float timer;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float timeToDelete = 2;
+
+
+    public bool shouldIDelete = true;
+
+
 
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime;
+        if (shouldIDelete) timer += Time.deltaTime;
 
-        if (timer > 2)
+        if (timer > timeToDelete)
         {
             Destroy(gameObject);
         }

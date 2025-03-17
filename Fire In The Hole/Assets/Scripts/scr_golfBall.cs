@@ -65,6 +65,7 @@ public class scr_golfBall : MonoBehaviour
     private Quaternion hitDirection;
     private float newZDirection;
 
+    private WaterSplash waterAnim;
     private void Start()
     {
         //put initializing code here and delete Temp
@@ -78,6 +79,8 @@ public class scr_golfBall : MonoBehaviour
         scr_Balltype_Scatter = GetComponent<scr_scattershotChild>();
         scr_Balltype_Walking = GetComponent<WalkingBall>();
         AssignRandomType();
+
+        waterAnim = GetComponentInChildren<WaterSplash>();
     }
 
     private void Update()
@@ -193,7 +196,8 @@ public class scr_golfBall : MonoBehaviour
         //slows ball in sand trap
         if (other.CompareTag(sandTrapTag))
         {
-            myRigidbody.drag = 2;
+            myRigidbody.drag = 3;
+            waterAnim.amInWater = true;
         }
     }
 
@@ -203,6 +207,7 @@ public class scr_golfBall : MonoBehaviour
         if (other.CompareTag(sandTrapTag))
         {
             myRigidbody.drag = .5f;
+            waterAnim.amInWater = false;
         }
     }
 

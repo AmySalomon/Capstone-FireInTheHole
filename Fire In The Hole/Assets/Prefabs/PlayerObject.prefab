@@ -1061,6 +1061,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathManager: {fileID: 4617527675341735179}
+  killValueRef: 1
+  playerKiller: {fileID: 0}
 --- !u!96 &740412417887625949
 TrailRenderer:
   serializedVersion: 3
@@ -2366,7 +2368,6 @@ MonoBehaviour:
   player: {fileID: 8370212098543078777}
   playerDeath: {fileID: 4617527675341735179}
   shieldActive: 0
-  shieldEnabled: 0
   shieldChargeTime: 5
 --- !u!1 &6173911817124226815
 GameObject:
@@ -2752,6 +2753,7 @@ GameObject:
   - component: {fileID: 6158018445185435344}
   - component: {fileID: 7005186657962668532}
   - component: {fileID: 5837689894220406610}
+  - component: {fileID: 5768986129540614703}
   m_Layer: 7
   m_Name: SwingAnimation
   m_TagString: Untagged
@@ -2786,13 +2788,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2ecfa3f44ddb6c4a9d0345c21336135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Frame1: {fileID: 21300000, guid: 7fe89415c8c39834f98012a48b8da41d, type: 3}
-  Frame2: {fileID: 21300000, guid: 8a502edfea8155946afe94c71f5c5fbd, type: 3}
-  Frame3: {fileID: 21300000, guid: 2b270a474bf1b6b40bb2bb1886b0478f, type: 3}
-  Frame4: {fileID: 21300000, guid: 196fbb16f40cb89469b4c5e71cea08b9, type: 3}
-  Frame5: {fileID: 21300000, guid: 3aae891dc2c0ee6498ba60c585d6d9a5, type: 3}
-  Frame6: {fileID: 21300000, guid: 6d037af0be08ae54289d9c39a9360959, type: 3}
-  Frame7: {fileID: 21300000, guid: f60761d44bce23b4f8d8ad42218aa843, type: 3}
+  Frame1: {fileID: 21300000, guid: bee141e57fef6e44f8ddc6808ddff413, type: 3}
+  Frame2: {fileID: 21300000, guid: 137b586eaf191564082a7f37d4637851, type: 3}
+  Frame3: {fileID: 21300000, guid: df001c8ddd44f0d4480537883e83eb63, type: 3}
+  Frame4: {fileID: 21300000, guid: d641dfaa7c304944ebdf23af6335f437, type: 3}
+  Frame5: {fileID: 21300000, guid: 55ecc5e525aaa8f499943bd3b0aaf442, type: 3}
+  Frame6: {fileID: 21300000, guid: c1e72b21318728d49b430a8414e89eef, type: 3}
+  Frame7: {fileID: 21300000, guid: ce6cd3c24175d4b45a30cff21a7385ec, type: 3}
   swingDuration: 0.5
 --- !u!212 &5837689894220406610
 SpriteRenderer:
@@ -2835,7 +2837,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: 2b270a474bf1b6b40bb2bb1886b0478f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 137b586eaf191564082a7f37d4637851, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2846,6 +2848,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5768986129540614703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7279810042185322265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0db9e572d0f0ea74592e97110a8a4ff9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &7306207167697825865
 GameObject:
   m_ObjectHideFlags: 0

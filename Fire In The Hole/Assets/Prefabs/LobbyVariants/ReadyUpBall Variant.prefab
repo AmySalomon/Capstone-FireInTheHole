@@ -22,11 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198056289403907709, guid: 4031563aec8778046a5edc5d43dcb23d, type: 3}
       propertyPath: type3Chance
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198056289403907709, guid: 4031563aec8778046a5edc5d43dcb23d, type: 3}
+      propertyPath: type4Chance
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198056289403907709, guid: 4031563aec8778046a5edc5d43dcb23d, type: 3}
       propertyPath: specialChance
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2418453429810656359, guid: 4031563aec8778046a5edc5d43dcb23d, type: 3}
       propertyPath: m_Name

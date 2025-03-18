@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BulletManager : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class BulletManager : MonoBehaviour
     private Rigidbody2D myRigidbody;
     public PhysicsMaterial2D bounceMaterial;
     public float launchForce; //the force the bullet was launched at
+    private static string currentLevelName = "Null"; // Hold the current level scene
 
     [HideInInspector] public bool canBounce = false;
 
@@ -25,6 +27,7 @@ public class BulletManager : MonoBehaviour
         {
             myRigidbody.sharedMaterial = bounceMaterial;
         }
+        SceneNameUpdate();
     }
 
     // Update is called once per frame
@@ -76,16 +79,31 @@ public class BulletManager : MonoBehaviour
 
     public void GolfBallOffset(Collider2D collision)
     {
-        if (collision.gameObject.TryGetComponent<scr_golfBall>(out scr_golfBall golfBall))
+        if (currentLevelName != "3D TutorialLobby")
         {
-            golfBall.playerHitter = playerShooter;
-            golfBall.outline.OutlineColor = playerShooter.GetComponent<scr_meleeSwing>().outlineColor;
-            Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
-            Vector2 forceDirection = rb.transform.position - this.gameObject.transform.position;
-            //collision.GetComponent<Rigidbody2D>().AddForce(-forceDirection.normalized*(launchForce), ForceMode2D.Force);
-            collision.GetComponent<Rigidbody2D>().AddForce(-gameObject.transform.up * launchForce/10);
-            bulletType.DeleteBullet(this.gameObject, playerShooter);
+            if (collision.gameObject.TryGetComponent<scr_golfBall>(out scr_golfBall golfBall))
+            {
+                golfBall.playerHitter = playerShooter;
+                golfBall.outline.OutlineColor = playerShooter.GetComponent<scr_meleeSwing>().outlineColor;
+                Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
+                Vector2 forceDirection = rb.transform.position - this.gameObject.transform.position;
+                //collision.GetComponent<Rigidbody2D>().AddForce(-forceDirection.normalized*(launchForce), ForceMode2D.Force);
+                collision.GetComponent<Rigidbody2D>().AddForce(-gameObject.transform.up * launchForce / 10);
+                bulletType.DeleteBullet(this.gameObject, playerShooter);
+            }
         }
+        else if (currentLevelName == null)
+        {
+            Debug.Log("[BulletManager]: Scene name not found.");
+        }
+    }
+
+    void SceneNameUpdate() //Update the scene name
+    {
+        // Get the current scene name
+        Scene currentLevel = SceneManager.GetActiveScene();
+        currentLevelName = currentLevel.name;
+        //Debug.Log("Loaded Level: " + currentLevel.name);
     }
 
 }

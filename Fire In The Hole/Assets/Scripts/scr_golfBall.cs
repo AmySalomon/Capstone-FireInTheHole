@@ -211,7 +211,7 @@ public class scr_golfBall : MonoBehaviour
         //speed ball back up outside of sand trap
         if (other.CompareTag(sandTrapTag))
         {
-            myRigidbody.drag = .5f;
+            myRigidbody.drag = .9f;
             waterAnim.amInWater = false;
         }
     }

@@ -5213,7 +5213,7 @@ MonoBehaviour:
   quitCancelButton: {fileID: 0}
   playButton: {fileID: 0}
   eventSystem: {fileID: 1997839958}
-  transition: {fileID: 0}
+  transition: {fileID: 632178382}
   transitionTime: 1
 --- !u!4 &1653597620
 Transform:
@@ -5898,8 +5898,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 269315807}
   m_HandleRect: {fileID: 269315806}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.1525702
+  m_Value: 0.9999999
+  m_Size: 0.15257019
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

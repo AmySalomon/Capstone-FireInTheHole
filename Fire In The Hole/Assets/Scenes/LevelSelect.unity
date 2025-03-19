@@ -1179,7 +1179,7 @@ MonoBehaviour:
   randomLevel: 0
   chosenLevel: 
   playerSetup: 3D TutorialLobby
-  transition: {fileID: 0}
+  transition: {fileID: 642743700}
   transitionTime: 1
   eventSystem: {fileID: 1997839958}
 --- !u!1 &384395137

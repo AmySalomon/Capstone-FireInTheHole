@@ -659,7 +659,7 @@ MonoBehaviour:
   voiceVolTemp: 0
   mainAudioMixer: {fileID: 24100000, guid: 03236680b3327e643be992d6d321973c, type: 2}
   vibrateToggle: {fileID: 949538243}
-  transition: {fileID: 0}
+  transition: {fileID: 56602908}
   transitionTime: 1
   eventSystem: {fileID: 1997839958}
 --- !u!4 &338269648

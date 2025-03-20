@@ -197,11 +197,20 @@ public class scr_meleeSwing : MonoBehaviour
             }
 
         }
+        if (currentSwingForce < 1500)
+        {
+            meleeHitbox.enabled = true;
+        }
+        else
+        {
+            meleeHitbox.enabled = true;
+        }
         if (hits.Length == 0)
         {
             audioPlayer.PlayOneShot(missedHit);
         }
 
+        
         //currentSwingForce = minSwingForce;
 
         yield return new WaitForSeconds(swingCooldown);

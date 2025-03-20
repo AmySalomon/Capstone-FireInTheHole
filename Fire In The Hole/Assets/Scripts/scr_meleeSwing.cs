@@ -173,13 +173,11 @@ public class scr_meleeSwing : MonoBehaviour
                 {
                     audioPlayer.PlayOneShot(normalHit);
                     myInput.RumbleCheck(0.7f, 0.2f); //vibrate the controller based on shot strength
-                    meleeHitbox.enabled = true;
                 }
                 else
                 {
                     audioPlayer.PlayOneShot(strongHit);
                     myInput.RumbleCheck(1f, 0.3f); //vibrate the controller based on shot strength
-                    meleeHitbox.enabled = true;
                 }
 
                 //if you hit a golf ball, tell the golf ball that you hit it
@@ -197,11 +195,7 @@ public class scr_meleeSwing : MonoBehaviour
             }
 
         }
-        if (currentSwingForce < 1500)
-        {
-            meleeHitbox.enabled = true;
-        }
-        else
+        if (currentSwingForce !< 1500)
         {
             meleeHitbox.enabled = true;
         }

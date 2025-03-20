@@ -13,12 +13,19 @@ public class PortalHazard : MonoBehaviour
     //Portal audio
     public AudioClip portalWoosh;
 
+    //Portal Position Change variables
+    public float portalTimerMin = 15, portalTimerMax = 30, portalTimerCurrent;
+    public static int portalLocationChosen;
+    public static bool portalChosen = false;
+    public List<GameObject> portalLocations = new List<GameObject>();
+
     //Start
     private void Start()
     {
         audioPlayer = GetComponent<AudioSource>();
     }
 
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("trigger2D detected: colliding with "+collision.name);
@@ -53,4 +60,6 @@ public class PortalHazard : MonoBehaviour
         Debug.Log("Player left portal "+ this.gameObject.name);
         collisionList.Remove(collision.gameObject);
     }
+
+    
 }

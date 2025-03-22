@@ -28,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.10660171, w: 0.9943018}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.10873013, y: 0.10873013, z: 0.10873013}
+  m_LocalScale: {x: 0.13794592, y: 0.13794592, z: 0.13794592}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5452827681276635566}
@@ -211,7 +211,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1444, y: 0.1444, z: 0.1444}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.1444}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5452827681276635566}
@@ -278,7 +278,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5452827681276635566}
   - component: {fileID: 9179871969606995395}
-  - component: {fileID: 303620366363045916}
   - component: {fileID: 1464218712985430446}
   - component: {fileID: 6845588447887135726}
   m_Layer: 3
@@ -321,49 +320,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToImpactMax: 4
-  timeToImpact: 0
-  lingerTimer: 1
-  lavaAnimator: {fileID: 1464218712985430446}
+  timeToImpact: 4
+  lingerTimer: 0.3
+  lavaAnimator: {fileID: 0}
   timeToAppear: 0.3
   innerRing: {fileID: 4438818132411062803}
   outerRing: {fileID: 5357775502620925508}
   warningIcon: {fileID: 5971894928629755121}
   meteorExplosion: {fileID: 8300000, guid: 2247af2da64f7014dbf856532f32e447, type: 3}
---- !u!58 &303620366363045916
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5214778925187614226}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
+  explosionPrefab: {fileID: 8977285105747890853, guid: f3c56af67d81f8b47952fb115069562e, type: 3}
 --- !u!95 &1464218712985430446
 Animator:
   serializedVersion: 5
@@ -508,7 +473,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.38424897, y: 0.38424897, z: 0.38424897}
+  m_LocalScale: {x: 0.64507717, y: 0.64507717, z: 0.64507717}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5452827681276635566}
@@ -593,7 +558,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.053, z: 0}
-  m_LocalScale: {x: 0.074086055, y: 0.074086055, z: 0.074086055}
+  m_LocalScale: {x: 0.108136006, y: 0.108136006, z: 0.108136006}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5452827681276635566}

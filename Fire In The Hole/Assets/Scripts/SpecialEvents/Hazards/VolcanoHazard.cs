@@ -35,6 +35,7 @@ public class VolcanoHazard : MonoBehaviour
     //One Explosion Bool
     bool explosionSound = true;
 
+    public GameObject explosionPrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -44,11 +45,7 @@ public class VolcanoHazard : MonoBehaviour
         endScale = innerRing.transform.localScale.x;
         startScale = outerRing.transform.localScale.x;
 
-        this.GetComponent<Collider2D>().enabled = false;
         timeToImpact = timeToImpactMax;
-        this.GetComponent<SpriteRenderer>().color = new Color(1.0f, 0.0f, 0.0f, 0.5f);
-        startingColour = GetComponent<SpriteRenderer>().color;
-        exploding = false;
     }
 
     // Update is called once per frame
@@ -60,35 +57,17 @@ public class VolcanoHazard : MonoBehaviour
         timeToImpact -= Time.deltaTime;
         time += Time.deltaTime;
 
-        if (exploding)
-        {//go away after set time
-            lingerTimer -= Time.deltaTime;
-            if(lingerTimer <= 0)
-            {
-                Destroy(this.gameObject);
-            }
-            else if (lingerTimer <= 1.5)
-            {
-                if (explosionSound == true)
-                {
-                    //Audio Player <3
-                    audioPlayer = GetComponent<AudioSource>();
-
-                    //Play Meteor Sound
-                    audioPlayer.pitch = Random.Range(0.9f, 1.1f);
-                    audioPlayer.PlayOneShot(meteorExplosion, 1f);
-                    explosionSound = false;
-                }
-            }
-        }//when timer elapses, make area harmful
-        else if(timeToImpact <= 0)
+       
+        if(timeToImpact <= 0)
         {
-            this.GetComponent<Collider2D>().enabled = true;
-            exploding = true;
-            lavaAnimator.SetBool("Fade Away", true);
-            innerRing.GetComponent<SpriteRenderer>().enabled = false;
-            outerRing.GetComponent<SpriteRenderer>().enabled = false;
-            warningIcon.SetActive(false);
+            //Audio Player <3
+            audioPlayer = GetComponent<AudioSource>();
+            //Play Meteor Sound
+            audioPlayer.pitch = Random.Range(0.9f, 1.1f);
+            audioPlayer.PlayOneShot(meteorExplosion, 1f);
+            var explosion = Instantiate(explosionPrefab, transform.position, transform.rotation);
+            explosion.transform.localScale = new Vector3 (1.3f, 1.3f, 1);
+            Destroy(this.gameObject);
         }
     }
 

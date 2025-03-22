@@ -576,6 +576,7 @@ MonoBehaviour:
   powerUp: {fileID: 6386908862290327705, guid: 0a13f736299cc2240a43a4b485996df2, type: 3}
   gunPickup: {fileID: 7631844770271239170, guid: ac2d026ab12e2b84684430477457e369, type: 3}
   skydiveExplosion: {fileID: 8977285105747890853, guid: f3c56af67d81f8b47952fb115069562e, type: 3}
+  playerRespawning: {fileID: 0}
   innerRing: {fileID: 7038277218828136491}
   outerRing: {fileID: 8692312855387847064}
   flashingArrows: {fileID: 1776790939820139707}
@@ -587,8 +588,8 @@ MonoBehaviour:
   squareRing: {fileID: 21300000, guid: a3b44480af2eae248afed9a5829975e8, type: 3}
   hexagonRing: {fileID: 21300000, guid: a4d8b8f2646f0ad438e37ba68244aecf, type: 3}
   ballDrop: {fileID: 21300000, guid: 3257895ddd09baa4db57f0680a9d3965, type: 3}
-  weaponDrop: {fileID: 21300000, guid: da9908017d4ea9448b7d204ea4af06cc, type: 3}
-  powerupDrop: {fileID: 21300000, guid: f71c9e5e3ee0c4741ae612fabec286d4, type: 3}
+  weaponDrop: {fileID: 21300000, guid: f572104c67891e44592b42a10c86ca67, type: 3}
+  powerupDrop: {fileID: 21300000, guid: f78e0e26f5ed16f4bab77b3d0e9c12db, type: 3}
   spawnBall: 0
   spawnGun: 0
   spawnPowerup: 0

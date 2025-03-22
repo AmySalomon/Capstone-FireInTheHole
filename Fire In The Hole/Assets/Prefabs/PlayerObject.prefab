@@ -1502,7 +1502,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1698695411582849876}
   - component: {fileID: 2505075083874456128}
-  m_Layer: 7
+  m_Layer: 5
   m_Name: SwingCrosshair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2754,7 +2754,7 @@ GameObject:
   - component: {fileID: 7005186657962668532}
   - component: {fileID: 5837689894220406610}
   - component: {fileID: 5768986129540614703}
-  m_Layer: 7
+  m_Layer: 5
   m_Name: SwingAnimation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8053,7 +8053,7 @@ MonoBehaviour:
   levelYMax: 5
   respawnTime: 6
   respawnIndicatorTime: 2
-  invulnRespawnTime: 2
+  invulnRespawnTime: 1
   playerIsDead: 0
   playerSprite: {fileID: 4271349150141182393}
   playerRigidbody: {fileID: 6029596620006062017}
@@ -8071,7 +8071,6 @@ MonoBehaviour:
     m_Bits: 0
   setSpawnLocation: {fileID: 0}
   myIndex: 0
-  tryingToAttack: 0
   shieldActive: 0
   shieldSprite: {fileID: 5279026413655888610}
   shieldScript: {fileID: 3370615610414991260}

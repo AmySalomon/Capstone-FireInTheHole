@@ -105,7 +105,7 @@ public class SpawnRing : MonoBehaviour
             outerRing.GetComponent<SpriteRenderer>().sprite = squareRing;
             innerRing.GetComponent<SpriteRenderer>().sprite = squareRing;
             playerSkydive.GetComponent<SpriteRenderer>().sprite = weaponDrop;
-            playerSkydive.transform.localScale = new Vector3(0.35f, 0.35f, 0.35f);
+            playerSkydive.transform.localScale = new Vector3(0.022f, 0.022f, 1);
             golfballIcon.SetActive(false);
             powerupIcon.SetActive(false);
         }
@@ -119,6 +119,7 @@ public class SpawnRing : MonoBehaviour
             outerRing.GetComponent<SpriteRenderer>().sprite = squareRing;
             innerRing.GetComponent<SpriteRenderer>().sprite = squareRing;
             playerSkydive.GetComponent<SpriteRenderer>().sprite = powerupDrop;
+            playerSkydive.transform.localScale = new Vector3(0.03f, 0.03f, 1);
             golfballIcon.SetActive(false);
             ammoIcon.SetActive(false);
         }

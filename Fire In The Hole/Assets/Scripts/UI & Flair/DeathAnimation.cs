@@ -23,6 +23,10 @@ public class DeathAnimation : MonoBehaviour
     [HideInInspector] public Vector2 knockbackDirection;
 
 
+    private float timer;
+
+    private Vector3 originalPosition;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,14 +49,25 @@ public class DeathAnimation : MonoBehaviour
             mySpriteRenderer.sprite = deadDuck;
         }
 
+        originalPosition = transform.position;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        StartCoroutine(DestroySelf());
-        transform.position += new Vector3(-knockbackDirection.normalized.x, -knockbackDirection.normalized.y, -risingSpeed) * Time.deltaTime * knockbackSpeed;
-        transform.Rotate(0, 0, 3);
+        timer += Time.deltaTime;
+        if (timer < 0.13f)
+        {
+            transform.position = new Vector3(originalPosition.x + Random.Range(-.1f, .1f), originalPosition.y + Random.Range(-.1f, .1f));
+        }
+        else
+        {
+            StartCoroutine(DestroySelf());
+            transform.position += new Vector3(-knockbackDirection.normalized.x, -knockbackDirection.normalized.y, -risingSpeed) * Time.deltaTime * knockbackSpeed;
+            transform.Rotate(0, 0, 3);
+        }
+        
     }
 
     IEnumerator DestroySelf()

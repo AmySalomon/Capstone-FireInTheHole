@@ -8053,7 +8053,7 @@ MonoBehaviour:
   levelYMax: 5
   respawnTime: 6
   respawnIndicatorTime: 2
-  invulnRespawnTime: 1
+  invulnRespawnTime: 1.5
   playerIsDead: 0
   playerSprite: {fileID: 4271349150141182393}
   playerRigidbody: {fileID: 6029596620006062017}

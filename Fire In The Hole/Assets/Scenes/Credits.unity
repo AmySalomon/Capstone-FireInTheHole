@@ -2172,7 +2172,7 @@ Animator:
   m_GameObject: {fileID: 632178380}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 601e17c99547c59439e8f0678c38787d, type: 2}
+  m_Controller: {fileID: 9100000, guid: f93f45c0c7f2fa849af269808aa6684c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -5898,8 +5898,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 269315807}
   m_HandleRect: {fileID: 269315806}
   m_Direction: 2
-  m_Value: 0.9999999
-  m_Size: 0.15257019
+  m_Value: 1
+  m_Size: 0.1525702
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

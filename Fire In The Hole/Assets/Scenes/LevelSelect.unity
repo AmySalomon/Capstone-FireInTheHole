@@ -1555,7 +1555,7 @@ Animator:
   m_GameObject: {fileID: 642743698}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 601e17c99547c59439e8f0678c38787d, type: 2}
+  m_Controller: {fileID: 9100000, guid: f93f45c0c7f2fa849af269808aa6684c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3011,7 +3011,7 @@ MonoBehaviour:
   quitCancelButton: {fileID: 0}
   playButton: {fileID: 0}
   eventSystem: {fileID: 1997839958}
-  transition: {fileID: 0}
+  transition: {fileID: 642743700}
   transitionTime: 1
 --- !u!4 &1165294265
 Transform:

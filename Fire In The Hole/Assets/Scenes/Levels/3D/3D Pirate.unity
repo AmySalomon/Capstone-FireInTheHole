@@ -8454,7 +8454,7 @@ PrefabInstance:
     - target: {fileID: 7129663365810361743, guid: ee16cafbe26cae640a4e3da3def6f611, type: 3}
       propertyPath: scaryMusic
       value: 
-      objectReference: {fileID: 8300000, guid: e0014f37bbff4a0469bfbdb561b2aab6, type: 3}
+      objectReference: {fileID: 8300000, guid: f9c234eeafefb104ebbf1d6557e704fb, type: 3}
     - target: {fileID: 7129663365810361743, guid: ee16cafbe26cae640a4e3da3def6f611, type: 3}
       propertyPath: musicPlayer
       value: 
@@ -30213,7 +30213,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -9010284469593096592, guid: 03236680b3327e643be992d6d321973c, type: 2}
-  m_audioClip: {fileID: 8300000, guid: ae1be48d474f4f447b9a9fb052fdb591, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0c32b7e4f004b2c4b93da71241f90b4e, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.25
   m_Pitch: 1
@@ -40681,7 +40681,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -9010284469593096592, guid: 03236680b3327e643be992d6d321973c, type: 2}
-  m_audioClip: {fileID: 8300000, guid: e0014f37bbff4a0469bfbdb561b2aab6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f9c234eeafefb104ebbf1d6557e704fb, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.25
   m_Pitch: 1

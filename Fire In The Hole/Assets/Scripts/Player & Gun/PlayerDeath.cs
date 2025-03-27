@@ -140,6 +140,8 @@ public class PlayerDeath : MonoBehaviour
 
     public void Died()
     {
+        this.gameObject.GetComponentInChildren<PlayerStatTracker>().UpdateDeaths();
+
         if (shieldActive == true)
         {
             shieldActive = false;

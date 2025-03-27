@@ -115,6 +115,7 @@ public class ShootProjectile : MonoBehaviour
             ammo_UI.RemoveAt((int)ammoCurrent-1);
             ammoCurrent--;
             AutoReloadCheck();
+            this.gameObject.GetComponent<PlayerStatTracker>().UpdateShotsFired();
         }
         
     }

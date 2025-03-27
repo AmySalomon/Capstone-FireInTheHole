@@ -23,6 +23,7 @@ public class GameTimer : MonoBehaviour
     public int[] playerScores;
     public Transform[] playerScoreboards;
     public GameObject[] players;
+    public PlayerConfig[] playerStats;
 
     public bool timerStarted = false;
 
@@ -177,12 +178,13 @@ public class GameTimer : MonoBehaviour
 
         if (endTimer > 3)
         {
-            //get each player's final score, then load end screen
+            //get each player's final score and config info, then load end screen
             for (int i = 0; i < playerScoreboards.Length; i++)
             {
                 if (players[i] == null) { break; }
                 playerScores[i] = playerScoreboards[i].gameObject.GetComponent<ScoreTracker>().score;
                 playerScoreboards[i].gameObject.SetActive(false);
+                playerStats[i] = players[i].GetComponentInChildren<PlayerStatTracker>().myConfig;
                 players[i].SetActive(false);
             }
             timer = 0;

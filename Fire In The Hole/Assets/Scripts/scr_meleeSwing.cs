@@ -185,6 +185,7 @@ public class scr_meleeSwing : MonoBehaviour
                 {
                     golfBall.playerHitter = myInput.gameObject;
                     golfBall.outline.OutlineColor = outlineColor;
+                    this.gameObject.GetComponent<PlayerStatTracker>().UpdatePuttsTaken();
                 }
                 if (rb.gameObject.TryGetComponent<tutorialGolfBall>(out tutorialGolfBall tutGolfBall))
                 {

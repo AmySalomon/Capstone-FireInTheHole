@@ -21,7 +21,7 @@ public class scr_powerUpPickup : MonoBehaviour
             collision.gameObject.GetComponentInChildren<scr_powerUpManager>().activePowerUp = powerUpEffect;
             collision.gameObject.GetComponentInChildren<scr_powerUpManager>().isTemporary = true;
             collision.gameObject.GetComponentInChildren<scr_powerUpManager>().duration = duration;
-            var newPopup = Instantiate(textPopup, collision.transform.position, transform.rotation);
+            var newPopup = Instantiate(textPopup, collision.transform.position, Quaternion.identity);
             newPopup.GetComponent<TextPopup>().weaponPickup = powerUpEffect.name;
             //var newPopup = Instantiate(textPopup, collision.transform.position, transform.rotation);
             //newPopup.GetComponent<TextPopup>().weaponPickup = chosenWeapon.name;

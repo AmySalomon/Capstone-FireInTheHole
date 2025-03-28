@@ -312,5 +312,7 @@ public class PlayerStats
     public int powerupsGained;
     public int weaponsGained;
     
+    public Dictionary<string, Sprite> accolades = new Dictionary<string, Sprite>();
+    public List<string> accoladeKeys = new List<string>();
 
 }

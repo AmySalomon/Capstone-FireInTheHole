@@ -8468,6 +8468,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1140229376}
     - target: {fileID: 7129663365810361743, guid: ee16cafbe26cae640a4e3da3def6f611, type: 3}
+      propertyPath: startingTime
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7129663365810361743, guid: ee16cafbe26cae640a4e3da3def6f611, type: 3}
       propertyPath: scaryMusicPlayer
       value: 
       objectReference: {fileID: 1534600885}

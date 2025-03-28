@@ -184,7 +184,6 @@ public class GameTimer : MonoBehaviour
                 if (players[i] == null) { break; }
                 playerScores[i] = playerScoreboards[i].gameObject.GetComponent<ScoreTracker>().score;
                 playerScoreboards[i].gameObject.SetActive(false);
-                playerStats[i] = players[i].GetComponentInChildren<PlayerStatTracker>().myConfig;
                 players[i].SetActive(false);
             }
             timer = 0;

@@ -92,7 +92,7 @@ public class scr_golfBall : MonoBehaviour
         //if speed of the golf ball reaches zero, reset who would get the point
         if (myRigidbody.velocity.magnitude <= 0.1 && hasMoved)
         {
-          
+            playerHitter.GetComponentInChildren<PlayerStatTracker>().UpdatePuttsMissed();
             Debug.Log("RRRESET");
             hasMoved = false;
             playerHitter = null;

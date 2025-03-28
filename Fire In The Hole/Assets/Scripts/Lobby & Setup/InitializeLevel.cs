@@ -41,6 +41,7 @@ public class InitializeLevel : MonoBehaviour
             player.GetComponentInChildren<ColorToPlayer>().myColor = playerConfigs[i].PlayerColor;
             player.GetComponentInChildren<PlayerConfigInfo>().GetPlayerConfig(playerConfigs[i]);
             player.GetComponentInChildren<PlayerPause>().GetPauseMenu(pauseMenu);
+            player.GetComponentInChildren<PlayerStatTracker>().myConfig = playerConfigs[i];
             LeaderboardManager.leaderboardManager.players[i] = player;
             GameTimer.gameTimer.players[i] = player;
 

@@ -196,7 +196,7 @@ public class scr_meleeSwing : MonoBehaviour
             }
 
         }
-        if (currentSwingForce !< 1500)
+        if (currentSwingForce !> 1200)
         {
             meleeHitbox.enabled = true;
         }

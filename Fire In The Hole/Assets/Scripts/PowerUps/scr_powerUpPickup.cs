@@ -6,13 +6,15 @@ public class scr_powerUpPickup : MonoBehaviour
 {
     public scr_powerUpEffect[] powerUps;
     public scr_powerUpEffect powerUpEffect;
-    public SpriteRenderer powerUpSprite;
     public GameObject textPopup;
     public float duration = 10f;
+
+    public Sprite ShieldIcon;
+    public Sprite BurnDodgeIcon;
+    public Sprite RicochetIcon;
+    public Sprite SpeedupIcon;
     
     // Start is called before the first frame update
-
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Player")) //if the gameobject is the player, update players weapon, then remove pickup
@@ -33,6 +35,22 @@ public class scr_powerUpPickup : MonoBehaviour
     private void Start()
     {
         powerUpEffect = powerUps[Random.Range(0, powerUps.Length)];
+        if (powerUpEffect.name == "PU_speed Boost")
+        {
+            gameObject.GetComponentInChildren<SpriteRenderer>().sprite = SpeedupIcon;
+        }
+        if (powerUpEffect.name == "PU_bouncyBullet")
+        {
+            gameObject.GetComponentInChildren<SpriteRenderer>().sprite = RicochetIcon;
+        }
+        if (powerUpEffect.name == "PU_burnDash")
+        {
+            gameObject.GetComponentInChildren<SpriteRenderer>().sprite = BurnDodgeIcon;
+        }
+        if (powerUpEffect.name == "PU_shield")
+        {
+            gameObject.GetComponentInChildren<SpriteRenderer>().sprite = ShieldIcon;
+        }
     }
-
 }
+

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6386908862290327705
+--- !u!1 &3134409873840605061
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7967093785377796431}
-  - component: {fileID: 6276044585039136774}
-  - component: {fileID: 907899087096959218}
-  - component: {fileID: 2656536632254065395}
-  - component: {fileID: 808152003696429189}
+  - component: {fileID: 8234697234483487025}
+  - component: {fileID: 27857263586196101}
   m_Layer: 0
-  m_Name: PowerUp
+  m_Name: Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7967093785377796431
+--- !u!4 &8234697234483487025
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6386908862290327705}
+  m_GameObject: {fileID: 3134409873840605061}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.0014243, y: -0.12459, z: 0}
-  m_LocalScale: {x: 0.37984437, y: 0.37984437, z: 0.37984437}
+  m_LocalPosition: {x: 0, y: 0.00000019615, z: 0}
+  m_LocalScale: {x: 0.0959411, y: 0.0959411, z: 0.0959411}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 7967093785377796431}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &6276044585039136774
+--- !u!212 &27857263586196101
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6386908862290327705}
+  m_GameObject: {fileID: 3134409873840605061}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -76,17 +73,52 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f71c9e5e3ee0c4741ae612fabec286d4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0c5c24f7a13373f42948a65675628bbc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 25.02, y: 25.02}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &6386908862290327705
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7967093785377796431}
+  - component: {fileID: 907899087096959218}
+  - component: {fileID: 2656536632254065395}
+  - component: {fileID: 808152003696429189}
+  m_Layer: 0
+  m_Name: PowerUp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7967093785377796431
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6386908862290327705}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.0014243, y: -0.12459, z: 0}
+  m_LocalScale: {x: 0.37984437, y: 0.37984437, z: 0.37984437}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8234697234483487025}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &907899087096959218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105,9 +137,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3766f122236747545b2b408982d699ec, type: 2}
   - {fileID: 11400000, guid: 7e8fbd8a39b6fdc4f9ce69e30b487644, type: 2}
   powerUpEffect: {fileID: 0}
-  powerUpSprite: {fileID: 0}
   textPopup: {fileID: 646746251575243297, guid: 53368d7090da0e445a24ca9006476f60, type: 3}
   duration: 10
+  ShieldIcon: {fileID: 21300000, guid: f57f24502a3a169438d6ff6c78bba304, type: 3}
+  BurnDodgeIcon: {fileID: 21300000, guid: 9d99e95475fc41f49b51932b29509d7b, type: 3}
+  RicochetIcon: {fileID: 21300000, guid: 5bb12bcc8403b7b46bcf882c1f8e5c67, type: 3}
+  SpeedupIcon: {fileID: 21300000, guid: 0c5c24f7a13373f42948a65675628bbc, type: 3}
 --- !u!58 &2656536632254065395
 CircleCollider2D:
   m_ObjectHideFlags: 0

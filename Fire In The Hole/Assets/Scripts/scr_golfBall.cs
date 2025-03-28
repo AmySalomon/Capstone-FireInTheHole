@@ -10,7 +10,7 @@ public class scr_golfBall : MonoBehaviour
     private float interactionRange;
     public string golfHoleTag = "GolfHole";
     public string sandTrapTag = "Sand";
-    public int ballValue = 5;
+    public int ballValue = 1;
 
 
     private GameObject directionArrowInstance;

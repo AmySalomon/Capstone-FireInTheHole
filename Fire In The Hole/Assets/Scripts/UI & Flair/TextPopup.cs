@@ -101,7 +101,7 @@ public class TextPopup : MonoBehaviour
         }
         if (weaponPickup == "PU_burnDash")
         {
-            text.text = "Burn Dash";
+            text.text = "Burn Dodge";
             myColor = new Color(0.61f, 0.2f, 0.92f);
         }
         if (weaponPickup == "PU_shield")

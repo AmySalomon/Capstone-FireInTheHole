@@ -21,6 +21,8 @@ public class scr_balltype_bomb : MonoBehaviour
     public scr_golfBall golfBall;
     public bool active = false;
 
+    public bool paused = false;
+    public float timer = 0;
     void Start()
     {
         spriteRenderer.enabled = true;
@@ -45,7 +47,9 @@ public class scr_balltype_bomb : MonoBehaviour
         {
             isTriggered = true;
             InvokeRepeating("Blink", 0f, blinkInterval);
-            Invoke("Explode", bombTimer);
+            //paused is true when eaten by a dinosaur, to avoid a bug that will disable the dino if the bomb is eaten and explodes while eaten.
+            if (!paused) timer += Time.deltaTime;
+            if (timer > bombTimer) Explode();
         }
     }
 

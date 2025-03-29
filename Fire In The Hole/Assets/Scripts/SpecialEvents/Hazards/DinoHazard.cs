@@ -63,6 +63,7 @@ public class DinoHazard : MonoBehaviour
                 eatenBall.GetComponent<CircleCollider2D>().enabled = true;
                 eatenBall.GetComponent<Outline>().enabled = true;
                 eatenBall.GetComponent<TrailRenderer>().enabled = true;
+                eatenBall.GetComponent<scr_balltype_bomb>().paused = false;
                 ballMeshes = eatenBall.GetComponentsInChildren<MeshRenderer>();
                 ballSprites = eatenBall.GetComponentsInChildren<SpriteRenderer>();
                 foreach (MeshRenderer mesh in ballMeshes)
@@ -145,6 +146,7 @@ public class DinoHazard : MonoBehaviour
                 eatenBall.GetComponent<CircleCollider2D>().enabled = false;
                 eatenBall.GetComponent<Outline>().enabled = false;
                 eatenBall.GetComponent<TrailRenderer>().enabled = false;
+                eatenBall.GetComponent<scr_balltype_bomb>().paused = true;
                 //this is done to make sure it doesn't slow down and reset the player who last hit it.
                 eatenBall.GetComponent<Rigidbody2D>().velocity = new Vector2(10, 10);
                 ballMeshes = eatenBall.GetComponentsInChildren<MeshRenderer>();

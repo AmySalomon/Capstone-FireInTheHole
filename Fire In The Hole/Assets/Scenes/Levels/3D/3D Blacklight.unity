@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.15957451, g: 0, b: 1, a: 1}
+  m_AmbientSkyColor: {r: 0.5138882, g: 0.42075467, b: 1, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
@@ -3688,6 +3688,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: obj_golfHole
       objectReference: {fileID: 0}
+    - target: {fileID: 4098447231423976882, guid: 42995d844d37aae4ebc16e0432da0a16, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4170522197260975356, guid: 42995d844d37aae4ebc16e0432da0a16, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.82
@@ -3728,6 +3732,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8081659085528131048, guid: 42995d844d37aae4ebc16e0432da0a16, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3749,6 +3757,10 @@ PrefabInstance:
     - target: {fileID: 4003410823970825105, guid: 42995d844d37aae4ebc16e0432da0a16, type: 3}
       propertyPath: m_Name
       value: obj_golfHole (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4098447231423976882, guid: 42995d844d37aae4ebc16e0432da0a16, type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4170522197260975356, guid: 42995d844d37aae4ebc16e0432da0a16, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3789,6 +3801,10 @@ PrefabInstance:
     - target: {fileID: 4170522197260975356, guid: 42995d844d37aae4ebc16e0432da0a16, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8081659085528131048, guid: 42995d844d37aae4ebc16e0432da0a16, type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16346,6 +16362,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: obj_golfHole (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4098447231423976882, guid: 42995d844d37aae4ebc16e0432da0a16, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4170522197260975356, guid: 42995d844d37aae4ebc16e0432da0a16, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.44
@@ -16385,6 +16405,10 @@ PrefabInstance:
     - target: {fileID: 4170522197260975356, guid: 42995d844d37aae4ebc16e0432da0a16, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8081659085528131048, guid: 42995d844d37aae4ebc16e0432da0a16, type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

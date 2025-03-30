@@ -108,6 +108,8 @@ public class EndScreenScores : MonoBehaviour
                     for(int j = 0; j < maxAccolades; j++)
                     {
                         //stats.accolades.Keys[] is used to get the key for the dictionary
+                        if (stats.accoladeKeys[j] == null) { break; }
+
                         string key = stats.accoladeKeys[j];
                         GameObject accoladeObj = Instantiate(accolade, accoladeHolderFirst.transform, false);
                         accoladeObj.GetComponent<Image>().sprite = stats.accolades[key];
@@ -147,6 +149,8 @@ public class EndScreenScores : MonoBehaviour
                     for (int j = 0; j < maxAccolades; j++)
                     {
                         //stats.accolades.Keys[] is used to get the key for the dictionary
+
+                        if (stats.accoladeKeys[j] == null) { break; }
                         string key = stats.accoladeKeys[j];
                         GameObject accoladeObj = Instantiate(accolade, accoladeHolderSecond.transform, false);
                         accoladeObj.GetComponent<Image>().sprite = stats.accolades[key];
@@ -186,6 +190,7 @@ public class EndScreenScores : MonoBehaviour
                     for (int j = 0; j < maxAccolades; j++)
                     {
                         //stats.accolades.Keys[] is used to get the key for the dictionary
+                        if (stats.accoladeKeys[j] == null) { break; }
                         string key = stats.accoladeKeys[j];
                         GameObject accoladeObj = Instantiate(accolade, accoladeHolderThird.transform, false);
                         accoladeObj.GetComponent<Image>().sprite = stats.accolades[key];
@@ -224,6 +229,8 @@ public class EndScreenScores : MonoBehaviour
                     for (int j = 0; j < maxAccolades; j++)
                     {
                         //stats.accolades.Keys[] is used to get the key for the dictionary
+                        if (stats.accoladeKeys[j] == null) { break; }
+
                         string key = stats.accoladeKeys[j];
                         GameObject accoladeObj = Instantiate(accolade, accoladeHolderFourth.transform, false);
                         accoladeObj.GetComponent<Image>().sprite = stats.accolades[key];

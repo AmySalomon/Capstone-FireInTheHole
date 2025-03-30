@@ -233,7 +233,7 @@ MonoBehaviour:
   directionArrowPrefab: {fileID: 3008977995450802778, guid: 32629b242ae621e458f00bd051371e80, type: 3}
   golfHoleTag: GolfHole
   sandTrapTag: Sand
-  ballValue: 5
+  ballValue: 1
   myRigidbody: {fileID: 2347447381634443944}
   mySprite: {fileID: 3362427951106548886}
   bounce1: {fileID: 8300000, guid: 42dcec202047c1141b1425b32d017750, type: 3}
@@ -1519,6 +1519,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 8977285105747890853, guid: 8b62f86990cbb96448969b262cdcb652, type: 3}
+  bounceEnabled: 0
 --- !u!1 &4395762624424758017
 GameObject:
   m_ObjectHideFlags: 0

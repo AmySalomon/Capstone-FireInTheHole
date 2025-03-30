@@ -155,6 +155,7 @@ public class PlayerDeath : MonoBehaviour
         {
             moveToPosition = playerStuff.transform.position;
             playerIsDead = true;
+            killSound.pitch = Random.Range(0.9f, 1.1f);
             killSound.Play();
             if (setSpawnLocation == false)
             {

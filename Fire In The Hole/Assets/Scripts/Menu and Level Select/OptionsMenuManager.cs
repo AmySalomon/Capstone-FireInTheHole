@@ -9,6 +9,7 @@ using UnityEngine.EventSystems;
 
 public class OptionsMenuManager : MonoBehaviour
 {
+
     //Access Toggle Option
     public static bool noVibrate;
 
@@ -39,6 +40,7 @@ public class OptionsMenuManager : MonoBehaviour
             mainAudioMixer.SetFloat("MasterParam", masterVol.value);
         }
         masterVolTemp = masterVol.value;
+        PlayerPrefs.SetFloat("MasterParam", masterVol.value);
     }
 
     public void ChangeMusicVolume()
@@ -52,6 +54,8 @@ public class OptionsMenuManager : MonoBehaviour
             mainAudioMixer.SetFloat("MusicParam", musicVol.value);
         }
         musicVolTemp = musicVol.value;
+        PlayerPrefs.SetFloat("MusicParam", musicVol.value);
+
     }
 
     public void ChangeSoundVolume()
@@ -65,6 +69,8 @@ public class OptionsMenuManager : MonoBehaviour
             mainAudioMixer.SetFloat("SoundParam", soundVol.value);
         }
         soundVolTemp = soundVol.value;
+        PlayerPrefs.SetFloat("SoundParam", soundVol.value);
+
     }
 
     public void ChangeVoiceVolume()
@@ -78,6 +84,8 @@ public class OptionsMenuManager : MonoBehaviour
             mainAudioMixer.SetFloat("VoiceParam", voiceVol.value);
         }
         voiceVolTemp = voiceVol.value;
+        PlayerPrefs.SetFloat("VoiceParam", voiceVol.value);
+
     }
 
     //Change Toggle
@@ -97,8 +105,10 @@ public class OptionsMenuManager : MonoBehaviour
             {
                 Debug.Log("[OptionsMenuManager]: Vibrate toggle broke.");
             }
-            //Debug.Log(noVibrate);
+            Debug.Log("noVibrate is " + noVibrate);
         }
+        PlayerPrefs.SetString("noVibrate", noVibrate.ToString());
+        Debug.Log("In Player Prefs, noVibrate is " + PlayerPrefs.GetString("noVibrate"));
     }
 
     IEnumerator LoadLevel(string nextScene) //Transition
@@ -116,22 +126,22 @@ public class OptionsMenuManager : MonoBehaviour
 
     void Start()
     {
+        Debug.Log("noVibrate is " + noVibrate);
         //Match toggle visuals to actual toggle.
         if (noVibrate == false)
         {
             vibrateToggle.isOn = true;
-            toggleIsSet = true;
         }
         else if (noVibrate == true)
         {
             vibrateToggle.isOn = false;
-            toggleIsSet = true;
         }
         else
         {
             Debug.Log("[OptionsMenuManager]: (In Start) Vibrate toggle broke.");
         }
 
+        toggleIsSet = true;
         //Match Audio Sliders to Audio Mixer
         mainAudioMixer.GetFloat("MasterParam", out float master);
         masterVol.value = master;
@@ -140,7 +150,9 @@ public class OptionsMenuManager : MonoBehaviour
         mainAudioMixer.GetFloat("SoundParam", out float sound);
         soundVol.value = sound;
         mainAudioMixer.GetFloat("VoiceParam", out float voice);
-        soundVol.value = voice;
+        voiceVol.value = voice;
+
+        
     }
 
     //Return to level select.

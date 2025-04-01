@@ -54,7 +54,10 @@ public class scr_golfBall : MonoBehaviour
     public float type3Chance = 0f;
     public float type4Chance = 0f;
 
+    //Ball Models
     public GameObject bombModel;
+    public GameObject bounceModel;
+    public GameObject scatterModel;
     public GameObject ballModel;
     public string tutorialLvlText;
 
@@ -150,11 +153,15 @@ public class scr_golfBall : MonoBehaviour
             }
             else if (specialRoll < type1Chance + type2Chance + type3Chance)
             {
+                scatterModel.SetActive(true);
+                ballModel.SetActive(false);
                 scr_Balltype_Scatter.enabled = true;
                 balltype = 3;
             }
             else
             {
+                bounceModel.SetActive(true);
+                ballModel.SetActive(false);
                 scr_Balltype_Bounce.enabled = true;
                 scr_Balltype_Bounce.bounceEnabled = true;
                 balltype = 4;

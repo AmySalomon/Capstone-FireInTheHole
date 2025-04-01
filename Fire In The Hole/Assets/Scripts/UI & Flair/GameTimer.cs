@@ -85,6 +85,34 @@ public class GameTimer : MonoBehaviour
             if (timer < runningOutTime) timerText.color = Color.red;
             if (timer < 11) CountdownTime();
 
+            if (timer < runningOutTime - 3.4f)
+            {
+                countdownText.gameObject.transform.localScale = new Vector3(1, 0, 1);
+            }
+
+            else if (timer < runningOutTime - 3)
+            {
+                //shrink
+                newVertScale = Mathf.Lerp(1, 0, (timer - (runningOutTime - 3)) / -0.4f);
+                countdownText.gameObject.transform.localScale = new Vector3(1, newVertScale, 1);
+                
+            }
+
+            else if (timer < runningOutTime - 0.4f)
+            {
+                //if the lerp has ended, snap the circle to have the normal scale
+                countdownText.gameObject.transform.localScale = new Vector3(1, 1, 1);
+            }
+
+            else if (timer < runningOutTime)
+            {
+                countdownText.text = "1 MINUTE";
+                countdownText.fontSize = 3;
+                //grow
+                newVertScale = Mathf.Lerp(0, 1, (timer - runningOutTime) / -0.4f);
+                countdownText.gameObject.transform.localScale = new Vector3(1, newVertScale, 1);
+            }
+
             //new music management
             audioMixer.GetFloat("MusicParam", out musicLevel);
 
@@ -119,6 +147,7 @@ public class GameTimer : MonoBehaviour
     void CountdownTime()
     {
         countdownTimer += Time.deltaTime;
+        countdownText.fontSize = 6;
         countdownText.text = count.ToString();
         if (countdownTimer < 0.1)
         {

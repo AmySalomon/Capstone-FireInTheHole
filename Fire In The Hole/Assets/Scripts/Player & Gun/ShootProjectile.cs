@@ -175,10 +175,13 @@ public class ShootProjectile : MonoBehaviour
         if(newWeapon.gunType == defaultWeapon.gunType)
         {
             magazineText.text = null;
+            magazineText.gameObject.SetActive(false);
+
         }
         else
         {
             magazineText.text = magazineCount.ToString();
+            magazineText.gameObject.SetActive(true);
         }
     }
 
@@ -213,10 +216,12 @@ public class ShootProjectile : MonoBehaviour
         {
             magazineText.text = "";
             Debug.Log("Magazine text: " + magazineText.text);
+            magazineText.gameObject.SetActive(false);
         }
         else
         {
             magazineText.text = magazineCount.ToString();
+            magazineText.gameObject.SetActive(true);
         }
     }
 

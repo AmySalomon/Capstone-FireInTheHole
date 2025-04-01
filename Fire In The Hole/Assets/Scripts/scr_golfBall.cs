@@ -38,7 +38,7 @@ public class scr_golfBall : MonoBehaviour
     //player who last hit the golfball
     public GameObject playerHitter;
 
-    public float balltype = 0; //0 = regular golfball, 1 = bomball, 2 = scattershot, 3 = walking
+    public float balltype = 0; //0 = regular golfball, 1 = bomball, 2 = walking, 3 = scattershot
     private scr_balltype_bomb scr_Balltype_Bomb;
     private scr_scattershotChild scr_Balltype_Scatter;
     private WalkingBall scr_Balltype_Walking;
@@ -86,6 +86,7 @@ public class scr_golfBall : MonoBehaviour
         AssignRandomType();
 
         waterAnim = GetComponentInChildren<WaterSplash>();
+        playerHitter = null;
     }
 
     private void Update()
@@ -93,7 +94,7 @@ public class scr_golfBall : MonoBehaviour
         if (myRigidbody.velocity.magnitude >= 0.1) hasMoved = true;
             
         //if speed of the golf ball reaches zero, reset who would get the point
-        if (myRigidbody.velocity.magnitude <= 0.1 && hasMoved)
+        if (myRigidbody.velocity.magnitude <= 0.1 && hasMoved && playerHitter != null)
         {
             playerHitter.GetComponentInChildren<PlayerStatTracker>().UpdatePuttsMissed();
             Debug.Log("RRRESET");
@@ -194,7 +195,7 @@ public class scr_golfBall : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag(golfHoleTag))
+        if (other.CompareTag(golfHoleTag) && playerHitter!=null)
         {
             playerHitter.GetComponentInChildren<PlayerScore>(true).IncreaseScore(ballValue);
             AudioSource audio = other.GetComponent<AudioSource>();

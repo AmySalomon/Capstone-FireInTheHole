@@ -24,7 +24,7 @@ public class scr_scattershotChild : MonoBehaviour
 
     void Update()
     {
-        if (scr_golfBall.playerHitter != null && scr_golfBall.balltype == 2 && active == true) //checks if ball was hit by a player and if the power up is active (needs changing for ball type)
+        if (scr_golfBall.playerHitter != null && scr_golfBall.balltype == 3 && active == true) //checks if ball was hit by a player and if the power up is active (needs changing for ball type)
         {
             HitCheck();
             active = false;
@@ -61,10 +61,32 @@ public class scr_scattershotChild : MonoBehaviour
 
                     Rgolfball.GetComponent<scr_golfBall>().playerHitter = scr_golfBall.playerHitter;
                     Rgolfball.GetComponent<Outline>().OutlineColor = gbOutline.OutlineColor;
+                    foreach (var meshRenderer in Rgolfball.GetComponentsInChildren<MeshRenderer>(true))
+                    {
+                        if (meshRenderer.name == "inner")
+                        {
+                            meshRenderer.enabled = false;
+                        }
+                    }
 
                     Lgolfball = Instantiate(golfball, leftSpawnPosition, Quaternion.identity);
                     Lgolfball.GetComponent<scr_golfBall>().playerHitter = scr_golfBall.playerHitter;
                     Lgolfball.GetComponent<Outline>().OutlineColor = gbOutline.OutlineColor;
+                    foreach (var meshRenderer in Lgolfball.GetComponentsInChildren<MeshRenderer>(true))
+                    {
+                        if (meshRenderer.name == "inner")
+                        {
+                            meshRenderer.enabled = false;
+                        }
+                    }
+
+                    foreach (var meshRenderer in gameObject.GetComponentsInChildren<MeshRenderer>(true))
+                    {
+                        if (meshRenderer.name == "inner")
+                        {
+                            meshRenderer.enabled = false;
+                        }
+                    }
 
                     Rgolfball.GetComponent<scr_scattershotChild>().clone = true;
                     Lgolfball.GetComponent<scr_scattershotChild>().clone = true;

@@ -156,11 +156,19 @@ public class scr_meleeSwing : MonoBehaviour
             rb = hit.collider.GetComponent<Rigidbody2D>();
             if (rb != null)
             {
-                /*if (balltype == 1)
+                //if you hit a golf ball, tell the golf ball that you hit it
+                if (rb.gameObject.TryGetComponent<scr_golfBall>(out scr_golfBall golfBall))
                 {
-                    rb.gameObject.GetComponent<scr_balltype_bomb>().active = true;
-                    rb.gameObject.GetComponent<scr_golfBall>().balltype = 1;
-                } //Remove when balltype not PU */
+                    golfBall.playerHitter = myInput.gameObject;
+                    golfBall.outline.OutlineColor = outlineColor;
+                    this.gameObject.GetComponent<PlayerStatTracker>().UpdatePuttsTaken();
+                }
+                if (rb.gameObject.TryGetComponent<tutorialGolfBall>(out tutorialGolfBall tutGolfBall))
+                {
+                    tutGolfBall.playerHitter = myInput.gameObject;
+                    tutGolfBall.outline.OutlineColor = outlineColor;
+                }
+
                 forceDirection = (swingAim).normalized;
                 rb.AddForce(forceDirection * currentSwingForce / 2);
                 myInput.rumbleTime = 0.3f;
@@ -180,18 +188,7 @@ public class scr_meleeSwing : MonoBehaviour
                     myInput.RumbleCheck(1f, 0.3f); //vibrate the controller based on shot strength
                 }
 
-                //if you hit a golf ball, tell the golf ball that you hit it
-                if (rb.gameObject.TryGetComponent<scr_golfBall>(out scr_golfBall golfBall))
-                {
-                    golfBall.playerHitter = myInput.gameObject;
-                    golfBall.outline.OutlineColor = outlineColor;
-                    this.gameObject.GetComponent<PlayerStatTracker>().UpdatePuttsTaken();
-                }
-                if (rb.gameObject.TryGetComponent<tutorialGolfBall>(out tutorialGolfBall tutGolfBall))
-                {
-                    tutGolfBall.playerHitter = myInput.gameObject;
-                    tutGolfBall.outline.OutlineColor = outlineColor;
-                }
+                
 
             }
 

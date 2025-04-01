@@ -124,6 +124,8 @@ public class JoinPlayer : MonoBehaviour
         var tutCover = Instantiate(coverPrefab, coverSpawns[index].position, Quaternion.identity, myGolfTutStuff.transform);
         tutCover.GetComponent<DisappearOvertime>().shouldIDelete = false;
         myGolfTutStuff.transform.position = new Vector3 (500 + index * 10, 500 + index * 10, 0);
+        player.GetComponentInChildren<ColorToPlayer>().myColor = playerConfigs[index].PlayerColor;
+        player.GetComponentInChildren<scr_meleeSwing>().outlineColor = playerConfigs[index].PlayerColor;
         shouldIDisableUI = true;
     }
 

@@ -65,6 +65,7 @@ public class PlayerDeath : MonoBehaviour
     //shield PU variables
     public bool shieldActive = false;
     public SpriteRenderer shieldSprite;
+    public ShieldAnim shieldBreak;
     //permanent shield variables (for us to test always having shield)
     public scr_permaShield shieldScript;
 
@@ -145,6 +146,7 @@ public class PlayerDeath : MonoBehaviour
         if (shieldActive == true)
         {
             shieldActive = false;
+            shieldBreak.timer = 0;
             shieldSprite.enabled = false;
             if (shieldScript != null) //this is for the perma shield if we decide to go with it.
             {

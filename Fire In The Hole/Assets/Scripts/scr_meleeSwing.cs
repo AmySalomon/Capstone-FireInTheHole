@@ -188,8 +188,6 @@ public class scr_meleeSwing : MonoBehaviour
                     myInput.RumbleCheck(1f, 0.3f); //vibrate the controller based on shot strength
                 }
 
-                
-
             }
 
         }

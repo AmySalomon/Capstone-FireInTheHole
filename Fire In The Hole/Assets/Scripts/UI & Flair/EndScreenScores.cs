@@ -27,7 +27,7 @@ public class EndScreenScores : MonoBehaviour
     public string sdTitle = "Accident Prone";
     public string puttsTakenTitle = "Putting Maniac";
     public string puttsMissedTitle = "Duffer";
-    public string powerupsTitle = "Most Powerups Gained";
+    public string powerupsTitle = "Power Tripping";
     public string weaponsTitle = "Weapons Junkie";
     //public string mostDeathsByTitle = " Caddie";
 

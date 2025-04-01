@@ -15,7 +15,7 @@ public class BulletManager : MonoBehaviour
     public float launchForce; //the force the bullet was launched at
     private static string currentLevelName = "Null"; // Hold the current level scene
 
-    [HideInInspector] public bool canBounce = false;
+    public bool canBounce = false;
 
     private Vector2 lastVelocity;
     void Start()

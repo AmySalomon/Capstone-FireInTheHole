@@ -1224,15 +1224,15 @@ MonoBehaviour:
   puttsMissed: 
   powerupsGained: 
   weaponsGained: 
-  deathsAccolade: {fileID: 21300000, guid: b3db5173a19759e4ea84ff29b53c6889, type: 3}
-  killsAccolade: {fileID: 21300000, guid: 6efdd5a705f347b4cbc49a5d2107c28c, type: 3}
+  deathsAccolade: {fileID: 21300000, guid: ebdbf717106e24449a5cd97be9dafb1b, type: 3}
+  killsAccolade: {fileID: 21300000, guid: dd64b93d14c37b44c9262aeb1308045a, type: 3}
   shotsFiredAccolade: {fileID: 21300000, guid: 2e44d6a87b39f1c46b544c92188939ea, type: 3}
-  golfballKillsAccolade: {fileID: 21300000, guid: 0f9c760b740c26849abcbf72d4629fbd, type: 3}
-  selfDestructsAccolade: {fileID: 21300000, guid: 3b4edb8ec5efb5e4781e155d84408304, type: 3}
-  puttsTakenAccolade: {fileID: 21300000, guid: 8ecc0e73cee22a54894dfafbf005ca54, type: 3}
-  puttsMissedAccolade: {fileID: 21300000, guid: 38cbe2916ebee6244b76dfff20bf1df7, type: 3}
-  powerupsGainedAccolade: {fileID: 21300000, guid: 506f910883905c84c9a6f2ca7c1a0b59, type: 3}
-  weaponsGainedAccolade: {fileID: 21300000, guid: 5fc157771cf760d4a9a33bc1ca686a76, type: 3}
+  golfballKillsAccolade: {fileID: 21300000, guid: 01826eb2c9ab113429b5f2dd0ec25753, type: 3}
+  selfDestructsAccolade: {fileID: 21300000, guid: 26a4758d815929d49bdf185c41ce43d3, type: 3}
+  puttsTakenAccolade: {fileID: 21300000, guid: 8788319fcba1f124a8774e19078b3373, type: 3}
+  puttsMissedAccolade: {fileID: 21300000, guid: f3f994e724a5f1249b0d4ea45a75b5e8, type: 3}
+  powerupsGainedAccolade: {fileID: 21300000, guid: 558007c8b93369d459b6a20790fd5fd7, type: 3}
+  weaponsGainedAccolade: {fileID: 21300000, guid: 8a75d0bd9cf270841a4a5f117a4f7fc6, type: 3}
   mostDeathsByAccolade: {fileID: 0}
   deathsTitle: Caddie
   killsTitle: Bloodthirsty
@@ -1241,7 +1241,7 @@ MonoBehaviour:
   sdTitle: Accident Prone
   puttsTakenTitle: Putting Maniac
   puttsMissedTitle: Duffer
-  powerupsTitle: Most Powerups Gained
+  powerupsTitle: Power Tripping
   weaponsTitle: Weapons Junkie
   accoladeHolderFirst: {fileID: 1446146317}
   accoladeHolderSecond: {fileID: 2054361998}
@@ -1331,7 +1331,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &931051564
 RectTransform:
   m_ObjectHideFlags: 0

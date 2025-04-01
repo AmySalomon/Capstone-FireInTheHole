@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class scr_powerUpPickup : MonoBehaviour
+public class DebugPowerup : MonoBehaviour
 {
     public scr_powerUpEffect[] powerUps;
     public scr_powerUpEffect powerUpEffect;
@@ -13,7 +13,7 @@ public class scr_powerUpPickup : MonoBehaviour
     public Sprite BurnDodgeIcon;
     public Sprite RicochetIcon;
     public Sprite SpeedupIcon;
-    
+
     // Start is called before the first frame update
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -30,7 +30,7 @@ public class scr_powerUpPickup : MonoBehaviour
             //newPopup.GetComponent<TextPopup>().weaponPickup = chosenWeapon.name;
             Debug.Log("Now applying powerup to " + collision.gameObject.GetComponentInChildren<PlayerStatTracker>().myConfig.PlayerSprite.name);
 
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
 
         }
     }
@@ -56,4 +56,3 @@ public class scr_powerUpPickup : MonoBehaviour
         }
     }
 }
-

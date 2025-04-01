@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,6 +11,7 @@ public class scr_PU_BouncyBullet : scr_powerUpEffect
         if (playerGun != null)
         {
             playerGun.isBounce = true;
+            Debug.Log("Now applying bouncy to " + player.GetComponent<PlayerStatTracker>().myConfig.PlayerSprite.name);
         }
     }
 

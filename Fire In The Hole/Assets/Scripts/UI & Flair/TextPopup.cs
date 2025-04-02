@@ -42,6 +42,7 @@ public class TextPopup : MonoBehaviour
         if (weaponPickup == "None")
         {
             int whichClip = Random.Range(1, 4);
+            audio.pitch = Random.Range(0.9f, 1.1f);
             switch (whichClip)
             {
                 case 1:
@@ -57,7 +58,7 @@ public class TextPopup : MonoBehaviour
                     audio.PlayOneShot(niceShot1);
                     break;
             }
-            text.text = "Nice Shot!";
+            text.text = "+ 1";
 
             Instantiate(confetti, startPosition, Quaternion.identity);
         }

@@ -69,10 +69,19 @@ public class DinoHazard : MonoBehaviour
                 foreach (MeshRenderer mesh in ballMeshes)
                 {
                     mesh.enabled = true;
+                    if (mesh.name == "inner")
+                    {
+                        mesh.enabled = false;
+                    }
                 }
                 foreach (SpriteRenderer sprite in ballSprites)
                 {
                     sprite.enabled = true;
+
+                    if (sprite.name == "blinkindicator")
+                    {
+                        sprite.enabled = false;
+                    }
                 }
                 //this is necessary so that the dinosaurs do not enable the legs on the walking ball sprites
                 var legsSprite = eatenBall.GetComponentInChildren<FlipAnim>();

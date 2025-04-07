@@ -58,7 +58,7 @@ public class TextPopup : MonoBehaviour
                     audio.PlayOneShot(niceShot1);
                     break;
             }
-            text.text = "+ 1";
+            text.text = "+ 1 POINT!";
 
             Instantiate(confetti, startPosition, Quaternion.identity);
         }

@@ -59,6 +59,7 @@ public class GameTimer : MonoBehaviour
         countdownText.gameObject.transform.localScale = new Vector3(1, 0, 1);
         timer = startingTime;
         timerStarted = true;
+        scaryMusic.LoadAudioData(); //Load Scary Music
         SceneNameUpdate(); //Check scene name
     }
 
@@ -123,8 +124,9 @@ public class GameTimer : MonoBehaviour
                 if (playScaryMusic == true)
                 {
                     //Sub normal music for scary music at 60 seconds left!
-                    Destroy(musicPlayer); //Destroy OG music
-                    scaryMusicPlayer.PlayOneShot(scaryMusic, 1f); //Play scary music
+                    //Destroy(musicPlayer); //Destroy OG music
+                    musicPlayer.Pause(); //Deactivate OG music
+                    scaryMusicPlayer.Play(); //Play scary music
                     //Debug.Log("WORKS!");
                     playScaryMusic = false;
                 }

@@ -8,7 +8,7 @@ using UnityEngine.Audio;
 public class GameTimer : MonoBehaviour
 {
     [HideInInspector] public float timer;
-    private float countdownTimer;
+    private float countdownTimer = 0;
     private float endTimer;
     public float startingTime;
     public float runningOutTime;
@@ -85,7 +85,9 @@ public class GameTimer : MonoBehaviour
             if (timer < runningOutTime) timerText.color = Color.red;
             if (timer < 11) CountdownTime();
 
-            if (timer < runningOutTime - 3.4f)
+
+            if (timer < runningOutTime - 3.5f) {/*stops the next line from running after it should, which breaks the countdown*/ }
+            else if (timer < runningOutTime - 3.4f)
             {
                 countdownText.gameObject.transform.localScale = new Vector3(1, 0, 1);
             }
@@ -95,7 +97,7 @@ public class GameTimer : MonoBehaviour
                 //shrink
                 newVertScale = Mathf.Lerp(1, 0, (timer - (runningOutTime - 3)) / -0.4f);
                 countdownText.gameObject.transform.localScale = new Vector3(1, newVertScale, 1);
-                
+
             }
 
             else if (timer < runningOutTime - 0.4f)

@@ -66,13 +66,26 @@ public class EndScreenScores : MonoBehaviour
 
     }
 
+    public void ScoreDebugLog()
+    {
+        string scoreList = "The Current Score List is ";
+        foreach(int i in scoresOrdered)
+        {
+            scoreList += i.ToString()+ ", ";
+        }
+
+        //foreach(var item  in scoresOrdered)
+        Debug.Log(scoreList);
+    }
     public void GetEndResults()
     {
+        ScoreDebugLog();
+        //Debug.Log("Previous End Scores Are: " + scoresOrdered);
         //Debug.Log("Getting End Results");
         scoresOrdered.Clear();
         for(int i = 0; i < scoreTracker.players.Length; i++)
         {
-            if(scoreTracker.players[i] ==null) { continue; }
+            if(scoreTracker.players[i] == null) { continue; }
             players[i] = scoreTracker.players[i];
             players[i].GetComponent<PlayerConfigInfo>().placed = false;
             scores[i] = scoreTracker.playerScores[i];
@@ -82,7 +95,8 @@ public class EndScreenScores : MonoBehaviour
         }
         //Debug.Log("Sorting End Results");
         scoresOrdered.Sort();
-
+        ScoreDebugLog();
+        //Debug.Log("New End Scores Are: " + scoresOrdered);
         ChooseAccolades();
         //Debug.Log("Attempting to Find First Place");
         FindFirstPlace();
@@ -91,13 +105,13 @@ public class EndScreenScores : MonoBehaviour
     public void FindFirstPlace()
     {
         Debug.Log("Finding First Place");
-        int highscore = scoresOrdered[scoresOrdered.Count -1];
+        int highscore = scoresOrdered[scoresOrdered.Count - 1];
         Debug.Log("The score is " + highscore);
         for(int i = 0; i<scores.Length; i++)
         {
             if(scores[i] >= highscore)
             {
-                Debug.Log("This player has the score!");
+                Debug.Log("Player "+ players[i].GetComponent<PlayerConfigInfo>().playerConfigPublic.VictorySprite+" score of "+ scores[i]+" has the score!");
                 playerPlacements[0].GetComponent<Image>().sprite = players[i].GetComponent<PlayerConfigInfo>().playerConfigPublic.VictorySprite;
                 players[i].GetComponent<PlayerConfigInfo>().placed = true;
                 playerPlacements[0].GetComponentInChildren<TextMeshProUGUI>().text = highscore.ToString();
@@ -139,6 +153,7 @@ public class EndScreenScores : MonoBehaviour
             if(players[i].GetComponent<PlayerConfigInfo>().placed == true) { continue; } //if the player has already been placed, skip them
             if (scores[i] >= placementScore)
             {
+                Debug.Log("Player " + players[i].GetComponent<PlayerConfigInfo>().playerConfigPublic.VictorySprite + " score of " + scores[i] + " has second!");
                 playerPlacements[1].GetComponent<Image>().sprite = players[i].GetComponent<PlayerConfigInfo>().playerConfigPublic.VictorySprite;
                 players[i].GetComponent<PlayerConfigInfo>().placed = true;
                 playerPlacements[1].GetComponentInChildren<TextMeshProUGUI>().text = placementScore.ToString();
@@ -180,6 +195,7 @@ public class EndScreenScores : MonoBehaviour
             if (players[i].GetComponent<PlayerConfigInfo>().placed == true) { continue; } //if the player has already been placed, skip them
             if (scores[i] >= placementScore)
             {
+                Debug.Log("Player " + players[i].GetComponent<PlayerConfigInfo>().playerConfigPublic.VictorySprite + " score of " + scores[i] + " has third!");
                 playerPlacements[2].GetComponent<Image>().sprite = players[i].GetComponent<PlayerConfigInfo>().playerConfigPublic.ThirdPlaceSprite;
                 players[i].GetComponent<PlayerConfigInfo>().placed = true;
                 playerPlacements[2].GetComponentInChildren<TextMeshProUGUI>().text = placementScore.ToString();
@@ -219,6 +235,7 @@ public class EndScreenScores : MonoBehaviour
             if (players[i].GetComponent<PlayerConfigInfo>().placed == true) { continue; } //if the player has already been placed, skip them
             if (scores[i] >= placementScore)
             {
+                Debug.Log("Player " + players[i].GetComponent<PlayerConfigInfo>().playerConfigPublic.VictorySprite + " score of " + scores[i] + " has fourth!");
                 playerPlacements[3].GetComponent<Image>().sprite = players[i].GetComponent<PlayerConfigInfo>().playerConfigPublic.LastPlaceSprite;
                 players[i].GetComponent<PlayerConfigInfo>().placed = true;
                 playerPlacements[3].GetComponentInChildren<TextMeshProUGUI>().text = placementScore.ToString();

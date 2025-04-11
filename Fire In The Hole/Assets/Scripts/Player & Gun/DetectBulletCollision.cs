@@ -100,7 +100,7 @@ public class DetectBulletCollision : MonoBehaviour
         {
             killer = ball.playerHitter.GetComponentInChildren<PlayerScore>().gameObject;
             //give the player who killed someone with a golfball credit... unless it was themselves
-            if (killer != this.gameObject)
+            if (killer != this.gameObject && killer != null)
             {
                 killer.GetComponent<PlayerStatTracker>().UpdateGolfballKills();
             }

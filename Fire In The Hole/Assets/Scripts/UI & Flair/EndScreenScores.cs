@@ -102,6 +102,8 @@ public class EndScreenScores : MonoBehaviour
         FindFirstPlace();
 
     }
+
+    //when assigning accolades, only allow two per player
     public void FindFirstPlace()
     {
         Debug.Log("Finding First Place");
@@ -119,7 +121,7 @@ public class EndScreenScores : MonoBehaviour
                 PlayerStats stats = players[i].GetComponent<PlayerConfigInfo>().playerConfigPublic.Stats;
                 if (stats.accolades.Count > 0)
                 {
-                    for(int j = 0; j < maxAccolades; j++)
+                    for(int j = 0; j < maxAccolades && j < stats.accolades.Count; j++)
                     {
                         //stats.accolades.Keys[] is used to get the key for the dictionary
                         if (stats.accoladeKeys[j] == null) { break; }
@@ -161,7 +163,7 @@ public class EndScreenScores : MonoBehaviour
                 PlayerStats stats = players[i].GetComponent<PlayerConfigInfo>().playerConfigPublic.Stats;
                 if (stats.accolades.Count > 0)
                 {
-                    for (int j = 0; j < maxAccolades; j++)
+                    for (int j = 0; j < maxAccolades && j < stats.accolades.Count; j++)
                     {
                         //stats.accolades.Keys[] is used to get the key for the dictionary
 
@@ -203,7 +205,7 @@ public class EndScreenScores : MonoBehaviour
                 PlayerStats stats = players[i].GetComponent<PlayerConfigInfo>().playerConfigPublic.Stats;
                 if (stats.accolades.Count > 0)
                 {
-                    for (int j = 0; j < maxAccolades; j++)
+                    for (int j = 0; j < maxAccolades && j < stats.accolades.Count; j++)
                     {
                         //stats.accolades.Keys[] is used to get the key for the dictionary
                         if (stats.accoladeKeys[j] == null) { break; }
@@ -243,7 +245,7 @@ public class EndScreenScores : MonoBehaviour
                 PlayerStats stats = players[i].GetComponent<PlayerConfigInfo>().playerConfigPublic.Stats;
                 if (stats.accolades.Count > 0)
                 {
-                    for (int j = 0; j < maxAccolades; j++)
+                    for (int j = 0; j < maxAccolades && j < stats.accolades.Count; j++)
                     {
                         //stats.accolades.Keys[] is used to get the key for the dictionary
                         if (stats.accoladeKeys[j] == null) { break; }

@@ -26,7 +26,7 @@ public class scr_meleeSwing : MonoBehaviour
     public Vector3 swingAim;
     public LayerMask interactableLayers;
     public LayerMask playerLayer;//for pvp player layer
-    public Rigidbody2D rb;
+    public Collider2D ballCollider;
     public Vector2 forceDirection;
     public CapsuleCollider2D meleeHitbox;
 
@@ -153,24 +153,24 @@ public class scr_meleeSwing : MonoBehaviour
 
         foreach (RaycastHit2D hit in hits)
         {
-            rb = hit.collider.GetComponent<Rigidbody2D>();
-            if (rb != null)
+            ballCollider = hit.collider.GetComponent<Collider2D>();
+            if (ballCollider != null)
             {
                 //if you hit a golf ball, tell the golf ball that you hit it
-                if (rb.gameObject.TryGetComponent<scr_golfBall>(out scr_golfBall golfBall))
+                if (ballCollider.gameObject.TryGetComponent<scr_golfBall>(out scr_golfBall golfBall))
                 {
                     golfBall.playerHitter = myInput.gameObject;
                     golfBall.outline.OutlineColor = outlineColor;
                     this.gameObject.GetComponent<PlayerStatTracker>().UpdatePuttsTaken();
                 }
-                if (rb.gameObject.TryGetComponent<tutorialGolfBall>(out tutorialGolfBall tutGolfBall))
+                if (ballCollider.gameObject.TryGetComponent<tutorialGolfBall>(out tutorialGolfBall tutGolfBall))
                 {
                     tutGolfBall.playerHitter = myInput.gameObject;
                     tutGolfBall.outline.OutlineColor = outlineColor;
                 }
 
                 forceDirection = (swingAim).normalized;
-                rb.AddForce(forceDirection * currentSwingForce / 2);
+                ballCollider.GetComponent<Rigidbody2D>().AddForce(forceDirection * currentSwingForce / 2);
                 myInput.rumbleTime = 0.3f;
                 if (currentSwingForce < 600)
                 {
@@ -186,6 +186,13 @@ public class scr_meleeSwing : MonoBehaviour
                 {
                     audioPlayer.PlayOneShot(strongHit);
                     myInput.RumbleCheck(1f, 0.3f); //vibrate the controller based on shot strength
+                }
+                //if you hit a golf ball, tell the golf ball that you hit it AGAIN
+                if (ballCollider.gameObject.TryGetComponent<scr_golfBall>(out scr_golfBall alsogolfBall))
+                {
+                    alsogolfBall.playerHitter = myInput.gameObject;
+                    alsogolfBall.outline.OutlineColor = outlineColor;
+                    this.gameObject.GetComponent<PlayerStatTracker>().UpdatePuttsTaken();
                 }
 
             }

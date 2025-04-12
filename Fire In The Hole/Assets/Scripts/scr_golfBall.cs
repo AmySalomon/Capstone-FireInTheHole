@@ -34,7 +34,7 @@ public class scr_golfBall : MonoBehaviour
 
     bool tempPlayerCheck = false;
 
-    bool hasMoved = false;
+    [HideInInspector] public bool hasMoved = false;
     //player who last hit the golfball
     public GameObject playerHitter;
 

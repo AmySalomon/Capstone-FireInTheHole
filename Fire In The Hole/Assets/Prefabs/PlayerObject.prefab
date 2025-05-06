@@ -972,7 +972,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
-  rb: {fileID: 0}
+  ballCollider: {fileID: 0}
   forceDirection: {x: 0, y: 0}
   meleeHitbox: {fileID: 2562731744779541477}
   isCharging: 0
@@ -1189,7 +1189,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -2815080828377637210, guid: 03236680b3327e643be992d6d321973c, type: 2}
   m_audioClip: {fileID: 8300000, guid: 294e8b3cf7c23724aaa160f5b892d793, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -8163,6 +8163,7 @@ MonoBehaviour:
   shieldActive: 0
   shieldSprite: {fileID: 5279026413655888610}
   shieldBreak: {fileID: 519768326491118455}
+  shieldInvDuration: 0.3
   shieldScript: {fileID: 3370615610414991260}
 --- !u!82 &7798374392852686781
 AudioSource:

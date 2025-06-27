@@ -8,7 +8,7 @@ using UnityEngine.Audio;
 public class GameTimer : MonoBehaviour
 {
     [HideInInspector] public float timer;
-    private float countdownTimer;
+    private float countdownTimer = 0;
     private float endTimer;
     public float startingTime;
     public float runningOutTime;
@@ -23,6 +23,7 @@ public class GameTimer : MonoBehaviour
     public int[] playerScores;
     public Transform[] playerScoreboards;
     public GameObject[] players;
+    public PlayerConfig[] playerStats;
 
     public bool timerStarted = false;
 
@@ -58,6 +59,7 @@ public class GameTimer : MonoBehaviour
         countdownText.gameObject.transform.localScale = new Vector3(1, 0, 1);
         timer = startingTime;
         timerStarted = true;
+        scaryMusic.LoadAudioData(); //Load Scary Music
         SceneNameUpdate(); //Check scene name
     }
 
@@ -84,6 +86,36 @@ public class GameTimer : MonoBehaviour
             if (timer < runningOutTime) timerText.color = Color.red;
             if (timer < 11) CountdownTime();
 
+
+            if (timer < runningOutTime - 3.5f) {/*stops the next line from running after it should, which breaks the countdown*/ }
+            else if (timer < runningOutTime - 3.4f)
+            {
+                countdownText.gameObject.transform.localScale = new Vector3(1, 0, 1);
+            }
+
+            else if (timer < runningOutTime - 3)
+            {
+                //shrink
+                newVertScale = Mathf.Lerp(1, 0, (timer - (runningOutTime - 3)) / -0.4f);
+                countdownText.gameObject.transform.localScale = new Vector3(1, newVertScale, 1);
+
+            }
+
+            else if (timer < runningOutTime - 0.4f)
+            {
+                //if the lerp has ended, snap the circle to have the normal scale
+                countdownText.gameObject.transform.localScale = new Vector3(1, 1, 1);
+            }
+
+            else if (timer < runningOutTime)
+            {
+                countdownText.text = "1 MINUTE";
+                countdownText.fontSize = 3;
+                //grow
+                newVertScale = Mathf.Lerp(0, 1, (timer - runningOutTime) / -0.4f);
+                countdownText.gameObject.transform.localScale = new Vector3(1, newVertScale, 1);
+            }
+
             //new music management
             audioMixer.GetFloat("MusicParam", out musicLevel);
 
@@ -92,8 +124,9 @@ public class GameTimer : MonoBehaviour
                 if (playScaryMusic == true)
                 {
                     //Sub normal music for scary music at 60 seconds left!
-                    Destroy(musicPlayer); //Destroy OG music
-                    scaryMusicPlayer.PlayOneShot(scaryMusic, 1f); //Play scary music
+                    //Destroy(musicPlayer); //Destroy OG music
+                    musicPlayer.Pause(); //Deactivate OG music
+                    scaryMusicPlayer.Play(); //Play scary music
                     //Debug.Log("WORKS!");
                     playScaryMusic = false;
                 }
@@ -118,6 +151,7 @@ public class GameTimer : MonoBehaviour
     void CountdownTime()
     {
         countdownTimer += Time.deltaTime;
+        countdownText.fontSize = 6;
         countdownText.text = count.ToString();
         if (countdownTimer < 0.1)
         {
@@ -177,7 +211,7 @@ public class GameTimer : MonoBehaviour
 
         if (endTimer > 3)
         {
-            //get each player's final score, then load end screen
+            //get each player's final score and config info, then load end screen
             for (int i = 0; i < playerScoreboards.Length; i++)
             {
                 if (players[i] == null) { break; }

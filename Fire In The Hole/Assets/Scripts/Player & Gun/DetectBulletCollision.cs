@@ -19,7 +19,7 @@ public class DetectBulletCollision : MonoBehaviour
         {
             //gets the vector direction from which the player was killed to use for the death animation
             if (collision != null) deathManager.deathDirection = collision.transform.position - transform.position;
-            //if a player was killed by someone, give them points
+            //if a player was killed by someone, update their stats
             playerKiller = IdentifyKillerCollision(collision);
             GiveKillCredit(playerKiller);
             deathManager.Died();
@@ -32,17 +32,25 @@ public class DetectBulletCollision : MonoBehaviour
         {
             //gets the vector direction from which the player was killed to use for the death animation
             if (collision != null) deathManager.deathDirection = collision.transform.position - transform.position;
-            //if a player was killed by someone, give them points
+            //if a player was killed by someone, update their stats
             playerKiller = IdentifyKillerCollider(collision);
             GiveKillCredit(playerKiller);
             deathManager.Died();
         }
     }
 
-    public void GiveKillCredit(GameObject playerShooter) //assign the player who killed the gameobject this is attached to points
+    public void GiveKillCredit(GameObject playerShooter) //assign the player who killed the gameobject kill credit in their PlayerStats
     {
-        if(playerShooter == null || playerShooter == this.gameObject) return;
-        playerShooter.GetComponent<PlayerScore>().IncreaseScore(killValue);
+        if(playerShooter == null ) return;
+        if(playerShooter == this.gameObject) //if you killed yourself, +1 to self destructs
+        {
+            this.gameObject.GetComponent<PlayerStatTracker>().UpdateSelfDestructs();
+        }
+        else //if someone else killed you, +1 to dead by, and +1 to their kills
+        {
+            this.gameObject.GetComponent<PlayerStatTracker>().UpdateDeathsBy(playerShooter);
+            playerShooter.GetComponent<PlayerStatTracker>().UpdateKills();
+        }
     }
 
     public GameObject IdentifyKillerCollider(Collider2D collision)
@@ -59,6 +67,12 @@ public class DetectBulletCollision : MonoBehaviour
         if(collision.gameObject.TryGetComponent<scr_golfBall>(out scr_golfBall ball)) //if they died via golf ball
         {
             killer = ball.playerHitter.GetComponentInChildren<PlayerScore>().gameObject;
+
+            //give the player who killed someone with a golfball credit... unless it was themselves
+            if(killer != this.gameObject)
+            {
+                killer.GetComponent<PlayerStatTracker>().UpdateGolfballKills();
+            }
         }
         if (collision.gameObject.GetComponentInParent<scr_meleeSwing>()) //if they died via melee attack
         {
@@ -85,6 +99,11 @@ public class DetectBulletCollision : MonoBehaviour
         if (collision.gameObject.TryGetComponent<scr_golfBall>(out scr_golfBall ball)) //if they died via golf ball
         {
             killer = ball.playerHitter.GetComponentInChildren<PlayerScore>().gameObject;
+            //give the player who killed someone with a golfball credit... unless it was themselves
+            if (killer != this.gameObject && killer != null)
+            {
+                killer.GetComponent<PlayerStatTracker>().UpdateGolfballKills();
+            }
         }
         if (collision.gameObject.GetComponentInParent<scr_meleeSwing>()) //if they died via melee attack
         {

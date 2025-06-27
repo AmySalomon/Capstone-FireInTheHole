@@ -10,7 +10,7 @@ public class scr_golfBall : MonoBehaviour
     private float interactionRange;
     public string golfHoleTag = "GolfHole";
     public string sandTrapTag = "Sand";
-    public int ballValue = 5;
+    public int ballValue = 1;
 
 
     private GameObject directionArrowInstance;
@@ -34,11 +34,11 @@ public class scr_golfBall : MonoBehaviour
 
     bool tempPlayerCheck = false;
 
-    bool hasMoved = false;
+    [HideInInspector] public bool hasMoved = false;
     //player who last hit the golfball
     public GameObject playerHitter;
 
-    public float balltype = 0; //0 = regular golfball, 1 = bomball, 2 = scattershot, 3 = walking
+    public float balltype = 0; //0 = regular golfball, 1 = bomball, 2 = walking, 3 = scattershot
     private scr_balltype_bomb scr_Balltype_Bomb;
     private scr_scattershotChild scr_Balltype_Scatter;
     private WalkingBall scr_Balltype_Walking;
@@ -54,7 +54,10 @@ public class scr_golfBall : MonoBehaviour
     public float type3Chance = 0f;
     public float type4Chance = 0f;
 
+    //Ball Models
     public GameObject bombModel;
+    public GameObject bounceModel;
+    public GameObject scatterModel;
     public GameObject ballModel;
     public string tutorialLvlText;
 
@@ -83,6 +86,7 @@ public class scr_golfBall : MonoBehaviour
         AssignRandomType();
 
         waterAnim = GetComponentInChildren<WaterSplash>();
+        playerHitter = null;
     }
 
     private void Update()
@@ -90,9 +94,9 @@ public class scr_golfBall : MonoBehaviour
         if (myRigidbody.velocity.magnitude >= 0.1) hasMoved = true;
             
         //if speed of the golf ball reaches zero, reset who would get the point
-        if (myRigidbody.velocity.magnitude <= 0.1 && hasMoved)
+        if (myRigidbody.velocity.magnitude <= 0.1 && hasMoved && playerHitter != null)
         {
-          
+            playerHitter.GetComponentInChildren<PlayerStatTracker>().UpdatePuttsMissed();
             Debug.Log("RRRESET");
             hasMoved = false;
             playerHitter = null;
@@ -150,11 +154,15 @@ public class scr_golfBall : MonoBehaviour
             }
             else if (specialRoll < type1Chance + type2Chance + type3Chance)
             {
+                scatterModel.SetActive(true);
+                ballModel.SetActive(false);
                 scr_Balltype_Scatter.enabled = true;
                 balltype = 3;
             }
             else
             {
+                bounceModel.SetActive(true);
+                ballModel.SetActive(false);
                 scr_Balltype_Bounce.enabled = true;
                 scr_Balltype_Bounce.bounceEnabled = true;
                 balltype = 4;
@@ -187,7 +195,7 @@ public class scr_golfBall : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag(golfHoleTag))
+        if (other.CompareTag(golfHoleTag) && playerHitter!=null)
         {
             playerHitter.GetComponentInChildren<PlayerScore>(true).IncreaseScore(ballValue);
             AudioSource audio = other.GetComponent<AudioSource>();

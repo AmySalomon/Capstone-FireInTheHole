@@ -98,9 +98,9 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  niceShot1: {fileID: 8300000, guid: b68a4585355a14b439393156a7c25ae6, type: 3}
-  niceShot2: {fileID: 8300000, guid: 9c66f9db1b15b9a468c5a7f9846e60e2, type: 3}
-  niceShot3: {fileID: 8300000, guid: fb9811b504d95814cb84fb0acc12cdf6, type: 3}
+  niceShot1: {fileID: 8300000, guid: 39802cc33a9e27f4a8b3283eb9bea480, type: 3}
+  niceShot2: {fileID: 8300000, guid: 39802cc33a9e27f4a8b3283eb9bea480, type: 3}
+  niceShot3: {fileID: 8300000, guid: 39802cc33a9e27f4a8b3283eb9bea480, type: 3}
   timeToPopup: 2
   timeToDelete: 3
   yModifier: 1
@@ -117,7 +117,7 @@ AudioSource:
   m_GameObject: {fileID: 646746251575243297}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 3860018317195262200, guid: 03236680b3327e643be992d6d321973c, type: 2}
+  OutputAudioMixerGroup: {fileID: -2815080828377637210, guid: 03236680b3327e643be992d6d321973c, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1

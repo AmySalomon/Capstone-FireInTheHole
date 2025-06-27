@@ -8,7 +8,7 @@ public class GameTransitionTooltips : MonoBehaviour
     private float timer = 0;
 
     public GameObject BallTip;
-    public GameObject FightTip;
+    //public GameObject FightTip;
     public GameObject WinTip;
     public GameObject VolcanoTip;
     public GameObject PirateTip;
@@ -19,7 +19,7 @@ public class GameTransitionTooltips : MonoBehaviour
     {
         JoinPlayer.Instance.DestroyActivePlayers();
         BallTip.SetActive(false);
-        FightTip.SetActive(false);
+        //FightTip.SetActive(false);
         WinTip.SetActive(false);
         VolcanoTip.SetActive(false);
         PirateTip.SetActive(false);
@@ -69,14 +69,14 @@ public class GameTransitionTooltips : MonoBehaviour
             }
         }
 
-        else if (timer >4.5)
+        else if (timer >3.5)
         {
             WinTip.SetActive(true);
         }
 
         else if (timer > 2.5)
         {
-            FightTip.SetActive(true);
+            //FightTip.SetActive(true);
         }
 
         else if (timer > 0.5)

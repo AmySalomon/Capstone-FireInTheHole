@@ -33,6 +33,12 @@ public class HowToPlayManager : MonoBehaviour
                 Destroy(manager);
             Debug.Log("[HowToPlayManager]: Destroyed LevelSelectManager.");
 
+            GameObject[] PMObject;
+            PMObject = GameObject.FindGameObjectsWithTag("PlayerManager");
+            foreach (GameObject manager in PMObject)
+                Destroy(manager);
+            Debug.Log("[HowToPlayManager]: Destroyed Player Manager.");
+
             //GameObject[] GameTimer;
             //GameTimer = GameObject.FindGameObjectsWithTag("Timer");
             //foreach (GameObject timer in GameTimer)

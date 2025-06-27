@@ -88,16 +88,16 @@ public class ShootProjectile : MonoBehaviour
             ShootAction();
         }
 
-        if (isBounce == true)
-        {
-            var bulletManager = bullet.GetComponent<BulletManager>();
-            bulletManager.canBounce = true;
-        }
-        else
-        {
-            var bulletManager = bullet.GetComponent<BulletManager>();
-            bulletManager.canBounce = false;
-        }
+        //if (isBounce == true)
+        //{
+        //    var bulletManager = bullet.GetComponent<BulletManager>();
+        //    bulletManager.canBounce = true;
+        //}
+        //else
+        //{
+        //    var bulletManager = bullet.GetComponent<BulletManager>();
+        //    bulletManager.canBounce = false;
+        //}
     }
     public void ShootAction()
     {
@@ -109,12 +109,13 @@ public class ShootProjectile : MonoBehaviour
             audioPlayer.pitch = Random.Range(0.9f, 1.1f);
             audioPlayer.PlayOneShot(gunshot, 1f);
             rumbleHandler.RumbleCheck(0.1f, 0.3f);
-            shotType.ShootBullets(barrelEnd, launchForce, shotSpread, this.gameObject);
+            shotType.ShootBullets(barrelEnd, launchForce, shotSpread, this.gameObject, isBounce);
             shootTimer = 0;
             Destroy(ammo_UI[ammoCurrent - 1]);
             ammo_UI.RemoveAt((int)ammoCurrent-1);
             ammoCurrent--;
             AutoReloadCheck();
+            this.gameObject.GetComponent<PlayerStatTracker>().UpdateShotsFired();
         }
         
     }
@@ -174,10 +175,13 @@ public class ShootProjectile : MonoBehaviour
         if(newWeapon.gunType == defaultWeapon.gunType)
         {
             magazineText.text = null;
+            magazineText.gameObject.SetActive(false);
+
         }
         else
         {
             magazineText.text = magazineCount.ToString();
+            magazineText.gameObject.SetActive(true);
         }
     }
 
@@ -212,10 +216,12 @@ public class ShootProjectile : MonoBehaviour
         {
             magazineText.text = "";
             Debug.Log("Magazine text: " + magazineText.text);
+            magazineText.gameObject.SetActive(false);
         }
         else
         {
             magazineText.text = magazineCount.ToString();
+            magazineText.gameObject.SetActive(true);
         }
     }
 

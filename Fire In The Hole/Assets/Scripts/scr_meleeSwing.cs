@@ -26,7 +26,7 @@ public class scr_meleeSwing : MonoBehaviour
     public Vector3 swingAim;
     public LayerMask interactableLayers;
     public LayerMask playerLayer;//for pvp player layer
-    public Rigidbody2D rb;
+    public Collider2D ballCollider;
     public Vector2 forceDirection;
     public CapsuleCollider2D meleeHitbox;
 
@@ -153,16 +153,24 @@ public class scr_meleeSwing : MonoBehaviour
 
         foreach (RaycastHit2D hit in hits)
         {
-            rb = hit.collider.GetComponent<Rigidbody2D>();
-            if (rb != null)
+            ballCollider = hit.collider.GetComponent<Collider2D>();
+            if (ballCollider != null)
             {
-                /*if (balltype == 1)
+                //if you hit a golf ball, tell the golf ball that you hit it
+                if (ballCollider.gameObject.TryGetComponent<scr_golfBall>(out scr_golfBall golfBall))
                 {
-                    rb.gameObject.GetComponent<scr_balltype_bomb>().active = true;
-                    rb.gameObject.GetComponent<scr_golfBall>().balltype = 1;
-                } //Remove when balltype not PU */
+                    golfBall.playerHitter = myInput.gameObject;
+                    golfBall.outline.OutlineColor = outlineColor;
+                    this.gameObject.GetComponent<PlayerStatTracker>().UpdatePuttsTaken();
+                }
+                if (ballCollider.gameObject.TryGetComponent<tutorialGolfBall>(out tutorialGolfBall tutGolfBall))
+                {
+                    tutGolfBall.playerHitter = myInput.gameObject;
+                    tutGolfBall.outline.OutlineColor = outlineColor;
+                }
+
                 forceDirection = (swingAim).normalized;
-                rb.AddForce(forceDirection * currentSwingForce / 2);
+                ballCollider.GetComponent<Rigidbody2D>().AddForce(forceDirection * currentSwingForce / 2);
                 myInput.rumbleTime = 0.3f;
                 if (currentSwingForce < 600)
                 {
@@ -179,23 +187,18 @@ public class scr_meleeSwing : MonoBehaviour
                     audioPlayer.PlayOneShot(strongHit);
                     myInput.RumbleCheck(1f, 0.3f); //vibrate the controller based on shot strength
                 }
-
-                //if you hit a golf ball, tell the golf ball that you hit it
-                if (rb.gameObject.TryGetComponent<scr_golfBall>(out scr_golfBall golfBall))
+                //if you hit a golf ball, tell the golf ball that you hit it AGAIN
+                if (ballCollider.gameObject.TryGetComponent<scr_golfBall>(out scr_golfBall alsogolfBall))
                 {
-                    golfBall.playerHitter = myInput.gameObject;
-                    golfBall.outline.OutlineColor = outlineColor;
-                }
-                if (rb.gameObject.TryGetComponent<tutorialGolfBall>(out tutorialGolfBall tutGolfBall))
-                {
-                    tutGolfBall.playerHitter = myInput.gameObject;
-                    tutGolfBall.outline.OutlineColor = outlineColor;
+                    alsogolfBall.playerHitter = myInput.gameObject;
+                    alsogolfBall.outline.OutlineColor = outlineColor;
+                    this.gameObject.GetComponent<PlayerStatTracker>().UpdatePuttsTaken();
                 }
 
             }
 
         }
-        if (currentSwingForce !< 1500)
+        if (currentSwingForce !> 1200)
         {
             meleeHitbox.enabled = true;
         }

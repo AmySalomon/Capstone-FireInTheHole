@@ -42,6 +42,7 @@ public class TextPopup : MonoBehaviour
         if (weaponPickup == "None")
         {
             int whichClip = Random.Range(1, 4);
+            audio.pitch = Random.Range(0.9f, 1.1f);
             switch (whichClip)
             {
                 case 1:
@@ -57,7 +58,7 @@ public class TextPopup : MonoBehaviour
                     audio.PlayOneShot(niceShot1);
                     break;
             }
-            text.text = "Nice Shot!";
+            text.text = "+ 1 POINT!";
 
             Instantiate(confetti, startPosition, Quaternion.identity);
         }
@@ -101,7 +102,7 @@ public class TextPopup : MonoBehaviour
         }
         if (weaponPickup == "PU_burnDash")
         {
-            text.text = "Burn Dash";
+            text.text = "Burn Dodge";
             myColor = new Color(0.61f, 0.2f, 0.92f);
         }
         if (weaponPickup == "PU_shield")

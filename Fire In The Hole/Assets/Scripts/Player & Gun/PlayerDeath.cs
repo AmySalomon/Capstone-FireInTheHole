@@ -65,6 +65,12 @@ public class PlayerDeath : MonoBehaviour
     //shield PU variables
     public bool shieldActive = false;
     public SpriteRenderer shieldSprite;
+    public ShieldAnim shieldBreak;
+
+    public float shieldInvDuration = 0.3f;
+    private bool isInvulnerable = false;
+    private float shieldInvTimer = 0f;
+
     //permanent shield variables (for us to test always having shield)
     public scr_permaShield shieldScript;
 
@@ -136,13 +142,29 @@ public class PlayerDeath : MonoBehaviour
         {
             shieldSprite.enabled = true;
         }
+
+        if (isInvulnerable)
+        {
+            invulnTimer += Time.deltaTime;
+            if (invulnTimer >= shieldInvDuration)
+            {
+                isInvulnerable = false;
+                invulnTimer = 0f;
+            }
+        }
     }
 
     public void Died()
     {
+        this.gameObject.GetComponentInChildren<PlayerStatTracker>().UpdateDeaths();
+
+        if (isInvulnerable) return;
+
         if (shieldActive == true)
         {
             shieldActive = false;
+            isInvulnerable = true;
+            shieldBreak.timer = 0;
             shieldSprite.enabled = false;
             if (shieldScript != null) //this is for the perma shield if we decide to go with it.
             {
@@ -153,6 +175,7 @@ public class PlayerDeath : MonoBehaviour
         {
             moveToPosition = playerStuff.transform.position;
             playerIsDead = true;
+            killSound.pitch = Random.Range(0.9f, 1.1f);
             killSound.Play();
             if (setSpawnLocation == false)
             {

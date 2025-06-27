@@ -10,9 +10,15 @@ public class scr_balltype_bomb : MonoBehaviour
     public float explosionForce = 500f; 
     public GameObject explosionEffect;
     public Animator explosionAnimator; 
-    public SpriteRenderer spriteRenderer; 
+    public SpriteRenderer spriteRenderer;
+    public Renderer bombRenderer;
     public Color blinkColor = Color.red;
     public float blinkInterval = 0.5f;
+
+    //Blink material stuff
+    public Material normalMaterial;
+    public Material blinkMaterial;
+    private bool isBlinking = false;
 
     private bool isTriggered = false;
     private Rigidbody2D rb;
@@ -21,13 +27,15 @@ public class scr_balltype_bomb : MonoBehaviour
     public scr_golfBall golfBall;
     public bool active = false;
 
+    public bool paused = false;
+    public float timer = 0;
     void Start()
     {
-        spriteRenderer.enabled = true;
+        bombRenderer.enabled = true;
         rb = GetComponent<Rigidbody2D>();
-        if (spriteRenderer)
+        if (bombRenderer && bombRenderer.material.HasProperty("_Color"))
         {
-            originalColor = spriteRenderer.color;
+            originalColor = bombRenderer.material.color;
         }
     }
 
@@ -37,6 +45,14 @@ public class scr_balltype_bomb : MonoBehaviour
         {
             spriteRenderer.color = spriteRenderer.color == originalColor ? blinkColor : originalColor;
         }
+        if (bombRenderer && bombRenderer.material.HasProperty("_Color"))
+        {
+            Color currentColor = bombRenderer.material.color;
+            bombRenderer.material = isBlinking ? normalMaterial : blinkMaterial;
+            isBlinking = !isBlinking;
+        }
+
+
     }
 
     void Update()
@@ -45,7 +61,9 @@ public class scr_balltype_bomb : MonoBehaviour
         {
             isTriggered = true;
             InvokeRepeating("Blink", 0f, blinkInterval);
-            Invoke("Explode", bombTimer);
+            //paused is true when eaten by a dinosaur, to avoid a bug that will disable the dino if the bomb is eaten and explodes while eaten.
+            if (!paused) timer += Time.deltaTime;
+            if (timer > bombTimer) Explode();
         }
     }
 
@@ -55,6 +73,10 @@ public class scr_balltype_bomb : MonoBehaviour
         if (spriteRenderer)
         {
             spriteRenderer.color = originalColor;
+        }
+        if (bombRenderer)
+        {
+            bombRenderer.material = normalMaterial;
         }
 
         if (explosionAnimator) //trigger explode animation

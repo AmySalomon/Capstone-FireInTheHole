@@ -7,16 +7,21 @@ public class scr_PU_BouncyBullet : scr_powerUpEffect
 {
     public override void ApplyEffect(GameObject player)
     {
-        //var bullet = player.GetComponentInChildren<ShootProjectile>().bullet;
-        //bullet.GetComponent<BulletManager>().canBounce = true;
-        player.GetComponentInChildren<ShootProjectile>().isBounce = true;
+        var playerGun = player.GetComponent<ShootProjectile>();
+        if (playerGun != null)
+        {
+            playerGun.isBounce = true;
+            Debug.Log("Now applying bouncy to " + player.GetComponent<PlayerStatTracker>().myConfig.PlayerSprite.name);
+        }
     }
 
     public override void RemoveEffect(GameObject player)
     {
-       // var bullet = player.GetComponentInChildren<ShootProjectile>().bullet;
-       // bullet.GetComponent<BulletManager>().canBounce = false;
-       player.GetComponentInChildren<ShootProjectile>().isBounce = false;
+        var playerGun = player.GetComponent<ShootProjectile>();
+        if (playerGun != null)
+        {
+            playerGun.isBounce = false;
+        }
     }
 }
 

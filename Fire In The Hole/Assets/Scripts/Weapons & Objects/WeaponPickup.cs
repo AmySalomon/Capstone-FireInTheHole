@@ -15,6 +15,7 @@ public class WeaponPickup : MonoBehaviour
             collision.gameObject.GetComponent<ShootProjectile>().UpdateWeapon(chosenWeapon);
             var newPopup = Instantiate(textPopup, collision.transform.position, transform.rotation);
             newPopup.GetComponent<TextPopup>().weaponPickup = chosenWeapon.name;
+            collision.gameObject.GetComponentInChildren<PlayerStatTracker>().UpdateWeaponsGained();
             Destroy(this.gameObject);
         }
     }

@@ -124,6 +124,8 @@ public class JoinPlayer : MonoBehaviour
         var tutCover = Instantiate(coverPrefab, coverSpawns[index].position, Quaternion.identity, myGolfTutStuff.transform);
         tutCover.GetComponent<DisappearOvertime>().shouldIDelete = false;
         myGolfTutStuff.transform.position = new Vector3 (500 + index * 10, 500 + index * 10, 0);
+        player.GetComponentInChildren<ColorToPlayer>().myColor = playerConfigs[index].PlayerColor;
+        player.GetComponentInChildren<scr_meleeSwing>().outlineColor = playerConfigs[index].PlayerColor;
         shouldIDisableUI = true;
     }
 
@@ -271,6 +273,7 @@ public class PlayerConfig
     {
         PlayerIndex = pi.playerIndex;
         Input = pi;
+        Stats = new PlayerStats();
     }
     public PlayerInput Input { get; set; }
 
@@ -289,4 +292,29 @@ public class PlayerConfig
 
     public Sprite ScoreboardSprite { get; set; }
     public bool placed { get; set; }
+
+    public PlayerStats Stats { get; set; }
+}
+
+public class PlayerStats
+{
+    //violence stats
+    public int deaths;
+    public int kills;
+    public int shotsFired;
+    public int golfballKills;
+    public int selfDestructs;
+    public Dictionary<GameObject, float> deathsBy = new Dictionary<GameObject, float>();
+
+    //putting
+    public int puttsTaken;
+    public int puttsMissed;
+
+    //interactables stats
+    public int powerupsGained;
+    public int weaponsGained;
+    
+    public Dictionary<string, Sprite> accolades = new Dictionary<string, Sprite>();
+    public List<string> accoladeKeys = new List<string>();
+
 }

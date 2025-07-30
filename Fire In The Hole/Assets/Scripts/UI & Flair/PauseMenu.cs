@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
@@ -8,6 +9,8 @@ public class PauseMenu : MonoBehaviour
     public Transform pauseMenu;
     public static bool functional = true;
     public bool funcCopy;
+
+
     private void Start()
     {
         functional = true;
@@ -23,7 +26,12 @@ public class PauseMenu : MonoBehaviour
     public void UnpauseGame()
     {
         pauseMenu.gameObject.SetActive(false);
-        Time.timeScale = 1f;
+        //Turn off player manager to allow all players to control UI
+        GameObject playerManager = GameObject.FindGameObjectWithTag("PlayerManager");
+        playerManager.GetComponent<PlayerInputManager>().enabled = true;
+        playerManager.GetComponent<PlayerInputManager>().EnableJoining();
+
+         Time.timeScale = 1f;
         PlayerPause.paused = false;
         PlayerPause.playerPaused = null;
     }

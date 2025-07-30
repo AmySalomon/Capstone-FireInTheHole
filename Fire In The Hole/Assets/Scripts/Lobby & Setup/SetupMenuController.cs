@@ -207,5 +207,7 @@ public class SetupMenuController : MonoBehaviour
         readyButton.gameObject.SetActive(false);
         //this disables the UI panel after selecting character. in future, we will have to make a way to return to this UI panel after selecting a character
         gameObject.SetActive(false);
+        Destroy(module);
+        myInput.uiInputModule = GameObject.FindGameObjectWithTag("Pause").GetComponent<InputSystemUIInputModule>();
     }
 }

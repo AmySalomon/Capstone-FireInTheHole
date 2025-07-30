@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+
 
 public class PlayerPause : MonoBehaviour
 {
@@ -19,6 +21,7 @@ public class PlayerPause : MonoBehaviour
     {
         playerPaused = index;
         Debug.Log("Pause by player " + playerPaused);
+        
         paused = true;
         Time.timeScale = 0;
         if(pauseMenu!= null)

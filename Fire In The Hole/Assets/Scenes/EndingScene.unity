@@ -1925,7 +1925,7 @@ GameObject:
   - component: {fileID: 1029081314}
   m_Layer: 5
   m_Name: PlayerEventSystem
-  m_TagString: Untagged
+  m_TagString: Pause
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1950,7 +1950,7 @@ MonoBehaviour:
   m_PointAction: {fileID: 0}
   m_MoveAction: {fileID: 5707518712884579917, guid: 87467c364baca9c49b14e3af90d00e3b, type: 3}
   m_SubmitAction: {fileID: 2556067248684489493, guid: 87467c364baca9c49b14e3af90d00e3b, type: 3}
-  m_CancelAction: {fileID: 0}
+  m_CancelAction: {fileID: 1026527800928812438, guid: 87467c364baca9c49b14e3af90d00e3b, type: 3}
   m_LeftClickAction: {fileID: 0}
   m_MiddleClickAction: {fileID: 0}
   m_RightClickAction: {fileID: 0}
@@ -1958,7 +1958,7 @@ MonoBehaviour:
   m_TrackedDevicePositionAction: {fileID: 0}
   m_TrackedDeviceOrientationAction: {fileID: 0}
   m_DeselectOnBackgroundClick: 1
-  m_PointerBehavior: 0
+  m_PointerBehavior: 1
   m_CursorLockBehavior: 0
 --- !u!114 &1029081315
 MonoBehaviour:

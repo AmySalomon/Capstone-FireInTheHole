@@ -21,7 +21,10 @@ public class PlayerPause : MonoBehaviour
     {
         playerPaused = index;
         Debug.Log("Pause by player " + playerPaused);
-        
+
+        GameObject playerManager = GameObject.FindGameObjectWithTag("PlayerManager");
+        playerManager.GetComponent<PlayerInputManager>().enabled = false;
+
         paused = true;
         Time.timeScale = 0;
         if(pauseMenu!= null)
@@ -39,6 +42,9 @@ public class PlayerPause : MonoBehaviour
             pauseMenu.gameObject.SetActive(false);
 
         }
+        GameObject playerManager = GameObject.FindGameObjectWithTag("PlayerManager");
+        playerManager.GetComponent<PlayerInputManager>().enabled = true;
+        playerManager.GetComponent<PlayerInputManager>().EnableJoining();
         Time.timeScale = 1f;
         paused = false;
         playerPaused = null;
@@ -47,10 +53,10 @@ public class PlayerPause : MonoBehaviour
     public void GetPauseMenu(Transform currentPauseMenu)
     {
         //Debug.Log("currentPauseMenu is "+ currentPauseMenu);
-        
+
         pauseMenu = currentPauseMenu;
 
-       // Debug.Log("UPDATED pauseMenu is currently " + pauseMenu.name + " and currentPauseMenu is " + currentPauseMenu);
+        // Debug.Log("UPDATED pauseMenu is currently " + pauseMenu.name + " and currentPauseMenu is " + currentPauseMenu);
 
     }
 }

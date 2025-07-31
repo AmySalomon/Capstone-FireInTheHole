@@ -205,9 +205,17 @@ public class SetupMenuController : MonoBehaviour
 
         JoinPlayer.Instance.ReadyPlayer(PlayerIndex);
         readyButton.gameObject.SetActive(false);
-        //this disables the UI panel after selecting character. in future, we will have to make a way to return to this UI panel after selecting a character
-        gameObject.SetActive(false);
+
+        //All of the following exists so that everyone can control the pause menu on the tutorial lobby
         Destroy(module);
-        myInput.uiInputModule = GameObject.FindGameObjectWithTag("Pause").GetComponent<InputSystemUIInputModule>();
+        Destroy(multiplayerEventSystem);
+
+        myInput.uiInputModule = myInput.GetComponent<InputSystemUIInputModule>();
+        myInput.GetComponent<InputSystemUIInputModule>().actionsAsset = myInput.GetComponent<PlayerInput>().actions;
+
+        myInput.GetComponent<MultiplayerEventSystem>().SetSelectedGameObject(FindObjectOfType<PauseMenu>().quickFixForTutButton.gameObject);
+
+        gameObject.SetActive(false);
+ 
     }
 }

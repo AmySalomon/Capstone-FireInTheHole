@@ -10,6 +10,8 @@ public class PauseMenu : MonoBehaviour
     public static bool functional = true;
     public bool funcCopy;
 
+    public GameObject quickFixForTutButton;
+
 
     private void Start()
     {
@@ -35,7 +37,7 @@ public class PauseMenu : MonoBehaviour
         PlayerPause.paused = false;
         PlayerPause.playerPaused = null;
     }
-
+    
     public void MainMenu()
     {
         Time.timeScale = 1f;
@@ -59,6 +61,7 @@ public class PauseMenu : MonoBehaviour
         foreach (GameObject manager in PMObject)
             Destroy(manager);
         Debug.Log("[PauseMenu]: Destroyed Player Manager.");
+        Destroy(GameObject.FindGameObjectWithTag("Pause").GetComponentInParent<PauseMenu>().gameObject);
     }
 
     public void NoPausing()

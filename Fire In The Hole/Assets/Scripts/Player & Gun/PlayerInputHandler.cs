@@ -229,7 +229,7 @@ public class PlayerInputHandler : MonoBehaviour
         {
             playerPause.PauseGame(playerConfig.PlayerIndex);
         }
-        else if (playerPause != null && context.performed && PlayerPause.paused && PlayerPause.playerPaused == playerConfig.PlayerIndex)
+        else if (playerPause != null && context.performed && PlayerPause.paused)
         {
             playerPause.UnpauseGame();
         }

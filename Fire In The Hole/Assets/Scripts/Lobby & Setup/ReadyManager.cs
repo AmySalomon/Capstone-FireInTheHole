@@ -42,6 +42,8 @@ public class ReadyManager : MonoBehaviour
         foreach (GameObject levelInits in LevelInitializers)
             Destroy(levelInits);
         Debug.Log("[ReadyManager]: Destroyed LevelInitializer.");
+        //Need this in the tutorial, otherwise pausing doesn't work in the tutorial.
+        IntroFlyBy.gameStarted = true;
     }
 
     // Update is called once per frame

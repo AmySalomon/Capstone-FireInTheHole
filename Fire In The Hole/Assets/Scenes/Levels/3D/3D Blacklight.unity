@@ -21700,6 +21700,32 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5717748830072257094, guid: ee16cafbe26cae640a4e3da3def6f611, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 73.59873
+      objectReference: {fileID: 0}
+    - target: {fileID: 5717748830072257094, guid: ee16cafbe26cae640a4e3da3def6f611, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 73.59873
+      objectReference: {fileID: 0}
+    - target: {fileID: 5717748830072257094, guid: ee16cafbe26cae640a4e3da3def6f611, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 73.59873
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816030208398376562, guid: ee16cafbe26cae640a4e3da3def6f611, type: 3}
+      propertyPath: m_text
+      value: '10
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816030208398376562, guid: ee16cafbe26cae640a4e3da3def6f611, type: 3}
+      propertyPath: m_fontSize
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816030208398376562, guid: ee16cafbe26cae640a4e3da3def6f611, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7129663365810361743, guid: ee16cafbe26cae640a4e3da3def6f611, type: 3}
       propertyPath: scaryMusic
       value: 
@@ -21710,7 +21736,7 @@ PrefabInstance:
       objectReference: {fileID: 22426646}
     - target: {fileID: 7129663365810361743, guid: ee16cafbe26cae640a4e3da3def6f611, type: 3}
       propertyPath: startingTime
-      value: 10
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 7129663365810361743, guid: ee16cafbe26cae640a4e3da3def6f611, type: 3}
       propertyPath: scaryMusicPlayer
@@ -29767,6 +29793,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelInitializer
       objectReference: {fileID: 0}
+    - target: {fileID: 5350488806983921784, guid: 06f8cbb26a42c804fbce4ee7e194e64e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9158550349686972837, guid: 06f8cbb26a42c804fbce4ee7e194e64e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -29943,10 +29973,6 @@ PrefabInstance:
     - target: {fileID: 6873164001006320210, guid: 5215f46a254617c44bfa431ec6a6050d, type: 3}
       propertyPath: m_Name
       value: GameIntro
-      objectReference: {fileID: 0}
-    - target: {fileID: 6873164001006320210, guid: 5215f46a254617c44bfa431ec6a6050d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

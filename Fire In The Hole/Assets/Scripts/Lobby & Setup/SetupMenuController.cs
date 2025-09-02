@@ -94,11 +94,10 @@ public class SetupMenuController : MonoBehaviour
         switch (pi + 1)
         {
             //this places the menus in the correct positions based on spawn location. may need to update again later.
-            //the X axis 1 is .8f, and the Y axis 1 is .75f, in order to have better spacing.
-            //the X axis 0 is .2f, and the Y axis 0 is .3f, for spacing reasons as well.
+
             case 1:
-                rectTransform.anchorMin = new Vector2(.2f, .75f);
-                rectTransform.anchorMax = new Vector2(.2f, .75f);
+                rectTransform.anchorMin = new Vector2(.2f, .65f);
+                rectTransform.anchorMax = new Vector2(.2f, .65f);
                 break;
 
             case 2:
@@ -107,8 +106,8 @@ public class SetupMenuController : MonoBehaviour
                 break;
 
             case 3:
-                rectTransform.anchorMin = new Vector2(.8f, .75f);
-                rectTransform.anchorMax = new Vector2(.8f, .75f);
+                rectTransform.anchorMin = new Vector2(.8f, .65f);
+                rectTransform.anchorMax = new Vector2(.8f, .65f);
                 break;
             case 4:
                 rectTransform.anchorMin = new Vector2(.2f, .3f);

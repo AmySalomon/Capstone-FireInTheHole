@@ -198,10 +198,10 @@ public class scr_meleeSwing : MonoBehaviour
             }
 
         }
-        if (currentSwingForce !> 1200)
-        {
-            meleeHitbox.enabled = true;
-        }
+        //Enable melee when swinging (at any force level)
+        meleeHitbox.enabled = true;
+
+
         if (hits.Length == 0)
         {
             audioPlayer.PlayOneShot(missedHit);

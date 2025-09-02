@@ -39,6 +39,8 @@ public class GameTimer : MonoBehaviour
     private bool soundOffWhistle = true;
     private bool playScaryMusic = true;
     private static string currentScene = "Null"; //Detects scene name
+
+    private Vector3 ogCountdownSize;
     private void Awake()
     {
         myWhistleSFX = GetComponent<AudioSource>();
@@ -52,11 +54,14 @@ public class GameTimer : MonoBehaviour
             gameTimer = this;
         }
         DontDestroyOnLoad(this.gameObject);
+
+        ogCountdownSize = countdownText.gameObject.transform.localScale;
+
     }
     // Start is called before the first frame update
     void Start()
     {
-        countdownText.gameObject.transform.localScale = new Vector3(1, 0, 1);
+        countdownText.gameObject.transform.localScale = new Vector3(ogCountdownSize.x, 0, ogCountdownSize.z);
         timer = startingTime;
         timerStarted = true;
         scaryMusic.LoadAudioData(); //Load Scary Music
@@ -90,30 +95,30 @@ public class GameTimer : MonoBehaviour
             if (timer < runningOutTime - 3.5f) {/*stops the next line from running after it should, which breaks the countdown*/ }
             else if (timer < runningOutTime - 3.4f)
             {
-                countdownText.gameObject.transform.localScale = new Vector3(1, 0, 1);
+                countdownText.gameObject.transform.localScale = new Vector3(ogCountdownSize.x, 0, ogCountdownSize.z);
             }
 
             else if (timer < runningOutTime - 3)
             {
                 //shrink
-                newVertScale = Mathf.Lerp(1, 0, (timer - (runningOutTime - 3)) / -0.4f);
-                countdownText.gameObject.transform.localScale = new Vector3(1, newVertScale, 1);
+                newVertScale = Mathf.Lerp(ogCountdownSize.y, 0, (timer - (runningOutTime - 3)) / -0.4f);
+                countdownText.gameObject.transform.localScale = new Vector3(ogCountdownSize.x, newVertScale, ogCountdownSize.z);
 
             }
 
             else if (timer < runningOutTime - 0.4f)
             {
                 //if the lerp has ended, snap the circle to have the normal scale
-                countdownText.gameObject.transform.localScale = new Vector3(1, 1, 1);
+                countdownText.gameObject.transform.localScale = ogCountdownSize;
             }
 
             else if (timer < runningOutTime)
             {
                 countdownText.text = "1 MINUTE";
-                countdownText.fontSize = 3;
+                countdownText.fontSize = 4;
                 //grow
-                newVertScale = Mathf.Lerp(0, 1, (timer - runningOutTime) / -0.4f);
-                countdownText.gameObject.transform.localScale = new Vector3(1, newVertScale, 1);
+                newVertScale = Mathf.Lerp(0, ogCountdownSize.y, (timer - runningOutTime) / -0.4f);
+                countdownText.gameObject.transform.localScale = new Vector3(ogCountdownSize.x, newVertScale, ogCountdownSize.z);
             }
 
             //new music management
@@ -156,22 +161,22 @@ public class GameTimer : MonoBehaviour
         if (countdownTimer < 0.1)
         {
             //grow
-            newVertScale = Mathf.Lerp(0, 1, countdownTimer / 0.1f);
-            countdownText.gameObject.transform.localScale = new Vector3(1, newVertScale, 1);
+            newVertScale = Mathf.Lerp(0, ogCountdownSize.y, countdownTimer / 0.1f);
+            countdownText.gameObject.transform.localScale = new Vector3(ogCountdownSize.x, newVertScale, ogCountdownSize.z);
         }
         
         
         else if (countdownTimer < 0.8)
         {
             //if the lerp has ended, snap the circle to have the normal scale
-            countdownText.gameObject.transform.localScale = new Vector3(1, 1, 1);
+            countdownText.gameObject.transform.localScale = ogCountdownSize;
         }
 
         else if (countdownTimer < 1)
         {
             //shrink
-            newVertScale = Mathf.Lerp(1, 0, (countdownTimer - 0.8f) / 0.1f);
-            countdownText.gameObject.transform.localScale = new Vector3(1, newVertScale, 1);
+            newVertScale = Mathf.Lerp(ogCountdownSize.y, 0, (countdownTimer - 0.8f) / 0.1f);
+            countdownText.gameObject.transform.localScale = new Vector3(ogCountdownSize.x, newVertScale, ogCountdownSize.z);
         }
 
         else
@@ -193,7 +198,7 @@ public class GameTimer : MonoBehaviour
         }
         //Time.timeScale = 0;
         endTimer += Time.unscaledDeltaTime;
-        countdownText.fontSize = 3;
+        countdownText.fontSize = 4;
         countdownText.text = "IT'S OVER!";
         //turns off the music, momentarily
         audioMixer.SetFloat("MusicParam", -80);
@@ -205,8 +210,8 @@ public class GameTimer : MonoBehaviour
         if (endTimer < 0.2)
         {
             //shrink
-            newVertScale = Mathf.Lerp(0, 1, endTimer / 0.2f);
-            countdownText.gameObject.transform.localScale = new Vector3(1, newVertScale, 1);
+            newVertScale = Mathf.Lerp(0, ogCountdownSize.y, endTimer / 0.2f);
+            countdownText.gameObject.transform.localScale = new Vector3(ogCountdownSize.x, newVertScale, ogCountdownSize.z);
         }
 
         if (endTimer > 3)

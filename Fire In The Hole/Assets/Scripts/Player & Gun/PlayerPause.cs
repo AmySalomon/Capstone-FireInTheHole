@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Steamworks;
 
 
 public class PlayerPause : MonoBehaviour
@@ -15,6 +16,37 @@ public class PlayerPause : MonoBehaviour
         playerPaused = null;
         Transform tempPause = FindAnyObjectByType<PauseMenu>().pauseMenu;
         GetPauseMenu(tempPause);
+    }
+
+    private void Update()
+    {
+        if (SteamManager.Initialized)
+        {
+            if (SteamUtils.IsOverlayEnabled() && paused == false && IntroFlyBy.gameStarted == true)
+            {
+                //Pause with index of 0, just to pause (I hope index doesn't matter anymore, it shouldn't.)
+                PauseGame(0);
+            }
+        }
+    }
+
+    void OnEnable()
+    {
+        InputSystem.onDeviceChange += OnDeviceChange;
+    }
+
+    void OnDisable()
+    {
+        InputSystem.onDeviceChange -= OnDeviceChange;
+    }
+
+    //Whenever a controller is removed or added, pause the game if not already paused.
+    void OnDeviceChange(InputDevice device, InputDeviceChange change)
+    {
+        if (paused == false && IntroFlyBy.gameStarted == true)
+        {
+            PauseGame(0);
+        }
     }
 
     public void PauseGame(int index)

@@ -30,11 +30,14 @@ public class IntroFlyBy : MonoBehaviour
 
     private float newVertScale;
 
+    [HideInInspector] public static bool gameStarted = false;
+
     // Start is called before the first frame update
     void Start()
     {
         timer = 0;
         PlayerPause.paused = true;
+        gameStarted = false;
         text = GetComponentInChildren<TextMeshProUGUI>();
         text.gameObject.transform.localScale = new Vector3(1, 0, 1);
 
@@ -91,6 +94,7 @@ public class IntroFlyBy : MonoBehaviour
             myCamera.transform.position = new Vector3(firstCameraXPos, firstCameraYPos, firstCameraZPos);
             Time.timeScale = 1;
             PlayerPause.paused = false;
+            gameStarted = true;
             Destroy(gameObject);
         }
 
@@ -152,6 +156,7 @@ public class IntroFlyBy : MonoBehaviour
             myCamera.transform.position = new Vector3(firstCameraXPos, firstCameraYPos, firstCameraZPos);
             Time.timeScale = 1;
             PlayerPause.paused = false;
+            gameStarted = true;
             Destroy(gameObject);
         }
 
@@ -205,6 +210,7 @@ public class IntroFlyBy : MonoBehaviour
             myCamera.transform.position = new Vector3(firstCameraXPos, firstCameraYPos, firstCameraZPos);
             Time.timeScale = 1;
             PlayerPause.paused = false;
+            gameStarted = true;
             Destroy(gameObject);
         }
 
@@ -248,6 +254,7 @@ public class IntroFlyBy : MonoBehaviour
             myCamera.transform.position = new Vector3(firstCameraXPos, firstCameraYPos, firstCameraZPos);
             Time.timeScale = 1;
             PlayerPause.paused = false;
+            gameStarted = true;
             Destroy(gameObject);
         }
 

@@ -27,16 +27,16 @@ public class PlayerSettings : MonoBehaviour
         var voiceVolume = PlayerPrefs.GetFloat("VoiceParam", 0);
         audioMixer.SetFloat("VoiceParam", voiceVolume);
 
-        var noVibrate = PlayerPrefs.GetString("noVibrate", "False");
+        var noVibrate = PlayerPrefs.GetString("noVibrate", "True");
         if (noVibrate == "False") 
         { 
             OptionsMenuManager.noVibrate = false;
-            Debug.Log("Ring ring");
+            //Debug.Log("Ring ring");
         }
         else if (noVibrate == "True") 
         { 
             OptionsMenuManager.noVibrate = true;
-            Debug.Log("bong bonk");
+            //Debug.Log("bong bonk");
         }
         else
         {

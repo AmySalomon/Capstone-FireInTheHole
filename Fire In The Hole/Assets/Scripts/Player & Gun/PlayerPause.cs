@@ -49,18 +49,17 @@ public class PlayerPause : MonoBehaviour
 
     public void PauseGame(int index)
     {
-        playerPaused = index;
-        Debug.Log("Pause by player " + playerPaused);
-
-        GameObject playerManager = GameObject.FindGameObjectWithTag("PlayerManager");
-        playerManager.GetComponent<PlayerInputManager>().enabled = false;
-
         paused = true;
-        Time.timeScale = 0;
-        if(pauseMenu!= null)
+        if (pauseMenu != null)
         {
             pauseMenu.gameObject.SetActive(true);
         }
+        playerPaused = index;
+
+        GameObject playerManager = GameObject.FindGameObjectWithTag("PlayerManager");
+        playerManager.GetComponent<PlayerInputManager>().enabled = false;
+        Time.timeScale = 0;
+
 
     }
 

@@ -12,30 +12,33 @@ public class PlayerPause : MonoBehaviour
     public static int? playerPaused;
 
     protected Callback<GameOverlayActivated_t> overlayIsOn;
-    // Start is called before the first frame update
+
     void Start()
     {
         playerPaused = null;
         Transform tempPause = FindAnyObjectByType<PauseMenu>().pauseMenu;
         GetPauseMenu(tempPause);
-
-        if (SteamManager.Initialized) overlayIsOn = Callback<GameOverlayActivated_t>.Create(OnGameOverlayActivated);
     }
-    private void OnGameOverlayActivated(GameOverlayActivated_t pCallback)
-    {
-        if (paused == false && IntroFlyBy.gameStarted == true)
-        {
-            PauseGame(0);
-        }
-    }
-
+    
     void OnEnable()
     {
+        if (SteamManager.Initialized) overlayIsOn = Callback<GameOverlayActivated_t>.Create(OnGameOverlayActivated);
         InputSystem.onDeviceChange += OnDeviceChange;
     }
         void OnDisable()
     {
         InputSystem.onDeviceChange -= OnDeviceChange;
+    }
+
+    void OnGameOverlayActivated(GameOverlayActivated_t pCallback)
+    {
+        Transform tempPause = FindAnyObjectByType<PauseMenu>().pauseMenu;
+        GetPauseMenu(tempPause);
+
+        if (pCallback.m_bActive != 0 && paused == false && IntroFlyBy.gameStarted == true)
+        {
+            PauseGame(0);
+        }
     }
 
     //Whenever a controller is removed or added, pause the game if not already paused.
@@ -59,8 +62,6 @@ public class PlayerPause : MonoBehaviour
         GameObject playerManager = GameObject.FindGameObjectWithTag("PlayerManager");
         playerManager.GetComponent<PlayerInputManager>().enabled = false;
         Time.timeScale = 0;
-
-
     }
 
     

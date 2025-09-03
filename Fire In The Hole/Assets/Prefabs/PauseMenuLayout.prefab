@@ -553,7 +553,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 9072393263757791324}
   funcCopy: 0
-  quickFixForTutButton: {fileID: 0}
+  quickFixForTutButton: {fileID: 7373635165510801817}
 --- !u!114 &4620424950405989251
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -10,23 +10,22 @@ public class PlayerPause : MonoBehaviour
     public Transform pauseMenu;
     public static bool paused;
     public static int? playerPaused;
+
+    protected Callback<GameOverlayActivated_t> overlayIsOn;
     // Start is called before the first frame update
     void Start()
     {
         playerPaused = null;
         Transform tempPause = FindAnyObjectByType<PauseMenu>().pauseMenu;
         GetPauseMenu(tempPause);
-    }
 
-    private void Update()
+        if (SteamManager.Initialized) overlayIsOn = Callback<GameOverlayActivated_t>.Create(OnGameOverlayActivated);
+    }
+    private void OnGameOverlayActivated(GameOverlayActivated_t pCallback)
     {
-        if (SteamManager.Initialized)
+        if (paused == false && IntroFlyBy.gameStarted == true)
         {
-            if (SteamUtils.IsOverlayEnabled() && paused == false && IntroFlyBy.gameStarted == true)
-            {
-                //Pause with index of 0, just to pause (I hope index doesn't matter anymore, it shouldn't.)
-                PauseGame(0);
-            }
+            PauseGame(0);
         }
     }
 
@@ -34,8 +33,7 @@ public class PlayerPause : MonoBehaviour
     {
         InputSystem.onDeviceChange += OnDeviceChange;
     }
-
-    void OnDisable()
+        void OnDisable()
     {
         InputSystem.onDeviceChange -= OnDeviceChange;
     }
